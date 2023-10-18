@@ -16,10 +16,5 @@ namespace DOAN
         {
             InitializeComponent();
         }
-
-        private void frm_trangchinh_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
