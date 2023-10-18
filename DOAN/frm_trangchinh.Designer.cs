@@ -198,8 +198,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_trangchinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_trangchinh";
-            this.Load += new System.EventHandler(this.frm_trangchinh_Load);
             this.pnl_thanhben.ResumeLayout(false);
             this.ResumeLayout(false);
 
