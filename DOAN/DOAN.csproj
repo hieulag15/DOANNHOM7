@@ -33,8 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Guna.UI2">
-      <HintPath>..\Guna.UI2.dll</HintPath>
+    <Reference Include="Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -57,16 +58,16 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_trangchinh.cs">
+    <Compile Include="Frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_trangchinh.Designer.cs">
-      <DependentUpon>frm_trangchinh.cs</DependentUpon>
+    <Compile Include="Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frm_trangchinh.resx">
-      <DependentUpon>frm_trangchinh.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_Login.resx">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -92,31 +93,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\hacker.png" />
+    <None Include="Resources\anhlogin.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\hacker %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fashion.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fashion %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fashion %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rating.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\operation.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\supplier.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\stats.png" />
+    <None Include="Resources\shop.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
