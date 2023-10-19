@@ -78,6 +78,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="TienIch.cs" />
     <Compile Include="us_accountUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
