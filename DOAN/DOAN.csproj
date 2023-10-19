@@ -78,6 +78,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="us_accountUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="us_accountUI.Designer.cs">
+      <DependentUpon>us_accountUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="us_customerUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="us_customerUI.Designer.cs">
+      <DependentUpon>us_customerUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="us_employeeUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="us_employeeUI.Designer.cs">
+      <DependentUpon>us_employeeUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="us_paymentUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -97,6 +115,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="us_accountUI.resx">
+      <DependentUpon>us_accountUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="us_customerUI.resx">
+      <DependentUpon>us_customerUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="us_employeeUI.resx">
+      <DependentUpon>us_employeeUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="us_paymentUI.resx">
       <DependentUpon>us_paymentUI.cs</DependentUpon>
