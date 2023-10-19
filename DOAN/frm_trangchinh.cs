@@ -46,5 +46,11 @@ namespace DOAN
             us_employeeUI employeeUI = new us_employeeUI();
             TienIch.addUserControl(employeeUI, pnl_trangchinh);
         }
+
+        private void btn_HienThiMatHang_Click(object sender, EventArgs e)
+        {
+            frm_mathang Fmathang = new frm_mathang();
+            TienIch.addForm(Fmathang, pnl_trangchinh);
+        }
     }
 }

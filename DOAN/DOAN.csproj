@@ -66,6 +66,12 @@
     <Compile Include="Frm_Login.Designer.cs">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_mathang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_mathang.Designer.cs">
+      <DependentUpon>frm_mathang.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_trangchinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_mathang.resx">
+      <DependentUpon>frm_mathang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_trangchinh.resx">
       <DependentUpon>frm_trangchinh.cs</DependentUpon>
