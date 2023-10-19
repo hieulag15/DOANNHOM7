@@ -58,6 +58,7 @@
             // 
             // txt_DiaChi
             // 
+            this.txt_DiaChi.BorderColor = System.Drawing.Color.Black;
             this.txt_DiaChi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_DiaChi.DefaultText = "";
             this.txt_DiaChi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -82,8 +83,9 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(11, 288);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
@@ -93,6 +95,7 @@
             // 
             // txt_SoDienThoai
             // 
+            this.txt_SoDienThoai.BorderColor = System.Drawing.Color.Black;
             this.txt_SoDienThoai.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_SoDienThoai.DefaultText = "";
             this.txt_SoDienThoai.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -117,8 +120,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(11, 216);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
@@ -135,7 +139,7 @@
             this.rb_Nu.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rb_Nu.CheckedState.InnerOffset = -4;
             this.rb_Nu.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rb_Nu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.rb_Nu.ForeColor = System.Drawing.Color.Black;
             this.rb_Nu.Location = new System.Drawing.Point(922, 76);
             this.rb_Nu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rb_Nu.Name = "rb_Nu";
@@ -158,7 +162,7 @@
             this.rb_Nam.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rb_Nam.CheckedState.InnerOffset = -4;
             this.rb_Nam.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rb_Nam.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.rb_Nam.ForeColor = System.Drawing.Color.Black;
             this.rb_Nam.Location = new System.Drawing.Point(846, 76);
             this.rb_Nam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rb_Nam.Name = "rb_Nam";
@@ -176,7 +180,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(764, 76);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
@@ -186,12 +190,13 @@
             // 
             // btn_LamMoi
             // 
+            this.btn_LamMoi.BackColor = System.Drawing.Color.White;
             this.btn_LamMoi.BorderRadius = 5;
             this.btn_LamMoi.CheckedState.Parent = this.btn_LamMoi;
             this.btn_LamMoi.CustomImages.Parent = this.btn_LamMoi;
-            this.btn_LamMoi.FillColor = System.Drawing.Color.White;
+            this.btn_LamMoi.FillColor = System.Drawing.Color.Black;
             this.btn_LamMoi.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_LamMoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(58)))), ((int)(((byte)(41)))));
+            this.btn_LamMoi.ForeColor = System.Drawing.Color.White;
             this.btn_LamMoi.HoverState.Parent = this.btn_LamMoi;
             this.btn_LamMoi.Location = new System.Drawing.Point(15, 496);
             this.btn_LamMoi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -206,7 +211,7 @@
             this.btn_Huy.BorderRadius = 5;
             this.btn_Huy.CheckedState.Parent = this.btn_Huy;
             this.btn_Huy.CustomImages.Parent = this.btn_Huy;
-            this.btn_Huy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(58)))), ((int)(((byte)(41)))));
+            this.btn_Huy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.btn_Huy.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_Huy.ForeColor = System.Drawing.Color.White;
             this.btn_Huy.HoverState.Parent = this.btn_Huy;
@@ -223,7 +228,7 @@
             this.btn_Xoa.BorderRadius = 5;
             this.btn_Xoa.CheckedState.Parent = this.btn_Xoa;
             this.btn_Xoa.CustomImages.Parent = this.btn_Xoa;
-            this.btn_Xoa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(58)))), ((int)(((byte)(41)))));
+            this.btn_Xoa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.btn_Xoa.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_Xoa.ForeColor = System.Drawing.Color.White;
             this.btn_Xoa.HoverState.Parent = this.btn_Xoa;
@@ -240,7 +245,7 @@
             this.btn_Sua.BorderRadius = 5;
             this.btn_Sua.CheckedState.Parent = this.btn_Sua;
             this.btn_Sua.CustomImages.Parent = this.btn_Sua;
-            this.btn_Sua.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(58)))), ((int)(((byte)(41)))));
+            this.btn_Sua.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.btn_Sua.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_Sua.ForeColor = System.Drawing.Color.White;
             this.btn_Sua.HoverState.Parent = this.btn_Sua;
@@ -257,7 +262,7 @@
             this.btn_Them.BorderRadius = 5;
             this.btn_Them.CheckedState.Parent = this.btn_Them;
             this.btn_Them.CustomImages.Parent = this.btn_Them;
-            this.btn_Them.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(58)))), ((int)(((byte)(41)))));
+            this.btn_Them.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.btn_Them.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_Them.ForeColor = System.Drawing.Color.White;
             this.btn_Them.HoverState.Parent = this.btn_Them;
@@ -271,6 +276,7 @@
             // 
             // txt_TimKhachHang
             // 
+            this.txt_TimKhachHang.BorderColor = System.Drawing.Color.Black;
             this.txt_TimKhachHang.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_TimKhachHang.DefaultText = "";
             this.txt_TimKhachHang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -297,7 +303,7 @@
             this.btn_TimKiem.BorderRadius = 5;
             this.btn_TimKiem.CheckedState.Parent = this.btn_TimKiem;
             this.btn_TimKiem.CustomImages.Parent = this.btn_TimKiem;
-            this.btn_TimKiem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(58)))), ((int)(((byte)(41)))));
+            this.btn_TimKiem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.btn_TimKiem.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_TimKiem.ForeColor = System.Drawing.Color.White;
             this.btn_TimKiem.HoverState.Parent = this.btn_TimKiem;
@@ -311,6 +317,7 @@
             // 
             // guna2TextBox1
             // 
+            this.guna2TextBox1.BorderColor = System.Drawing.Color.Black;
             this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox1.DefaultText = "";
             this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -338,7 +345,7 @@
             this.gv_CList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gv_CList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gv_CList.BackgroundColor = System.Drawing.Color.White;
-            this.gv_CList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gv_CList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.gv_CList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gv_CList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -353,7 +360,7 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -387,13 +394,14 @@
             this.gv_CList.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.gv_CList.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gv_CList.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.gv_CList.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gv_CList.ThemeStyle.RowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
             this.gv_CList.ThemeStyle.RowsStyle.Height = 24;
             this.gv_CList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gv_CList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // txt_TenDangNhap
             // 
+            this.txt_TenDangNhap.BorderColor = System.Drawing.Color.Black;
             this.txt_TenDangNhap.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_TenDangNhap.DefaultText = "";
             this.txt_TenDangNhap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -418,8 +426,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(11, 145);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
@@ -430,8 +439,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(11, 76);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
@@ -443,7 +453,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Sitka Text Semibold", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.ForeColor = System.Drawing.Color.LightYellow;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(343, 19);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
@@ -453,6 +463,7 @@
             // 
             // txt_DiemTichLuy
             // 
+            this.txt_DiemTichLuy.BorderColor = System.Drawing.Color.Black;
             this.txt_DiemTichLuy.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_DiemTichLuy.DefaultText = "0";
             this.txt_DiemTichLuy.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -478,8 +489,9 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(219, 288);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
@@ -491,7 +503,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(100)))), ((int)(((byte)(74)))));
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.txt_DiemTichLuy);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txt_DiaChi);
