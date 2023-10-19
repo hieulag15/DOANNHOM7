@@ -44,7 +44,7 @@
             // 
             this.pnl_trangchinh.BackColor = System.Drawing.Color.White;
             this.pnl_trangchinh.Location = new System.Drawing.Point(280, 95);
-            this.pnl_trangchinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl_trangchinh.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_trangchinh.Name = "pnl_trangchinh";
             this.pnl_trangchinh.ShadowDecoration.Parent = this.pnl_trangchinh;
             this.pnl_trangchinh.Size = new System.Drawing.Size(976, 554);
@@ -59,7 +59,7 @@
             this.pnl_thanhben.Controls.Add(this.btn_khachhang);
             this.pnl_thanhben.Controls.Add(this.btn_sanpham);
             this.pnl_thanhben.Location = new System.Drawing.Point(1, 1);
-            this.pnl_thanhben.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl_thanhben.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_thanhben.Name = "pnl_thanhben";
             this.pnl_thanhben.ShadowDecoration.Parent = this.pnl_thanhben;
             this.pnl_thanhben.Size = new System.Drawing.Size(280, 648);
@@ -79,7 +79,7 @@
             this.btn_thongke.ImageOffset = new System.Drawing.Point(20, 30);
             this.btn_thongke.ImageSize = new System.Drawing.Size(60, 60);
             this.btn_thongke.Location = new System.Drawing.Point(0, 490);
-            this.btn_thongke.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_thongke.Margin = new System.Windows.Forms.Padding(2);
             this.btn_thongke.Name = "btn_thongke";
             this.btn_thongke.ShadowDecoration.Parent = this.btn_thongke;
             this.btn_thongke.Size = new System.Drawing.Size(280, 95);
@@ -101,7 +101,7 @@
             this.btn_nhacungcap.ImageOffset = new System.Drawing.Point(20, 30);
             this.btn_nhacungcap.ImageSize = new System.Drawing.Size(60, 60);
             this.btn_nhacungcap.Location = new System.Drawing.Point(0, 391);
-            this.btn_nhacungcap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_nhacungcap.Margin = new System.Windows.Forms.Padding(2);
             this.btn_nhacungcap.Name = "btn_nhacungcap";
             this.btn_nhacungcap.ShadowDecoration.Parent = this.btn_nhacungcap;
             this.btn_nhacungcap.Size = new System.Drawing.Size(280, 95);
@@ -124,7 +124,7 @@
             this.btn_taikhoan.ImageOffset = new System.Drawing.Point(25, 30);
             this.btn_taikhoan.ImageSize = new System.Drawing.Size(60, 60);
             this.btn_taikhoan.Location = new System.Drawing.Point(-8, -1);
-            this.btn_taikhoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_taikhoan.Margin = new System.Windows.Forms.Padding(2);
             this.btn_taikhoan.Name = "btn_taikhoan";
             this.btn_taikhoan.ShadowDecoration.Parent = this.btn_taikhoan;
             this.btn_taikhoan.Size = new System.Drawing.Size(288, 95);
@@ -146,7 +146,7 @@
             this.btn_thanhtoan.ImageOffset = new System.Drawing.Point(20, 30);
             this.btn_thanhtoan.ImageSize = new System.Drawing.Size(60, 60);
             this.btn_thanhtoan.Location = new System.Drawing.Point(0, 292);
-            this.btn_thanhtoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_thanhtoan.Margin = new System.Windows.Forms.Padding(2);
             this.btn_thanhtoan.Name = "btn_thanhtoan";
             this.btn_thanhtoan.ShadowDecoration.Parent = this.btn_thanhtoan;
             this.btn_thanhtoan.Size = new System.Drawing.Size(280, 95);
@@ -167,7 +167,7 @@
             this.btn_khachhang.ImageOffset = new System.Drawing.Point(20, 30);
             this.btn_khachhang.ImageSize = new System.Drawing.Size(60, 60);
             this.btn_khachhang.Location = new System.Drawing.Point(0, 193);
-            this.btn_khachhang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_khachhang.Margin = new System.Windows.Forms.Padding(2);
             this.btn_khachhang.Name = "btn_khachhang";
             this.btn_khachhang.ShadowDecoration.Parent = this.btn_khachhang;
             this.btn_khachhang.Size = new System.Drawing.Size(280, 95);
@@ -189,7 +189,7 @@
             this.btn_sanpham.ImageOffset = new System.Drawing.Point(20, 30);
             this.btn_sanpham.ImageSize = new System.Drawing.Size(60, 60);
             this.btn_sanpham.Location = new System.Drawing.Point(0, 94);
-            this.btn_sanpham.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_sanpham.Margin = new System.Windows.Forms.Padding(2);
             this.btn_sanpham.Name = "btn_sanpham";
             this.btn_sanpham.ShadowDecoration.Parent = this.btn_sanpham;
             this.btn_sanpham.Size = new System.Drawing.Size(280, 95);
@@ -202,7 +202,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(568, 31);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(447, 33);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(386, 35);
             this.guna2HtmlLabel1.TabIndex = 1;
@@ -219,7 +219,7 @@
             this.Controls.Add(this.pnl_trangchinh);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_trangchinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.pnl_thanhben.ResumeLayout(false);
