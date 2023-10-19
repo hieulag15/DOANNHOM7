@@ -55,7 +55,6 @@
             this.pnl_thanhben.Controls.Add(this.btn_thanhtoan);
             this.pnl_thanhben.Controls.Add(this.btn_khachhang);
             this.pnl_thanhben.Controls.Add(this.btn_sanpham);
-            this.pnl_thanhben.Controls.Add(this.btn_taikhoan);
             this.pnl_thanhben.Location = new System.Drawing.Point(1, 1);
             this.pnl_thanhben.Name = "pnl_thanhben";
             this.pnl_thanhben.ShadowDecoration.Parent = this.pnl_thanhben;
@@ -178,10 +177,10 @@
             this.btn_taikhoan.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_taikhoan.ImageOffset = new System.Drawing.Point(20, 30);
             this.btn_taikhoan.ImageSize = new System.Drawing.Size(60, 60);
-            this.btn_taikhoan.Location = new System.Drawing.Point(0, 0);
+            this.btn_taikhoan.Location = new System.Drawing.Point(1404, 1);
             this.btn_taikhoan.Name = "btn_taikhoan";
             this.btn_taikhoan.ShadowDecoration.Parent = this.btn_taikhoan;
-            this.btn_taikhoan.Size = new System.Drawing.Size(374, 117);
+            this.btn_taikhoan.Size = new System.Drawing.Size(268, 117);
             this.btn_taikhoan.TabIndex = 0;
             this.btn_taikhoan.Text = "Nhân viên";
             this.btn_taikhoan.TextOffset = new System.Drawing.Point(40, -30);
@@ -194,6 +193,7 @@
             this.ClientSize = new System.Drawing.Size(1674, 1077);
             this.Controls.Add(this.pnl_thanhben);
             this.Controls.Add(this.pnl_trangchinh);
+            this.Controls.Add(this.btn_taikhoan);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_trangchinh";
