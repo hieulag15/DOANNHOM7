@@ -41,10 +41,10 @@ namespace DOAN
             TienIch.addUserControl(paymentUI, pnl_trangchinh);
         }
 
-        private void btn_HienThiTaiKhoan_Click(object sender, EventArgs e)
+        private void btn_QuanlyNhanvien_Click(object sender, EventArgs e)
         {
-            us_accountUI accountUI = new us_accountUI();
-            TienIch.addUserControl(accountUI, pnl_trangchinh);
+            us_employeeUI employeeUI = new us_employeeUI();
+            TienIch.addUserControl(employeeUI, pnl_trangchinh);
         }
     }
 }
