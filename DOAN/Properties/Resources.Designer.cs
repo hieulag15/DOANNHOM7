@@ -103,16 +103,6 @@ namespace DOAN.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap hacker {
-            get {
-                object obj = ResourceManager.GetObject("hacker", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap hacker__1_ {
             get {
                 object obj = ResourceManager.GetObject("hacker (1)", resourceCulture);
@@ -136,6 +126,16 @@ namespace DOAN.Properties {
         internal static System.Drawing.Bitmap rating {
             get {
                 object obj = ResourceManager.GetObject("rating", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap s {
+            get {
+                object obj = ResourceManager.GetObject("s", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
