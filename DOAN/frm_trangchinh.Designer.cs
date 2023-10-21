@@ -30,13 +30,13 @@
         {
             this.pnl_trangchinh = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.pnl_thanhben = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btn_thongke = new Guna.UI2.WinForms.Guna2TileButton();
             this.btn_nhacungcap = new Guna.UI2.WinForms.Guna2TileButton();
             this.btn_taikhoan = new Guna.UI2.WinForms.Guna2TileButton();
             this.btn_thanhtoan = new Guna.UI2.WinForms.Guna2TileButton();
             this.btn_khachhang = new Guna.UI2.WinForms.Guna2TileButton();
             this.btn_sanpham = new Guna.UI2.WinForms.Guna2TileButton();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnl_thanhben.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +64,17 @@
             this.pnl_thanhben.ShadowDecoration.Parent = this.pnl_thanhben;
             this.pnl_thanhben.Size = new System.Drawing.Size(280, 648);
             this.pnl_thanhben.TabIndex = 0;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(447, 33);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(386, 35);
+            this.guna2HtmlLabel1.TabIndex = 1;
+            this.guna2HtmlLabel1.Text = "HỆ THỐNG QUẢN LÝ CỬA HÀNG";
             // 
             // btn_thongke
             // 
@@ -196,17 +207,6 @@
             this.btn_sanpham.TabIndex = 1;
             this.btn_sanpham.Text = "Sản phẩm";
             this.btn_sanpham.TextOffset = new System.Drawing.Point(30, -30);
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(447, 33);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(386, 35);
-            this.guna2HtmlLabel1.TabIndex = 1;
-            this.guna2HtmlLabel1.Text = "HỆ THỐNG QUẢN LÝ CỬA HÀNG";
             // 
             // frm_trangchinh
             // 
