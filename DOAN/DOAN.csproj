@@ -96,6 +96,12 @@
     <Compile Include="us_accountUI.Designer.cs">
       <DependentUpon>us_accountUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="us_banhang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="us_banhang.Designer.cs">
+      <DependentUpon>us_banhang.cs</DependentUpon>
+    </Compile>
     <Compile Include="us_customerUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="us_accountUI.resx">
       <DependentUpon>us_accountUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="us_banhang.resx">
+      <DependentUpon>us_banhang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="us_customerUI.resx">
       <DependentUpon>us_customerUI.cs</DependentUpon>
@@ -182,6 +191,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cancel %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

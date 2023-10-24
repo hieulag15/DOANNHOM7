@@ -21,7 +21,10 @@ namespace DOAN
 
         private void frm_trangchinh_Load(object sender, EventArgs e)
         {
+            timer1.Start();
 
+            lbl_time.Text = DateTime.Now.ToLongTimeString();
+            lbl_date.Text = DateTime.Now.ToLongDateString();
         }
 
         private void btn_HienThiSanPham_Click(object sender, EventArgs e)
@@ -61,6 +64,23 @@ namespace DOAN
         private void pic_dong_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbl_time.Text = DateTime.Now.ToLongTimeString();
+            timer1.Start();
+        }
+
+        private void btn_NhapKho_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Banhang_Click(object sender, EventArgs e)
+        {
+            us_banhang us_Banhang = new us_banhang();
+            TienIch.addUserControl(us_Banhang, pnl_trangchinh);
         }
     }
 }
