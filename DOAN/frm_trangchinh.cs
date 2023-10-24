@@ -52,5 +52,15 @@ namespace DOAN
             frm_mathang Fmathang = new frm_mathang();
             TienIch.addForm(Fmathang, pnl_trangchinh);
         }
+
+        private void btn_TaikhoanAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pic_dong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

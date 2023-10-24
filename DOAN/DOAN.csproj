@@ -38,10 +38,13 @@
       <HintPath>C:\Users\HP\Downloads\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,6 +54,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DATA\DBConnection.cs" />
@@ -163,6 +167,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\recruitment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b11882e6-2ebe-0c01-43d8-001aa1e17eb9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\direct-marketing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clothes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
