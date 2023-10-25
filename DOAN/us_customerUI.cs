@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN.DS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,22 @@ namespace DOAN
         public us_customerUI()
         {
             InitializeComponent();
+        }
+
+        DataTable dtCustomer = new DataTable();
+        Customer dbCustomer = new Customer();
+
+        public void LoadCustomer()
+        {
+            dtCustomer.Clear();
+            DataSet ds = dbCustomer.getCustomer();
+            dtCustomer = ds.Tables[0];
+            dgv_Customer.DataSource = dtCustomer;
+        }
+
+        private void us_customerUI_Load(object sender, EventArgs e)
+        {
+            LoadCustomer();
         }
     }
 }
