@@ -54,5 +54,11 @@ namespace DOAN
         {
 
         }
+
+        private void btn_XemChiTiet_Click(object sender, EventArgs e)
+        {
+            us_InforProduct us_InforProduct = new us_InforProduct(pnl_trangchinh);
+            TienIch.addUserControl(us_InforProduct, pnl_trangchinh);
+        }
     }
 }

@@ -128,6 +128,12 @@
     <Compile Include="us_employeeUI.Designer.cs">
       <DependentUpon>us_employeeUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="us_InforProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="us_InforProduct.Designer.cs">
+      <DependentUpon>us_InforProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="us_paymentUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="us_employeeUI.resx">
       <DependentUpon>us_employeeUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="us_InforProduct.resx">
+      <DependentUpon>us_InforProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="us_paymentUI.resx">
       <DependentUpon>us_paymentUI.cs</DependentUpon>
