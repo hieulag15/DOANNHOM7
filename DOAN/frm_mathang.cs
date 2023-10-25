@@ -14,9 +14,16 @@ namespace DOAN
 {
     public partial class frm_mathang : Form
     {
+        private Panel pnl_trangchinh;
         public frm_mathang()
         {
             InitializeComponent();
+        }
+
+        public frm_mathang(Panel pnl_trangchinh)
+        {
+            InitializeComponent();
+            this.pnl_trangchinh= pnl_trangchinh;
         }
 
         DataTable dtProduct = new DataTable();

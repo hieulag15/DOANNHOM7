@@ -47,7 +47,7 @@ namespace DOAN
 
         private void btn_HienThiMatHang_Click(object sender, EventArgs e)
         {
-            frm_mathang Fmathang = new frm_mathang();
+            frm_mathang Fmathang = new frm_mathang(this.pnl_trangchinh);
             TienIch.addForm(Fmathang, pnl_trangchinh);
         }
 

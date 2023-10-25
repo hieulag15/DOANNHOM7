@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2TileButton1 = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2TileButton6 = new Guna.UI2.WinForms.Guna2TileButton();
@@ -42,15 +42,15 @@
             this.dgv_Product = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TileButton8 = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btn_Them = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btn_Xoa = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btn_XemChiTiet = new Guna.UI2.WinForms.Guna2TileButton();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2TileButton10 = new Guna.UI2.WinForms.Guna2TileButton();
-            this.guna2TileButton9 = new Guna.UI2.WinForms.Guna2TileButton();
-            this.guna2TileButton11 = new Guna.UI2.WinForms.Guna2TileButton();
-            this.guna2TileButton12 = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Product)).BeginInit();
             this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -192,35 +192,36 @@
             // 
             // dgv_Product
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgv_Product.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgv_Product.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Product.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Product.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Product.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_Product.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_Product.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Product.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Product.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Product.ColumnHeadersHeight = 21;
             this.dgv_Product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Product.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Product.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Product.EnableHeadersVisualStyles = false;
             this.dgv_Product.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_Product.Location = new System.Drawing.Point(2, 66);
             this.dgv_Product.Name = "dgv_Product";
+            this.dgv_Product.RowHeadersVisible = false;
             this.dgv_Product.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgv_Product.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Product.Size = new System.Drawing.Size(701, 457);
@@ -279,23 +280,64 @@
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(148, 38);
+            this.guna2TextBox1.Size = new System.Drawing.Size(240, 38);
             this.guna2TextBox1.TabIndex = 7;
             // 
-            // guna2TileButton8
+            // btn_Them
             // 
-            this.guna2TileButton8.CheckedState.Parent = this.guna2TileButton8;
-            this.guna2TileButton8.CustomImages.Parent = this.guna2TileButton8;
-            this.guna2TileButton8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.guna2TileButton8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TileButton8.ForeColor = System.Drawing.Color.White;
-            this.guna2TileButton8.HoverState.Parent = this.guna2TileButton8;
-            this.guna2TileButton8.Location = new System.Drawing.Point(878, 19);
-            this.guna2TileButton8.Name = "guna2TileButton8";
-            this.guna2TileButton8.ShadowDecoration.Parent = this.guna2TileButton8;
-            this.guna2TileButton8.Size = new System.Drawing.Size(82, 38);
-            this.guna2TileButton8.TabIndex = 8;
-            this.guna2TileButton8.Text = "Tìm kiếm";
+            this.btn_Them.CheckedState.Parent = this.btn_Them;
+            this.btn_Them.CustomImages.Parent = this.btn_Them;
+            this.btn_Them.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btn_Them.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Them.ForeColor = System.Drawing.Color.White;
+            this.btn_Them.HoverState.Parent = this.btn_Them;
+            this.btn_Them.Location = new System.Drawing.Point(724, 497);
+            this.btn_Them.Name = "btn_Them";
+            this.btn_Them.ShadowDecoration.Parent = this.btn_Them;
+            this.btn_Them.Size = new System.Drawing.Size(112, 42);
+            this.btn_Them.TabIndex = 10;
+            this.btn_Them.Text = "Thêm";
+            // 
+            // btn_Xoa
+            // 
+            this.btn_Xoa.CheckedState.Parent = this.btn_Xoa;
+            this.btn_Xoa.CustomImages.Parent = this.btn_Xoa;
+            this.btn_Xoa.FillColor = System.Drawing.Color.IndianRed;
+            this.btn_Xoa.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Xoa.ForeColor = System.Drawing.Color.White;
+            this.btn_Xoa.HoverState.Parent = this.btn_Xoa;
+            this.btn_Xoa.Location = new System.Drawing.Point(849, 497);
+            this.btn_Xoa.Name = "btn_Xoa";
+            this.btn_Xoa.ShadowDecoration.Parent = this.btn_Xoa;
+            this.btn_Xoa.Size = new System.Drawing.Size(115, 42);
+            this.btn_Xoa.TabIndex = 12;
+            this.btn_Xoa.Text = "Xóa";
+            // 
+            // btn_XemChiTiet
+            // 
+            this.btn_XemChiTiet.CheckedState.Parent = this.btn_XemChiTiet;
+            this.btn_XemChiTiet.CustomImages.Parent = this.btn_XemChiTiet;
+            this.btn_XemChiTiet.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btn_XemChiTiet.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_XemChiTiet.ForeColor = System.Drawing.Color.White;
+            this.btn_XemChiTiet.HoverState.Parent = this.btn_XemChiTiet;
+            this.btn_XemChiTiet.Location = new System.Drawing.Point(724, 433);
+            this.btn_XemChiTiet.Name = "btn_XemChiTiet";
+            this.btn_XemChiTiet.ShadowDecoration.Parent = this.btn_XemChiTiet;
+            this.btn_XemChiTiet.Size = new System.Drawing.Size(240, 42);
+            this.btn_XemChiTiet.TabIndex = 13;
+            this.btn_XemChiTiet.Text = "Xem chi tiết";
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = global::DOAN.Properties.Resources.search;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(931, 24);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(31, 28);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 14;
+            this.guna2PictureBox2.TabStop = false;
             // 
             // guna2PictureBox1
             // 
@@ -308,78 +350,17 @@
             this.guna2PictureBox1.TabIndex = 9;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // guna2TileButton10
-            // 
-            this.guna2TileButton10.CheckedState.Parent = this.guna2TileButton10;
-            this.guna2TileButton10.CustomImages.Parent = this.guna2TileButton10;
-            this.guna2TileButton10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.guna2TileButton10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TileButton10.ForeColor = System.Drawing.Color.White;
-            this.guna2TileButton10.HoverState.Parent = this.guna2TileButton10;
-            this.guna2TileButton10.Location = new System.Drawing.Point(724, 497);
-            this.guna2TileButton10.Name = "guna2TileButton10";
-            this.guna2TileButton10.ShadowDecoration.Parent = this.guna2TileButton10;
-            this.guna2TileButton10.Size = new System.Drawing.Size(108, 42);
-            this.guna2TileButton10.TabIndex = 11;
-            this.guna2TileButton10.Text = "Sửa";
-            // 
-            // guna2TileButton9
-            // 
-            this.guna2TileButton9.CheckedState.Parent = this.guna2TileButton9;
-            this.guna2TileButton9.CustomImages.Parent = this.guna2TileButton9;
-            this.guna2TileButton9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.guna2TileButton9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TileButton9.ForeColor = System.Drawing.Color.White;
-            this.guna2TileButton9.HoverState.Parent = this.guna2TileButton9;
-            this.guna2TileButton9.Location = new System.Drawing.Point(856, 433);
-            this.guna2TileButton9.Name = "guna2TileButton9";
-            this.guna2TileButton9.ShadowDecoration.Parent = this.guna2TileButton9;
-            this.guna2TileButton9.Size = new System.Drawing.Size(108, 42);
-            this.guna2TileButton9.TabIndex = 10;
-            this.guna2TileButton9.Text = "Thêm";
-            // 
-            // guna2TileButton11
-            // 
-            this.guna2TileButton11.CheckedState.Parent = this.guna2TileButton11;
-            this.guna2TileButton11.CustomImages.Parent = this.guna2TileButton11;
-            this.guna2TileButton11.FillColor = System.Drawing.Color.IndianRed;
-            this.guna2TileButton11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TileButton11.ForeColor = System.Drawing.Color.White;
-            this.guna2TileButton11.HoverState.Parent = this.guna2TileButton11;
-            this.guna2TileButton11.Location = new System.Drawing.Point(856, 497);
-            this.guna2TileButton11.Name = "guna2TileButton11";
-            this.guna2TileButton11.ShadowDecoration.Parent = this.guna2TileButton11;
-            this.guna2TileButton11.Size = new System.Drawing.Size(108, 42);
-            this.guna2TileButton11.TabIndex = 12;
-            this.guna2TileButton11.Text = "Xóa";
-            // 
-            // guna2TileButton12
-            // 
-            this.guna2TileButton12.CheckedState.Parent = this.guna2TileButton12;
-            this.guna2TileButton12.CustomImages.Parent = this.guna2TileButton12;
-            this.guna2TileButton12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.guna2TileButton12.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TileButton12.ForeColor = System.Drawing.Color.White;
-            this.guna2TileButton12.HoverState.Parent = this.guna2TileButton12;
-            this.guna2TileButton12.Location = new System.Drawing.Point(724, 433);
-            this.guna2TileButton12.Name = "guna2TileButton12";
-            this.guna2TileButton12.ShadowDecoration.Parent = this.guna2TileButton12;
-            this.guna2TileButton12.Size = new System.Drawing.Size(108, 42);
-            this.guna2TileButton12.TabIndex = 13;
-            this.guna2TileButton12.Text = "Xem";
-            // 
             // frm_mathang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(976, 554);
-            this.Controls.Add(this.guna2TileButton12);
-            this.Controls.Add(this.guna2TileButton11);
-            this.Controls.Add(this.guna2TileButton10);
-            this.Controls.Add(this.guna2TileButton9);
+            this.Controls.Add(this.guna2PictureBox2);
+            this.Controls.Add(this.btn_XemChiTiet);
+            this.Controls.Add(this.btn_Xoa);
+            this.Controls.Add(this.btn_Them);
             this.Controls.Add(this.guna2PictureBox1);
-            this.Controls.Add(this.guna2TileButton8);
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -389,6 +370,7 @@
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Product)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -407,11 +389,10 @@
         private Guna.UI2.WinForms.Guna2DataGridView dgv_Product;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton8;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton10;
-        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton9;
-        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton11;
-        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton12;
+        private Guna.UI2.WinForms.Guna2TileButton btn_Them;
+        private Guna.UI2.WinForms.Guna2TileButton btn_Xoa;
+        private Guna.UI2.WinForms.Guna2TileButton btn_XemChiTiet;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
     }
 }

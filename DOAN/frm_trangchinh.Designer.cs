@@ -43,7 +43,8 @@
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pic_dong = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btn_TaikhoanAdmin = new Guna.UI2.WinForms.Guna2TileButton();
+            this.guna2TileButton2 = new Guna.UI2.WinForms.Guna2TileButton();
+            this.guna2TileButton1 = new Guna.UI2.WinForms.Guna2TileButton();
             this.btn_Banhang = new Guna.UI2.WinForms.Guna2TileButton();
             this.btn_QuanlyNhanvien = new Guna.UI2.WinForms.Guna2TileButton();
             this.btn_HienThiKhachHang = new Guna.UI2.WinForms.Guna2TileButton();
@@ -51,9 +52,13 @@
             this.btn_NhapKho = new Guna.UI2.WinForms.Guna2TileButton();
             this.btn_HienThiHoaDon = new Guna.UI2.WinForms.Guna2TileButton();
             this.btn_HienThiMatHang = new Guna.UI2.WinForms.Guna2TileButton();
+            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnl_thanhben.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_dong)).BeginInit();
+            this.guna2Panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_trangchinh
@@ -70,9 +75,11 @@
             // pnl_thanhben
             // 
             this.pnl_thanhben.BorderColor = System.Drawing.Color.Black;
+            this.pnl_thanhben.Controls.Add(this.guna2Panel6);
+            this.pnl_thanhben.Controls.Add(this.guna2TileButton2);
+            this.pnl_thanhben.Controls.Add(this.guna2TileButton1);
             this.pnl_thanhben.Controls.Add(this.guna2Panel2);
             this.pnl_thanhben.Controls.Add(this.guna2Panel1);
-            this.pnl_thanhben.Controls.Add(this.btn_TaikhoanAdmin);
             this.pnl_thanhben.Controls.Add(this.btn_Banhang);
             this.pnl_thanhben.Controls.Add(this.btn_QuanlyNhanvien);
             this.pnl_thanhben.Controls.Add(this.btn_HienThiKhachHang);
@@ -108,15 +115,16 @@
             // guna2Panel3
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.White;
-            this.guna2Panel3.BorderColor = System.Drawing.Color.Black;
+            this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.guna2Panel3.BorderThickness = 2;
             this.guna2Panel3.Controls.Add(this.pic_dong);
             this.guna2Panel3.Controls.Add(this.guna2Panel5);
             this.guna2Panel3.Controls.Add(this.guna2Panel4);
             this.guna2Panel3.Controls.Add(this.guna2HtmlLabel2);
-            this.guna2Panel3.Location = new System.Drawing.Point(278, 0);
+            this.guna2Panel3.Location = new System.Drawing.Point(278, -2);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
-            this.guna2Panel3.Size = new System.Drawing.Size(978, 54);
+            this.guna2Panel3.Size = new System.Drawing.Size(978, 56);
             this.guna2Panel3.TabIndex = 1;
             // 
             // guna2Panel5
@@ -196,7 +204,7 @@
             // pic_dong
             // 
             this.pic_dong.Image = global::DOAN.Properties.Resources.cancel__1_;
-            this.pic_dong.Location = new System.Drawing.Point(942, 3);
+            this.pic_dong.Location = new System.Drawing.Point(943, 4);
             this.pic_dong.Name = "pic_dong";
             this.pic_dong.ShadowDecoration.Parent = this.pic_dong;
             this.pic_dong.Size = new System.Drawing.Size(33, 26);
@@ -205,27 +213,49 @@
             this.pic_dong.TabStop = false;
             this.pic_dong.Click += new System.EventHandler(this.pic_dong_Click);
             // 
-            // btn_TaikhoanAdmin
+            // guna2TileButton2
             // 
-            this.btn_TaikhoanAdmin.BorderThickness = 2;
-            this.btn_TaikhoanAdmin.CheckedState.Parent = this.btn_TaikhoanAdmin;
-            this.btn_TaikhoanAdmin.CustomImages.Parent = this.btn_TaikhoanAdmin;
-            this.btn_TaikhoanAdmin.FillColor = System.Drawing.Color.White;
-            this.btn_TaikhoanAdmin.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_TaikhoanAdmin.ForeColor = System.Drawing.Color.White;
-            this.btn_TaikhoanAdmin.HoverState.Parent = this.btn_TaikhoanAdmin;
-            this.btn_TaikhoanAdmin.Image = global::DOAN.Properties.Resources.clothes;
-            this.btn_TaikhoanAdmin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_TaikhoanAdmin.ImageOffset = new System.Drawing.Point(90, 0);
-            this.btn_TaikhoanAdmin.ImageSize = new System.Drawing.Size(80, 80);
-            this.btn_TaikhoanAdmin.Location = new System.Drawing.Point(-5, -4);
-            this.btn_TaikhoanAdmin.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_TaikhoanAdmin.Name = "btn_TaikhoanAdmin";
-            this.btn_TaikhoanAdmin.ShadowDecoration.Parent = this.btn_TaikhoanAdmin;
-            this.btn_TaikhoanAdmin.Size = new System.Drawing.Size(285, 162);
-            this.btn_TaikhoanAdmin.TabIndex = 0;
-            this.btn_TaikhoanAdmin.TextOffset = new System.Drawing.Point(15, -23);
-            this.btn_TaikhoanAdmin.Click += new System.EventHandler(this.btn_TaikhoanAdmin_Click);
+            this.guna2TileButton2.BackColor = System.Drawing.Color.White;
+            this.guna2TileButton2.CheckedState.Parent = this.guna2TileButton2;
+            this.guna2TileButton2.CustomImages.Parent = this.guna2TileButton2;
+            this.guna2TileButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.guna2TileButton2.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TileButton2.ForeColor = System.Drawing.Color.White;
+            this.guna2TileButton2.HoverState.Parent = this.guna2TileButton2;
+            this.guna2TileButton2.Image = global::DOAN.Properties.Resources.settings;
+            this.guna2TileButton2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2TileButton2.ImageOffset = new System.Drawing.Point(30, 20);
+            this.guna2TileButton2.ImageSize = new System.Drawing.Size(40, 40);
+            this.guna2TileButton2.Location = new System.Drawing.Point(4, 653);
+            this.guna2TileButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2TileButton2.Name = "guna2TileButton2";
+            this.guna2TileButton2.ShadowDecoration.Parent = this.guna2TileButton2;
+            this.guna2TileButton2.Size = new System.Drawing.Size(276, 57);
+            this.guna2TileButton2.TabIndex = 8;
+            this.guna2TileButton2.Text = "Cài đặt";
+            this.guna2TileButton2.TextOffset = new System.Drawing.Point(14, -23);
+            // 
+            // guna2TileButton1
+            // 
+            this.guna2TileButton1.BackColor = System.Drawing.Color.White;
+            this.guna2TileButton1.CheckedState.Parent = this.guna2TileButton1;
+            this.guna2TileButton1.CustomImages.Parent = this.guna2TileButton1;
+            this.guna2TileButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.guna2TileButton1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TileButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2TileButton1.HoverState.Parent = this.guna2TileButton1;
+            this.guna2TileButton1.Image = global::DOAN.Properties.Resources.manufacture;
+            this.guna2TileButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2TileButton1.ImageOffset = new System.Drawing.Point(30, 20);
+            this.guna2TileButton1.ImageSize = new System.Drawing.Size(40, 40);
+            this.guna2TileButton1.Location = new System.Drawing.Point(4, 400);
+            this.guna2TileButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2TileButton1.Name = "guna2TileButton1";
+            this.guna2TileButton1.ShadowDecoration.Parent = this.guna2TileButton1;
+            this.guna2TileButton1.Size = new System.Drawing.Size(276, 57);
+            this.guna2TileButton1.TabIndex = 7;
+            this.guna2TileButton1.Text = "Nhà cung cấp";
+            this.guna2TileButton1.TextOffset = new System.Drawing.Point(47, -23);
             // 
             // btn_Banhang
             // 
@@ -263,15 +293,15 @@
             this.btn_QuanlyNhanvien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_QuanlyNhanvien.ImageOffset = new System.Drawing.Point(30, 25);
             this.btn_QuanlyNhanvien.ImageSize = new System.Drawing.Size(40, 40);
-            this.btn_QuanlyNhanvien.Location = new System.Drawing.Point(2, 522);
+            this.btn_QuanlyNhanvien.Location = new System.Drawing.Point(4, 583);
             this.btn_QuanlyNhanvien.Margin = new System.Windows.Forms.Padding(2);
             this.btn_QuanlyNhanvien.Name = "btn_QuanlyNhanvien";
             this.btn_QuanlyNhanvien.ShadowDecoration.Parent = this.btn_QuanlyNhanvien;
-            this.btn_QuanlyNhanvien.Size = new System.Drawing.Size(276, 77);
+            this.btn_QuanlyNhanvien.Size = new System.Drawing.Size(276, 66);
             this.btn_QuanlyNhanvien.TabIndex = 6;
             this.btn_QuanlyNhanvien.Text = "Quản lý                   nhân viên";
             this.btn_QuanlyNhanvien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_QuanlyNhanvien.TextOffset = new System.Drawing.Point(100, -23);
+            this.btn_QuanlyNhanvien.TextOffset = new System.Drawing.Point(98, -23);
             this.btn_QuanlyNhanvien.Click += new System.EventHandler(this.btn_QuanlyNhanvien_Click);
             // 
             // btn_HienThiKhachHang
@@ -286,7 +316,7 @@
             this.btn_HienThiKhachHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_HienThiKhachHang.ImageOffset = new System.Drawing.Point(30, 20);
             this.btn_HienThiKhachHang.ImageSize = new System.Drawing.Size(40, 40);
-            this.btn_HienThiKhachHang.Location = new System.Drawing.Point(2, 400);
+            this.btn_HienThiKhachHang.Location = new System.Drawing.Point(4, 461);
             this.btn_HienThiKhachHang.Margin = new System.Windows.Forms.Padding(2);
             this.btn_HienThiKhachHang.Name = "btn_HienThiKhachHang";
             this.btn_HienThiKhachHang.ShadowDecoration.Parent = this.btn_HienThiKhachHang;
@@ -309,7 +339,7 @@
             this.btn_thongke.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_thongke.ImageOffset = new System.Drawing.Point(30, 20);
             this.btn_thongke.ImageSize = new System.Drawing.Size(40, 40);
-            this.btn_thongke.Location = new System.Drawing.Point(2, 461);
+            this.btn_thongke.Location = new System.Drawing.Point(4, 522);
             this.btn_thongke.Margin = new System.Windows.Forms.Padding(2);
             this.btn_thongke.Name = "btn_thongke";
             this.btn_thongke.ShadowDecoration.Parent = this.btn_thongke;
@@ -361,7 +391,7 @@
             this.btn_HienThiHoaDon.Size = new System.Drawing.Size(276, 57);
             this.btn_HienThiHoaDon.TabIndex = 3;
             this.btn_HienThiHoaDon.Text = "Hóa đơn";
-            this.btn_HienThiHoaDon.TextOffset = new System.Drawing.Point(20, -23);
+            this.btn_HienThiHoaDon.TextOffset = new System.Drawing.Point(21, -23);
             this.btn_HienThiHoaDon.Click += new System.EventHandler(this.btn_HienThiHoaDon_Click);
             // 
             // btn_HienThiMatHang
@@ -387,6 +417,27 @@
             this.btn_HienThiMatHang.TextOffset = new System.Drawing.Point(24, -23);
             this.btn_HienThiMatHang.Click += new System.EventHandler(this.btn_HienThiMatHang_Click);
             // 
+            // guna2Panel6
+            // 
+            this.guna2Panel6.BackColor = System.Drawing.Color.White;
+            this.guna2Panel6.Controls.Add(this.guna2PictureBox1);
+            this.guna2Panel6.Location = new System.Drawing.Point(0, -2);
+            this.guna2Panel6.Name = "guna2Panel6";
+            this.guna2Panel6.ShadowDecoration.Parent = this.guna2Panel6;
+            this.guna2Panel6.Size = new System.Drawing.Size(281, 159);
+            this.guna2Panel6.TabIndex = 0;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::DOAN.Properties.Resources.logo_shop;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(46, 2);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(190, 157);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // frm_trangchinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,6 +461,8 @@
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_dong)).EndInit();
+            this.guna2Panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,7 +472,6 @@
 
         private Guna.UI2.WinForms.Guna2GradientPanel pnl_trangchinh;
         private Guna.UI2.WinForms.Guna2GradientPanel pnl_thanhben;
-        private Guna.UI2.WinForms.Guna2TileButton btn_TaikhoanAdmin;
         private Guna.UI2.WinForms.Guna2TileButton btn_HienThiHoaDon;
         private Guna.UI2.WinForms.Guna2TileButton btn_HienThiKhachHang;
         private Guna.UI2.WinForms.Guna2TileButton btn_HienThiMatHang;
@@ -439,5 +491,9 @@
         private System.Windows.Forms.Timer timer1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton2;
+        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

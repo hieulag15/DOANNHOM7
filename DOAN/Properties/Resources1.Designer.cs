@@ -183,16 +183,6 @@ namespace DOAN.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo_shop {
-            get {
-                object obj = ResourceManager.GetObject("logo_shop", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap logoshop {
             get {
                 object obj = ResourceManager.GetObject("logoshop", resourceCulture);
@@ -203,9 +193,19 @@ namespace DOAN.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap manufacture {
+        internal static System.Drawing.Bitmap logoshop1 {
             get {
-                object obj = ResourceManager.GetObject("manufacture", resourceCulture);
+                object obj = ResourceManager.GetObject("logoshop1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap manufacture1 {
+            get {
+                object obj = ResourceManager.GetObject("manufacture1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -296,6 +296,16 @@ namespace DOAN.Properties {
         internal static System.Drawing.Bitmap supplier {
             get {
                 object obj = ResourceManager.GetObject("supplier", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap z4817921112313_a2814b8588125d79dc12adf056c2c7cd {
+            get {
+                object obj = ResourceManager.GetObject("z4817921112313_a2814b8588125d79dc12adf056c2c7cd", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
