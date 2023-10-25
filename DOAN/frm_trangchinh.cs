@@ -27,11 +27,6 @@ namespace DOAN
             lbl_date.Text = DateTime.Now.ToLongDateString();
         }
 
-        private void btn_HienThiSanPham_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btn_HienThiKhachHang_Click(object sender, EventArgs e)
         {
             us_customerUI customerUI = new us_customerUI();
