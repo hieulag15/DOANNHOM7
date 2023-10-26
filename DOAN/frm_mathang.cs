@@ -49,6 +49,7 @@ namespace DOAN
         private void frm_mathang_Load(object sender, EventArgs e)
         {
             LoadProduct();
+            id_product = dgv_Product.Rows[0].Cells[0].Value.ToString();
         }
 
         private void bindingSource1_CurrentChanged(object sender, EventArgs e)

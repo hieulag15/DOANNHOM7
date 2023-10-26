@@ -47,7 +47,7 @@ namespace DOAN
                 txt_tenmathang.Text = dr[1].ToString();
                 txt_giaban.Text = dr[2].ToString();
                 txt_kichthuoc.Text = dr[4].ToString();
-                txt_soluong.Text = dr[5].ToString();
+                guna2NumericUpDown1.Value = int.Parse(dr[5].ToString());
                 txt_maNCC.Text = dr[6].ToString();
                 txt_tenNCC.Text = dr[7].ToString();
                 txt_malohang.Text = dr[8].ToString();

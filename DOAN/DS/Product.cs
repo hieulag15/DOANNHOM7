@@ -28,5 +28,70 @@ namespace DOAN.DS
         {
             return db.ExecuteQueryDataSet(string.Format("select * from V_DetailProduct where ProductID = '{0}'", id_product));
         }
+
+        public bool addProduct(string pid, string name, decimal price, byte[] image, string size, int quantity)
+        {
+            comm = new SqlCommand("EXEC usp_AddProduct @pid, @name, @image, @price, @quantity", db.getSqlConn);
+            comm.Parameters.AddWithValue("@pid", pid);
+            comm.Parameters.AddWithValue("@name", name);
+            comm.Parameters.AddWithValue("@price", price);
+            comm.Parameters.AddWithValue("@image", image.ToArray());
+            comm.Parameters.AddWithValue("@price", size);
+            comm.Parameters.AddWithValue("@quantity", quantity);
+
+            db.openConnection();
+            if (comm.ExecuteNonQuery() == 1)
+            {
+                db.closeConnection();
+                return true;
+            }
+            else
+            {
+                db.closeConnection();
+                return false;
+            }
+        }
+
+        public bool deleteProduct(string pid)
+        {
+            comm = new SqlCommand("Exec usp_DeleteProduct @pid", db.getSqlConn);
+            comm.Parameters.AddWithValue("@pid", pid);
+
+            db.openConnection();
+            if ((comm.ExecuteNonQuery() == 1))
+            {
+                db.closeConnection();
+                return true;
+            }
+            else
+            {
+                db.closeConnection();
+                return false;
+            }
+        }
+
+        public bool updateProduct(string pid, string name, decimal price, byte[] image, string size, int quantity)
+        {
+
+            comm = new SqlCommand("EXEC usp_UpdateProduct @pid, @idate, @vdate, @name, @image, @price, @quantity, @tid", db.getSqlConn);
+            comm.Parameters.AddWithValue("@pid", pid);
+            comm.Parameters.AddWithValue("@name", name);
+            comm.Parameters.AddWithValue("@price", price);
+            comm.Parameters.AddWithValue("@image", image.ToArray());
+            comm.Parameters.AddWithValue("@price", size);
+            comm.Parameters.AddWithValue("@quantity", quantity);
+
+            db.openConnection();
+            if ((comm.ExecuteNonQuery() == 1))
+            {
+                db.closeConnection();
+                return true;
+            }
+            else
+            {
+                db.closeConnection();
+                return false;
+            }
+        }
     }
 }
