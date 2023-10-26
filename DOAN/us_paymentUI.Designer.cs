@@ -195,7 +195,6 @@
             // 
             // guna2ImageButton1
             // 
-            this.guna2ImageButton1.BackgroundImage = global::DOAN.Properties.Resources.search;
             this.guna2ImageButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
             this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;

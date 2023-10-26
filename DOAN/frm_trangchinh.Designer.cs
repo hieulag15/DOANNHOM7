@@ -209,7 +209,6 @@
             this.btn_QuanlyNhanvien.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_QuanlyNhanvien.ForeColor = System.Drawing.Color.White;
             this.btn_QuanlyNhanvien.HoverState.Parent = this.btn_QuanlyNhanvien;
-            this.btn_QuanlyNhanvien.Image = global::DOAN.Properties.Resources.recruitment;
             this.btn_QuanlyNhanvien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_QuanlyNhanvien.ImageOffset = new System.Drawing.Point(30, 25);
             this.btn_QuanlyNhanvien.ImageSize = new System.Drawing.Size(40, 40);
