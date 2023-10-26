@@ -98,11 +98,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="QLCuaHangDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLCuaHangDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="TienIch.cs" />
     <Compile Include="us_accountUI.cs">
       <SubType>UserControl</SubType>
@@ -189,17 +184,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="QLCuaHangDataSet.xsc">
-      <DependentUpon>QLCuaHangDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLCuaHangDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLCuaHangDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLCuaHangDataSet.xss">
-      <DependentUpon>QLCuaHangDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Resources\anhlogin.jpg" />
   </ItemGroup>
   <ItemGroup>
