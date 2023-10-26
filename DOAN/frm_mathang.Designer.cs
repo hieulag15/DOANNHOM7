@@ -45,13 +45,13 @@
             this.btn_Them = new Guna.UI2.WinForms.Guna2TileButton();
             this.btn_Xoa = new Guna.UI2.WinForms.Guna2TileButton();
             this.btn_XemChiTiet = new Guna.UI2.WinForms.Guna2TileButton();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Product)).BeginInit();
             this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2TileButton1
@@ -66,7 +66,7 @@
             this.guna2TileButton1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2TileButton1.Name = "guna2TileButton1";
             this.guna2TileButton1.ShadowDecoration.Parent = this.guna2TileButton1;
-            this.guna2TileButton1.Size = new System.Drawing.Size(96, 31);
+            this.guna2TileButton1.Size = new System.Drawing.Size(96, 34);
             this.guna2TileButton1.TabIndex = 0;
             this.guna2TileButton1.Text = "Áo thun";
             this.guna2TileButton1.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
@@ -85,7 +85,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(703, 38);
+            this.guna2Panel1.Size = new System.Drawing.Size(700, 38);
             this.guna2Panel1.TabIndex = 4;
             // 
             // guna2TileButton6
@@ -96,11 +96,11 @@
             this.guna2TileButton6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TileButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.guna2TileButton6.HoverState.Parent = this.guna2TileButton6;
-            this.guna2TileButton6.Location = new System.Drawing.Point(602, 2);
+            this.guna2TileButton6.Location = new System.Drawing.Point(600, 2);
             this.guna2TileButton6.Margin = new System.Windows.Forms.Padding(2);
             this.guna2TileButton6.Name = "guna2TileButton6";
             this.guna2TileButton6.ShadowDecoration.Parent = this.guna2TileButton6;
-            this.guna2TileButton6.Size = new System.Drawing.Size(96, 31);
+            this.guna2TileButton6.Size = new System.Drawing.Size(98, 34);
             this.guna2TileButton6.TabIndex = 11;
             this.guna2TileButton6.Text = "Quần short";
             this.guna2TileButton6.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
@@ -117,7 +117,7 @@
             this.guna2TileButton5.Margin = new System.Windows.Forms.Padding(2);
             this.guna2TileButton5.Name = "guna2TileButton5";
             this.guna2TileButton5.ShadowDecoration.Parent = this.guna2TileButton5;
-            this.guna2TileButton5.Size = new System.Drawing.Size(96, 31);
+            this.guna2TileButton5.Size = new System.Drawing.Size(96, 34);
             this.guna2TileButton5.TabIndex = 10;
             this.guna2TileButton5.Text = "Quần tây";
             this.guna2TileButton5.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
@@ -134,7 +134,7 @@
             this.guna2TileButton4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2TileButton4.Name = "guna2TileButton4";
             this.guna2TileButton4.ShadowDecoration.Parent = this.guna2TileButton4;
-            this.guna2TileButton4.Size = new System.Drawing.Size(96, 31);
+            this.guna2TileButton4.Size = new System.Drawing.Size(96, 34);
             this.guna2TileButton4.TabIndex = 9;
             this.guna2TileButton4.Text = "Quần jean";
             this.guna2TileButton4.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
@@ -151,7 +151,7 @@
             this.guna2TileButton7.Margin = new System.Windows.Forms.Padding(2);
             this.guna2TileButton7.Name = "guna2TileButton7";
             this.guna2TileButton7.ShadowDecoration.Parent = this.guna2TileButton7;
-            this.guna2TileButton7.Size = new System.Drawing.Size(96, 31);
+            this.guna2TileButton7.Size = new System.Drawing.Size(96, 34);
             this.guna2TileButton7.TabIndex = 7;
             this.guna2TileButton7.Text = "Áo polo";
             this.guna2TileButton7.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
@@ -168,7 +168,7 @@
             this.guna2TileButton2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2TileButton2.Name = "guna2TileButton2";
             this.guna2TileButton2.ShadowDecoration.Parent = this.guna2TileButton2;
-            this.guna2TileButton2.Size = new System.Drawing.Size(96, 31);
+            this.guna2TileButton2.Size = new System.Drawing.Size(96, 34);
             this.guna2TileButton2.TabIndex = 5;
             this.guna2TileButton2.Text = "Áo khoác";
             this.guna2TileButton2.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
@@ -185,7 +185,7 @@
             this.guna2TileButton3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2TileButton3.Name = "guna2TileButton3";
             this.guna2TileButton3.ShadowDecoration.Parent = this.guna2TileButton3;
-            this.guna2TileButton3.Size = new System.Drawing.Size(96, 31);
+            this.guna2TileButton3.Size = new System.Drawing.Size(96, 34);
             this.guna2TileButton3.TabIndex = 8;
             this.guna2TileButton3.Text = "Áo sơ mi";
             this.guna2TileButton3.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
@@ -329,17 +329,6 @@
             this.btn_XemChiTiet.Text = "Xem chi tiết";
             this.btn_XemChiTiet.Click += new System.EventHandler(this.btn_XemChiTiet_Click);
             // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = global::DOAN.Properties.Resources.search;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(931, 24);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(31, 28);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 14;
-            this.guna2PictureBox2.TabStop = false;
-            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Image = global::DOAN.Properties.Resources.b11882e6_2ebe_0c01_43d8_001aa1e17eb9;
@@ -350,6 +339,17 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 9;
             this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = global::DOAN.Properties.Resources.search__1_;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(931, 24);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(31, 28);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 14;
+            this.guna2PictureBox2.TabStop = false;
             // 
             // frm_mathang
             // 
@@ -371,8 +371,8 @@
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Product)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
