@@ -23,5 +23,11 @@ namespace DOAN
             InitializeComponent();
             this.pnl_trangchinh = pnl_trangchinh;
         }
+
+        private void btn_quaylai_Click(object sender, EventArgs e)
+        {
+            frm_mathang frm_Mathang = new frm_mathang(pnl_trangchinh);
+            TienIch.addForm(frm_Mathang, pnl_trangchinh);
+        }
     }
 }
