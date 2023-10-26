@@ -60,5 +60,11 @@ namespace DOAN
             us_InforProduct us_InforProduct = new us_InforProduct(pnl_trangchinh);
             TienIch.addUserControl(us_InforProduct, pnl_trangchinh);
         }
+
+        private void btn_Them_Click(object sender, EventArgs e)
+        {
+            us_AddProduct us_AddProduct = new us_AddProduct(pnl_trangchinh);
+            TienIch.addUserControl(us_AddProduct, pnl_trangchinh);
+        }
     }
 }

@@ -105,6 +105,12 @@
     <Compile Include="us_accountUI.Designer.cs">
       <DependentUpon>us_accountUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="us_AddProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="us_AddProduct.Designer.cs">
+      <DependentUpon>us_AddProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="us_banhang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="us_accountUI.resx">
       <DependentUpon>us_accountUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="us_AddProduct.resx">
+      <DependentUpon>us_AddProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="us_banhang.resx">
       <DependentUpon>us_banhang.cs</DependentUpon>
@@ -251,6 +260,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chevron1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down-arrow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowhead-up1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-arrow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diskette %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diskette1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-product1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
