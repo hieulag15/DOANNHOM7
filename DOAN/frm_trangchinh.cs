@@ -21,12 +21,10 @@ namespace DOAN
 
         private void frm_trangchinh_Load(object sender, EventArgs e)
         {
+            timer1.Start();
 
-        }
-
-        private void btn_HienThiSanPham_Click(object sender, EventArgs e)
-        {
-            
+            lbl_time.Text = DateTime.Now.ToLongTimeString();
+            lbl_date.Text = DateTime.Now.ToLongDateString();
         }
 
         private void btn_HienThiKhachHang_Click(object sender, EventArgs e)
@@ -49,8 +47,35 @@ namespace DOAN
 
         private void btn_HienThiMatHang_Click(object sender, EventArgs e)
         {
-            frm_mathang Fmathang = new frm_mathang();
+            frm_mathang Fmathang = new frm_mathang(this.pnl_trangchinh);
             TienIch.addForm(Fmathang, pnl_trangchinh);
+        }
+
+        private void btn_TaikhoanAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pic_dong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbl_time.Text = DateTime.Now.ToLongTimeString();
+            timer1.Start();
+        }
+
+        private void btn_NhapKho_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Banhang_Click(object sender, EventArgs e)
+        {
+            us_banhang us_Banhang = new us_banhang();
+            TienIch.addUserControl(us_Banhang, pnl_trangchinh);
         }
     }
 }

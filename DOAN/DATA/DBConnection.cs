@@ -10,7 +10,7 @@ namespace DOAN.DATA
 {
     internal class DBConnection
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=HIEULAG\THANHHIEU;Initial Catalog=CUAHANG;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-NN1DVIA;Initial Catalog=QLCuaHang;Integrated Security=True");
         SqlCommand comm = null; //Đối tượng truy vấn và cập nhật vào SQL Serverwd
         SqlDataAdapter da = null; //Đối tượng đưa dữ liệu vào DataTable
 
@@ -43,13 +43,12 @@ namespace DOAN.DATA
             }
         }
 
-        public DataSet ExecuteQueryDataSet(string strSQL, CommandType ct) //Lấy data thông qua câu truy vấn đưa vào DataSet --> Load lên DataGridView
+        public DataSet ExecuteQueryDataSet(string strSQL) //Lấy data thông qua câu truy vấn đưa vào DataSet --> Load lên DataGridView
         {
             if (conn.State == ConnectionState.Open)//Nếu đang mở kết nối trước đó thì đóng lại
                 conn.Close();
             conn.Open(); //Tạo một kết nối mới
             comm.CommandText = strSQL; //Đưa câu truy vấn vào SqlCommand
-            comm.CommandType = ct; //Chọn kiểu 
             da = new SqlDataAdapter(comm); //Khởi tạo một instance mới với SQLcommand đã cho
             DataSet ds = new DataSet();
             da.Fill(ds); //Đưa dữ liệu truy vào Dataset
