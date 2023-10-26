@@ -40,6 +40,7 @@
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -65,6 +66,12 @@
     <Compile Include="Frm_Login.Designer.cs">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_mathang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_mathang.Designer.cs">
+      <DependentUpon>frm_mathang.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_trangchinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +85,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="TienIch.cs" />
+    <Compile Include="us_accountUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="us_accountUI.Designer.cs">
+      <DependentUpon>us_accountUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="us_customerUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="us_customerUI.Designer.cs">
+      <DependentUpon>us_customerUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="us_employeeUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="us_employeeUI.Designer.cs">
+      <DependentUpon>us_employeeUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="us_paymentUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -90,6 +116,9 @@
     <EmbeddedResource Include="Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_mathang.resx">
+      <DependentUpon>frm_mathang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_trangchinh.resx">
       <DependentUpon>frm_trangchinh.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,6 +126,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="us_accountUI.resx">
+      <DependentUpon>us_accountUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="us_customerUI.resx">
+      <DependentUpon>us_customerUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="us_employeeUI.resx">
+      <DependentUpon>us_employeeUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="us_paymentUI.resx">
       <DependentUpon>us_paymentUI.cs</DependentUpon>
@@ -124,7 +162,7 @@
     <None Include="Resources\bill.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\search.png" />
+    <None Include="Resources\recruitment.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

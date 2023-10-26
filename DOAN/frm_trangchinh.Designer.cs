@@ -30,13 +30,14 @@
         {
             this.pnl_trangchinh = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.pnl_thanhben = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btn_QuanlyNhanvien = new Guna.UI2.WinForms.Guna2TileButton();
             this.btn_thongke = new Guna.UI2.WinForms.Guna2TileButton();
-            this.btn_nhacungcap = new Guna.UI2.WinForms.Guna2TileButton();
-            this.btn_taikhoan = new Guna.UI2.WinForms.Guna2TileButton();
-            this.btn_thanhtoan = new Guna.UI2.WinForms.Guna2TileButton();
-            this.btn_khachhang = new Guna.UI2.WinForms.Guna2TileButton();
-            this.btn_sanpham = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btn_HienThiNCC = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btn_HienThiHoaDon = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btn_HienThiKhachHang = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btn_TaikhoanAdmin = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btn_HienThiMatHang = new Guna.UI2.WinForms.Guna2TileButton();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnl_thanhben.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,12 +53,13 @@
             // 
             // pnl_thanhben
             // 
+            this.pnl_thanhben.Controls.Add(this.btn_QuanlyNhanvien);
             this.pnl_thanhben.Controls.Add(this.btn_thongke);
-            this.pnl_thanhben.Controls.Add(this.btn_nhacungcap);
-            this.pnl_thanhben.Controls.Add(this.btn_taikhoan);
-            this.pnl_thanhben.Controls.Add(this.btn_thanhtoan);
-            this.pnl_thanhben.Controls.Add(this.btn_khachhang);
-            this.pnl_thanhben.Controls.Add(this.btn_sanpham);
+            this.pnl_thanhben.Controls.Add(this.btn_HienThiNCC);
+            this.pnl_thanhben.Controls.Add(this.btn_HienThiHoaDon);
+            this.pnl_thanhben.Controls.Add(this.btn_HienThiKhachHang);
+            this.pnl_thanhben.Controls.Add(this.btn_TaikhoanAdmin);
+            this.pnl_thanhben.Controls.Add(this.btn_HienThiMatHang);
             this.pnl_thanhben.Location = new System.Drawing.Point(1, 1);
             this.pnl_thanhben.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_thanhben.Name = "pnl_thanhben";
@@ -65,16 +67,29 @@
             this.pnl_thanhben.Size = new System.Drawing.Size(280, 648);
             this.pnl_thanhben.TabIndex = 0;
             // 
-            // guna2HtmlLabel1
+            // btn_QuanlyNhanvien
             // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(447, 33);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(386, 35);
-            this.guna2HtmlLabel1.TabIndex = 1;
-            this.guna2HtmlLabel1.Text = "HỆ THỐNG QUẢN LÝ CỬA HÀNG";
+            this.btn_QuanlyNhanvien.BackColor = System.Drawing.Color.White;
+            this.btn_QuanlyNhanvien.CheckedState.Parent = this.btn_QuanlyNhanvien;
+            this.btn_QuanlyNhanvien.CustomImages.Parent = this.btn_QuanlyNhanvien;
+            this.btn_QuanlyNhanvien.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btn_QuanlyNhanvien.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_QuanlyNhanvien.ForeColor = System.Drawing.Color.White;
+            this.btn_QuanlyNhanvien.HoverState.Parent = this.btn_QuanlyNhanvien;
+            this.btn_QuanlyNhanvien.Image = global::DOAN.Properties.Resources.recruitment;
+            this.btn_QuanlyNhanvien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_QuanlyNhanvien.ImageOffset = new System.Drawing.Point(30, 25);
+            this.btn_QuanlyNhanvien.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_QuanlyNhanvien.Location = new System.Drawing.Point(0, 399);
+            this.btn_QuanlyNhanvien.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_QuanlyNhanvien.Name = "btn_QuanlyNhanvien";
+            this.btn_QuanlyNhanvien.ShadowDecoration.Parent = this.btn_QuanlyNhanvien;
+            this.btn_QuanlyNhanvien.Size = new System.Drawing.Size(280, 77);
+            this.btn_QuanlyNhanvien.TabIndex = 6;
+            this.btn_QuanlyNhanvien.Text = "Quản lý                   nhân viên";
+            this.btn_QuanlyNhanvien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_QuanlyNhanvien.TextOffset = new System.Drawing.Point(100, -23);
+            this.btn_QuanlyNhanvien.Click += new System.EventHandler(this.btn_QuanlyNhanvien_Click);
             // 
             // btn_thongke
             // 
@@ -87,126 +102,140 @@
             this.btn_thongke.HoverState.Parent = this.btn_thongke;
             this.btn_thongke.Image = global::DOAN.Properties.Resources.stats;
             this.btn_thongke.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_thongke.ImageOffset = new System.Drawing.Point(20, 30);
-            this.btn_thongke.ImageSize = new System.Drawing.Size(60, 60);
-            this.btn_thongke.Location = new System.Drawing.Point(0, 490);
+            this.btn_thongke.ImageOffset = new System.Drawing.Point(30, 20);
+            this.btn_thongke.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_thongke.Location = new System.Drawing.Point(0, 338);
             this.btn_thongke.Margin = new System.Windows.Forms.Padding(2);
             this.btn_thongke.Name = "btn_thongke";
             this.btn_thongke.ShadowDecoration.Parent = this.btn_thongke;
-            this.btn_thongke.Size = new System.Drawing.Size(280, 95);
+            this.btn_thongke.Size = new System.Drawing.Size(280, 57);
             this.btn_thongke.TabIndex = 5;
             this.btn_thongke.Text = "Thống kê";
-            this.btn_thongke.TextOffset = new System.Drawing.Point(28, -30);
+            this.btn_thongke.TextOffset = new System.Drawing.Point(26, -23);
             // 
-            // btn_nhacungcap
+            // btn_HienThiNCC
             // 
-            this.btn_nhacungcap.BackColor = System.Drawing.Color.White;
-            this.btn_nhacungcap.CheckedState.Parent = this.btn_nhacungcap;
-            this.btn_nhacungcap.CustomImages.Parent = this.btn_nhacungcap;
-            this.btn_nhacungcap.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.btn_nhacungcap.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nhacungcap.ForeColor = System.Drawing.Color.White;
-            this.btn_nhacungcap.HoverState.Parent = this.btn_nhacungcap;
-            this.btn_nhacungcap.Image = global::DOAN.Properties.Resources.supplier;
-            this.btn_nhacungcap.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_nhacungcap.ImageOffset = new System.Drawing.Point(20, 30);
-            this.btn_nhacungcap.ImageSize = new System.Drawing.Size(60, 60);
-            this.btn_nhacungcap.Location = new System.Drawing.Point(0, 391);
-            this.btn_nhacungcap.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_nhacungcap.Name = "btn_nhacungcap";
-            this.btn_nhacungcap.ShadowDecoration.Parent = this.btn_nhacungcap;
-            this.btn_nhacungcap.Size = new System.Drawing.Size(280, 95);
-            this.btn_nhacungcap.TabIndex = 4;
-            this.btn_nhacungcap.Text = "Nhà cung cấp";
-            this.btn_nhacungcap.TextOffset = new System.Drawing.Point(50, -30);
+            this.btn_HienThiNCC.BackColor = System.Drawing.Color.White;
+            this.btn_HienThiNCC.CheckedState.Parent = this.btn_HienThiNCC;
+            this.btn_HienThiNCC.CustomImages.Parent = this.btn_HienThiNCC;
+            this.btn_HienThiNCC.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btn_HienThiNCC.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HienThiNCC.ForeColor = System.Drawing.Color.White;
+            this.btn_HienThiNCC.HoverState.Parent = this.btn_HienThiNCC;
+            this.btn_HienThiNCC.Image = global::DOAN.Properties.Resources.supplier;
+            this.btn_HienThiNCC.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_HienThiNCC.ImageOffset = new System.Drawing.Point(30, 20);
+            this.btn_HienThiNCC.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_HienThiNCC.Location = new System.Drawing.Point(0, 277);
+            this.btn_HienThiNCC.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_HienThiNCC.Name = "btn_HienThiNCC";
+            this.btn_HienThiNCC.ShadowDecoration.Parent = this.btn_HienThiNCC;
+            this.btn_HienThiNCC.Size = new System.Drawing.Size(280, 57);
+            this.btn_HienThiNCC.TabIndex = 4;
+            this.btn_HienThiNCC.Text = "Nhà cung cấp";
+            this.btn_HienThiNCC.TextOffset = new System.Drawing.Point(48, -23);
             // 
-            // btn_taikhoan
+            // btn_HienThiHoaDon
             // 
-            this.btn_taikhoan.BorderColor = System.Drawing.Color.White;
-            this.btn_taikhoan.BorderThickness = 1;
-            this.btn_taikhoan.CheckedState.Parent = this.btn_taikhoan;
-            this.btn_taikhoan.CustomImages.Parent = this.btn_taikhoan;
-            this.btn_taikhoan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.btn_taikhoan.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_taikhoan.ForeColor = System.Drawing.Color.White;
-            this.btn_taikhoan.HoverState.Parent = this.btn_taikhoan;
-            this.btn_taikhoan.Image = global::DOAN.Properties.Resources.hacker__1_;
-            this.btn_taikhoan.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_taikhoan.ImageOffset = new System.Drawing.Point(25, 30);
-            this.btn_taikhoan.ImageSize = new System.Drawing.Size(60, 60);
-            this.btn_taikhoan.Location = new System.Drawing.Point(-8, -1);
-            this.btn_taikhoan.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_taikhoan.Name = "btn_taikhoan";
-            this.btn_taikhoan.ShadowDecoration.Parent = this.btn_taikhoan;
-            this.btn_taikhoan.Size = new System.Drawing.Size(288, 95);
-            this.btn_taikhoan.TabIndex = 0;
-            this.btn_taikhoan.Text = "Nhân viên";
-            this.btn_taikhoan.TextOffset = new System.Drawing.Point(34, -30);
+            this.btn_HienThiHoaDon.BackColor = System.Drawing.Color.White;
+            this.btn_HienThiHoaDon.CheckedState.Parent = this.btn_HienThiHoaDon;
+            this.btn_HienThiHoaDon.CustomImages.Parent = this.btn_HienThiHoaDon;
+            this.btn_HienThiHoaDon.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btn_HienThiHoaDon.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HienThiHoaDon.ForeColor = System.Drawing.Color.White;
+            this.btn_HienThiHoaDon.HoverState.Parent = this.btn_HienThiHoaDon;
+            this.btn_HienThiHoaDon.Image = global::DOAN.Properties.Resources.bill;
+            this.btn_HienThiHoaDon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_HienThiHoaDon.ImageOffset = new System.Drawing.Point(30, 20);
+            this.btn_HienThiHoaDon.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_HienThiHoaDon.Location = new System.Drawing.Point(0, 216);
+            this.btn_HienThiHoaDon.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_HienThiHoaDon.Name = "btn_HienThiHoaDon";
+            this.btn_HienThiHoaDon.ShadowDecoration.Parent = this.btn_HienThiHoaDon;
+            this.btn_HienThiHoaDon.Size = new System.Drawing.Size(280, 57);
+            this.btn_HienThiHoaDon.TabIndex = 3;
+            this.btn_HienThiHoaDon.Text = "Hóa đơn";
+            this.btn_HienThiHoaDon.TextOffset = new System.Drawing.Point(20, -23);
+            this.btn_HienThiHoaDon.Click += new System.EventHandler(this.btn_HienThiHoaDon_Click);
             // 
-            // btn_thanhtoan
+            // btn_HienThiKhachHang
             // 
-            this.btn_thanhtoan.BackColor = System.Drawing.Color.White;
-            this.btn_thanhtoan.CheckedState.Parent = this.btn_thanhtoan;
-            this.btn_thanhtoan.CustomImages.Parent = this.btn_thanhtoan;
-            this.btn_thanhtoan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.btn_thanhtoan.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_thanhtoan.ForeColor = System.Drawing.Color.White;
-            this.btn_thanhtoan.HoverState.Parent = this.btn_thanhtoan;
-            this.btn_thanhtoan.Image = global::DOAN.Properties.Resources.bill;
-            this.btn_thanhtoan.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_thanhtoan.ImageOffset = new System.Drawing.Point(20, 30);
-            this.btn_thanhtoan.ImageSize = new System.Drawing.Size(60, 60);
-            this.btn_thanhtoan.Location = new System.Drawing.Point(0, 292);
-            this.btn_thanhtoan.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_thanhtoan.Name = "btn_thanhtoan";
-            this.btn_thanhtoan.ShadowDecoration.Parent = this.btn_thanhtoan;
-            this.btn_thanhtoan.Size = new System.Drawing.Size(280, 95);
-            this.btn_thanhtoan.TabIndex = 3;
-            this.btn_thanhtoan.Text = "Hóa đơn";
-            this.btn_thanhtoan.TextOffset = new System.Drawing.Point(22, -30);
+            this.btn_HienThiKhachHang.CheckedState.Parent = this.btn_HienThiKhachHang;
+            this.btn_HienThiKhachHang.CustomImages.Parent = this.btn_HienThiKhachHang;
+            this.btn_HienThiKhachHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btn_HienThiKhachHang.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HienThiKhachHang.ForeColor = System.Drawing.Color.White;
+            this.btn_HienThiKhachHang.HoverState.Parent = this.btn_HienThiKhachHang;
+            this.btn_HienThiKhachHang.Image = global::DOAN.Properties.Resources.rating;
+            this.btn_HienThiKhachHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_HienThiKhachHang.ImageOffset = new System.Drawing.Point(30, 20);
+            this.btn_HienThiKhachHang.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_HienThiKhachHang.Location = new System.Drawing.Point(0, 155);
+            this.btn_HienThiKhachHang.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_HienThiKhachHang.Name = "btn_HienThiKhachHang";
+            this.btn_HienThiKhachHang.ShadowDecoration.Parent = this.btn_HienThiKhachHang;
+            this.btn_HienThiKhachHang.Size = new System.Drawing.Size(280, 57);
+            this.btn_HienThiKhachHang.TabIndex = 2;
+            this.btn_HienThiKhachHang.Text = "Khách hàng";
+            this.btn_HienThiKhachHang.TextOffset = new System.Drawing.Point(37, -23);
+            this.btn_HienThiKhachHang.Click += new System.EventHandler(this.btn_HienThiKhachHang_Click);
             // 
-            // btn_khachhang
+            // btn_TaikhoanAdmin
             // 
-            this.btn_khachhang.CheckedState.Parent = this.btn_khachhang;
-            this.btn_khachhang.CustomImages.Parent = this.btn_khachhang;
-            this.btn_khachhang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.btn_khachhang.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_khachhang.ForeColor = System.Drawing.Color.White;
-            this.btn_khachhang.HoverState.Parent = this.btn_khachhang;
-            this.btn_khachhang.Image = global::DOAN.Properties.Resources.rating;
-            this.btn_khachhang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_khachhang.ImageOffset = new System.Drawing.Point(20, 30);
-            this.btn_khachhang.ImageSize = new System.Drawing.Size(60, 60);
-            this.btn_khachhang.Location = new System.Drawing.Point(0, 193);
-            this.btn_khachhang.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_khachhang.Name = "btn_khachhang";
-            this.btn_khachhang.ShadowDecoration.Parent = this.btn_khachhang;
-            this.btn_khachhang.Size = new System.Drawing.Size(280, 95);
-            this.btn_khachhang.TabIndex = 2;
-            this.btn_khachhang.Text = "Khách hàng";
-            this.btn_khachhang.TextOffset = new System.Drawing.Point(39, -30);
+            this.btn_TaikhoanAdmin.BorderColor = System.Drawing.Color.White;
+            this.btn_TaikhoanAdmin.BorderThickness = 1;
+            this.btn_TaikhoanAdmin.CheckedState.Parent = this.btn_TaikhoanAdmin;
+            this.btn_TaikhoanAdmin.CustomImages.Parent = this.btn_TaikhoanAdmin;
+            this.btn_TaikhoanAdmin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btn_TaikhoanAdmin.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TaikhoanAdmin.ForeColor = System.Drawing.Color.White;
+            this.btn_TaikhoanAdmin.HoverState.Parent = this.btn_TaikhoanAdmin;
+            this.btn_TaikhoanAdmin.Image = global::DOAN.Properties.Resources.hacker__1_;
+            this.btn_TaikhoanAdmin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_TaikhoanAdmin.ImageOffset = new System.Drawing.Point(36, 20);
+            this.btn_TaikhoanAdmin.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_TaikhoanAdmin.Location = new System.Drawing.Point(-8, -1);
+            this.btn_TaikhoanAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_TaikhoanAdmin.Name = "btn_TaikhoanAdmin";
+            this.btn_TaikhoanAdmin.ShadowDecoration.Parent = this.btn_TaikhoanAdmin;
+            this.btn_TaikhoanAdmin.Size = new System.Drawing.Size(288, 95);
+            this.btn_TaikhoanAdmin.TabIndex = 0;
+            this.btn_TaikhoanAdmin.Text = "Admin";
+            this.btn_TaikhoanAdmin.TextOffset = new System.Drawing.Point(15, -23);
             // 
-            // btn_sanpham
+            // btn_HienThiMatHang
             // 
-            this.btn_sanpham.BackColor = System.Drawing.Color.White;
-            this.btn_sanpham.CheckedState.Parent = this.btn_sanpham;
-            this.btn_sanpham.CustomImages.Parent = this.btn_sanpham;
-            this.btn_sanpham.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.btn_sanpham.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sanpham.ForeColor = System.Drawing.Color.White;
-            this.btn_sanpham.HoverState.Parent = this.btn_sanpham;
-            this.btn_sanpham.Image = global::DOAN.Properties.Resources.fashion__2_;
-            this.btn_sanpham.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_sanpham.ImageOffset = new System.Drawing.Point(20, 30);
-            this.btn_sanpham.ImageSize = new System.Drawing.Size(60, 60);
-            this.btn_sanpham.Location = new System.Drawing.Point(0, 94);
-            this.btn_sanpham.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_sanpham.Name = "btn_sanpham";
-            this.btn_sanpham.ShadowDecoration.Parent = this.btn_sanpham;
-            this.btn_sanpham.Size = new System.Drawing.Size(280, 95);
-            this.btn_sanpham.TabIndex = 1;
-            this.btn_sanpham.Text = "Sản phẩm";
-            this.btn_sanpham.TextOffset = new System.Drawing.Point(30, -30);
+            this.btn_HienThiMatHang.BackColor = System.Drawing.Color.White;
+            this.btn_HienThiMatHang.CheckedState.Parent = this.btn_HienThiMatHang;
+            this.btn_HienThiMatHang.CustomImages.Parent = this.btn_HienThiMatHang;
+            this.btn_HienThiMatHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btn_HienThiMatHang.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HienThiMatHang.ForeColor = System.Drawing.Color.White;
+            this.btn_HienThiMatHang.HoverState.Parent = this.btn_HienThiMatHang;
+            this.btn_HienThiMatHang.Image = global::DOAN.Properties.Resources.fashion__2_;
+            this.btn_HienThiMatHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_HienThiMatHang.ImageOffset = new System.Drawing.Point(30, 20);
+            this.btn_HienThiMatHang.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_HienThiMatHang.Location = new System.Drawing.Point(0, 94);
+            this.btn_HienThiMatHang.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_HienThiMatHang.Name = "btn_HienThiMatHang";
+            this.btn_HienThiMatHang.ShadowDecoration.Parent = this.btn_HienThiMatHang;
+            this.btn_HienThiMatHang.Size = new System.Drawing.Size(280, 57);
+            this.btn_HienThiMatHang.TabIndex = 1;
+            this.btn_HienThiMatHang.Text = "Mặt hàng";
+            this.btn_HienThiMatHang.TextOffset = new System.Drawing.Point(24, -23);
+            this.btn_HienThiMatHang.Click += new System.EventHandler(this.btn_HienThiMatHang_Click);
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(596, 29);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(386, 35);
+            this.guna2HtmlLabel1.TabIndex = 1;
+            this.guna2HtmlLabel1.Text = "HỆ THỐNG QUẢN LÝ CỬA HÀNG";
             // 
             // frm_trangchinh
             // 
@@ -222,6 +251,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_trangchinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frm_trangchinh_Load);
             this.pnl_thanhben.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -232,12 +262,13 @@
 
         private Guna.UI2.WinForms.Guna2GradientPanel pnl_trangchinh;
         private Guna.UI2.WinForms.Guna2GradientPanel pnl_thanhben;
-        private Guna.UI2.WinForms.Guna2TileButton btn_taikhoan;
-        private Guna.UI2.WinForms.Guna2TileButton btn_thanhtoan;
-        private Guna.UI2.WinForms.Guna2TileButton btn_khachhang;
-        private Guna.UI2.WinForms.Guna2TileButton btn_sanpham;
+        private Guna.UI2.WinForms.Guna2TileButton btn_TaikhoanAdmin;
+        private Guna.UI2.WinForms.Guna2TileButton btn_HienThiHoaDon;
+        private Guna.UI2.WinForms.Guna2TileButton btn_HienThiKhachHang;
+        private Guna.UI2.WinForms.Guna2TileButton btn_HienThiMatHang;
         private Guna.UI2.WinForms.Guna2TileButton btn_thongke;
-        private Guna.UI2.WinForms.Guna2TileButton btn_nhacungcap;
+        private Guna.UI2.WinForms.Guna2TileButton btn_HienThiNCC;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2TileButton btn_QuanlyNhanvien;
     }
 }
