@@ -31,12 +31,12 @@ namespace DOAN.DS
 
         public bool addProduct(string pid, string name, decimal price, byte[] image, string size, int quantity)
         {
-            comm = new SqlCommand("EXEC usp_AddProduct @pid, @name, @image, @price, @quantity", db.getSqlConn);
+            comm = new SqlCommand("EXEC usp_AddProduct @pid, @name, @price, @image, @size , @quantity", db.getSqlConn);
             comm.Parameters.AddWithValue("@pid", pid);
             comm.Parameters.AddWithValue("@name", name);
             comm.Parameters.AddWithValue("@price", price);
             comm.Parameters.AddWithValue("@image", image.ToArray());
-            comm.Parameters.AddWithValue("@price", size);
+            comm.Parameters.AddWithValue("@size", size);
             comm.Parameters.AddWithValue("@quantity", quantity);
 
             db.openConnection();
@@ -73,12 +73,12 @@ namespace DOAN.DS
         public bool updateProduct(string pid, string name, decimal price, byte[] image, string size, int quantity)
         {
 
-            comm = new SqlCommand("EXEC usp_UpdateProduct @pid, @idate, @vdate, @name, @image, @price, @quantity, @tid", db.getSqlConn);
+            comm = new SqlCommand("EXEC usp_UpdateProduct @pid, @name, @price, @image, @size , @quantity", db.getSqlConn);
             comm.Parameters.AddWithValue("@pid", pid);
             comm.Parameters.AddWithValue("@name", name);
             comm.Parameters.AddWithValue("@price", price);
             comm.Parameters.AddWithValue("@image", image.ToArray());
-            comm.Parameters.AddWithValue("@price", size);
+            comm.Parameters.AddWithValue("@size", size);
             comm.Parameters.AddWithValue("@quantity", quantity);
 
             db.openConnection();

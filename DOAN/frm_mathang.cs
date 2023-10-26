@@ -59,8 +59,17 @@ namespace DOAN
 
         private void btn_XemChiTiet_Click(object sender, EventArgs e)
         {
-            us_InforProduct us_InforProduct = new us_InforProduct(pnl_trangchinh, id_product);
-            TienIch.addUserControl(us_InforProduct, pnl_trangchinh);
+            try
+            {
+                us_InforProduct us_InforProduct = new us_InforProduct(pnl_trangchinh, id_product);
+                TienIch.addUserControl(us_InforProduct, pnl_trangchinh);
+            }
+            catch
+            {
+                frm_mathang Fmathang = new frm_mathang(this.pnl_trangchinh);
+                TienIch.addForm(Fmathang, pnl_trangchinh);
+                MessageBox.Show("Chưa thêm đủ thông tin về Nhà sản xuất hoặc Lô hàng", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btn_Them_Click(object sender, EventArgs e)
