@@ -23,5 +23,10 @@ namespace DOAN.DS
         {
             return db.ExecuteQueryDataSet("select * from V_PRODUCTS");
         }
+
+        public DataSet getDetailProduct(string id_product)
+        {
+            return db.ExecuteQueryDataSet(string.Format("select * from V_DetailProduct where ProductID = '{0}'", id_product));
+        }
     }
 }

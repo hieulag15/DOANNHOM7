@@ -14,6 +14,7 @@ namespace DOAN
 {
     public partial class frm_mathang : Form
     {
+        string id_product;
         private Panel pnl_trangchinh;
         public frm_mathang()
         {
@@ -57,7 +58,7 @@ namespace DOAN
 
         private void btn_XemChiTiet_Click(object sender, EventArgs e)
         {
-            us_InforProduct us_InforProduct = new us_InforProduct(pnl_trangchinh);
+            us_InforProduct us_InforProduct = new us_InforProduct(pnl_trangchinh, id_product);
             TienIch.addUserControl(us_InforProduct, pnl_trangchinh);
         }
 
@@ -65,6 +66,14 @@ namespace DOAN
         {
             us_AddProduct us_AddProduct = new us_AddProduct(pnl_trangchinh);
             TienIch.addUserControl(us_AddProduct, pnl_trangchinh);
+        }
+
+        private void dgv_Product_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i;
+            i = dgv_Product.CurrentRow.Index;
+            id_product = dgv_Product.Rows[i].Cells[0].Value.ToString();
+            txt_timkiem.Text = id_product.ToString();
         }
     }
 }
