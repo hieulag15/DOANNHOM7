@@ -12,16 +12,16 @@ using System.Windows.Forms;
 
 namespace DOAN
 {
-    public partial class frm_mathang : Form
+    public partial class frm_ListProduct : Form
     {
         string id_product;
         private Panel pnl_trangchinh;
-        public frm_mathang()
+        public frm_ListProduct()
         {
             InitializeComponent();
         }
 
-        public frm_mathang(Panel pnl_trangchinh)
+        public frm_ListProduct(Panel pnl_trangchinh)
         {
             InitializeComponent();
             this.pnl_trangchinh= pnl_trangchinh;
@@ -66,7 +66,7 @@ namespace DOAN
             }
             catch
             {
-                frm_mathang Fmathang = new frm_mathang(this.pnl_trangchinh);
+                frm_ListProduct Fmathang = new frm_ListProduct(this.pnl_trangchinh);
                 TienIch.addForm(Fmathang, pnl_trangchinh);
                 MessageBox.Show("Chưa thêm đủ thông tin về Nhà sản xuất hoặc Lô hàng", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

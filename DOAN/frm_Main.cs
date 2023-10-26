@@ -11,10 +11,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify;
 
 namespace DOAN
 {
-    public partial class frm_trangchinh : Form
+    public partial class frm_Main : Form
     {
         Color background1 = Color.FromArgb(65, 100, 74); 
-        public frm_trangchinh()
+        public frm_Main()
         {
             InitializeComponent();
         }
@@ -47,7 +47,7 @@ namespace DOAN
 
         private void btn_HienThiMatHang_Click(object sender, EventArgs e)
         {
-            frm_mathang Fmathang = new frm_mathang(this.pnl_trangchinh);
+            frm_ListProduct Fmathang = new frm_ListProduct(this.pnl_trangchinh);
             TienIch.addForm(Fmathang, pnl_trangchinh);
         }
 
@@ -74,7 +74,7 @@ namespace DOAN
 
         private void btn_Banhang_Click(object sender, EventArgs e)
         {
-            us_banhang us_Banhang = new us_banhang();
+            us_Sell us_Banhang = new us_Sell();
             TienIch.addUserControl(us_Banhang, pnl_trangchinh);
         }
     }

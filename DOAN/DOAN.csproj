@@ -79,17 +79,17 @@
     <Compile Include="Frm_Login.Designer.cs">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_mathang.cs">
+    <Compile Include="frm_ListProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_mathang.Designer.cs">
-      <DependentUpon>frm_mathang.cs</DependentUpon>
+    <Compile Include="frm_ListProduct.Designer.cs">
+      <DependentUpon>frm_ListProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_trangchinh.cs">
+    <Compile Include="frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_trangchinh.Designer.cs">
-      <DependentUpon>frm_trangchinh.cs</DependentUpon>
+    <Compile Include="frm_Main.Designer.cs">
+      <DependentUpon>frm_Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -111,11 +111,11 @@
     <Compile Include="us_AddProduct.Designer.cs">
       <DependentUpon>us_AddProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="us_banhang.cs">
+    <Compile Include="us_Sell.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="us_banhang.Designer.cs">
-      <DependentUpon>us_banhang.cs</DependentUpon>
+    <Compile Include="us_Sell.Designer.cs">
+      <DependentUpon>us_Sell.cs</DependentUpon>
     </Compile>
     <Compile Include="us_customerUI.cs">
       <SubType>UserControl</SubType>
@@ -128,6 +128,12 @@
     </Compile>
     <Compile Include="us_employeeUI.Designer.cs">
       <DependentUpon>us_employeeUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="us_ImportProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="us_ImportProduct.Designer.cs">
+      <DependentUpon>us_ImportProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="us_InforProduct.cs">
       <SubType>UserControl</SubType>
@@ -147,11 +153,11 @@
     <EmbeddedResource Include="Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_mathang.resx">
-      <DependentUpon>frm_mathang.cs</DependentUpon>
+    <EmbeddedResource Include="frm_ListProduct.resx">
+      <DependentUpon>frm_ListProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_trangchinh.resx">
-      <DependentUpon>frm_trangchinh.cs</DependentUpon>
+    <EmbeddedResource Include="frm_Main.resx">
+      <DependentUpon>frm_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -164,8 +170,8 @@
     <EmbeddedResource Include="us_AddProduct.resx">
       <DependentUpon>us_AddProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="us_banhang.resx">
-      <DependentUpon>us_banhang.cs</DependentUpon>
+    <EmbeddedResource Include="us_Sell.resx">
+      <DependentUpon>us_Sell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="us_customerUI.resx">
       <DependentUpon>us_customerUI.cs</DependentUpon>

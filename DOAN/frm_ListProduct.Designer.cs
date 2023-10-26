@@ -1,6 +1,6 @@
 ﻿namespace DOAN
 {
-    partial class frm_mathang
+    partial class frm_ListProduct
     {
         /// <summary>
         /// Required designer variable.

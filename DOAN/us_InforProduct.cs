@@ -62,7 +62,7 @@ namespace DOAN
 
         private void btn_quaylai_Click(object sender, EventArgs e)
         {
-            frm_mathang frm_Mathang = new frm_mathang(pnl_trangchinh);
+            frm_ListProduct frm_Mathang = new frm_ListProduct(pnl_trangchinh);
             TienIch.addForm(frm_Mathang, pnl_trangchinh);
         }
     }

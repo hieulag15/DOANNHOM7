@@ -1,6 +1,6 @@
 ﻿namespace DOAN
 {
-    partial class us_banhang
+    partial class us_Sell
     {
         /// <summary> 
         /// Required designer variable.

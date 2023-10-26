@@ -1,6 +1,6 @@
 ﻿namespace DOAN
 {
-    partial class frm_trangchinh
+    partial class frm_Main
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_trangchinh));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main));
             this.pnl_trangchinh = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.pnl_thanhben = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
