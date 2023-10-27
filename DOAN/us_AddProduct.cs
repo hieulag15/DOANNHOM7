@@ -65,7 +65,7 @@ namespace DOAN
                 img = new byte[fs.Length]; //Tạo một mảng byte với kích thước của file stream
                 fs.Read(img, 0, Convert.ToInt32(fs.Length)); //Đọc luồng tệp đã chọn vào mảng byte
                 dbProduct.addProduct(txt_mamathang.Text.Trim(), txt_tenmathang.Text.Trim(), (decimal)Convert.ToDouble(txt_giaban.Text.Trim()), 
-                    img, cb_kichthuoc.Text.Trim(), (int)Convert.ToDouble(num_soluong.Text.Trim()));
+                    img, cb_kichthuoc.Text.Trim(), (int)Convert.ToInt64(num_soluong.Text.Trim()));
             }
             catch (Exception ex)
             {
