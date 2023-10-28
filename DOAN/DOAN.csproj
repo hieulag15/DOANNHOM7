@@ -141,6 +141,12 @@
     <Compile Include="us_paymentUI.Designer.cs">
       <DependentUpon>us_paymentUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="us_Shipment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="us_Shipment.Designer.cs">
+      <DependentUpon>us_Shipment.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="us_paymentUI.resx">
       <DependentUpon>us_paymentUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="us_Shipment.resx">
+      <DependentUpon>us_Shipment.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -158,11 +158,11 @@
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(668, 32);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(728, 32);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(235, 31);
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(148, 31);
             this.guna2HtmlLabel8.TabIndex = 60;
-            this.guna2HtmlLabel8.Text = "Ảnh mặt hàng trong lô";
+            this.guna2HtmlLabel8.Text = "Ảnh mặt hàng";
             // 
             // txt_maNCC
             // 

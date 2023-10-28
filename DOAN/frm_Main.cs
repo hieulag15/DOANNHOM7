@@ -74,5 +74,11 @@ namespace DOAN
             us_Sell us_Banhang = new us_Sell();
             TienIch.addUserControl(us_Banhang, pnl_trangchinh);
         }
+
+        private void btn_LoHang_Click(object sender, EventArgs e)
+        {
+            us_Shipment us_Shipment = new us_Shipment();
+            TienIch.addUserControl(us_Shipment, pnl_trangchinh);
+        }
     }
 }

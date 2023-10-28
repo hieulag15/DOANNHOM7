@@ -47,8 +47,8 @@ namespace DOAN
         {
             try
             {
-                dbshipment.addShipment(txt_malohang.Text.Trim(), txt_maNCC.Text.Trim(), txt_mamathang.Text.Trim(), (decimal)Convert.ToDouble(txt_gianhap.Text.Trim()),
-                    Convert.ToDateTime(date_ngaynhap.Value), (int)Convert.ToInt64(num_soluongmathang.Text.Trim()));
+                dbshipment.addShipment(txt_malohang.Text.Trim(), txt_maNCC.Text.Trim(), txt_mamathang.Text.Trim(), Convert.ToDateTime(date_ngaynhap.Value), 
+                    (decimal)Convert.ToDouble(txt_gianhap.Text.Trim()), (int)Convert.ToInt64(num_soluongmathang.Text.Trim()));
             }
             catch (Exception ex)
             {

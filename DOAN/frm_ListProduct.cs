@@ -39,14 +39,22 @@ namespace DOAN
                 dtProduct.Clear();
                 DataSet ds = dbProduct.getProduct();
                 dtProduct = ds.Tables[0];
-                dgv_Product.DataSource = dtProduct;
-                id_product = dgv_Product.Rows[0].Cells[0].Value.ToString();
 
-                DataSet pro = dbProduct.getOneProduct(id_product);
-                DataRow dr = pro.Tables[0].Rows[0];
+                if (dtProduct.Rows.Count > 0)
+                {
+                    dgv_Product.DataSource = dtProduct;
+                    id_product = dgv_Product.Rows[0].Cells[0].Value.ToString();
 
-                pic_AnhMatHang.Image = TienIch.ConvertByteArraytoImage((byte[])dr[3]);
-                pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+                    DataSet pro = dbProduct.getOneProduct(id_product);
+                    DataRow dr = pro.Tables[0].Rows[0];
+
+                    pic_AnhMatHang.Image = TienIch.ConvertByteArraytoImage((byte[])dr[3]);
+                    pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+                }
+                else
+                {
+                    MessageBox.Show("Chưa có mặt hàng nào");
+                }
             }
             catch (SqlException)
             {
