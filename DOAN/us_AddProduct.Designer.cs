@@ -160,7 +160,7 @@
             0});
             this.num_soluong.Name = "num_soluong";
             this.num_soluong.ShadowDecoration.Parent = this.num_soluong;
-            this.num_soluong.Size = new System.Drawing.Size(99, 37);
+            this.num_soluong.Size = new System.Drawing.Size(123, 37);
             this.num_soluong.TabIndex = 57;
             this.num_soluong.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             // 
@@ -186,7 +186,7 @@
             this.cb_kichthuoc.Location = new System.Drawing.Point(336, 323);
             this.cb_kichthuoc.Name = "cb_kichthuoc";
             this.cb_kichthuoc.ShadowDecoration.Parent = this.cb_kichthuoc;
-            this.cb_kichthuoc.Size = new System.Drawing.Size(99, 36);
+            this.cb_kichthuoc.Size = new System.Drawing.Size(123, 36);
             this.cb_kichthuoc.TabIndex = 55;
             // 
             // txt_giaban

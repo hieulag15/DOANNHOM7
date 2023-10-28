@@ -41,17 +41,13 @@ namespace DOAN
             try
             {
                 dtProduct.Clear();
-                DataSet ds = dbProduct.getDetailProduct(id_product);
+                DataSet ds = dbProduct.getOneProduct(id_product);
                 DataRow dr = ds.Tables[0].Rows[0];
                 txt_mamathang.Text = dr[0].ToString();
                 txt_tenmathang.Text = dr[1].ToString();
                 txt_giaban.Text = dr[2].ToString();
                 txt_kichthuoc.Text = dr[4].ToString();
-                guna2NumericUpDown1.Value = int.Parse(dr[5].ToString());
-                txt_maNCC.Text = dr[6].ToString();
-                txt_tenNCC.Text = dr[7].ToString();
-                txt_malohang.Text = dr[8].ToString();
-                txt_gianhap.Text = dr[9].ToString();
+                num_soluong.Value = int.Parse(dr[5].ToString());
 
                 pic_AnhMatHang.Image = TienIch.ConvertByteArraytoImage((byte[])dr[3]);
                 pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
