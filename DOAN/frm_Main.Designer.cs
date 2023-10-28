@@ -42,7 +42,7 @@
             this.lbl_time = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_date = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbl_Name = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.pic_dong = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -445,13 +445,118 @@
             // 
             // frm_Main
             // 
+            this.guna2Panel3.BackColor = System.Drawing.Color.White;
+            this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.guna2Panel3.BorderThickness = 2;
+            this.guna2Panel3.Controls.Add(this.pic_dong);
+            this.guna2Panel3.Controls.Add(this.guna2Panel5);
+            this.guna2Panel3.Controls.Add(this.guna2Panel4);
+            this.guna2Panel3.Controls.Add(this.guna2HtmlLabel2);
+            this.guna2Panel3.Location = new System.Drawing.Point(278, -2);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
+            this.guna2Panel3.Size = new System.Drawing.Size(978, 56);
+            this.guna2Panel3.TabIndex = 1;
+            // 
+            // pic_dong
+            // 
+            this.pic_dong.Image = global::DOAN.Properties.Resources.cancel__1_;
+            this.pic_dong.Location = new System.Drawing.Point(943, 4);
+            this.pic_dong.Name = "pic_dong";
+            this.pic_dong.ShadowDecoration.Parent = this.pic_dong;
+            this.pic_dong.Size = new System.Drawing.Size(33, 26);
+            this.pic_dong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_dong.TabIndex = 2;
+            this.pic_dong.TabStop = false;
+            this.pic_dong.Click += new System.EventHandler(this.pic_dong_Click);
+            // 
+            // guna2Panel5
+            // 
+            this.guna2Panel5.BorderColor = System.Drawing.Color.Black;
+            this.guna2Panel5.Location = new System.Drawing.Point(2, 52);
+            this.guna2Panel5.Name = "guna2Panel5";
+            this.guna2Panel5.ShadowDecoration.Parent = this.guna2Panel5;
+            this.guna2Panel5.Size = new System.Drawing.Size(976, 106);
+            this.guna2Panel5.TabIndex = 2;
+            // 
+            // guna2Panel4
+            // 
+            this.guna2Panel4.Location = new System.Drawing.Point(1, 56);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.ShadowDecoration.Parent = this.guna2Panel4;
+            this.guna2Panel4.Size = new System.Drawing.Size(816, 102);
+            this.guna2Panel4.TabIndex = 2;
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(16, 15);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(307, 27);
+            this.guna2HtmlLabel2.TabIndex = 0;
+            this.guna2HtmlLabel2.Text = "HỆ THỐNG QUẢN LÝ CỬA HÀNG";
+            // 
+            // lbl_time
+            // 
+            this.lbl_time.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_time.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_time.Location = new System.Drawing.Point(995, 75);
+            this.lbl_time.Name = "lbl_time";
+            this.lbl_time.Size = new System.Drawing.Size(68, 25);
+            this.lbl_time.TabIndex = 4;
+            this.lbl_time.Text = "lbl_time";
+            // 
+            // lbl_date
+            // 
+            this.lbl_date.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_date.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_date.Location = new System.Drawing.Point(994, 106);
+            this.lbl_date.Name = "lbl_date";
+            this.lbl_date.Size = new System.Drawing.Size(69, 25);
+            this.lbl_date.TabIndex = 5;
+            this.lbl_date.Text = "lbl_date";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lbl_Name
+            // 
+            this.lbl_Name.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Name.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Name.ForeColor = System.Drawing.Color.White;
+            this.lbl_Name.Location = new System.Drawing.Point(389, 73);
+            this.lbl_Name.Name = "lbl_Name";
+            this.lbl_Name.Size = new System.Drawing.Size(66, 27);
+            this.lbl_Name.TabIndex = 3;
+            this.lbl_Name.Text = "Bảo Lê";
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(294, 73);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(89, 27);
+            this.guna2HtmlLabel1.TabIndex = 2;
+            this.guna2HtmlLabel1.Text = "Xin chào, ";
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.TargetControl = this.guna2Panel3;
+            // 
+            // frm_Main
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.ClientSize = new System.Drawing.Size(1254, 710);
             this.Controls.Add(this.lbl_date);
             this.Controls.Add(this.lbl_time);
-            this.Controls.Add(this.guna2HtmlLabel3);
+            this.Controls.Add(this.lbl_Name);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.pnl_thanhben);
@@ -495,7 +600,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lbl_time;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbl_date;
         private System.Windows.Forms.Timer timer1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_Name;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton2;
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton1;

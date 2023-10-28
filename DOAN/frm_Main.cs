@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN.DS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,8 @@ namespace DOAN
 {
     public partial class frm_Main : Form
     {
-        Color background1 = Color.FromArgb(65, 100, 74); 
+        Color background1 = Color.FromArgb(65, 100, 74);
+        public Account account;
         public frm_Main()
         {
             InitializeComponent();
@@ -22,7 +24,7 @@ namespace DOAN
         private void frm_trangchinh_Load(object sender, EventArgs e)
         {
             timer1.Start();
-
+            lbl_Name.Text = account.name.ToString();
             lbl_time.Text = DateTime.Now.ToLongTimeString();
             lbl_date.Text = DateTime.Now.ToLongDateString();
         }
