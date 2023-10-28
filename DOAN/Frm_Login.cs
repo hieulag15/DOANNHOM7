@@ -29,7 +29,7 @@ namespace DOAN
                 DataSet ds = dbAccount.GetAccount(txt_Username.Text, txt_Password.Text);
                 DataTable dt = ds.Tables[0];
                 dbAccount = new Account(dt.Rows[0][0].ToString(), dt.Rows[0][1].ToString(), dt.Rows[0][2].ToString(), dt.Rows[0][3].ToString());
-                frm_trangchinh frm_home = new frm_trangchinh();
+                frm_Main frm_home = new frm_Main();
                 this.Hide();
                 frm_home.ShowDialog();
                 this.Close();
