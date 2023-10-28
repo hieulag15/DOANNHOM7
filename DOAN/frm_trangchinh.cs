@@ -14,6 +14,7 @@ namespace DOAN
     public partial class frm_trangchinh : Form
     {
         Color background1 = Color.FromArgb(65, 100, 74); 
+
         public frm_trangchinh()
         {
             InitializeComponent();
