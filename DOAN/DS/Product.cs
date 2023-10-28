@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace DOAN.DS
 {
@@ -22,6 +23,11 @@ namespace DOAN.DS
         public DataSet getProduct()
         {
             return db.ExecuteQueryDataSet("select * from V_PRODUCTS");
+        }
+
+        public DataSet getOneProduct(string id_product)
+        {
+            return db.ExecuteQueryDataSet(string.Format("select * from PRODUCT where p_id = '{0}'", id_product));
         }
 
         public DataSet getDetailProduct(string id_product)

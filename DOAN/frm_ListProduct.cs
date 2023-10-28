@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -78,12 +79,26 @@ namespace DOAN
             TienIch.addUserControl(us_AddProduct, pnl_trangchinh);
         }
 
+        public Image ConvertByteArraytoImage(byte[] data) //Dùng để chuyển mảng bit ảnh thành ảnh để load lên form
+        {
+            using (MemoryStream ms = new MemoryStream(data))
+            {
+                return Image.FromStream(ms);
+            }
+        }
+
         private void dgv_Product_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int i;
             i = dgv_Product.CurrentRow.Index;
             id_product = dgv_Product.Rows[i].Cells[0].Value.ToString();
             txt_timkiem.Text = id_product.ToString();
+
+            dbProduct.getProduct();
+
+            DataRow row = dtProduct.Rows[i];
+            pic_AnhMatHang.Image = ConvertByteArraytoImage((byte[])row[3]);
+            pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
         }
     }
 }

@@ -45,12 +45,12 @@
             this.btn_Them = new Guna.UI2.WinForms.Guna2TileButton();
             this.btn_Xoa = new Guna.UI2.WinForms.Guna2TileButton();
             this.btn_XemChiTiet = new Guna.UI2.WinForms.Guna2TileButton();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pic_AnhMatHang = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Product)).BeginInit();
             this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_AnhMatHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -280,6 +280,7 @@
             this.txt_timkiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_timkiem.HoverState.Parent = this.txt_timkiem;
             this.txt_timkiem.Location = new System.Drawing.Point(724, 19);
+            this.txt_timkiem.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txt_timkiem.Name = "txt_timkiem";
             this.txt_timkiem.PasswordChar = '\0';
             this.txt_timkiem.PlaceholderText = "";
@@ -335,16 +336,16 @@
             this.btn_XemChiTiet.Text = "Xem chi tiết";
             this.btn_XemChiTiet.Click += new System.EventHandler(this.btn_XemChiTiet_Click);
             // 
-            // guna2PictureBox1
+            // pic_AnhMatHang
             // 
-            this.guna2PictureBox1.Image = global::DOAN.Properties.Resources.b11882e6_2ebe_0c01_43d8_001aa1e17eb9;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(724, 82);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(240, 324);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 9;
-            this.guna2PictureBox1.TabStop = false;
+            this.pic_AnhMatHang.Image = global::DOAN.Properties.Resources.b11882e6_2ebe_0c01_43d8_001aa1e17eb9;
+            this.pic_AnhMatHang.Location = new System.Drawing.Point(724, 82);
+            this.pic_AnhMatHang.Name = "pic_AnhMatHang";
+            this.pic_AnhMatHang.ShadowDecoration.Parent = this.pic_AnhMatHang;
+            this.pic_AnhMatHang.Size = new System.Drawing.Size(240, 324);
+            this.pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_AnhMatHang.TabIndex = 9;
+            this.pic_AnhMatHang.TabStop = false;
             // 
             // guna2PictureBox2
             // 
@@ -357,7 +358,7 @@
             this.guna2PictureBox2.TabIndex = 14;
             this.guna2PictureBox2.TabStop = false;
             // 
-            // frm_mathang
+            // frm_ListProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -367,17 +368,17 @@
             this.Controls.Add(this.btn_XemChiTiet);
             this.Controls.Add(this.btn_Xoa);
             this.Controls.Add(this.btn_Them);
-            this.Controls.Add(this.guna2PictureBox1);
+            this.Controls.Add(this.pic_AnhMatHang);
             this.Controls.Add(this.txt_timkiem);
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frm_mathang";
+            this.Name = "frm_ListProduct";
             this.Text = "frm_mathang";
             this.Load += new System.EventHandler(this.frm_mathang_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Product)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_AnhMatHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -396,7 +397,7 @@
         private Guna.UI2.WinForms.Guna2DataGridView dgv_Product;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2TextBox txt_timkiem;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox pic_AnhMatHang;
         private Guna.UI2.WinForms.Guna2TileButton btn_Them;
         private Guna.UI2.WinForms.Guna2TileButton btn_Xoa;
         private Guna.UI2.WinForms.Guna2TileButton btn_XemChiTiet;
