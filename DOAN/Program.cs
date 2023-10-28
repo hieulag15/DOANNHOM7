@@ -16,6 +16,7 @@ namespace DOAN
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new frm_Main());
             Application.Run(new Frm_Login());
         }
     }

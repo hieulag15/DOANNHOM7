@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DOAN
 {
-    public partial class us_banhang : UserControl
+    public partial class us_Sell : UserControl
     {
-        public us_banhang()
+        public us_Sell()
         {
             InitializeComponent();
         }
