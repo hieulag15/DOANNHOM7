@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DOAN.DS
 {
-    internal class Account
+    public class Account
     {
         DBConnection db = null;
         SqlCommand cmd = null;

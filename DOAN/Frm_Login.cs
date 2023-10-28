@@ -30,6 +30,7 @@ namespace DOAN
                 DataTable dt = ds.Tables[0];
                 dbAccount = new Account(dt.Rows[0][0].ToString(), dt.Rows[0][1].ToString(), dt.Rows[0][2].ToString(), dt.Rows[0][3].ToString());
                 frm_Main frm_home = new frm_Main();
+                frm_home.account = dbAccount;
                 this.Hide();
                 frm_home.ShowDialog();
                 this.Close();
