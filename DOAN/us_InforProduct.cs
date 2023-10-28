@@ -53,6 +53,9 @@ namespace DOAN
                 txt_malohang.Text = dr[8].ToString();
                 txt_gianhap.Text = dr[9].ToString();
 
+                pic_AnhMatHang.Image = TienIch.ConvertByteArraytoImage((byte[])dr[3]);
+                pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+
             }
             catch (SqlException)
             {

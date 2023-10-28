@@ -33,6 +33,9 @@
             this.btn_quaylai = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btn_XacNhanNhap = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txt_maNCC = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.pic_AnhMatHang = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.num_soluongmathang = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.date_ngaynhap = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -46,15 +49,12 @@
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.pic_anhmathang = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txt_maNCC = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_quaylai)).BeginInit();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_AnhMatHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_soluongmathang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_soluonglo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_anhmathang)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel2
@@ -103,6 +103,7 @@
             this.btn_quaylai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_quaylai.TabIndex = 30;
             this.btn_quaylai.TabStop = false;
+            this.btn_quaylai.Click += new System.EventHandler(this.btn_quaylai_Click);
             // 
             // btn_XacNhanNhap
             // 
@@ -133,7 +134,7 @@
             this.guna2Panel1.BorderThickness = 2;
             this.guna2Panel1.Controls.Add(this.txt_maNCC);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel5);
-            this.guna2Panel1.Controls.Add(this.pic_anhmathang);
+            this.guna2Panel1.Controls.Add(this.pic_AnhMatHang);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel4);
             this.guna2Panel1.Controls.Add(this.num_soluongmathang);
             this.guna2Panel1.Controls.Add(this.date_ngaynhap);
@@ -153,6 +154,55 @@
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(969, 487);
             this.guna2Panel1.TabIndex = 3;
+            // 
+            // txt_maNCC
+            // 
+            this.txt_maNCC.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.txt_maNCC.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_maNCC.DefaultText = "";
+            this.txt_maNCC.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_maNCC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_maNCC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_maNCC.DisabledState.Parent = this.txt_maNCC;
+            this.txt_maNCC.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_maNCC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_maNCC.FocusedState.Parent = this.txt_maNCC;
+            this.txt_maNCC.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_maNCC.ForeColor = System.Drawing.Color.Black;
+            this.txt_maNCC.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_maNCC.HoverState.Parent = this.txt_maNCC;
+            this.txt_maNCC.Location = new System.Drawing.Point(385, 73);
+            this.txt_maNCC.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.txt_maNCC.Name = "txt_maNCC";
+            this.txt_maNCC.PasswordChar = '\0';
+            this.txt_maNCC.PlaceholderText = "";
+            this.txt_maNCC.SelectedText = "";
+            this.txt_maNCC.ShadowDecoration.Parent = this.txt_maNCC;
+            this.txt_maNCC.Size = new System.Drawing.Size(228, 37);
+            this.txt_maNCC.TabIndex = 62;
+            // 
+            // guna2HtmlLabel5
+            // 
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(669, 32);
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(235, 31);
+            this.guna2HtmlLabel5.TabIndex = 61;
+            this.guna2HtmlLabel5.Text = "Ảnh mặt hàng trong lô";
+            // 
+            // pic_AnhMatHang
+            // 
+            this.pic_AnhMatHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pic_AnhMatHang.Image = global::DOAN.Properties.Resources.b11882e6_2ebe_0c01_43d8_001aa1e17eb9;
+            this.pic_AnhMatHang.Location = new System.Drawing.Point(669, 73);
+            this.pic_AnhMatHang.Name = "pic_AnhMatHang";
+            this.pic_AnhMatHang.ShadowDecoration.Parent = this.pic_AnhMatHang;
+            this.pic_AnhMatHang.Size = new System.Drawing.Size(272, 371);
+            this.pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_AnhMatHang.TabIndex = 60;
+            this.pic_AnhMatHang.TabStop = false;
             // 
             // guna2HtmlLabel4
             // 
@@ -382,55 +432,6 @@
             this.guna2HtmlLabel2.TabIndex = 2;
             this.guna2HtmlLabel2.Text = "Ngày nhập";
             // 
-            // pic_anhmathang
-            // 
-            this.pic_anhmathang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_anhmathang.Image = global::DOAN.Properties.Resources.b11882e6_2ebe_0c01_43d8_001aa1e17eb9;
-            this.pic_anhmathang.Location = new System.Drawing.Point(669, 73);
-            this.pic_anhmathang.Name = "pic_anhmathang";
-            this.pic_anhmathang.ShadowDecoration.Parent = this.pic_anhmathang;
-            this.pic_anhmathang.Size = new System.Drawing.Size(272, 371);
-            this.pic_anhmathang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_anhmathang.TabIndex = 60;
-            this.pic_anhmathang.TabStop = false;
-            // 
-            // guna2HtmlLabel5
-            // 
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(669, 32);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(235, 31);
-            this.guna2HtmlLabel5.TabIndex = 61;
-            this.guna2HtmlLabel5.Text = "Ảnh mặt hàng trong lô";
-            // 
-            // txt_maNCC
-            // 
-            this.txt_maNCC.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.txt_maNCC.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_maNCC.DefaultText = "";
-            this.txt_maNCC.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_maNCC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_maNCC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_maNCC.DisabledState.Parent = this.txt_maNCC;
-            this.txt_maNCC.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_maNCC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_maNCC.FocusedState.Parent = this.txt_maNCC;
-            this.txt_maNCC.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_maNCC.ForeColor = System.Drawing.Color.Black;
-            this.txt_maNCC.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_maNCC.HoverState.Parent = this.txt_maNCC;
-            this.txt_maNCC.Location = new System.Drawing.Point(385, 73);
-            this.txt_maNCC.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.txt_maNCC.Name = "txt_maNCC";
-            this.txt_maNCC.PasswordChar = '\0';
-            this.txt_maNCC.PlaceholderText = "";
-            this.txt_maNCC.SelectedText = "";
-            this.txt_maNCC.ShadowDecoration.Parent = this.txt_maNCC;
-            this.txt_maNCC.Size = new System.Drawing.Size(228, 37);
-            this.txt_maNCC.TabIndex = 62;
-            // 
             // us_ImportProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -439,13 +440,14 @@
             this.Controls.Add(this.guna2Panel2);
             this.Name = "us_ImportProduct";
             this.Size = new System.Drawing.Size(976, 554);
+            this.Load += new System.EventHandler(this.us_ImportProduct_Load);
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_quaylai)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_AnhMatHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_soluongmathang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_soluonglo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_anhmathang)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -471,7 +473,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
-        private Guna.UI2.WinForms.Guna2PictureBox pic_anhmathang;
+        private Guna.UI2.WinForms.Guna2PictureBox pic_AnhMatHang;
         private Guna.UI2.WinForms.Guna2TextBox txt_maNCC;
     }
 }

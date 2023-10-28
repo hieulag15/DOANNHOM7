@@ -67,12 +67,6 @@ namespace DOAN
             timer1.Start();
         }
 
-        private void btn_NhapKho_Click(object sender, EventArgs e)
-        {
-            us_ImportProduct us_ImportProduct = new us_ImportProduct();
-            TienIch.addUserControl(us_ImportProduct, pnl_trangchinh);
-        }
-
         private void btn_Banhang_Click(object sender, EventArgs e)
         {
             us_Sell us_Banhang = new us_Sell();

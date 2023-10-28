@@ -40,17 +40,23 @@ namespace DOAN
                 DataSet ds = dbProduct.getProduct();
                 dtProduct = ds.Tables[0];
                 dgv_Product.DataSource = dtProduct;
+                id_product = dgv_Product.Rows[0].Cells[0].Value.ToString();
+
+                DataSet pro = dbProduct.getOneProduct(id_product);
+                DataRow dr = pro.Tables[0].Rows[0];
+
+                pic_AnhMatHang.Image = TienIch.ConvertByteArraytoImage((byte[])dr[3]);
+                pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             }
             catch (SqlException)
             {
-                MessageBox.Show("Loi");
+                MessageBox.Show("Chưa có mặt hàng nào");
             }
         }
 
         private void frm_mathang_Load(object sender, EventArgs e)
         {
             LoadProduct();
-            id_product = dgv_Product.Rows[0].Cells[0].Value.ToString();
         }
 
         private void bindingSource1_CurrentChanged(object sender, EventArgs e)
@@ -79,14 +85,6 @@ namespace DOAN
             TienIch.addUserControl(us_AddProduct, pnl_trangchinh);
         }
 
-        public Image ConvertByteArraytoImage(byte[] data) //Dùng để chuyển mảng bit ảnh thành ảnh để load lên form
-        {
-            using (MemoryStream ms = new MemoryStream(data))
-            {
-                return Image.FromStream(ms);
-            }
-        }
-
         private void dgv_Product_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int i;
@@ -94,11 +92,17 @@ namespace DOAN
             id_product = dgv_Product.Rows[i].Cells[0].Value.ToString();
             txt_timkiem.Text = id_product.ToString();
 
-            dbProduct.getProduct();
+            DataSet pro = dbProduct.getOneProduct(id_product);
+            DataRow dr = pro.Tables[0].Rows[0];
 
-            DataRow row = dtProduct.Rows[i];
-            pic_AnhMatHang.Image = ConvertByteArraytoImage((byte[])row[3]);
+            pic_AnhMatHang.Image =  TienIch.ConvertByteArraytoImage((byte[])dr[3]);
             pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+        }
+
+        private void btn_NhapKho_Click(object sender, EventArgs e)
+        {
+            us_ImportProduct us_ImportProduct = new us_ImportProduct(id_product, pnl_trangchinh);
+            TienIch.addUserControl(us_ImportProduct, pnl_trangchinh);
         }
     }
 }
