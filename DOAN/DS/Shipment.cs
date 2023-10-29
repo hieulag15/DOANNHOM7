@@ -30,18 +30,54 @@ namespace DOAN.DS
             return db.ExecuteQueryDataSet(string.Format("select * from V_INFO_DETAIL_SHIPMENT where [Mã lô hàng] = '{0}'", id_shipment));
         }
 
-        public bool addShipment(string shid, string sid, string pid, DateTime imDate, decimal imPrice, int pquantity)
+        public bool addShipment(string shid, string sid, DateTime imDate)
         {
-            comm = new SqlCommand("EXEC usp_AddShipment @shid, @sid, @pid, @imDate, @imPrice, @pquantity", db.getSqlConn);
+            comm = new SqlCommand("EXEC proc_AddShipment @shid, @sid, @imDate", db.getSqlConn);
             comm.Parameters.AddWithValue("@shid", shid);
             comm.Parameters.AddWithValue("@sid", sid);
-            comm.Parameters.AddWithValue("@pid", pid);
             comm.Parameters.AddWithValue("@imDate", imDate);
-            comm.Parameters.AddWithValue("@imPrice", imPrice);
-            comm.Parameters.AddWithValue("@pquantity", pquantity);
 
             db.openConnection();
             if (comm.ExecuteNonQuery() == 1)
+            {
+                db.closeConnection();
+                return true;
+            }
+            else
+            {
+                db.closeConnection();
+                return false;
+            }
+        }
+
+        public bool addDetailShipment(string shid, string pid, decimal imPrice, int quantity)
+        {
+            comm = new SqlCommand("EXEC proc_AddDetailShipment @shid, @pid, @imPrice, @quantity", db.getSqlConn);
+            comm.Parameters.AddWithValue("@shid", shid);
+            comm.Parameters.AddWithValue("@pid", pid);
+            comm.Parameters.AddWithValue("@imPrice", imPrice);
+            comm.Parameters.AddWithValue("@quantity", quantity);
+
+            db.openConnection();
+            if (comm.ExecuteNonQuery() == 1)
+            {
+                db.closeConnection();
+                return true;
+            }
+            else
+            {
+                db.closeConnection();
+                return false;
+            }
+        }
+
+        public bool deleteShipment(string shid)
+        {
+            comm = new SqlCommand("Exec proc_DeleteShipment @shid", db.getSqlConn);
+            comm.Parameters.AddWithValue("@shid", shid);
+
+            db.openConnection();
+            if ((comm.ExecuteNonQuery() == 1))
             {
                 db.closeConnection();
                 return true;

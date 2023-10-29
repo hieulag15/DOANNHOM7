@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -14,40 +15,83 @@ namespace DOAN
 {
     public partial class us_ImportProduct : UserControl
     {
-        Panel pnl_trangchinh;
-        string id_product;
         public us_ImportProduct()
         {
             InitializeComponent();
         }
 
-        public us_ImportProduct(string id_product, Panel pnl_trangchinh)
+        Panel pnl_trangchinh;
+        string id_shipment;
+        string id_ncc;
+        public us_ImportProduct(Panel pnl_trangchinh, string id_shipment, string id_ncc)
         {
             InitializeComponent();
-            this.id_product = id_product;
             this.pnl_trangchinh = pnl_trangchinh;
+            this.id_shipment= id_shipment;
+            this.id_ncc= id_ncc;
         }
-
-        Product dbProduct = new Product();
 
         private void us_ImportProduct_Load(object sender, EventArgs e)
         {
-            txt_mamathang.Text = id_product;
-
-            DataSet pro = dbProduct.getOneProduct(id_product);
-            DataRow dr = pro.Tables[0].Rows[0];
-
-            pic_AnhMatHang.Image = TienIch.ConvertByteArraytoImage((byte[])dr[3]);
-            pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            LoadImportProduct();
         }
 
-        Shipment dbshipment= new Shipment();
+        private void btn_quaylai_Click(object sender, EventArgs e)
+        {
+            us_Shipment us_Shipment = new us_Shipment(pnl_trangchinh);
+            TienIch.addUserControl(us_Shipment, pnl_trangchinh);
+        }
 
-        private void btn_XacNhanNhap_Click(object sender, EventArgs e)
+        private void btn_XacNhanThem_Click(object sender, EventArgs e)
+        {
+            ThemChiTietLoHang();
+            LoadProduct();
+        }
+
+        //Xử lý
+
+        DataTable dtProduct = new DataTable();
+        Product dbProduct = new Product();
+
+        //Hiển thị thông tin lô hàng và nhà cung cấp
+        private void LoadImportProduct()
+        {
+            txt_malohang.Text = id_shipment;
+            txt_maNCC.Text = id_ncc;
+            LoadProduct();
+        }
+
+        private void LoadProduct()
         {
             try
             {
-                dbshipment.addShipment(txt_malohang.Text.Trim(), txt_maNCC.Text.Trim(), txt_mamathang.Text.Trim(), Convert.ToDateTime(date_ngaynhap.Value), 
+                dtProduct.Clear();
+                DataSet ds = dbProduct.getProduct();
+                dtProduct = ds.Tables[0];
+
+                if (dtProduct.Rows.Count > 0)
+                {
+                    dgv_Product.DataSource = dtProduct;
+                }
+                else
+                {
+                    MessageBox.Show("Chưa có mặt hàng nào");
+                }
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("Chưa có mặt hàng nào");
+            }
+        }
+
+        Shipment dbShipment = new Shipment();
+
+        //Thêm thông tin chi tiết lô hàng mới
+        private void ThemChiTietLoHang()
+        {
+            try
+            {
+                dbShipment.addDetailShipment(txt_malohang.Text.Trim(), txt_mamathang.Text.Trim(),
                     (decimal)Convert.ToDouble(txt_gianhap.Text.Trim()), (int)Convert.ToInt64(num_soluongmathang.Text.Trim()));
             }
             catch (Exception ex)
@@ -56,10 +100,23 @@ namespace DOAN
             }
         }
 
-        private void btn_quaylai_Click(object sender, EventArgs e)
+        private void LamMoi()
         {
-            frm_ListProduct Fmathang = new frm_ListProduct(this.pnl_trangchinh);
-            TienIch.addForm(Fmathang, pnl_trangchinh);
+            txt_mamathang.Text = "";
+            txt_gianhap.Text = "";
+            num_soluongmathang.Value = 0;
+            date_ngaynhap.Value = DateTime.Now;
         }
+
+        string id_product;
+        private void dgv_Product_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i;
+            i = dgv_Product.CurrentRow.Index;
+            id_product = dgv_Product.Rows[i].Cells[0].Value.ToString();
+
+            txt_mamathang.Text = id_product;
+        }
+        
     }
 }

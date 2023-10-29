@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.cb_kichthuoc = new Guna.UI2.WinForms.Guna2ComboBox();
             this.num_soluong = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.txt_giaban = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_tenmathang = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_mamathang = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_kichthuoc = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_ThayDoiAnh = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -57,11 +57,11 @@
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.guna2Panel1.BorderThickness = 2;
+            this.guna2Panel1.Controls.Add(this.cb_kichthuoc);
             this.guna2Panel1.Controls.Add(this.num_soluong);
             this.guna2Panel1.Controls.Add(this.txt_giaban);
             this.guna2Panel1.Controls.Add(this.txt_tenmathang);
             this.guna2Panel1.Controls.Add(this.txt_mamathang);
-            this.guna2Panel1.Controls.Add(this.txt_kichthuoc);
             this.guna2Panel1.Controls.Add(this.btn_ThayDoiAnh);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel7);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel6);
@@ -75,6 +75,30 @@
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(969, 486);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // cb_kichthuoc
+            // 
+            this.cb_kichthuoc.BackColor = System.Drawing.Color.Transparent;
+            this.cb_kichthuoc.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.cb_kichthuoc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_kichthuoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_kichthuoc.FocusedColor = System.Drawing.Color.Empty;
+            this.cb_kichthuoc.FocusedState.Parent = this.cb_kichthuoc;
+            this.cb_kichthuoc.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_kichthuoc.ForeColor = System.Drawing.Color.Black;
+            this.cb_kichthuoc.FormattingEnabled = true;
+            this.cb_kichthuoc.HoverState.Parent = this.cb_kichthuoc;
+            this.cb_kichthuoc.ItemHeight = 30;
+            this.cb_kichthuoc.Items.AddRange(new object[] {
+            "M",
+            "L",
+            "XL"});
+            this.cb_kichthuoc.ItemsAppearance.Parent = this.cb_kichthuoc;
+            this.cb_kichthuoc.Location = new System.Drawing.Point(393, 220);
+            this.cb_kichthuoc.Name = "cb_kichthuoc";
+            this.cb_kichthuoc.ShadowDecoration.Parent = this.cb_kichthuoc;
+            this.cb_kichthuoc.Size = new System.Drawing.Size(123, 36);
+            this.cb_kichthuoc.TabIndex = 57;
             // 
             // num_soluong
             // 
@@ -100,7 +124,7 @@
             0});
             this.num_soluong.Name = "num_soluong";
             this.num_soluong.ShadowDecoration.Parent = this.num_soluong;
-            this.num_soluong.Size = new System.Drawing.Size(136, 37);
+            this.num_soluong.Size = new System.Drawing.Size(123, 37);
             this.num_soluong.TabIndex = 56;
             this.num_soluong.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             // 
@@ -177,41 +201,17 @@
             this.txt_mamathang.Name = "txt_mamathang";
             this.txt_mamathang.PasswordChar = '\0';
             this.txt_mamathang.PlaceholderText = "";
+            this.txt_mamathang.ReadOnly = true;
             this.txt_mamathang.SelectedText = "";
             this.txt_mamathang.ShadowDecoration.Parent = this.txt_mamathang;
             this.txt_mamathang.Size = new System.Drawing.Size(228, 37);
             this.txt_mamathang.TabIndex = 46;
             // 
-            // txt_kichthuoc
-            // 
-            this.txt_kichthuoc.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.txt_kichthuoc.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_kichthuoc.DefaultText = "";
-            this.txt_kichthuoc.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_kichthuoc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_kichthuoc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_kichthuoc.DisabledState.Parent = this.txt_kichthuoc;
-            this.txt_kichthuoc.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_kichthuoc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_kichthuoc.FocusedState.Parent = this.txt_kichthuoc;
-            this.txt_kichthuoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_kichthuoc.ForeColor = System.Drawing.Color.Black;
-            this.txt_kichthuoc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_kichthuoc.HoverState.Parent = this.txt_kichthuoc;
-            this.txt_kichthuoc.Location = new System.Drawing.Point(393, 218);
-            this.txt_kichthuoc.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.txt_kichthuoc.Name = "txt_kichthuoc";
-            this.txt_kichthuoc.PasswordChar = '\0';
-            this.txt_kichthuoc.PlaceholderText = "";
-            this.txt_kichthuoc.SelectedText = "";
-            this.txt_kichthuoc.ShadowDecoration.Parent = this.txt_kichthuoc;
-            this.txt_kichthuoc.Size = new System.Drawing.Size(136, 38);
-            this.txt_kichthuoc.TabIndex = 28;
-            // 
             // btn_ThayDoiAnh
             // 
             this.btn_ThayDoiAnh.BackColor = System.Drawing.Color.White;
             this.btn_ThayDoiAnh.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btn_ThayDoiAnh.BorderRadius = 10;
             this.btn_ThayDoiAnh.CheckedState.Parent = this.btn_ThayDoiAnh;
             this.btn_ThayDoiAnh.CustomImages.Parent = this.btn_ThayDoiAnh;
             this.btn_ThayDoiAnh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
@@ -227,6 +227,7 @@
             this.btn_ThayDoiAnh.Size = new System.Drawing.Size(250, 49);
             this.btn_ThayDoiAnh.TabIndex = 25;
             this.btn_ThayDoiAnh.Text = "Thay đổi ảnh";
+            this.btn_ThayDoiAnh.Click += new System.EventHandler(this.btn_ThayDoiAnh_Click);
             // 
             // guna2HtmlLabel7
             // 
@@ -323,10 +324,10 @@
             // 
             // btn_LuuThayDoi
             // 
-            this.btn_LuuThayDoi.BackColor = System.Drawing.Color.Aquamarine;
+            this.btn_LuuThayDoi.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btn_LuuThayDoi.CheckedState.Parent = this.btn_LuuThayDoi;
             this.btn_LuuThayDoi.CustomImages.Parent = this.btn_LuuThayDoi;
-            this.btn_LuuThayDoi.FillColor = System.Drawing.Color.LightSeaGreen;
+            this.btn_LuuThayDoi.FillColor = System.Drawing.Color.MediumTurquoise;
             this.btn_LuuThayDoi.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_LuuThayDoi.ForeColor = System.Drawing.Color.White;
             this.btn_LuuThayDoi.HoverState.Parent = this.btn_LuuThayDoi;
@@ -342,6 +343,7 @@
             this.btn_LuuThayDoi.TabIndex = 26;
             this.btn_LuuThayDoi.Text = "Lưu thay đổi";
             this.btn_LuuThayDoi.TextOffset = new System.Drawing.Point(20, -18);
+            this.btn_LuuThayDoi.Click += new System.EventHandler(this.btn_LuuThayDoi_Click);
             // 
             // guna2HtmlLabel9
             // 
@@ -392,6 +394,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_giaban;
         private Guna.UI2.WinForms.Guna2TextBox txt_tenmathang;
         private Guna.UI2.WinForms.Guna2NumericUpDown num_soluong;
-        private Guna.UI2.WinForms.Guna2TextBox txt_kichthuoc;
+        private Guna.UI2.WinForms.Guna2ComboBox cb_kichthuoc;
     }
 }

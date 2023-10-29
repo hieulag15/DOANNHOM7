@@ -15,22 +15,63 @@ namespace DOAN
 {
     public partial class frm_ListProduct : Form
     {
-        string id_product;
-        private Panel pnl_trangchinh;
         public frm_ListProduct()
         {
             InitializeComponent();
         }
 
+        private Panel pnl_trangchinh;
         public frm_ListProduct(Panel pnl_trangchinh)
         {
             InitializeComponent();
             this.pnl_trangchinh= pnl_trangchinh;
         }
 
+        private void frm_mathang_Load(object sender, EventArgs e)
+        {
+            LoadProduct();
+        }
+
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_XemChiTiet_Click(object sender, EventArgs e)
+        {
+            XemChiTiet();
+        }
+
+        private void btn_Them_Click(object sender, EventArgs e)
+        {
+            us_AddProduct us_AddProduct = new us_AddProduct(pnl_trangchinh);
+            TienIch.addUserControl(us_AddProduct, pnl_trangchinh);
+        }
+
+        private void dgv_Product_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i;
+            i = dgv_Product.CurrentRow.Index;
+            id_product = dgv_Product.Rows[i].Cells[0].Value.ToString();
+
+            DataSet pro = dbProduct.getOneProduct(id_product);
+            DataRow dr = pro.Tables[0].Rows[0];
+
+            pic_AnhMatHang.Image =  TienIch.ConvertByteArraytoImage((byte[])dr[3]);
+            pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+        }
+
+        private void btn_Xoa_Click(object sender, EventArgs e)
+        {
+            XoaMatHang();
+        }
+
+
+        //Xử lý
+ 
         DataTable dtProduct = new DataTable();
         Product dbProduct = new Product();
-
+        string id_product;
 
         public void LoadProduct()
         {
@@ -62,17 +103,8 @@ namespace DOAN
             }
         }
 
-        private void frm_mathang_Load(object sender, EventArgs e)
-        {
-            LoadProduct();
-        }
-
-        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_XemChiTiet_Click(object sender, EventArgs e)
+        //Mở form xem chi tiết thông tin mặt hàng
+        private void XemChiTiet()
         {
             try
             {
@@ -87,29 +119,32 @@ namespace DOAN
             }
         }
 
-        private void btn_Them_Click(object sender, EventArgs e)
+        private void XoaMatHang()
         {
-            us_AddProduct us_AddProduct = new us_AddProduct(pnl_trangchinh);
-            TienIch.addUserControl(us_AddProduct, pnl_trangchinh);
-        }
+            try
+            {
+                DialogResult traloi;
+                traloi = MessageBox.Show("Xác nhận xóa sản phẩm?", "Trả lời",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (traloi == DialogResult.Yes)
+                {
+                    dbProduct.deleteProduct(id_product);
+                    // Cập nhật lại DataGridView 
+                    LoadProduct();
+                    // Thông báo 
+                    MessageBox.Show("Đã xóa xong!");
 
-        private void dgv_Product_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int i;
-            i = dgv_Product.CurrentRow.Index;
-            id_product = dgv_Product.Rows[i].Cells[0].Value.ToString();
-
-            DataSet pro = dbProduct.getOneProduct(id_product);
-            DataRow dr = pro.Tables[0].Rows[0];
-
-            pic_AnhMatHang.Image =  TienIch.ConvertByteArraytoImage((byte[])dr[3]);
-            pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-        }
-
-        private void btn_NhapKho_Click(object sender, EventArgs e)
-        {
-            us_ImportProduct us_ImportProduct = new us_ImportProduct(id_product, pnl_trangchinh);
-            TienIch.addUserControl(us_ImportProduct, pnl_trangchinh);
+                }
+                else
+                {
+                    // Thông báo 
+                    MessageBox.Show("Không thực hiện việc xóa mẫu tin!");
+                }
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("Không xóa được. Lỗi rồi!");
+            }
         }
     }
 }

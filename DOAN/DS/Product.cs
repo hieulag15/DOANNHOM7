@@ -37,7 +37,7 @@ namespace DOAN.DS
 
         public bool addProduct(string pid, string name, decimal price, byte[] image, string size, int quantity)
         {
-            comm = new SqlCommand("EXEC usp_AddProduct @pid, @name, @price, @image, @size , @quantity", db.getSqlConn);
+            comm = new SqlCommand("EXEC proc_AddProduct @pid, @name, @price, @image, @size , @quantity", db.getSqlConn);
             comm.Parameters.AddWithValue("@pid", pid);
             comm.Parameters.AddWithValue("@name", name);
             comm.Parameters.AddWithValue("@price", price);
@@ -60,7 +60,7 @@ namespace DOAN.DS
 
         public bool deleteProduct(string pid)
         {
-            comm = new SqlCommand("Exec usp_DeleteProduct @pid", db.getSqlConn);
+            comm = new SqlCommand("Exec proc_DeleteProduct @pid", db.getSqlConn);
             comm.Parameters.AddWithValue("@pid", pid);
 
             db.openConnection();
@@ -79,7 +79,7 @@ namespace DOAN.DS
         public bool updateProduct(string pid, string name, decimal price, byte[] image, string size, int quantity)
         {
 
-            comm = new SqlCommand("EXEC usp_UpdateProduct @pid, @name, @price, @image, @size , @quantity", db.getSqlConn);
+            comm = new SqlCommand("EXEC proc_UpdateProduct @pid, @name, @price, @image, @size , @quantity", db.getSqlConn);
             comm.Parameters.AddWithValue("@pid", pid);
             comm.Parameters.AddWithValue("@name", name);
             comm.Parameters.AddWithValue("@price", price);

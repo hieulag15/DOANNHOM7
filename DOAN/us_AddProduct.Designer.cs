@@ -178,7 +178,6 @@
             this.cb_kichthuoc.HoverState.Parent = this.cb_kichthuoc;
             this.cb_kichthuoc.ItemHeight = 30;
             this.cb_kichthuoc.Items.AddRange(new object[] {
-            "Tất cả",
             "M",
             "L",
             "XL"});
@@ -270,6 +269,7 @@
             // btn_TaiAnhLen
             // 
             this.btn_TaiAnhLen.BackColor = System.Drawing.Color.White;
+            this.btn_TaiAnhLen.BorderRadius = 10;
             this.btn_TaiAnhLen.CheckedState.Parent = this.btn_TaiAnhLen;
             this.btn_TaiAnhLen.CustomImages.Parent = this.btn_TaiAnhLen;
             this.btn_TaiAnhLen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));

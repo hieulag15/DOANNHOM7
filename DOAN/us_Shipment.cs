@@ -14,17 +14,23 @@ namespace DOAN
 {
     public partial class us_Shipment : UserControl
     {
+        Panel pnl_trangchinh;
         public us_Shipment()
         {
             InitializeComponent();
         }
 
+        public us_Shipment(Panel pnl_trangchinh)
+        {
+            InitializeComponent();
+            this.pnl_trangchinh = pnl_trangchinh;
+        }
+
         DataTable dtShipment = new DataTable();
         Shipment dbShipment = new Shipment();
         DataTable dtDetailShipment = new DataTable();
-        Shipment dbDetailShipment = new Shipment();
-        string id_shipment;
 
+        //Hiển thị các lô hàng
         public void LoadShipment()
         {
             try
@@ -40,6 +46,9 @@ namespace DOAN
             }
         }
 
+        string id_shipment;
+        string id_ncc;
+        //Hiển thị chi tiết các mặt hàng trong mỗi lô hàng
         public void LoadDetailShipment()
         {
             try
@@ -55,6 +64,58 @@ namespace DOAN
             }
         }
 
+        //Thêm lô hàng mới
+        private void ThemLoHang()
+        {
+            try
+            {
+                //truyền dữ liệu vào hàm thêm lô hàng
+                dbShipment.addShipment(txt_malohang.Text.Trim(), txt_maNCC.Text.Trim(), Convert.ToDateTime(date_ngaynhap.Value));
+                LoadShipment();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        //Xóa lô hàng
+        private void XoaLoHang()
+        {
+            try
+            {
+                DialogResult traloi;
+                traloi = MessageBox.Show("Xác nhận xóa sản phẩm?", "Trả lời",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (traloi == DialogResult.Yes)
+                {
+                    dbShipment.deleteShipment(id_shipment);
+                    // Cập nhật lại bảng lô hàng và chi tiết lô hàng 
+                    LoadShipment();
+                    LoadDetailShipment();
+                    // Thông báo 
+                    MessageBox.Show("Đã xóa xong!");
+
+                }
+                else
+                {
+                    // Thông báo 
+                    MessageBox.Show("Không thực hiện việc xóa lô hàng!");
+                }
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("Không xóa được. Lỗi rồi!");
+            }
+        }
+
+        private void LamMoi()
+        {
+            pnl_ThemLoHang.Visible = false;
+            txt_malohang.Text = "";
+            txt_maNCC.Text = "";
+        }
+
         private void us_Shipment_Load(object sender, EventArgs e)
         {
             LoadShipment();
@@ -65,6 +126,7 @@ namespace DOAN
             int i;
             i = dgv_Shipment.CurrentRow.Index;
             id_shipment = dgv_Shipment.Rows[i].Cells[4].Value.ToString();
+            id_ncc = dgv_Shipment.Rows[i].Cells[0].Value.ToString();
             LoadDetailShipment();
         }
 
@@ -75,9 +137,24 @@ namespace DOAN
 
         private void btn_huy_Click(object sender, EventArgs e)
         {
-            pnl_ThemLoHang.Visible = false;
-            txt_malohang.Text = "";
-            txt_maNCC.Text = "";
+            LamMoi();
+        }
+
+        private void btn_XacNhanThem_Click(object sender, EventArgs e)
+        {
+            ThemLoHang();
+            LamMoi();
+        }
+
+        private void btn_XoaLoHang_Click(object sender, EventArgs e)
+        {
+            XoaLoHang();
+        }
+
+        private void btn_NhapKho_Click(object sender, EventArgs e)
+        {
+            us_ImportProduct us_ImportProduct = new us_ImportProduct(pnl_trangchinh, id_shipment, id_ncc);
+            TienIch.addUserControl(us_ImportProduct, pnl_trangchinh);
         }
     }
 }

@@ -77,7 +77,7 @@ namespace DOAN
 
         private void btn_LoHang_Click(object sender, EventArgs e)
         {
-            us_Shipment us_Shipment = new us_Shipment();
+            us_Shipment us_Shipment = new us_Shipment(pnl_trangchinh);
             TienIch.addUserControl(us_Shipment, pnl_trangchinh);
         }
     }
