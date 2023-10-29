@@ -98,7 +98,6 @@ namespace DOAN
             int i;
             i = dgv_Product.CurrentRow.Index;
             id_product = dgv_Product.Rows[i].Cells[0].Value.ToString();
-            txt_timkiem.Text = id_product.ToString();
 
             DataSet pro = dbProduct.getOneProduct(id_product);
             DataRow dr = pro.Tables[0].Rows[0];

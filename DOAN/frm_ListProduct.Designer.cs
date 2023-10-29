@@ -84,10 +84,10 @@
             this.guna2Panel1.Controls.Add(this.guna2TileButton2);
             this.guna2Panel1.Controls.Add(this.guna2TileButton3);
             this.guna2Panel1.Controls.Add(this.guna2TileButton1);
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 2);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 1);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(706, 38);
+            this.guna2Panel1.Size = new System.Drawing.Size(700, 38);
             this.guna2Panel1.TabIndex = 4;
             // 
             // guna2TileButton6
@@ -221,13 +221,13 @@
             this.dgv_Product.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Product.EnableHeadersVisualStyles = false;
             this.dgv_Product.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_Product.Location = new System.Drawing.Point(3, 66);
+            this.dgv_Product.Location = new System.Drawing.Point(2, 66);
             this.dgv_Product.Name = "dgv_Product";
             this.dgv_Product.ReadOnly = true;
             this.dgv_Product.RowHeadersVisible = false;
             this.dgv_Product.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgv_Product.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Product.Size = new System.Drawing.Size(701, 457);
+            this.dgv_Product.Size = new System.Drawing.Size(696, 457);
             this.dgv_Product.TabIndex = 5;
             this.dgv_Product.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dgv_Product.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -256,13 +256,12 @@
             // guna2Panel2
             // 
             this.guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.guna2Panel2.BorderThickness = 2;
             this.guna2Panel2.Controls.Add(this.guna2Panel1);
             this.guna2Panel2.Controls.Add(this.dgv_Product);
             this.guna2Panel2.Location = new System.Drawing.Point(12, 16);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(706, 526);
+            this.guna2Panel2.Size = new System.Drawing.Size(703, 526);
             this.guna2Panel2.TabIndex = 6;
             // 
             // txt_timkiem
@@ -282,7 +281,7 @@
             this.txt_timkiem.ForeColor = System.Drawing.Color.Black;
             this.txt_timkiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_timkiem.HoverState.Parent = this.txt_timkiem;
-            this.txt_timkiem.Location = new System.Drawing.Point(724, 19);
+            this.txt_timkiem.Location = new System.Drawing.Point(724, 17);
             this.txt_timkiem.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txt_timkiem.Name = "txt_timkiem";
             this.txt_timkiem.PasswordChar = '\0';
@@ -354,10 +353,10 @@
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.Image = global::DOAN.Properties.Resources.search__1_;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(931, 24);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(928, 20);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(31, 28);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(33, 32);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox2.TabIndex = 14;
             this.guna2PictureBox2.TabStop = false;

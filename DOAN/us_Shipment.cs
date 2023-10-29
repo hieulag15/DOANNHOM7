@@ -67,5 +67,17 @@ namespace DOAN
             id_shipment = dgv_Shipment.Rows[i].Cells[4].Value.ToString();
             LoadDetailShipment();
         }
+
+        private void btn_ThemLoHang_Click(object sender, EventArgs e)
+        {
+            pnl_ThemLoHang.Visible = true;
+        }
+
+        private void btn_huy_Click(object sender, EventArgs e)
+        {
+            pnl_ThemLoHang.Visible = false;
+            txt_malohang.Text = "";
+            txt_maNCC.Text = "";
+        }
     }
 }
