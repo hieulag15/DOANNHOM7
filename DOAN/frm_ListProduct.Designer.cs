@@ -84,10 +84,10 @@
             this.guna2Panel1.Controls.Add(this.guna2TileButton2);
             this.guna2Panel1.Controls.Add(this.guna2TileButton3);
             this.guna2Panel1.Controls.Add(this.guna2TileButton1);
-            this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(700, 38);
+            this.guna2Panel1.Size = new System.Drawing.Size(706, 38);
             this.guna2Panel1.TabIndex = 4;
             // 
             // guna2TileButton6
@@ -221,7 +221,7 @@
             this.dgv_Product.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Product.EnableHeadersVisualStyles = false;
             this.dgv_Product.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_Product.Location = new System.Drawing.Point(2, 66);
+            this.dgv_Product.Location = new System.Drawing.Point(3, 66);
             this.dgv_Product.Name = "dgv_Product";
             this.dgv_Product.ReadOnly = true;
             this.dgv_Product.RowHeadersVisible = false;
@@ -255,6 +255,8 @@
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.guna2Panel2.BorderThickness = 2;
             this.guna2Panel2.Controls.Add(this.guna2Panel1);
             this.guna2Panel2.Controls.Add(this.dgv_Product);
             this.guna2Panel2.Location = new System.Drawing.Point(12, 16);
