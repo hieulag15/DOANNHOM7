@@ -54,10 +54,7 @@ namespace DOAN
             i = dgv_Product.CurrentRow.Index;
             id_product = dgv_Product.Rows[i].Cells[0].Value.ToString();
 
-            DataSet pro = dbProduct.getOneProduct(id_product);
-            DataRow dr = pro.Tables[0].Rows[0];
-
-            pic_AnhMatHang.Image =  TienIch.ConvertByteArraytoImage((byte[])dr[3]);
+            pic_AnhMatHang.Image =  TienIch.ConvertByteArraytoImage((byte[])dgv_Product.Rows[i].Cells[3].Value);
             pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
         }
 
@@ -84,12 +81,11 @@ namespace DOAN
                 if (dtProduct.Rows.Count > 0)
                 {
                     dgv_Product.DataSource = dtProduct;
+                    dgv_Product.Columns[3].Visible = false;
+
                     id_product = dgv_Product.Rows[0].Cells[0].Value.ToString();
 
-                    DataSet pro = dbProduct.getOneProduct(id_product);
-                    DataRow dr = pro.Tables[0].Rows[0];
-
-                    pic_AnhMatHang.Image = TienIch.ConvertByteArraytoImage((byte[])dr[3]);
+                    pic_AnhMatHang.Image = TienIch.ConvertByteArraytoImage((byte[])dgv_Product.Rows[0].Cells[3].Value);
                     pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
                 }
                 else
@@ -145,6 +141,16 @@ namespace DOAN
             {
                 MessageBox.Show("Không xóa được. Lỗi rồi!");
             }
+        }
+
+        private void pic_timkiem_Click(object sender, EventArgs e)
+        {
+            dtProduct = new DataTable();
+            dtProduct.Clear();
+            dtProduct = dbProduct.findProduct(txt_timten.Text).Tables[0];
+            dgv_Product.DataSource = dtProduct;
+
+            dgv_Product.Columns[3].Visible = false;
         }
     }
 }

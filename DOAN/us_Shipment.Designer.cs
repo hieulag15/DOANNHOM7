@@ -191,11 +191,11 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(183, 5);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(148, 6);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(332, 31);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(405, 31);
             this.guna2HtmlLabel1.TabIndex = 29;
-            this.guna2HtmlLabel1.Text = "Các mặt hàng có trong lô hàng";
+            this.guna2HtmlLabel1.Text = "Danh sách mặt hàng có trong lô hàng";
             // 
             // dgv_DetailShipment
             // 
@@ -308,6 +308,7 @@
             // 
             // btn_huy
             // 
+            this.btn_huy.BorderRadius = 10;
             this.btn_huy.CheckedState.Parent = this.btn_huy;
             this.btn_huy.CustomImages.Parent = this.btn_huy;
             this.btn_huy.FillColor = System.Drawing.Color.DarkGray;
@@ -463,7 +464,7 @@
             this.btn_ThemLoHang.BorderRadius = 10;
             this.btn_ThemLoHang.CheckedState.Parent = this.btn_ThemLoHang;
             this.btn_ThemLoHang.CustomImages.Parent = this.btn_ThemLoHang;
-            this.btn_ThemLoHang.FillColor = System.Drawing.Color.MediumTurquoise;
+            this.btn_ThemLoHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.btn_ThemLoHang.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ThemLoHang.ForeColor = System.Drawing.Color.White;
             this.btn_ThemLoHang.HoverState.Parent = this.btn_ThemLoHang;

@@ -72,6 +72,7 @@ namespace DOAN
                 if (dtProduct.Rows.Count > 0)
                 {
                     dgv_Product.DataSource = dtProduct;
+                    dgv_Product.Columns[3].Visible = false;
                 }
                 else
                 {
@@ -116,7 +117,19 @@ namespace DOAN
             id_product = dgv_Product.Rows[i].Cells[0].Value.ToString();
 
             txt_mamathang.Text = id_product;
+
+            pic_AnhMatHang.Image = TienIch.ConvertByteArraytoImage((byte[])dgv_Product.Rows[i].Cells[3].Value);
+            pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
         }
-        
+
+        private void pic_TimMatHang_Click(object sender, EventArgs e)
+        {
+            dtProduct = new DataTable();
+            dtProduct.Clear();
+            dtProduct = dbProduct.findProduct(txt_timten.Text).Tables[0];
+            dgv_Product.DataSource = dtProduct;
+
+            dgv_Product.Columns[3].Visible = false;
+        }
     }
 }

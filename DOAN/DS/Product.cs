@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace DOAN.DS
@@ -98,6 +99,28 @@ namespace DOAN.DS
                 db.closeConnection();
                 return false;
             }
+        }
+
+        public DataSet findProduct(string p_name)
+        {
+            db = new DBConnection();
+            db.openConnection();
+            DataSet ds = new DataSet();
+            try
+            {
+                comm = new SqlCommand("proc_FindProduct", db.getSqlConn);
+                comm.Parameters.AddWithValue("@searchChar", p_name);
+
+                comm.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(); //Tạo một cầu nối giữa SQl command và Database
+                da.SelectCommand = comm;
+                da.Fill(ds); //Đưa dữ liệu vừa gọi được vào DataSet
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return ds;
         }
     }
 }

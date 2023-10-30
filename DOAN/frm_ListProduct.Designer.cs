@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2TileButton1 = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2TileButton6 = new Guna.UI2.WinForms.Guna2TileButton();
@@ -41,17 +41,17 @@
             this.guna2TileButton3 = new Guna.UI2.WinForms.Guna2TileButton();
             this.dgv_Product = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.txt_timkiem = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_timten = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_Them = new Guna.UI2.WinForms.Guna2TileButton();
             this.btn_Xoa = new Guna.UI2.WinForms.Guna2TileButton();
             this.btn_XemChiTiet = new Guna.UI2.WinForms.Guna2TileButton();
             this.pic_AnhMatHang = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pic_timkiem = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Product)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_AnhMatHang)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_timkiem)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2TileButton1
@@ -193,31 +193,31 @@
             // 
             // dgv_Product
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgv_Product.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgv_Product.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Product.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Product.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Product.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_Product.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_Product.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Product.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Product.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Product.ColumnHeadersHeight = 21;
             this.dgv_Product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Product.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Product.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Product.EnableHeadersVisualStyles = false;
             this.dgv_Product.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_Product.Location = new System.Drawing.Point(2, 66);
@@ -263,32 +263,32 @@
             this.guna2Panel2.Size = new System.Drawing.Size(703, 526);
             this.guna2Panel2.TabIndex = 6;
             // 
-            // txt_timkiem
+            // txt_timten
             // 
-            this.txt_timkiem.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.txt_timkiem.BorderThickness = 2;
-            this.txt_timkiem.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_timkiem.DefaultText = "";
-            this.txt_timkiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_timkiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_timkiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_timkiem.DisabledState.Parent = this.txt_timkiem;
-            this.txt_timkiem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_timkiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_timkiem.FocusedState.Parent = this.txt_timkiem;
-            this.txt_timkiem.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_timkiem.ForeColor = System.Drawing.Color.Black;
-            this.txt_timkiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_timkiem.HoverState.Parent = this.txt_timkiem;
-            this.txt_timkiem.Location = new System.Drawing.Point(724, 17);
-            this.txt_timkiem.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.txt_timkiem.Name = "txt_timkiem";
-            this.txt_timkiem.PasswordChar = '\0';
-            this.txt_timkiem.PlaceholderText = "";
-            this.txt_timkiem.SelectedText = "";
-            this.txt_timkiem.ShadowDecoration.Parent = this.txt_timkiem;
-            this.txt_timkiem.Size = new System.Drawing.Size(240, 38);
-            this.txt_timkiem.TabIndex = 7;
+            this.txt_timten.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.txt_timten.BorderThickness = 2;
+            this.txt_timten.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_timten.DefaultText = "";
+            this.txt_timten.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_timten.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_timten.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_timten.DisabledState.Parent = this.txt_timten;
+            this.txt_timten.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_timten.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_timten.FocusedState.Parent = this.txt_timten;
+            this.txt_timten.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_timten.ForeColor = System.Drawing.Color.Black;
+            this.txt_timten.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_timten.HoverState.Parent = this.txt_timten;
+            this.txt_timten.Location = new System.Drawing.Point(724, 17);
+            this.txt_timten.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt_timten.Name = "txt_timten";
+            this.txt_timten.PasswordChar = '\0';
+            this.txt_timten.PlaceholderText = "";
+            this.txt_timten.SelectedText = "";
+            this.txt_timten.ShadowDecoration.Parent = this.txt_timten;
+            this.txt_timten.Size = new System.Drawing.Size(240, 38);
+            this.txt_timten.TabIndex = 7;
             // 
             // btn_Them
             // 
@@ -353,16 +353,17 @@
             this.pic_AnhMatHang.TabIndex = 9;
             this.pic_AnhMatHang.TabStop = false;
             // 
-            // guna2PictureBox2
+            // pic_timkiem
             // 
-            this.guna2PictureBox2.Image = global::DOAN.Properties.Resources.search__1_;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(928, 20);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(33, 32);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 14;
-            this.guna2PictureBox2.TabStop = false;
+            this.pic_timkiem.Image = global::DOAN.Properties.Resources.search__1_;
+            this.pic_timkiem.Location = new System.Drawing.Point(928, 20);
+            this.pic_timkiem.Name = "pic_timkiem";
+            this.pic_timkiem.ShadowDecoration.Parent = this.pic_timkiem;
+            this.pic_timkiem.Size = new System.Drawing.Size(33, 32);
+            this.pic_timkiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_timkiem.TabIndex = 14;
+            this.pic_timkiem.TabStop = false;
+            this.pic_timkiem.Click += new System.EventHandler(this.pic_timkiem_Click);
             // 
             // frm_ListProduct
             // 
@@ -370,12 +371,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(976, 554);
-            this.Controls.Add(this.guna2PictureBox2);
+            this.Controls.Add(this.pic_timkiem);
             this.Controls.Add(this.btn_XemChiTiet);
             this.Controls.Add(this.btn_Xoa);
             this.Controls.Add(this.btn_Them);
             this.Controls.Add(this.pic_AnhMatHang);
-            this.Controls.Add(this.txt_timkiem);
+            this.Controls.Add(this.txt_timten);
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_ListProduct";
@@ -385,7 +386,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Product)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_AnhMatHang)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_timkiem)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -402,11 +403,11 @@
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton2;
         private Guna.UI2.WinForms.Guna2DataGridView dgv_Product;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2TextBox txt_timkiem;
+        private Guna.UI2.WinForms.Guna2TextBox txt_timten;
         private Guna.UI2.WinForms.Guna2PictureBox pic_AnhMatHang;
         private Guna.UI2.WinForms.Guna2TileButton btn_Them;
         private Guna.UI2.WinForms.Guna2TileButton btn_Xoa;
         private Guna.UI2.WinForms.Guna2TileButton btn_XemChiTiet;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2PictureBox pic_timkiem;
     }
 }
