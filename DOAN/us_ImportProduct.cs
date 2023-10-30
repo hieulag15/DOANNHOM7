@@ -48,6 +48,29 @@ namespace DOAN
             LoadProduct();
         }
 
+        string id_product;
+        private void dgv_Product_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i;
+            i = dgv_Product.CurrentRow.Index;
+            id_product = dgv_Product.Rows[i].Cells[0].Value.ToString();
+
+            txt_mamathang.Text = id_product;
+
+            pic_AnhMatHang.Image = TienIch.ConvertByteArraytoImage((byte[])dgv_Product.Rows[i].Cells[3].Value);
+            pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+        }
+
+        private void pic_TimMatHang_Click(object sender, EventArgs e)
+        {
+            dtProduct = new DataTable();
+            dtProduct.Clear();
+            dtProduct = dbProduct.findProduct(txt_timten.Text).Tables[0];
+            dgv_Product.DataSource = dtProduct;
+
+            dgv_Product.Columns[3].Visible = false;
+        }
+
         //Xử lý
 
         DataTable dtProduct = new DataTable();
@@ -109,20 +132,7 @@ namespace DOAN
             date_ngaynhap.Value = DateTime.Now;
         }
 
-        string id_product;
-        private void dgv_Product_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int i;
-            i = dgv_Product.CurrentRow.Index;
-            id_product = dgv_Product.Rows[i].Cells[0].Value.ToString();
-
-            txt_mamathang.Text = id_product;
-
-            pic_AnhMatHang.Image = TienIch.ConvertByteArraytoImage((byte[])dgv_Product.Rows[i].Cells[3].Value);
-            pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-        }
-
-        private void pic_TimMatHang_Click(object sender, EventArgs e)
+        private void TimMatHang()
         {
             dtProduct = new DataTable();
             dtProduct.Clear();

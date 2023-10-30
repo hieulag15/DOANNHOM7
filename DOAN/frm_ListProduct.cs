@@ -63,9 +63,14 @@ namespace DOAN
             XoaMatHang();
         }
 
+        private void pic_timkiem_Click(object sender, EventArgs e)
+        {
+            TimMatHang();
+        }
+
 
         //Xử lý
- 
+
         DataTable dtProduct = new DataTable();
         Product dbProduct = new Product();
         string id_product;
@@ -143,7 +148,7 @@ namespace DOAN
             }
         }
 
-        private void pic_timkiem_Click(object sender, EventArgs e)
+        private void TimMatHang()
         {
             dtProduct = new DataTable();
             dtProduct.Clear();
