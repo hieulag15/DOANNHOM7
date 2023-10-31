@@ -36,5 +36,37 @@ namespace DOAN
                 this.Close();
             }
         }
+
+        private void txt_Username_Leave(object sender, EventArgs e)
+        {
+            if (txt_Username.Text == "")
+            {
+                txt_Username.Text = "Username";
+            }
+        }
+
+        private void txt_Username_Click(object sender, EventArgs e)
+        {
+            if (txt_Username.Text == "Username")
+            {
+                txt_Username.Text = "";
+            }
+        }
+
+        private void txt_Password_Click(object sender, EventArgs e)
+        {
+            if (txt_Password.Text == "Password")
+            {
+                txt_Password.Text = "";
+            }
+        }
+
+        private void txt_Password_Leave(object sender, EventArgs e)
+        {
+            if (txt_Password.Text == "")
+            {
+                txt_Password.Text = "Password";
+            }
+        }
     }
 }
