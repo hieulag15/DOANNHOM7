@@ -57,6 +57,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BTN_CONTROLS\us_Product.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BTN_CONTROLS\us_Product.Designer.cs">
+      <DependentUpon>us_Product.cs</DependentUpon>
+    </Compile>
     <Compile Include="DATA\DBConnection.cs" />
     <Compile Include="DS\Account.cs" />
     <Compile Include="DS\Employee.cs" />
@@ -146,6 +152,9 @@
     <Compile Include="us_Shipment.Designer.cs">
       <DependentUpon>us_Shipment.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BTN_CONTROLS\us_Product.resx">
+      <DependentUpon>us_Product.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -299,5 +308,6 @@
   <ItemGroup>
     <None Include="Resources\box.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

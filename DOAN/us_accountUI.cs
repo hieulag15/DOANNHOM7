@@ -16,5 +16,15 @@ namespace DOAN
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void us_accountUI_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
