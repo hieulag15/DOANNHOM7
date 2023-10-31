@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,18 +23,19 @@ namespace DOAN
 
         Panel pnl_trangchinh;
         string id_shipment;
-        string id_ncc;
-        public us_ImportProduct(Panel pnl_trangchinh, string id_shipment, string id_ncc)
+
+        public us_ImportProduct(Panel pnl_trangchinh, string id_shipment)
         {
             InitializeComponent();
             this.pnl_trangchinh = pnl_trangchinh;
             this.id_shipment= id_shipment;
-            this.id_ncc= id_ncc;
         }
 
         private void us_ImportProduct_Load(object sender, EventArgs e)
         {
-            LoadImportProduct();
+            LoadShipment();
+            LoadProduct();
+            cb_LoaiMatHang.SelectedIndex = 0;
         }
 
         private void btn_quaylai_Click(object sender, EventArgs e)
@@ -46,6 +48,7 @@ namespace DOAN
         {
             ThemChiTietLoHang();
             LoadProduct();
+            LamMoi();
         }
 
         string id_product;
@@ -63,12 +66,7 @@ namespace DOAN
 
         private void pic_TimMatHang_Click(object sender, EventArgs e)
         {
-            dtProduct = new DataTable();
-            dtProduct.Clear();
-            dtProduct = dbProduct.FindProduct(txt_timten.Text).Tables[0];
-            dgv_Product.DataSource = dtProduct;
-
-            dgv_Product.Columns[3].Visible = false;
+            TimMatHang();
         }
 
         //Xử lý
@@ -77,11 +75,17 @@ namespace DOAN
         Product dbProduct = new Product();
 
         //Hiển thị thông tin lô hàng và nhà cung cấp
-        private void LoadImportProduct()
+
+        private void LoadShipment()
         {
             txt_malohang.Text = id_shipment;
-            txt_maNCC.Text = id_ncc;
-            LoadProduct();
+            DataTable dtShipment = new DataTable();
+            dtShipment.Clear();
+            DataSet ds = dbShipment.getOneShipment(id_shipment);
+            dtShipment = ds.Tables[0];
+            DataRow dr = dtShipment.Rows[0];
+            txt_maNCC.Text = dr[1].ToString();
+            date_ngaynhap.Value = (DateTime)dr[2];
         }
 
         private void LoadProduct()
@@ -129,9 +133,14 @@ namespace DOAN
             txt_mamathang.Text = "";
             txt_gianhap.Text = "";
             num_soluongmathang.Value = 0;
-            date_ngaynhap.Value = DateTime.Now;
         }
 
+        private void LamMoiTimKiem()
+        {
+            txt_timten.Text = "";
+            cb_LoaiMatHang.SelectedIndex = 0;
+            LoadProduct();
+        }
         private void TimMatHang()
         {
             dtProduct = new DataTable();
@@ -140,6 +149,38 @@ namespace DOAN
             dgv_Product.DataSource = dtProduct;
 
             dgv_Product.Columns[3].Visible = false;
+        }
+
+        private void TimMatHangTheoLoai(string idtype)
+        {
+            dtProduct = new DataTable();
+            dtProduct.Clear();
+            dtProduct = dbProduct.FindProductByIDType(idtype).Tables[0];
+            dgv_Product.DataSource = dtProduct;
+
+            dgv_Product.Columns[3].Visible = false;
+        }
+
+        string id_type;
+        private void cb_LoaiMatHang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cb_LoaiMatHang.SelectedItem != null)
+            {
+                if (cb_LoaiMatHang.SelectedIndex == 0) id_type = "";
+                if (cb_LoaiMatHang.SelectedIndex == 1) id_type = "PT";
+                if (cb_LoaiMatHang.SelectedIndex == 2) id_type = "PK";
+                if (cb_LoaiMatHang.SelectedIndex == 3) id_type = "PM";
+                if (cb_LoaiMatHang.SelectedIndex == 4) id_type = "PP";
+                if (cb_LoaiMatHang.SelectedIndex == 5) id_type = "PJ";
+                if (cb_LoaiMatHang.SelectedIndex == 6) id_type = "PE";
+                if (cb_LoaiMatHang.SelectedIndex == 7) id_type = "PS";
+            }
+            TimMatHangTheoLoai(id_type);
+        }
+
+        private void btn_LamMoi_Click(object sender, EventArgs e)
+        {
+            LamMoiTimKiem();
         }
     }
 }

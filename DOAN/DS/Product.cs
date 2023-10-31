@@ -34,7 +34,7 @@ namespace DOAN.DS
         public DataSet getDetailProduct(string id_product)
         {
             return db.ExecuteQueryDataSet(string.Format("select * from V_DetailProduct where ProductID = '{0}'", id_product));
-        }
+        }        
 
         public bool addProduct(string pid, string name, decimal price, byte[] image, string size, int quantity)
         {
@@ -151,6 +151,29 @@ namespace DOAN.DS
                 db.closeConnection();
             }
             return ds;
+        }
+
+        public string GetTypeProduct(string id_product)
+        {
+            Dictionary<string, string> productTypes = new Dictionary<string, string>
+            {
+                { "PT", "Áo thun" },
+                { "PK", "Áo khoác" },
+                { "PM", "Áo sơ mi" },
+                { "PP", "Áo Polo" },
+                { "PJ", "Quần Jean" },
+                { "PE", "Quần Tây" },
+                { "PS", "Quần Short" },
+            };
+
+            foreach (string key in productTypes.Keys)
+            {
+                if (id_product.Contains(key))
+                {
+                    return productTypes[key];
+                }
+            }
+            return "Không xác định";
         }
 
         public string CreateAutoID(string idtype)

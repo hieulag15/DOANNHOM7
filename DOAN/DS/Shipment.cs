@@ -26,6 +26,11 @@ namespace DOAN.DS
             return db.ExecuteQueryDataSet("select * from V_INFO_SHIPMENT");
         }
 
+        public DataSet getOneShipment(string id_shipment)
+        {
+            return db.ExecuteQueryDataSet(string.Format("select * from SHIPMENT where sh_id = '{0}'", id_shipment));
+        }
+
         public DataSet getDetailShipment(string id_shipment)
         {
             return db.ExecuteQueryDataSet(string.Format("select * from V_INFO_DETAIL_SHIPMENT where [Mã lô hàng] = '{0}'", id_shipment));

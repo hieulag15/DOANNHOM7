@@ -47,11 +47,8 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.pic_TimMatHang = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2TileButton2 = new Guna.UI2.WinForms.Guna2TileButton();
-            this.guna2TileButton1 = new Guna.UI2.WinForms.Guna2TileButton();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btn_LamMoi = new Guna.UI2.WinForms.Guna2TileButton();
+            this.cb_LoaiMatHang = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txt_timten = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -62,7 +59,6 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_quaylai = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btn_XacNhanThem = new Guna.UI2.WinForms.Guna2TileButton();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pic_AnhMatHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_soluongmathang)).BeginInit();
             this.guna2Panel3.SuspendLayout();
@@ -326,18 +322,15 @@
             this.guna2Panel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.guna2Panel5.BorderThickness = 2;
             this.guna2Panel5.Controls.Add(this.pic_TimMatHang);
-            this.guna2Panel5.Controls.Add(this.guna2TileButton2);
-            this.guna2Panel5.Controls.Add(this.guna2TileButton1);
-            this.guna2Panel5.Controls.Add(this.guna2ComboBox2);
-            this.guna2Panel5.Controls.Add(this.guna2HtmlLabel12);
-            this.guna2Panel5.Controls.Add(this.guna2ComboBox1);
+            this.guna2Panel5.Controls.Add(this.btn_LamMoi);
+            this.guna2Panel5.Controls.Add(this.cb_LoaiMatHang);
             this.guna2Panel5.Controls.Add(this.guna2HtmlLabel8);
             this.guna2Panel5.Controls.Add(this.txt_timten);
             this.guna2Panel5.Controls.Add(this.guna2HtmlLabel9);
             this.guna2Panel5.Location = new System.Drawing.Point(437, 64);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.ShadowDecoration.Parent = this.guna2Panel5;
-            this.guna2Panel5.Size = new System.Drawing.Size(536, 141);
+            this.guna2Panel5.Size = new System.Drawing.Size(536, 108);
             this.guna2Panel5.TabIndex = 60;
             // 
             // pic_TimMatHang
@@ -352,98 +345,43 @@
             this.pic_TimMatHang.TabStop = false;
             this.pic_TimMatHang.Click += new System.EventHandler(this.pic_TimMatHang_Click);
             // 
-            // guna2TileButton2
+            // btn_LamMoi
             // 
-            this.guna2TileButton2.BackColor = System.Drawing.Color.White;
-            this.guna2TileButton2.CheckedState.Parent = this.guna2TileButton2;
-            this.guna2TileButton2.CustomImages.Parent = this.guna2TileButton2;
-            this.guna2TileButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.guna2TileButton2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TileButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2TileButton2.HoverState.Parent = this.guna2TileButton2;
-            this.guna2TileButton2.Image = global::DOAN.Properties.Resources.refresh;
-            this.guna2TileButton2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2TileButton2.ImageOffset = new System.Drawing.Point(0, 13);
-            this.guna2TileButton2.Location = new System.Drawing.Point(123, 95);
-            this.guna2TileButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2TileButton2.Name = "guna2TileButton2";
-            this.guna2TileButton2.ShadowDecoration.Parent = this.guna2TileButton2;
-            this.guna2TileButton2.Size = new System.Drawing.Size(102, 34);
-            this.guna2TileButton2.TabIndex = 9;
-            this.guna2TileButton2.Text = "Làm mới";
-            this.guna2TileButton2.TextOffset = new System.Drawing.Point(12, -12);
+            this.btn_LamMoi.BackColor = System.Drawing.Color.White;
+            this.btn_LamMoi.BorderRadius = 10;
+            this.btn_LamMoi.CheckedState.Parent = this.btn_LamMoi;
+            this.btn_LamMoi.CustomImages.Parent = this.btn_LamMoi;
+            this.btn_LamMoi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btn_LamMoi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_LamMoi.ForeColor = System.Drawing.Color.White;
+            this.btn_LamMoi.HoverState.Parent = this.btn_LamMoi;
+            this.btn_LamMoi.Image = global::DOAN.Properties.Resources.refresh;
+            this.btn_LamMoi.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_LamMoi.ImageOffset = new System.Drawing.Point(0, 13);
+            this.btn_LamMoi.Location = new System.Drawing.Point(418, 51);
+            this.btn_LamMoi.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_LamMoi.Name = "btn_LamMoi";
+            this.btn_LamMoi.ShadowDecoration.Parent = this.btn_LamMoi;
+            this.btn_LamMoi.Size = new System.Drawing.Size(102, 37);
+            this.btn_LamMoi.TabIndex = 9;
+            this.btn_LamMoi.Text = "Làm mới";
+            this.btn_LamMoi.TextOffset = new System.Drawing.Point(12, -12);
+            this.btn_LamMoi.Click += new System.EventHandler(this.btn_LamMoi_Click);
             // 
-            // guna2TileButton1
+            // cb_LoaiMatHang
             // 
-            this.guna2TileButton1.BackColor = System.Drawing.Color.White;
-            this.guna2TileButton1.CheckedState.Parent = this.guna2TileButton1;
-            this.guna2TileButton1.CustomImages.Parent = this.guna2TileButton1;
-            this.guna2TileButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.guna2TileButton1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TileButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2TileButton1.HoverState.Parent = this.guna2TileButton1;
-            this.guna2TileButton1.Image = global::DOAN.Properties.Resources._checked;
-            this.guna2TileButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2TileButton1.ImageOffset = new System.Drawing.Point(0, 13);
-            this.guna2TileButton1.Location = new System.Drawing.Point(14, 95);
-            this.guna2TileButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2TileButton1.Name = "guna2TileButton1";
-            this.guna2TileButton1.ShadowDecoration.Parent = this.guna2TileButton1;
-            this.guna2TileButton1.Size = new System.Drawing.Size(102, 34);
-            this.guna2TileButton1.TabIndex = 8;
-            this.guna2TileButton1.Text = "Áp dụng";
-            this.guna2TileButton1.TextOffset = new System.Drawing.Point(12, -12);
-            // 
-            // guna2ComboBox2
-            // 
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox2.FocusedState.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox2.FormattingEnabled = true;
-            this.guna2ComboBox2.HoverState.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.Items.AddRange(new object[] {
-            "Tất cả",
-            "M",
-            "L",
-            "XL"});
-            this.guna2ComboBox2.ItemsAppearance.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.Location = new System.Drawing.Point(397, 51);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.ShadowDecoration.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.Size = new System.Drawing.Size(125, 36);
-            this.guna2ComboBox2.TabIndex = 7;
-            // 
-            // guna2HtmlLabel12
-            // 
-            this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel12.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel12.Location = new System.Drawing.Point(397, 16);
-            this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            this.guna2HtmlLabel12.Size = new System.Drawing.Size(92, 26);
-            this.guna2HtmlLabel12.TabIndex = 6;
-            this.guna2HtmlLabel12.Text = "Kích thước";
-            // 
-            // guna2ComboBox1
-            // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox1.FormattingEnabled = true;
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
+            this.cb_LoaiMatHang.BackColor = System.Drawing.Color.Transparent;
+            this.cb_LoaiMatHang.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.cb_LoaiMatHang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_LoaiMatHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_LoaiMatHang.FocusedColor = System.Drawing.Color.Empty;
+            this.cb_LoaiMatHang.FocusedState.Parent = this.cb_LoaiMatHang;
+            this.cb_LoaiMatHang.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_LoaiMatHang.ForeColor = System.Drawing.Color.Black;
+            this.cb_LoaiMatHang.FormattingEnabled = true;
+            this.cb_LoaiMatHang.HoverState.Parent = this.cb_LoaiMatHang;
+            this.cb_LoaiMatHang.ItemHeight = 30;
+            this.cb_LoaiMatHang.Items.AddRange(new object[] {
             "Tất cả",
             "Áo thun",
             "Áo khoác",
@@ -452,19 +390,20 @@
             "Quần jean",
             "Quần Tây",
             "Quần short"});
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(231, 51);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(160, 36);
-            this.guna2ComboBox1.TabIndex = 5;
+            this.cb_LoaiMatHang.ItemsAppearance.Parent = this.cb_LoaiMatHang;
+            this.cb_LoaiMatHang.Location = new System.Drawing.Point(244, 51);
+            this.cb_LoaiMatHang.Name = "cb_LoaiMatHang";
+            this.cb_LoaiMatHang.ShadowDecoration.Parent = this.cb_LoaiMatHang;
+            this.cb_LoaiMatHang.Size = new System.Drawing.Size(160, 36);
+            this.cb_LoaiMatHang.TabIndex = 5;
+            this.cb_LoaiMatHang.SelectedIndexChanged += new System.EventHandler(this.cb_LoaiMatHang_SelectedIndexChanged);
             // 
             // guna2HtmlLabel8
             // 
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(231, 16);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(244, 16);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(121, 26);
             this.guna2HtmlLabel8.TabIndex = 3;
@@ -513,10 +452,10 @@
             this.guna2Panel7.BorderThickness = 2;
             this.guna2Panel7.Controls.Add(this.dgv_Product);
             this.guna2Panel7.Controls.Add(this.guna2Panel8);
-            this.guna2Panel7.Location = new System.Drawing.Point(437, 211);
+            this.guna2Panel7.Location = new System.Drawing.Point(437, 178);
             this.guna2Panel7.Name = "guna2Panel7";
             this.guna2Panel7.ShadowDecoration.Parent = this.guna2Panel7;
-            this.guna2Panel7.Size = new System.Drawing.Size(536, 340);
+            this.guna2Panel7.Size = new System.Drawing.Size(536, 373);
             this.guna2Panel7.TabIndex = 61;
             // 
             // dgv_Product
@@ -554,7 +493,7 @@
             this.dgv_Product.RowHeadersVisible = false;
             this.dgv_Product.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgv_Product.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Product.Size = new System.Drawing.Size(530, 296);
+            this.dgv_Product.Size = new System.Drawing.Size(530, 329);
             this.dgv_Product.TabIndex = 6;
             this.dgv_Product.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dgv_Product.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -584,7 +523,7 @@
             // 
             this.guna2Panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.guna2Panel8.Controls.Add(this.guna2HtmlLabel4);
-            this.guna2Panel8.Location = new System.Drawing.Point(1, 2);
+            this.guna2Panel8.Location = new System.Drawing.Point(0, 2);
             this.guna2Panel8.Name = "guna2Panel8";
             this.guna2Panel8.ShadowDecoration.Parent = this.guna2Panel8;
             this.guna2Panel8.Size = new System.Drawing.Size(534, 33);
@@ -608,7 +547,6 @@
             this.guna2Panel2.BorderThickness = 2;
             this.guna2Panel2.Controls.Add(this.btn_quaylai);
             this.guna2Panel2.Controls.Add(this.btn_XacNhanThem);
-            this.guna2Panel2.Controls.Add(this.guna2HtmlLabel5);
             this.guna2Panel2.Location = new System.Drawing.Point(4, 3);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
@@ -650,17 +588,6 @@
             this.btn_XacNhanThem.TextOffset = new System.Drawing.Point(20, -18);
             this.btn_XacNhanThem.Click += new System.EventHandler(this.btn_XacNhanThem_Click);
             // 
-            // guna2HtmlLabel5
-            // 
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(424, 13);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(104, 31);
-            this.guna2HtmlLabel5.TabIndex = 29;
-            this.guna2HtmlLabel5.Text = "Nhập kho";
-            // 
             // us_ImportProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -684,7 +611,6 @@
             this.guna2Panel8.ResumeLayout(false);
             this.guna2Panel8.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_quaylai)).EndInit();
             this.ResumeLayout(false);
 
@@ -707,11 +633,8 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private Guna.UI2.WinForms.Guna2PictureBox pic_TimMatHang;
-        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton2;
-        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2TileButton btn_LamMoi;
+        private Guna.UI2.WinForms.Guna2ComboBox cb_LoaiMatHang;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private Guna.UI2.WinForms.Guna2TextBox txt_timten;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
@@ -722,6 +645,5 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2PictureBox btn_quaylai;
         private Guna.UI2.WinForms.Guna2TileButton btn_XacNhanThem;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
     }
 }

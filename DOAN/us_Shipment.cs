@@ -34,6 +34,7 @@ namespace DOAN
         //Hiển thị các lô hàng
         public void LoadShipment()
         {
+            date_ngaynhap.Value = DateTime.Today;
             try
             {
                 dtShipment.Clear();
@@ -48,7 +49,6 @@ namespace DOAN
         }
 
         string id_shipment;
-        string id_ncc;
         //Hiển thị chi tiết các mặt hàng trong mỗi lô hàng
         public void LoadDetailShipment()
         {
@@ -127,7 +127,6 @@ namespace DOAN
             int i;
             i = dgv_Shipment.CurrentRow.Index;
             id_shipment = dgv_Shipment.Rows[i].Cells[4].Value.ToString();
-            id_ncc = dgv_Shipment.Rows[i].Cells[0].Value.ToString();
             LoadDetailShipment();
         }
 
@@ -154,7 +153,7 @@ namespace DOAN
 
         private void btn_NhapKho_Click(object sender, EventArgs e)
         {
-            us_ImportProduct us_ImportProduct = new us_ImportProduct(pnl_trangchinh, id_shipment, id_ncc);
+            us_ImportProduct us_ImportProduct = new us_ImportProduct(pnl_trangchinh, id_shipment);
             TienIch.addUserControl(us_ImportProduct, pnl_trangchinh);
         }
     }

@@ -69,7 +69,7 @@ namespace DOAN
                 txt_giaban.Text = dr[2].ToString();
                 cb_kichthuoc.Text = dr[4].ToString();
                 num_soluong.Value = int.Parse(dr[5].ToString());
-
+                txt_LoaiMatHang.Text = dbProduct.GetTypeProduct(id_product);
                 img = (byte[])dr[3];
                 pic_AnhMatHang.Image = TienIch.ConvertByteArraytoImage(img);
                 pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
