@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel_Product = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.ptb_anhSanPham = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbl_giaTien = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.ptb_anhSanPham = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel_Product.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_anhSanPham)).BeginInit();
             this.SuspendLayout();
@@ -47,15 +47,6 @@
             this.panel_Product.Size = new System.Drawing.Size(159, 182);
             this.panel_Product.TabIndex = 0;
             // 
-            // ptb_anhSanPham
-            // 
-            this.ptb_anhSanPham.Location = new System.Drawing.Point(3, 3);
-            this.ptb_anhSanPham.Name = "ptb_anhSanPham";
-            this.ptb_anhSanPham.ShadowDecoration.Parent = this.ptb_anhSanPham;
-            this.ptb_anhSanPham.Size = new System.Drawing.Size(153, 158);
-            this.ptb_anhSanPham.TabIndex = 1;
-            this.ptb_anhSanPham.TabStop = false;
-            // 
             // lbl_giaTien
             // 
             this.lbl_giaTien.AutoSize = false;
@@ -69,6 +60,16 @@
             this.lbl_giaTien.TabIndex = 2;
             this.lbl_giaTien.Text = "Price";
             this.lbl_giaTien.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // ptb_anhSanPham
+            // 
+            this.ptb_anhSanPham.Location = new System.Drawing.Point(3, 3);
+            this.ptb_anhSanPham.Name = "ptb_anhSanPham";
+            this.ptb_anhSanPham.ShadowDecoration.Parent = this.ptb_anhSanPham;
+            this.ptb_anhSanPham.Size = new System.Drawing.Size(153, 158);
+            this.ptb_anhSanPham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptb_anhSanPham.TabIndex = 1;
+            this.ptb_anhSanPham.TabStop = false;
             // 
             // us_Product
             // 

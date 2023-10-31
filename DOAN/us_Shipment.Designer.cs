@@ -251,7 +251,7 @@
             this.btn_NhapKho.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_NhapKho.ForeColor = System.Drawing.Color.White;
             this.btn_NhapKho.HoverState.Parent = this.btn_NhapKho;
-            this.btn_NhapKho.Location = new System.Drawing.Point(18, 3);
+            this.btn_NhapKho.Location = new System.Drawing.Point(18, 14);
             this.btn_NhapKho.Name = "btn_NhapKho";
             this.btn_NhapKho.ShadowDecoration.Parent = this.btn_NhapKho;
             this.btn_NhapKho.Size = new System.Drawing.Size(107, 42);
@@ -383,7 +383,7 @@
             this.btn_XoaLoHang.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_XoaLoHang.ForeColor = System.Drawing.Color.White;
             this.btn_XoaLoHang.HoverState.Parent = this.btn_XoaLoHang;
-            this.btn_XoaLoHang.Location = new System.Drawing.Point(139, 3);
+            this.btn_XoaLoHang.Location = new System.Drawing.Point(139, 14);
             this.btn_XoaLoHang.Name = "btn_XoaLoHang";
             this.btn_XoaLoHang.ShadowDecoration.Parent = this.btn_XoaLoHang;
             this.btn_XoaLoHang.Size = new System.Drawing.Size(107, 42);
@@ -400,7 +400,7 @@
             this.btn_ThemLoHang.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ThemLoHang.ForeColor = System.Drawing.Color.White;
             this.btn_ThemLoHang.HoverState.Parent = this.btn_ThemLoHang;
-            this.btn_ThemLoHang.Location = new System.Drawing.Point(18, 62);
+            this.btn_ThemLoHang.Location = new System.Drawing.Point(18, 72);
             this.btn_ThemLoHang.Name = "btn_ThemLoHang";
             this.btn_ThemLoHang.ShadowDecoration.Parent = this.btn_ThemLoHang;
             this.btn_ThemLoHang.Size = new System.Drawing.Size(228, 42);
