@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -62,15 +63,16 @@ namespace DOAN
             {
                 MessageBox.Show("Không có mặt hàng nào");
             }
-        }
+        }      
 
         //Thêm lô hàng mới
         private void ThemLoHang()
         {
+            string prefixIDShipment = dbShipment.CreateAutoID("SH");
             try
             {
                 //truyền dữ liệu vào hàm thêm lô hàng
-                dbShipment.addShipment(txt_malohang.Text.Trim(), txt_maNCC.Text.Trim(), Convert.ToDateTime(date_ngaynhap.Value));
+                dbShipment.addShipment(prefixIDShipment.Trim(), txt_maNCC.Text.Trim(), Convert.ToDateTime(date_ngaynhap.Value));
                 LoadShipment();
             }
             catch (Exception ex)
@@ -112,7 +114,6 @@ namespace DOAN
         private void LamMoi()
         {
             pnl_ThemLoHang.Visible = false;
-            txt_malohang.Text = "";
             txt_maNCC.Text = "";
         }
 

@@ -127,14 +127,14 @@ namespace DOAN.DS
             return ds;
         }
 
-        public string CreateAutoID(string prefix)
+        public string CreateAutoID(string idtype)
         {
             db = new DBConnection();
             db.openConnection();
             try
             {
-                comm = new SqlCommand("proc_CreateAutoID", db.getSqlConn);
-                comm.Parameters.AddWithValue("@prefix", prefix);
+                comm = new SqlCommand("proc_CreateAutoProductID", db.getSqlConn);
+                comm.Parameters.AddWithValue("@idtype", idtype);
                 comm.CommandType = CommandType.StoredProcedure;
 
                 // Thêm tham số đầu vào nếu cần
