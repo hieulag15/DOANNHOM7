@@ -101,7 +101,7 @@ namespace DOAN.DS
             }
         }
 
-        public DataSet findProduct(string p_name)
+        public DataSet FindProduct(string p_name)
         {
             db = new DBConnection();
             db.openConnection();
@@ -110,6 +110,32 @@ namespace DOAN.DS
             {
                 comm = new SqlCommand("proc_FindProduct", db.getSqlConn);
                 comm.Parameters.AddWithValue("@searchChar", p_name);
+
+                comm.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(); //Tạo một cầu nối giữa SQl command và Database
+                da.SelectCommand = comm;
+                da.Fill(ds); //Đưa dữ liệu vừa gọi được vào DataSet
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                db.closeConnection();
+            }
+            return ds;
+        }
+
+        public DataSet FindProductByIDType(string p_name)
+        {
+            db = new DBConnection();
+            db.openConnection();
+            DataSet ds = new DataSet();
+            try
+            {
+                comm = new SqlCommand("proc_FindProductByIDType", db.getSqlConn);
+                comm.Parameters.AddWithValue("@idtype", p_name);
 
                 comm.CommandType = CommandType.StoredProcedure;
                 SqlDataAdapter da = new SqlDataAdapter(); //Tạo một cầu nối giữa SQl command và Database

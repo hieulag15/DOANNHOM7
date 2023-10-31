@@ -68,6 +68,48 @@ namespace DOAN
             TimMatHang();
         }
 
+        private void btn_AoThun_Click(object sender, EventArgs e)
+        {
+            string idtype = "PT";
+            TimMatHangTheoLoai(idtype);
+        }
+
+        private void btn_AoKhoac_Click(object sender, EventArgs e)
+        {
+            string idtype = "PK";
+            TimMatHangTheoLoai(idtype);
+        }
+
+        private void btn_AoSoMi_Click(object sender, EventArgs e)
+        {
+            string idtype = "PM";
+            TimMatHangTheoLoai(idtype);
+        }
+
+        private void btn_AoPolo_Click(object sender, EventArgs e)
+        {
+            string idtype = "PP";
+            TimMatHangTheoLoai(idtype);
+        }
+
+        private void btn_QuanJean_Click(object sender, EventArgs e)
+        {
+            string idtype = "PJ";
+            TimMatHangTheoLoai(idtype);
+        }
+
+        private void btn_QuanTay_Click(object sender, EventArgs e)
+        {
+            string idtype = "PE";
+            TimMatHangTheoLoai(idtype);
+        }
+
+        private void btn_QuanShort_Click(object sender, EventArgs e)
+        {
+            string idtype = "PS";
+            TimMatHangTheoLoai(idtype);
+        }
+
 
         //Xử lý
 
@@ -152,7 +194,17 @@ namespace DOAN
         {
             dtProduct = new DataTable();
             dtProduct.Clear();
-            dtProduct = dbProduct.findProduct(txt_timten.Text).Tables[0];
+            dtProduct = dbProduct.FindProduct(txt_timten.Text).Tables[0];
+            dgv_Product.DataSource = dtProduct;
+
+            dgv_Product.Columns[3].Visible = false;
+        }
+
+        private void TimMatHangTheoLoai(string idtype)
+        {
+            dtProduct = new DataTable();
+            dtProduct.Clear();
+            dtProduct = dbProduct.FindProductByIDType(idtype).Tables[0];
             dgv_Product.DataSource = dtProduct;
 
             dgv_Product.Columns[3].Visible = false;

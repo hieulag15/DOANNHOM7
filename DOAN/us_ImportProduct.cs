@@ -65,7 +65,7 @@ namespace DOAN
         {
             dtProduct = new DataTable();
             dtProduct.Clear();
-            dtProduct = dbProduct.findProduct(txt_timten.Text).Tables[0];
+            dtProduct = dbProduct.FindProduct(txt_timten.Text).Tables[0];
             dgv_Product.DataSource = dtProduct;
 
             dgv_Product.Columns[3].Visible = false;
@@ -136,7 +136,7 @@ namespace DOAN
         {
             dtProduct = new DataTable();
             dtProduct.Clear();
-            dtProduct = dbProduct.findProduct(txt_timten.Text).Tables[0];
+            dtProduct = dbProduct.FindProduct(txt_timten.Text).Tables[0];
             dgv_Product.DataSource = dtProduct;
 
             dgv_Product.Columns[3].Visible = false;

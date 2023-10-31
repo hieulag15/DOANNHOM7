@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.guna2TileButton1 = new Guna.UI2.WinForms.Guna2TileButton();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.btn_AoThun = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2TileButton6 = new Guna.UI2.WinForms.Guna2TileButton();
-            this.guna2TileButton5 = new Guna.UI2.WinForms.Guna2TileButton();
-            this.guna2TileButton4 = new Guna.UI2.WinForms.Guna2TileButton();
-            this.guna2TileButton7 = new Guna.UI2.WinForms.Guna2TileButton();
-            this.guna2TileButton2 = new Guna.UI2.WinForms.Guna2TileButton();
-            this.guna2TileButton3 = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btn_QuanShort = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btn_QuanTay = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btn_QuanJean = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btn_AoPolo = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btn_AoKhoac = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btn_AoSoMi = new Guna.UI2.WinForms.Guna2TileButton();
             this.dgv_Product = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.txt_timten = new Guna.UI2.WinForms.Guna2TextBox();
@@ -54,170 +54,177 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_timkiem)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2TileButton1
+            // btn_AoThun
             // 
-            this.guna2TileButton1.CheckedState.Parent = this.guna2TileButton1;
-            this.guna2TileButton1.CustomImages.Parent = this.guna2TileButton1;
-            this.guna2TileButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.guna2TileButton1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TileButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2TileButton1.HoverState.Parent = this.guna2TileButton1;
-            this.guna2TileButton1.Location = new System.Drawing.Point(2, 2);
-            this.guna2TileButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2TileButton1.Name = "guna2TileButton1";
-            this.guna2TileButton1.ShadowDecoration.Parent = this.guna2TileButton1;
-            this.guna2TileButton1.Size = new System.Drawing.Size(96, 34);
-            this.guna2TileButton1.TabIndex = 0;
-            this.guna2TileButton1.Text = "Áo thun";
-            this.guna2TileButton1.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            this.btn_AoThun.CheckedState.Parent = this.btn_AoThun;
+            this.btn_AoThun.CustomImages.Parent = this.btn_AoThun;
+            this.btn_AoThun.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btn_AoThun.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AoThun.ForeColor = System.Drawing.Color.White;
+            this.btn_AoThun.HoverState.Parent = this.btn_AoThun;
+            this.btn_AoThun.Location = new System.Drawing.Point(2, 2);
+            this.btn_AoThun.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_AoThun.Name = "btn_AoThun";
+            this.btn_AoThun.ShadowDecoration.Parent = this.btn_AoThun;
+            this.btn_AoThun.Size = new System.Drawing.Size(96, 34);
+            this.btn_AoThun.TabIndex = 0;
+            this.btn_AoThun.Text = "Áo thun";
+            this.btn_AoThun.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            this.btn_AoThun.Click += new System.EventHandler(this.btn_AoThun_Click);
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.guna2Panel1.BorderThickness = 2;
-            this.guna2Panel1.Controls.Add(this.guna2TileButton6);
-            this.guna2Panel1.Controls.Add(this.guna2TileButton5);
-            this.guna2Panel1.Controls.Add(this.guna2TileButton4);
-            this.guna2Panel1.Controls.Add(this.guna2TileButton7);
-            this.guna2Panel1.Controls.Add(this.guna2TileButton2);
-            this.guna2Panel1.Controls.Add(this.guna2TileButton3);
-            this.guna2Panel1.Controls.Add(this.guna2TileButton1);
+            this.guna2Panel1.Controls.Add(this.btn_QuanShort);
+            this.guna2Panel1.Controls.Add(this.btn_QuanTay);
+            this.guna2Panel1.Controls.Add(this.btn_QuanJean);
+            this.guna2Panel1.Controls.Add(this.btn_AoPolo);
+            this.guna2Panel1.Controls.Add(this.btn_AoKhoac);
+            this.guna2Panel1.Controls.Add(this.btn_AoSoMi);
+            this.guna2Panel1.Controls.Add(this.btn_AoThun);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 1);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(700, 38);
             this.guna2Panel1.TabIndex = 4;
             // 
-            // guna2TileButton6
+            // btn_QuanShort
             // 
-            this.guna2TileButton6.CheckedState.Parent = this.guna2TileButton6;
-            this.guna2TileButton6.CustomImages.Parent = this.guna2TileButton6;
-            this.guna2TileButton6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.guna2TileButton6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TileButton6.ForeColor = System.Drawing.Color.White;
-            this.guna2TileButton6.HoverState.Parent = this.guna2TileButton6;
-            this.guna2TileButton6.Location = new System.Drawing.Point(600, 2);
-            this.guna2TileButton6.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2TileButton6.Name = "guna2TileButton6";
-            this.guna2TileButton6.ShadowDecoration.Parent = this.guna2TileButton6;
-            this.guna2TileButton6.Size = new System.Drawing.Size(98, 34);
-            this.guna2TileButton6.TabIndex = 11;
-            this.guna2TileButton6.Text = "Quần short";
-            this.guna2TileButton6.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            this.btn_QuanShort.CheckedState.Parent = this.btn_QuanShort;
+            this.btn_QuanShort.CustomImages.Parent = this.btn_QuanShort;
+            this.btn_QuanShort.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btn_QuanShort.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_QuanShort.ForeColor = System.Drawing.Color.White;
+            this.btn_QuanShort.HoverState.Parent = this.btn_QuanShort;
+            this.btn_QuanShort.Location = new System.Drawing.Point(600, 2);
+            this.btn_QuanShort.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_QuanShort.Name = "btn_QuanShort";
+            this.btn_QuanShort.ShadowDecoration.Parent = this.btn_QuanShort;
+            this.btn_QuanShort.Size = new System.Drawing.Size(98, 34);
+            this.btn_QuanShort.TabIndex = 11;
+            this.btn_QuanShort.Text = "Quần short";
+            this.btn_QuanShort.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            this.btn_QuanShort.Click += new System.EventHandler(this.btn_QuanShort_Click);
             // 
-            // guna2TileButton5
+            // btn_QuanTay
             // 
-            this.guna2TileButton5.CheckedState.Parent = this.guna2TileButton5;
-            this.guna2TileButton5.CustomImages.Parent = this.guna2TileButton5;
-            this.guna2TileButton5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.guna2TileButton5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TileButton5.ForeColor = System.Drawing.Color.White;
-            this.guna2TileButton5.HoverState.Parent = this.guna2TileButton5;
-            this.guna2TileButton5.Location = new System.Drawing.Point(501, 2);
-            this.guna2TileButton5.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2TileButton5.Name = "guna2TileButton5";
-            this.guna2TileButton5.ShadowDecoration.Parent = this.guna2TileButton5;
-            this.guna2TileButton5.Size = new System.Drawing.Size(96, 34);
-            this.guna2TileButton5.TabIndex = 10;
-            this.guna2TileButton5.Text = "Quần tây";
-            this.guna2TileButton5.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            this.btn_QuanTay.CheckedState.Parent = this.btn_QuanTay;
+            this.btn_QuanTay.CustomImages.Parent = this.btn_QuanTay;
+            this.btn_QuanTay.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btn_QuanTay.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_QuanTay.ForeColor = System.Drawing.Color.White;
+            this.btn_QuanTay.HoverState.Parent = this.btn_QuanTay;
+            this.btn_QuanTay.Location = new System.Drawing.Point(501, 2);
+            this.btn_QuanTay.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_QuanTay.Name = "btn_QuanTay";
+            this.btn_QuanTay.ShadowDecoration.Parent = this.btn_QuanTay;
+            this.btn_QuanTay.Size = new System.Drawing.Size(96, 34);
+            this.btn_QuanTay.TabIndex = 10;
+            this.btn_QuanTay.Text = "Quần tây";
+            this.btn_QuanTay.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            this.btn_QuanTay.Click += new System.EventHandler(this.btn_QuanTay_Click);
             // 
-            // guna2TileButton4
+            // btn_QuanJean
             // 
-            this.guna2TileButton4.CheckedState.Parent = this.guna2TileButton4;
-            this.guna2TileButton4.CustomImages.Parent = this.guna2TileButton4;
-            this.guna2TileButton4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.guna2TileButton4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TileButton4.ForeColor = System.Drawing.Color.White;
-            this.guna2TileButton4.HoverState.Parent = this.guna2TileButton4;
-            this.guna2TileButton4.Location = new System.Drawing.Point(401, 2);
-            this.guna2TileButton4.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2TileButton4.Name = "guna2TileButton4";
-            this.guna2TileButton4.ShadowDecoration.Parent = this.guna2TileButton4;
-            this.guna2TileButton4.Size = new System.Drawing.Size(96, 34);
-            this.guna2TileButton4.TabIndex = 9;
-            this.guna2TileButton4.Text = "Quần jean";
-            this.guna2TileButton4.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            this.btn_QuanJean.CheckedState.Parent = this.btn_QuanJean;
+            this.btn_QuanJean.CustomImages.Parent = this.btn_QuanJean;
+            this.btn_QuanJean.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btn_QuanJean.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_QuanJean.ForeColor = System.Drawing.Color.White;
+            this.btn_QuanJean.HoverState.Parent = this.btn_QuanJean;
+            this.btn_QuanJean.Location = new System.Drawing.Point(401, 2);
+            this.btn_QuanJean.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_QuanJean.Name = "btn_QuanJean";
+            this.btn_QuanJean.ShadowDecoration.Parent = this.btn_QuanJean;
+            this.btn_QuanJean.Size = new System.Drawing.Size(96, 34);
+            this.btn_QuanJean.TabIndex = 9;
+            this.btn_QuanJean.Text = "Quần jean";
+            this.btn_QuanJean.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            this.btn_QuanJean.Click += new System.EventHandler(this.btn_QuanJean_Click);
             // 
-            // guna2TileButton7
+            // btn_AoPolo
             // 
-            this.guna2TileButton7.CheckedState.Parent = this.guna2TileButton7;
-            this.guna2TileButton7.CustomImages.Parent = this.guna2TileButton7;
-            this.guna2TileButton7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.guna2TileButton7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TileButton7.ForeColor = System.Drawing.Color.White;
-            this.guna2TileButton7.HoverState.Parent = this.guna2TileButton7;
-            this.guna2TileButton7.Location = new System.Drawing.Point(301, 2);
-            this.guna2TileButton7.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2TileButton7.Name = "guna2TileButton7";
-            this.guna2TileButton7.ShadowDecoration.Parent = this.guna2TileButton7;
-            this.guna2TileButton7.Size = new System.Drawing.Size(96, 34);
-            this.guna2TileButton7.TabIndex = 7;
-            this.guna2TileButton7.Text = "Áo polo";
-            this.guna2TileButton7.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            this.btn_AoPolo.CheckedState.Parent = this.btn_AoPolo;
+            this.btn_AoPolo.CustomImages.Parent = this.btn_AoPolo;
+            this.btn_AoPolo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btn_AoPolo.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AoPolo.ForeColor = System.Drawing.Color.White;
+            this.btn_AoPolo.HoverState.Parent = this.btn_AoPolo;
+            this.btn_AoPolo.Location = new System.Drawing.Point(301, 2);
+            this.btn_AoPolo.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_AoPolo.Name = "btn_AoPolo";
+            this.btn_AoPolo.ShadowDecoration.Parent = this.btn_AoPolo;
+            this.btn_AoPolo.Size = new System.Drawing.Size(96, 34);
+            this.btn_AoPolo.TabIndex = 7;
+            this.btn_AoPolo.Text = "Áo polo";
+            this.btn_AoPolo.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            this.btn_AoPolo.Click += new System.EventHandler(this.btn_AoPolo_Click);
             // 
-            // guna2TileButton2
+            // btn_AoKhoac
             // 
-            this.guna2TileButton2.CheckedState.Parent = this.guna2TileButton2;
-            this.guna2TileButton2.CustomImages.Parent = this.guna2TileButton2;
-            this.guna2TileButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.guna2TileButton2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TileButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2TileButton2.HoverState.Parent = this.guna2TileButton2;
-            this.guna2TileButton2.Location = new System.Drawing.Point(101, 2);
-            this.guna2TileButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2TileButton2.Name = "guna2TileButton2";
-            this.guna2TileButton2.ShadowDecoration.Parent = this.guna2TileButton2;
-            this.guna2TileButton2.Size = new System.Drawing.Size(96, 34);
-            this.guna2TileButton2.TabIndex = 5;
-            this.guna2TileButton2.Text = "Áo khoác";
-            this.guna2TileButton2.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            this.btn_AoKhoac.CheckedState.Parent = this.btn_AoKhoac;
+            this.btn_AoKhoac.CustomImages.Parent = this.btn_AoKhoac;
+            this.btn_AoKhoac.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btn_AoKhoac.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AoKhoac.ForeColor = System.Drawing.Color.White;
+            this.btn_AoKhoac.HoverState.Parent = this.btn_AoKhoac;
+            this.btn_AoKhoac.Location = new System.Drawing.Point(101, 2);
+            this.btn_AoKhoac.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_AoKhoac.Name = "btn_AoKhoac";
+            this.btn_AoKhoac.ShadowDecoration.Parent = this.btn_AoKhoac;
+            this.btn_AoKhoac.Size = new System.Drawing.Size(96, 34);
+            this.btn_AoKhoac.TabIndex = 5;
+            this.btn_AoKhoac.Text = "Áo khoác";
+            this.btn_AoKhoac.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            this.btn_AoKhoac.Click += new System.EventHandler(this.btn_AoKhoac_Click);
             // 
-            // guna2TileButton3
+            // btn_AoSoMi
             // 
-            this.guna2TileButton3.CheckedState.Parent = this.guna2TileButton3;
-            this.guna2TileButton3.CustomImages.Parent = this.guna2TileButton3;
-            this.guna2TileButton3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.guna2TileButton3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TileButton3.ForeColor = System.Drawing.Color.White;
-            this.guna2TileButton3.HoverState.Parent = this.guna2TileButton3;
-            this.guna2TileButton3.Location = new System.Drawing.Point(201, 2);
-            this.guna2TileButton3.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2TileButton3.Name = "guna2TileButton3";
-            this.guna2TileButton3.ShadowDecoration.Parent = this.guna2TileButton3;
-            this.guna2TileButton3.Size = new System.Drawing.Size(96, 34);
-            this.guna2TileButton3.TabIndex = 8;
-            this.guna2TileButton3.Text = "Áo sơ mi";
-            this.guna2TileButton3.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            this.btn_AoSoMi.CheckedState.Parent = this.btn_AoSoMi;
+            this.btn_AoSoMi.CustomImages.Parent = this.btn_AoSoMi;
+            this.btn_AoSoMi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btn_AoSoMi.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AoSoMi.ForeColor = System.Drawing.Color.White;
+            this.btn_AoSoMi.HoverState.Parent = this.btn_AoSoMi;
+            this.btn_AoSoMi.Location = new System.Drawing.Point(201, 2);
+            this.btn_AoSoMi.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_AoSoMi.Name = "btn_AoSoMi";
+            this.btn_AoSoMi.ShadowDecoration.Parent = this.btn_AoSoMi;
+            this.btn_AoSoMi.Size = new System.Drawing.Size(96, 34);
+            this.btn_AoSoMi.TabIndex = 8;
+            this.btn_AoSoMi.Text = "Áo sơ mi";
+            this.btn_AoSoMi.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            this.btn_AoSoMi.Click += new System.EventHandler(this.btn_AoSoMi_Click);
             // 
             // dgv_Product
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgv_Product.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.dgv_Product.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgv_Product.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Product.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Product.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_Product.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_Product.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Product.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Product.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgv_Product.ColumnHeadersHeight = 21;
             this.dgv_Product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Product.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Product.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgv_Product.EnableHeadersVisualStyles = false;
             this.dgv_Product.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_Product.Location = new System.Drawing.Point(2, 66);
@@ -393,14 +400,14 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton1;
+        private Guna.UI2.WinForms.Guna2TileButton btn_AoThun;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton6;
-        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton5;
-        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton4;
-        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton3;
-        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton7;
-        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton2;
+        private Guna.UI2.WinForms.Guna2TileButton btn_QuanShort;
+        private Guna.UI2.WinForms.Guna2TileButton btn_QuanTay;
+        private Guna.UI2.WinForms.Guna2TileButton btn_QuanJean;
+        private Guna.UI2.WinForms.Guna2TileButton btn_AoSoMi;
+        private Guna.UI2.WinForms.Guna2TileButton btn_AoPolo;
+        private Guna.UI2.WinForms.Guna2TileButton btn_AoKhoac;
         private Guna.UI2.WinForms.Guna2DataGridView dgv_Product;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2TextBox txt_timten;
