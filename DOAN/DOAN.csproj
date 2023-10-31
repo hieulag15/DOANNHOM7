@@ -58,7 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DATA\DBConnection.cs" />
-    <Compile Include="DS\Detail_Shipment.cs" />
     <Compile Include="DS\Account.cs" />
     <Compile Include="DS\Employee.cs" />
     <Compile Include="DS\Bill.cs" />

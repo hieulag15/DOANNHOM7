@@ -1,6 +1,8 @@
-﻿using Guna.UI2.WinForms;
+﻿using DOAN.DATA;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;

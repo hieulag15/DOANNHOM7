@@ -120,7 +120,43 @@ namespace DOAN.DS
             {
                 MessageBox.Show(ex.Message);
             }
+            finally
+            {
+                db.closeConnection();
+            }
             return ds;
+        }
+
+        public string CreateAutoID(string prefix)
+        {
+            db = new DBConnection();
+            db.openConnection();
+            try
+            {
+                comm = new SqlCommand("proc_CreateAutoID", db.getSqlConn);
+                comm.Parameters.AddWithValue("@prefix", prefix);
+                comm.CommandType = CommandType.StoredProcedure;
+
+                // Thêm tham số đầu vào nếu cần
+                // comm.Parameters.AddWithValue("@parameterName", parameterValue);
+
+                object result = comm.ExecuteScalar();
+
+                if (result != null)
+                {
+                    return result.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                db.closeConnection();
+            }
+
+            return "";
         }
     }
 }

@@ -539,7 +539,7 @@
             "Áo khoác",
             "Áo sơ mi",
             "Áo polo",
-            "Quần jean",
+            "Quần Jean",
             "Quần Tây",
             "Quần short"});
             this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
