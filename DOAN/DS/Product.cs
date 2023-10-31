@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Forms;
 
 namespace DOAN.DS
 {
@@ -118,7 +119,7 @@ namespace DOAN.DS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                System.Windows.MessageBox.Show(ex.Message);
             }
             finally
             {
@@ -144,7 +145,7 @@ namespace DOAN.DS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                System.Windows.MessageBox.Show(ex.Message);
             }
             finally
             {
@@ -198,7 +199,7 @@ namespace DOAN.DS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                System.Windows.MessageBox.Show(ex.Message);
             }
             finally
             {
@@ -206,6 +207,11 @@ namespace DOAN.DS
             }
 
             return "";
+        }
+
+        public string getProductList(FlowLayoutPanel panel)
+        {
+            return db.getButtons("select p_price, p_image from PRODUCT Where p_status = 1", panel);
         }
     }
 }

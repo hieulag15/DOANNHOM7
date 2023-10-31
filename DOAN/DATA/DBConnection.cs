@@ -5,12 +5,16 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using DOAN.BTN_CONTROLS;
+using System.Drawing;
+using System.IO;
 
 namespace DOAN.DATA
 {
     internal class DBConnection
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-NN1DVIA;Initial Catalog=QLCUAHANG;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=HIEULAG\THANHHIEU;Initial Catalog=QLCuaHang;Integrated Security=True");
         SqlCommand comm = null; //Đối tượng truy vấn và cập nhật vào SQL Serverwd
         SqlDataAdapter da = null; //Đối tượng đưa dữ liệu vào DataTable
 
@@ -68,6 +72,61 @@ namespace DOAN.DATA
             dr.Close();
             conn.Close();
             return result;
+        }
+
+        public string getButtons(string query, FlowLayoutPanel panel)
+        {
+            string ret = "";
+
+            try
+            {
+                conn.Open();
+                comm.Connection = conn;
+                comm.CommandText = query.ToLower();
+
+                SqlDataReader reader = comm.ExecuteReader();
+
+                string price;
+                Image image;
+
+                while (reader.Read())
+                {
+                    price = reader[0].ToString();
+                    byte[] imageBytes = (byte[])reader[1]; // Đọc dữ liệu hình ảnh từ cột thứ hai
+                    using (MemoryStream stream = new MemoryStream(imageBytes))
+                    {
+                        // Tạo một hình ảnh từ MemoryStream
+                        image = Image.FromStream(stream);
+
+                        // Bây giờ bạn có thể sử dụng biến 'image' để hiển thị hoặc xử lý hình ảnh.
+                        // Ví dụ: pictureBox1.Image = image; (đối với Windows Forms)
+                    }
+
+
+                    us_Product btn = new us_Product();
+
+                    btn.ItemPrice = "$" + price;
+                    btn.ItemImage = image;
+                    
+
+                    if (price != string.Empty)
+                    {
+                        panel.Controls.Add(btn);
+                    }
+
+                    ret = "Data Fetched Successfully.. :)";
+                }
+            }
+            catch (Exception ex)
+            {
+                ret = ex.Message;
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return ret;
         }
     }
 }
