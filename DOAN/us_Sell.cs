@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN.DS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,21 +11,18 @@ using System.Windows.Forms;
 
 namespace DOAN
 {
-    public partial class us_accountUI : UserControl
+    public partial class us_Sell : UserControl
     {
-        public us_accountUI()
+        Product product = new Product();
+        public us_Sell()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void us_Sell_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void us_accountUI_Load(object sender, EventArgs e)
-        {
-
+            Panel_Product.Controls.Clear();
+            product.getProductList(Panel_Product);
         }
     }
 }

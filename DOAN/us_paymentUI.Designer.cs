@@ -105,7 +105,7 @@
             this.lblNhapSDT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblNhapSDT.Location = new System.Drawing.Point(21, 60);
             this.lblNhapSDT.Name = "lblNhapSDT";
-            this.lblNhapSDT.Size = new System.Drawing.Size(138, 26);
+            this.lblNhapSDT.Size = new System.Drawing.Size(135, 22);
             this.lblNhapSDT.TabIndex = 2;
             this.lblNhapSDT.Text = "Nhập số điện thoại";
             // 
@@ -328,7 +328,7 @@
             this.guna2TextBox2.ForeColor = System.Drawing.Color.White;
             this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Location = new System.Drawing.Point(240, 380);
+            this.guna2TextBox2.Location = new System.Drawing.Point(230, 380);
             this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox2.Name = "guna2TextBox2";
             this.guna2TextBox2.PasswordChar = '\0';
@@ -342,11 +342,11 @@
             // guna2HtmlLabel7
             // 
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("SVN-Book Antiqua", 12F);
+            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.guna2HtmlLabel7.ForeColor = System.Drawing.SystemColors.Window;
             this.guna2HtmlLabel7.Location = new System.Drawing.Point(44, 388);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(79, 26);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(78, 22);
             this.guna2HtmlLabel7.TabIndex = 84;
             this.guna2HtmlLabel7.Text = "Thành tiền";
             // 
@@ -388,7 +388,7 @@
             this.guna2TextBox4.ForeColor = System.Drawing.Color.White;
             this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox4.HoverState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Location = new System.Drawing.Point(240, 271);
+            this.guna2TextBox4.Location = new System.Drawing.Point(230, 271);
             this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox4.Name = "guna2TextBox4";
             this.guna2TextBox4.PasswordChar = '\0';
@@ -416,7 +416,7 @@
             this.guna2TextBox3.ForeColor = System.Drawing.Color.White;
             this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox3.HoverState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Location = new System.Drawing.Point(240, 116);
+            this.guna2TextBox3.Location = new System.Drawing.Point(230, 116);
             this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox3.Name = "guna2TextBox3";
             this.guna2TextBox3.PasswordChar = '\0';
@@ -444,7 +444,7 @@
             this.guna2TextBox5.ForeColor = System.Drawing.Color.White;
             this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox5.HoverState.Parent = this.guna2TextBox5;
-            this.guna2TextBox5.Location = new System.Drawing.Point(240, 66);
+            this.guna2TextBox5.Location = new System.Drawing.Point(230, 66);
             this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox5.Name = "guna2TextBox5";
             this.guna2TextBox5.PasswordChar = '\0';
@@ -457,33 +457,33 @@
             // guna2HtmlLabel6
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("SVN-Book Antiqua", 12F);
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.guna2HtmlLabel6.ForeColor = System.Drawing.SystemColors.Window;
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(42, 333);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(164, 26);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(157, 22);
             this.guna2HtmlLabel6.TabIndex = 79;
             this.guna2HtmlLabel6.Text = "Dùng điểm thành viên";
             // 
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("SVN-Book Antiqua", 12F);
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.Window;
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(44, 279);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(67, 26);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(66, 22);
             this.guna2HtmlLabel5.TabIndex = 78;
             this.guna2HtmlLabel5.Text = "Giảm giá";
             // 
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("SVN-Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.Window;
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(42, 223);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(106, 30);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(109, 26);
             this.guna2HtmlLabel4.TabIndex = 77;
             this.guna2HtmlLabel4.Text = "Thanh toán";
             // 
@@ -496,7 +496,7 @@
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
             this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Location = new System.Drawing.Point(274, 173);
+            this.guna2Button3.Location = new System.Drawing.Point(264, 173);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
             this.guna2Button3.Size = new System.Drawing.Size(220, 34);
@@ -521,33 +521,33 @@
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("SVN-Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.SystemColors.Window;
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(42, 22);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(181, 30);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(185, 26);
             this.guna2HtmlLabel3.TabIndex = 73;
             this.guna2HtmlLabel3.Text = "Tìm kiếm sản phẩm";
             // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("SVN-Book Antiqua", 12F);
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.guna2HtmlLabel1.ForeColor = System.Drawing.SystemColors.Window;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(47, 74);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(140, 26);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(141, 22);
             this.guna2HtmlLabel1.TabIndex = 74;
             this.guna2HtmlLabel1.Text = "Nhập mã sản phẩm";
             // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("SVN-Book Antiqua", 12F);
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.Window;
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(47, 124);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(67, 26);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(66, 22);
             this.guna2HtmlLabel2.TabIndex = 75;
             this.guna2HtmlLabel2.Text = "Số lượng";
             // 
@@ -574,7 +574,7 @@
             this.guna2GradientPanel1.Location = new System.Drawing.Point(3, 242);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(544, 440);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(524, 440);
             this.guna2GradientPanel1.TabIndex = 86;
             // 
             // guna2TextBox6
@@ -607,11 +607,11 @@
             // guna2HtmlLabel8
             // 
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel8.Font = new System.Drawing.Font("SVN-Book Antiqua", 12F);
+            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.guna2HtmlLabel8.ForeColor = System.Drawing.SystemColors.Window;
             this.guna2HtmlLabel8.Location = new System.Drawing.Point(586, 52);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(87, 26);
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(87, 22);
             this.guna2HtmlLabel8.TabIndex = 87;
             this.guna2HtmlLabel8.Text = "Mã hóa đơn";
             // 

@@ -57,8 +57,13 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BTN_CONTROLS\us_Product.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BTN_CONTROLS\us_Product.Designer.cs">
+      <DependentUpon>us_Product.cs</DependentUpon>
+    </Compile>
     <Compile Include="DATA\DBConnection.cs" />
-    <Compile Include="DS\Detail_Shipment.cs" />
     <Compile Include="DS\Account.cs" />
     <Compile Include="DS\Employee.cs" />
     <Compile Include="DS\Bill.cs" />
@@ -67,29 +72,23 @@
     <Compile Include="DS\Product.cs" />
     <Compile Include="DS\Detail_Bill.cs" />
     <Compile Include="DS\Supplier.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_Login.Designer.cs">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_mathang.cs">
+    <Compile Include="frm_ListProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_mathang.Designer.cs">
-      <DependentUpon>frm_mathang.cs</DependentUpon>
+    <Compile Include="frm_ListProduct.Designer.cs">
+      <DependentUpon>frm_ListProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_trangchinh.cs">
+    <Compile Include="frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_trangchinh.Designer.cs">
-      <DependentUpon>frm_trangchinh.cs</DependentUpon>
+    <Compile Include="frm_Main.Designer.cs">
+      <DependentUpon>frm_Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -111,11 +110,11 @@
     <Compile Include="us_AddProduct.Designer.cs">
       <DependentUpon>us_AddProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="us_banhang.cs">
+    <Compile Include="us_Sell.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="us_banhang.Designer.cs">
-      <DependentUpon>us_banhang.cs</DependentUpon>
+    <Compile Include="us_Sell.Designer.cs">
+      <DependentUpon>us_Sell.cs</DependentUpon>
     </Compile>
     <Compile Include="us_customerUI.cs">
       <SubType>UserControl</SubType>
@@ -129,6 +128,12 @@
     <Compile Include="us_employeeUI.Designer.cs">
       <DependentUpon>us_employeeUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="us_ImportProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="us_ImportProduct.Designer.cs">
+      <DependentUpon>us_ImportProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="us_InforProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -141,17 +146,23 @@
     <Compile Include="us_paymentUI.Designer.cs">
       <DependentUpon>us_paymentUI.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="us_Shipment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="us_Shipment.Designer.cs">
+      <DependentUpon>us_Shipment.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BTN_CONTROLS\us_Product.resx">
+      <DependentUpon>us_Product.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_mathang.resx">
-      <DependentUpon>frm_mathang.cs</DependentUpon>
+    <EmbeddedResource Include="frm_ListProduct.resx">
+      <DependentUpon>frm_ListProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_trangchinh.resx">
-      <DependentUpon>frm_trangchinh.cs</DependentUpon>
+    <EmbeddedResource Include="frm_Main.resx">
+      <DependentUpon>frm_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -164,8 +175,11 @@
     <EmbeddedResource Include="us_AddProduct.resx">
       <DependentUpon>us_AddProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="us_banhang.resx">
-      <DependentUpon>us_banhang.cs</DependentUpon>
+    <EmbeddedResource Include="us_ImportProduct.resx">
+      <DependentUpon>us_ImportProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="us_Sell.resx">
+      <DependentUpon>us_Sell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="us_customerUI.resx">
       <DependentUpon>us_customerUI.cs</DependentUpon>
@@ -178,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="us_paymentUI.resx">
       <DependentUpon>us_paymentUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="us_Shipment.resx">
+      <DependentUpon>us_Shipment.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -288,5 +305,9 @@
   <ItemGroup>
     <None Include="Resources\add-product1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

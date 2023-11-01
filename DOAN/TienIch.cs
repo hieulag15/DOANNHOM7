@@ -1,7 +1,10 @@
-﻿using Guna.UI2.WinForms;
+﻿using DOAN.DATA;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +37,14 @@ namespace DOAN
             pnl_trangchinh.Controls.Add(userControl);
             pnl_trangchinh.Tag = userControl;
             userControl.Show();
+        }
+
+        public static Image ConvertByteArraytoImage(byte[] data) //Dùng để chuyển mảng bit ảnh thành ảnh để load lên form
+        {
+            using (MemoryStream ms = new MemoryStream(data))
+            {
+                return Image.FromStream(ms);
+            }
         }
     }
 }

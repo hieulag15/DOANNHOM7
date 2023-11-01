@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN.DS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,10 +12,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify;
 
 namespace DOAN
 {
-    public partial class frm_trangchinh : Form
+    public partial class frm_Main : Form
     {
-        Color background1 = Color.FromArgb(65, 100, 74); 
-        public frm_trangchinh()
+        Color background1 = Color.FromArgb(65, 100, 74);
+        public Account account;
+        public frm_Main()
         {
             InitializeComponent();
         }
@@ -22,7 +24,7 @@ namespace DOAN
         private void frm_trangchinh_Load(object sender, EventArgs e)
         {
             timer1.Start();
-
+            lbl_Name.Text = account.name.ToString();
             lbl_time.Text = DateTime.Now.ToLongTimeString();
             lbl_date.Text = DateTime.Now.ToLongDateString();
         }
@@ -47,7 +49,7 @@ namespace DOAN
 
         private void btn_HienThiMatHang_Click(object sender, EventArgs e)
         {
-            frm_mathang Fmathang = new frm_mathang(this.pnl_trangchinh);
+            frm_ListProduct Fmathang = new frm_ListProduct(this.pnl_trangchinh);
             TienIch.addForm(Fmathang, pnl_trangchinh);
         }
 
@@ -67,15 +69,16 @@ namespace DOAN
             timer1.Start();
         }
 
-        private void btn_NhapKho_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_Banhang_Click(object sender, EventArgs e)
         {
-            us_banhang us_Banhang = new us_banhang();
+            us_Sell us_Banhang = new us_Sell();
             TienIch.addUserControl(us_Banhang, pnl_trangchinh);
+        }
+
+        private void btn_LoHang_Click(object sender, EventArgs e)
+        {
+            us_Shipment us_Shipment = new us_Shipment(pnl_trangchinh);
+            TienIch.addUserControl(us_Shipment, pnl_trangchinh);
         }
     }
 }
