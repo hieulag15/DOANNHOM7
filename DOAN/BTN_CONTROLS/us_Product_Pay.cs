@@ -10,30 +10,23 @@ using System.Windows.Forms;
 
 namespace DOAN.BTN_CONTROLS
 {
-    public partial class us_Product : UserControl
+    public partial class us_Product_Pay : UserControl
     {
-        public us_Product()
-        {
-            InitializeComponent();
-        }
-
         public string ItemPrice
         {
             get { return lbl_giaTien.Text; }
             set { lbl_giaTien.Text = value; }
         }
 
-        public Image ItemImage
+        public string ItemID
         {
-            get { return ptb_anhSanPham.Image; }
-            set { ptb_anhSanPham.Image = value; }
+            get { return lbl_maSP.Text; }
+            set { lbl_maSP.Text = value; }
         }
 
-        public string ItemID;
-
-        private void ptb_anhSanPham_Click(object sender, EventArgs e)
+        public us_Product_Pay()
         {
-            this.OnClick(e);
+            InitializeComponent();
         }
     }
 }
