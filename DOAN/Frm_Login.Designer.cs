@@ -34,7 +34,7 @@
             this.txt_Username = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txt_Password = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btn_DangNhap = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panelShop = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
@@ -78,8 +78,7 @@
             this.txt_Username.ShadowDecoration.Parent = this.txt_Username;
             this.txt_Username.Size = new System.Drawing.Size(236, 40);
             this.txt_Username.TabIndex = 0;
-            this.txt_Username.Click += new System.EventHandler(this.txt_Username_Click);
-            this.txt_Username.Leave += new System.EventHandler(this.txt_Username_Leave);
+            this.txt_Username.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txt_Username_MouseClick);
             // 
             // guna2PictureBox1
             // 
@@ -122,27 +121,28 @@
             this.txt_Password.SelectionStart = 8;
             this.txt_Password.ShadowDecoration.Parent = this.txt_Password;
             this.txt_Password.Size = new System.Drawing.Size(236, 40);
-            this.txt_Password.TabIndex = 2;
+            this.txt_Password.TabIndex = 1;
             this.txt_Password.Click += new System.EventHandler(this.txt_Password_Click);
             this.txt_Password.Leave += new System.EventHandler(this.txt_Password_Leave);
+            this.txt_Password.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txt_Password_MouseClick);
             // 
-            // guna2GradientButton1
+            // btn_DangNhap
             // 
-            this.guna2GradientButton1.BorderRadius = 10;
-            this.guna2GradientButton1.CheckedState.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.CustomImages.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.HoverState.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(65, 296);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.Size = new System.Drawing.Size(148, 45);
-            this.guna2GradientButton1.TabIndex = 3;
-            this.guna2GradientButton1.Text = "Sign In";
-            this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
+            this.btn_DangNhap.BorderRadius = 10;
+            this.btn_DangNhap.CheckedState.Parent = this.btn_DangNhap;
+            this.btn_DangNhap.CustomImages.Parent = this.btn_DangNhap;
+            this.btn_DangNhap.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btn_DangNhap.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btn_DangNhap.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DangNhap.ForeColor = System.Drawing.Color.White;
+            this.btn_DangNhap.HoverState.Parent = this.btn_DangNhap;
+            this.btn_DangNhap.Location = new System.Drawing.Point(65, 296);
+            this.btn_DangNhap.Name = "btn_DangNhap";
+            this.btn_DangNhap.ShadowDecoration.Parent = this.btn_DangNhap;
+            this.btn_DangNhap.Size = new System.Drawing.Size(148, 45);
+            this.btn_DangNhap.TabIndex = 3;
+            this.btn_DangNhap.Text = "Sign In";
+            this.btn_DangNhap.Click += new System.EventHandler(this.btn_DangNhap_Click);
             // 
             // guna2HtmlLabel1
             // 
@@ -160,7 +160,7 @@
             this.panelShop.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.panelShop.BorderThickness = 1;
             this.panelShop.Controls.Add(this.guna2HtmlLabel1);
-            this.panelShop.Controls.Add(this.guna2GradientButton1);
+            this.panelShop.Controls.Add(this.btn_DangNhap);
             this.panelShop.Controls.Add(this.txt_Username);
             this.panelShop.Controls.Add(this.txt_Password);
             this.panelShop.CustomBorderColor = System.Drawing.Color.White;
@@ -205,6 +205,7 @@
             // 
             // Frm_Login
             // 
+            this.AcceptButton = this.btn_DangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
@@ -230,7 +231,7 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2TextBox txt_Username;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2GradientButton btn_DangNhap;
         private Guna.UI2.WinForms.Guna2TextBox txt_Password;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Panel panelShop;
