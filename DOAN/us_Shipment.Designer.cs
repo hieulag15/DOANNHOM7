@@ -101,13 +101,13 @@
             this.dgv_Shipment.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Shipment.EnableHeadersVisualStyles = false;
             this.dgv_Shipment.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(224)))), ((int)(((byte)(216)))));
-            this.dgv_Shipment.Location = new System.Drawing.Point(-3, -3);
+            this.dgv_Shipment.Location = new System.Drawing.Point(3, 3);
             this.dgv_Shipment.Name = "dgv_Shipment";
             this.dgv_Shipment.ReadOnly = true;
             this.dgv_Shipment.RowHeadersVisible = false;
             this.dgv_Shipment.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgv_Shipment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Shipment.Size = new System.Drawing.Size(700, 271);
+            this.dgv_Shipment.Size = new System.Drawing.Size(700, 272);
             this.dgv_Shipment.TabIndex = 5;
             this.dgv_Shipment.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.GreenSea;
             this.dgv_Shipment.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(226)))), ((int)(((byte)(218)))));
