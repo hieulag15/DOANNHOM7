@@ -129,5 +129,15 @@ namespace DOAN
         {
 
         }
+
+        private void pic_refresh_Click(object sender, EventArgs e)
+        {
+            txt_timTheoMaHoaDon.Text = "Theo mã hóa đơn";
+            txt_timTheoSDT.Text = "Theo SĐT khách hàng";
+            txt_timTheoMaMatHang.Text = "Theo mã mặt hàng";
+            dtp_mocDau.Value = DateTime.Today;
+            dtp_mocSau.Value = DateTime.Today;
+            LoadHistoryBill();
+        }
     }
 }
