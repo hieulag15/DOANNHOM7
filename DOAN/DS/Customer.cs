@@ -19,7 +19,7 @@ namespace DOAN.DS
 
         public DataSet getCustomer()
         {
-            return db.ExecuteQueryDataSet("select * from V_CUSTOMER_POINT");
+            return db.ExecuteQueryDataSet("select * from CUSTOMER");
         }
     }
 }

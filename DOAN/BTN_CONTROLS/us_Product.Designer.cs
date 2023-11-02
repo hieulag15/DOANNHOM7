@@ -70,6 +70,7 @@
             this.ptb_anhSanPham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptb_anhSanPham.TabIndex = 1;
             this.ptb_anhSanPham.TabStop = false;
+            this.ptb_anhSanPham.Click += new System.EventHandler(this.ptb_anhSanPham_Click);
             // 
             // us_Product
             // 
