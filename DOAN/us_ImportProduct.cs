@@ -77,13 +77,9 @@ namespace DOAN
         //Hiển thị thông tin lô hàng và nhà cung cấp
 
         private void LoadShipment()
-        {
+        {           
+            DataRow dr = dbShipment.getOneShipment(id_shipment);
             txt_malohang.Text = id_shipment;
-            DataTable dtShipment = new DataTable();
-            dtShipment.Clear();
-            DataSet ds = dbShipment.getOneShipment(id_shipment);
-            dtShipment = ds.Tables[0];
-            DataRow dr = dtShipment.Rows[0];
             txt_maNCC.Text = dr[1].ToString();
             date_ngaynhap.Value = (DateTime)dr[2];
         }
@@ -145,7 +141,7 @@ namespace DOAN
         {
             dtProduct = new DataTable();
             dtProduct.Clear();
-            dtProduct = dbProduct.FindProduct(txt_timten.Text).Tables[0];
+            dtProduct = dbProduct.FindProductByName(txt_timten.Text).Tables[0];
             dgv_Product.DataSource = dtProduct;
 
             dgv_Product.Columns[3].Visible = false;

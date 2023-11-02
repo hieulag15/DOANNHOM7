@@ -27,9 +27,11 @@ namespace DOAN.DS
             return db.ExecuteQueryDataSet("select * from V_PRODUCTS");
         }
 
-        public DataSet getOneProduct(string id_product)
+        public DataRow getOneProduct(string id_product)
         {
-            return db.ExecuteQueryDataSet(string.Format("select * from PRODUCT where p_id = '{0}'", id_product));
+            DataSet ds = db.ExecuteQueryDataSet(string.Format("select * from PRODUCT where p_id = '{0}'", id_product));
+            DataRow dr = ds.Tables[0].Rows[0];
+            return dr;
         }
 
         public DataSet getDetailProduct(string id_product)
@@ -102,17 +104,16 @@ namespace DOAN.DS
             }
         }
 
-        public DataSet FindProduct(string p_name)
+        public DataSet FindProductByName(string p_name)
         {
             db = new DBConnection();
             db.openConnection();
             DataSet ds = new DataSet();
             try
             {
-                comm = new SqlCommand("proc_FindProduct", db.getSqlConn);
-                comm.Parameters.AddWithValue("@searchChar", p_name);
+                comm = new SqlCommand("SELECT * FROM dbo.fn_FindProductByName(@name)", db.getSqlConn);
+                comm.Parameters.AddWithValue("@name", p_name);
 
-                comm.CommandType = CommandType.StoredProcedure;
                 SqlDataAdapter da = new SqlDataAdapter(); //Tạo một cầu nối giữa SQl command và Database
                 da.SelectCommand = comm;
                 da.Fill(ds); //Đưa dữ liệu vừa gọi được vào DataSet
@@ -135,10 +136,9 @@ namespace DOAN.DS
             DataSet ds = new DataSet();
             try
             {
-                comm = new SqlCommand("proc_FindProductByIDType", db.getSqlConn);
+                comm = new SqlCommand("SELECT * FROM dbo.fn_FindProductByIDType(@idtype)", db.getSqlConn);
                 comm.Parameters.AddWithValue("@idtype", p_name);
 
-                comm.CommandType = CommandType.StoredProcedure;
                 SqlDataAdapter da = new SqlDataAdapter(); //Tạo một cầu nối giữa SQl command và Database
                 da.SelectCommand = comm;
                 da.Fill(ds); //Đưa dữ liệu vừa gọi được vào DataSet
