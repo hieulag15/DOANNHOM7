@@ -136,7 +136,31 @@ namespace DOAN.DATA
             us_Product_Pay productpay = new us_Product_Pay();
             productpay.ItemID = us_Product.ItemID;
             productpay.ItemPrice = us_Product.ItemPrice;
-            panel.Controls.Add(productpay);
+            bool found = false;  // Biến này để kiểm tra xem sản phẩm đã tồn tại trong FlowLayoutPanel chưa.
+
+            foreach (Control control in panel.Controls)
+            {
+                if (control is us_Product_Pay us_Product_Pay)
+                {
+                    if (us_Product_Pay.ItemID == productpay.ItemID)
+                    {
+                        // Nếu sản phẩm đã tồn tại, tăng số lượng lên 1.
+                        int temp = int.Parse(us_Product_Pay.ItemQuantity) + 1;
+                        us_Product_Pay.ItemQuantity = temp.ToString();
+                        found = true;  // Đánh dấu là sản phẩm đã tồn tại.
+                        break;  // Bạn có thể thoát khỏi vòng lặp vì bạn đã tăng số lượng sản phẩm.
+                    }
+                }
+            }
+
+            if (!found)
+            {
+                // Nếu sản phẩm chưa tồn tại trong FlowLayoutPanel, hãy thêm nó vào.
+                int horizontalMargin = (panel.Width - productpay.Width) / 2;
+                
+                productpay.Margin = new Padding(horizontalMargin, 0, horizontalMargin, 0);
+                panel.Controls.Add(productpay);
+            }
         }
     }
 }
