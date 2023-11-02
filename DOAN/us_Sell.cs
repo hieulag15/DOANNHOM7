@@ -1,4 +1,5 @@
-﻿using DOAN.DS;
+﻿using DOAN.BTN_CONTROLS;
+using DOAN.DS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +23,7 @@ namespace DOAN
         private void us_Sell_Load(object sender, EventArgs e)
         {
             Panel_Product.Controls.Clear();
-            product.getProductList(Panel_Product);
+            product.getProductList(Panel_Product, Panel_ProductPay);
         }
     }
 }

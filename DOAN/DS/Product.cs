@@ -209,9 +209,9 @@ namespace DOAN.DS
             return "";
         }
 
-        public string getProductList(FlowLayoutPanel panel)
+        public string getProductList(FlowLayoutPanel panelProduct, FlowLayoutPanel panelProductPay)
         {
-            return db.getButtons("select p_price, p_image from PRODUCT Where p_status = 1", panel);
+            return db.getButtons("select p_price, p_image, p_id from PRODUCT Where p_status = 1", panelProduct, panelProductPay);
         }
     }
 }

@@ -74,7 +74,7 @@ namespace DOAN.DATA
             return result;
         }
 
-        public string getButtons(string query, FlowLayoutPanel panel)
+        public string getButtons(string query, FlowLayoutPanel panelProduct, FlowLayoutPanel panelProductPay)
         {
             string ret = "";
 
@@ -86,7 +86,7 @@ namespace DOAN.DATA
 
                 SqlDataReader reader = comm.ExecuteReader();
 
-                string price;
+                string price, id;
                 Image image;
 
                 while (reader.Read())
@@ -101,17 +101,19 @@ namespace DOAN.DATA
                         // Bây giờ bạn có thể sử dụng biến 'image' để hiển thị hoặc xử lý hình ảnh.
                         // Ví dụ: pictureBox1.Image = image; (đối với Windows Forms)
                     }
-
+                    id = reader[2].ToString();
 
                     us_Product btn = new us_Product();
 
                     btn.ItemPrice = "$" + price;
                     btn.ItemImage = image;
-                    
+                    btn.ItemID = id;
+                    btn.Click += (sender, e) => getInformation(btn, panelProductPay);
+
 
                     if (price != string.Empty)
                     {
-                        panel.Controls.Add(btn);
+                        panelProduct.Controls.Add(btn);
                     }
 
                     ret = "Data Fetched Successfully.. :)";
@@ -127,6 +129,14 @@ namespace DOAN.DATA
                 conn.Close();
             }
             return ret;
+        }
+
+        public void getInformation(us_Product us_Product, FlowLayoutPanel panel)
+        {
+            us_Product_Pay productpay = new us_Product_Pay();
+            productpay.ItemID = us_Product.ItemID;
+            productpay.ItemPrice = us_Product.ItemPrice;
+            panel.Controls.Add(productpay);
         }
     }
 }
