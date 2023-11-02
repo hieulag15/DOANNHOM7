@@ -42,9 +42,7 @@ namespace DOAN
                 //Set Header Text cho dtgv
                 dgv_Customer.Columns[0].HeaderText = "Số điện thoại";
                 dgv_Customer.Columns[1].HeaderText = "Tên";
-                
                 dgv_Customer.Columns[2].HeaderText = "Điểm";
-                dgv_Customer.Columns[3].HeaderText = "Trạng thái";
 
                 //Set chiều rộng cột
                 int width = dgv_Customer.Width;
@@ -52,7 +50,6 @@ namespace DOAN
                 dgv_Customer.Columns[0].Width -= width / n_column;
                 dgv_Customer.Columns[1].Width -= width / n_column;
                 dgv_Customer.Columns[2].Width -= width / n_column;
-                dgv_Customer.Columns[3].Width -= width / n_column;
                 dgv_Customer.AutoResizeColumns();
             }
         }
@@ -66,9 +63,102 @@ namespace DOAN
                 txt_SoDienThoai.Text = dgv_Customer.Rows[numrow].Cells[0].Value.ToString();
                 txt_TenKhachHang.Text = dgv_Customer.Rows[numrow].Cells[1].Value.ToString();
                 txt_DiemTichLuy.Text = dgv_Customer.Rows[numrow].Cells[2].Value.ToString();
-                rb_HD.Checked = Convert.ToInt32(dgv_Customer.Rows[numrow].Cells[3].Value) == 1 ? true : false;
-                rb_KHD.Checked = !rb_HD.Checked;
+                rb_HD.Checked = true;
             }
+        }
+        private void Refresh()
+        {
+            txt_SoDienThoai.Text = "";
+            txt_TenKhachHang.Text = "";
+            txt_DiemTichLuy.Text = "";
+        }
+
+        private void btn_LamMoi_Click(object sender, EventArgs e)
+        {
+            Refresh();
+        }
+
+        private void btn_Huy_Click(object sender, EventArgs e)
+        {
+            Refresh();
+        }
+
+        private void btn_Them_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dbCustomer.addCustomer(txt_SoDienThoai.Text.Trim(), txt_TenKhachHang.Text.Trim(), 
+                    //Lấy giá trị điểm trong Textbox, nếu textbox không có dữ liệu thì cho nó bằng 0
+                    txt_DiemTichLuy.Text.Trim() != null ? (int)Convert.ToDecimal(txt_DiemTichLuy.Text.Trim()) : 0
+                    ) == true)
+                {
+                    MessageBox.Show("Thêm khách hàng thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm khách hàng không thành công");
+                }
+                LoadCustomer();
+                Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btn_Sua_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dbCustomer.updateCustomer(
+                    txt_SoDienThoai.Text.Trim(),
+                    txt_TenKhachHang.Text.Trim(),
+                    //Lấy giá trị điểm trong Textbox, nếu textbox không có dữ liệu thì cho nó bằng 0
+                    txt_DiemTichLuy.Text.Trim() != null ? (int)Convert.ToDecimal(txt_DiemTichLuy.Text.Trim()) : 0,
+                    0);
+
+                MessageBox.Show("Cập nhật thông tin khách hàng thành công");
+                LoadCustomer();
+                Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btn_Xoa_Click(object sender, EventArgs e)
+        {
+            //Hỏi người dùng là có chắc chắn muốn xóa khách hàng không
+            DialogResult respone = MessageBox.Show("Bạn có chắc chắn muốn xóa khách hàng", "Thông báo",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            //Nếu đồng ý
+            if (respone == DialogResult.Yes)
+            {
+                try
+                {
+                    dbCustomer.deleteCustomer(txt_SoDienThoai.Text);
+                    MessageBox.Show("Xóa thông tin khách hàng thành công");
+                    LoadCustomer();
+                    Refresh();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                Refresh();
+                return;
+            }
+        }
+
+        private void btn_TimKiem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
