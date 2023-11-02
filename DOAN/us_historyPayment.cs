@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DOAN
 {
-    public partial class us_paymentUI : UserControl
+    public partial class us_historyPayment : UserControl
     {
-        public us_paymentUI()
+        public us_historyPayment()
         {
             InitializeComponent();
         }
