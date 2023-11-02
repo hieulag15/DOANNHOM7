@@ -24,6 +24,12 @@ namespace DOAN.BTN_CONTROLS
             set { lbl_maSP.Text = value; }
         }
 
+        public string ItemQuantity
+        {
+            get { return lbl_soLuong.Text; }
+            set { lbl_soLuong.Text = value; }
+        }
+
         public us_Product_Pay()
         {
             InitializeComponent();
