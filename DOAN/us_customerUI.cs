@@ -115,8 +115,7 @@ namespace DOAN
                     txt_SoDienThoai.Text.Trim(),
                     txt_TenKhachHang.Text.Trim(),
                     //Lấy giá trị điểm trong Textbox, nếu textbox không có dữ liệu thì cho nó bằng 0
-                    txt_DiemTichLuy.Text.Trim() != null ? (int)Convert.ToDecimal(txt_DiemTichLuy.Text.Trim()) : 0,
-                    0);
+                    txt_DiemTichLuy.Text.Trim() != null ? (int)Convert.ToDecimal(txt_DiemTichLuy.Text.Trim()) : 0);
 
                 MessageBox.Show("Cập nhật thông tin khách hàng thành công");
                 LoadCustomer();

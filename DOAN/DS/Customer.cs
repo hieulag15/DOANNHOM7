@@ -50,7 +50,7 @@ namespace DOAN.DS
                 db.closeConnection();
             }
         }
-        public bool updateCustomer(string phone, string name, decimal point, int status)
+        public bool updateCustomer(string phone, string name, decimal point)
         {
             string queryString = "EXEC proc_UpdateCustomer @phone, @name, @point";
 
@@ -92,6 +92,29 @@ namespace DOAN.DS
                 db.closeConnection();
                 return false;
             }
+        }
+        public DataSet findCustomer(string cname)
+        {
+            db.openConnection();
+
+            DataSet ds = new DataSet();
+            try
+            {
+                cmd = new SqlCommand("usp_FindCustomer @sql_findName", db.getSqlConn);
+                cmd.Parameters.AddWithValue("@sql_findName", cname);
+
+                SqlDataAdapter da = new SqlDataAdapter();
+                da.SelectCommand = cmd;
+                da.Fill(ds);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                db.closeConnection();
+            }
+
+            db.closeConnection();
+            return ds;
         }
     }
 }

@@ -40,13 +40,6 @@ namespace DOAN
                 dgv_Employee.Columns[3].HeaderText = "Số điện thoại";
                 dgv_Employee.Columns[4].HeaderText = "Giới tính";
                 
-                //Ẩn các cột: sinh nhật, địa chỉ, trang thái.
-                for (int i = 0; i < dgv_Employee.ColumnCount; i++)
-                {
-                    if (i == 5)
-                        dgv_Employee.Columns[i].Visible = false;
-                }
-
                 //Set chiều rộng cột
                 int width = dgv_Employee.Width;
                 int n_column = dgv_Employee.ColumnCount;
@@ -77,6 +70,114 @@ namespace DOAN
                 rb_Nam.Checked = dgv_Employee.Rows[numrow].Cells[4].Value.ToString() == "Nam" ? true : false;
                 rb_Nu.Checked = !rb_Nam.Checked;
             }
+        }
+        private void Refresh()
+        {
+            txt_SoDienThoai.Text = "";
+            txt_MaNhanVien.Text = "";
+            txt_TenNhanVien.Text = "";
+            txt_DiaChi.Text = "";
+            rb_Nam.Checked = false;
+            rb_Nu.Checked = false;
+        }
+
+        private void btn_LamMoi_Click(object sender, EventArgs e)
+        {
+            Refresh();
+        }
+
+        private void btn_Huy_Click(object sender, EventArgs e)
+        {
+            Refresh();
+        }
+
+        private void btn_Them_Click(object sender, EventArgs e)
+        {
+            string gender = "";
+            if (rb_Nam.Checked)
+                gender = rb_Nam.Text;
+            else
+                gender = rb_Nu.Text;
+            DataSet ds = new DataSet();
+            ds = dbEmployee.findEmployee(txt_MaNhanVien.Text);
+            if (ds != null)
+            {
+                dbEmployee.updateEmployee(txt_MaNhanVien.Text.Trim(), txt_TenNhanVien.Text.Trim(), txt_DiaChi.Text.Trim(), txt_SoDienThoai.Text.Trim(), gender);
+            }
+            else
+            {
+                try
+                {
+                    if (dbEmployee.addEmployee(txt_MaNhanVien.Text.Trim(), txt_TenNhanVien.Text.Trim(), txt_DiaChi.Text.Trim(), txt_SoDienThoai.Text.Trim(), gender) == true)
+                    {
+                        MessageBox.Show("Thêm nhân viên thành công");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm nhân viên không thành công");
+                    }
+                    LoadEmployee();
+                    Refresh();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void btn_Sua_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string gender = "";
+                if (rb_Nam.Checked)
+                    gender = rb_Nam.Text;
+                else
+                    gender = "Nu";
+                dbEmployee.updateEmployee(txt_MaNhanVien.Text.Trim(), txt_TenNhanVien.Text.Trim(), txt_DiaChi.Text.Trim(), txt_SoDienThoai.Text.Trim(), gender);
+
+                MessageBox.Show("Cập nhật thông tin nhân viên thành công");
+                LoadEmployee();
+                Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btn_Xoa_Click(object sender, EventArgs e)
+        {
+            //Hỏi người dùng là có chắc chắn muốn xóa khách hàng không
+            DialogResult respone = MessageBox.Show("Bạn có chắc chắn muốn xóa khách hàng", "Thông báo",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            //Nếu đồng ý
+            if (respone == DialogResult.Yes)
+            {
+                try
+                {
+                    dbEmployee.deleteEmployee(txt_MaNhanVien.Text);
+                    MessageBox.Show("Xóa thông tin khách hàng thành công");
+                    LoadEmployee();
+                    Refresh();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                Refresh();
+                return;
+            }
+        }
+
+        private void btn_TimKiem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
