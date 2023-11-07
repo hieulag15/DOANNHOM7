@@ -107,7 +107,7 @@ namespace DOAN.DS
             DataSet ds = new DataSet();
             try
             {
-                cmd = new SqlCommand("proc_FindCustomer @phone", db.getSqlConn);
+                cmd = new SqlCommand("SELECT * FROM dbo.SearchCustomerByPhone(@phone)", db.getSqlConn);
                 cmd.Parameters.AddWithValue("@phone", phone);
 
                 SqlDataAdapter da = new SqlDataAdapter();
