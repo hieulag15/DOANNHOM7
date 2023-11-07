@@ -25,13 +25,12 @@ namespace DOAN.DS
         {
             return db.ExecuteQueryDataSet("select * from V_INFO_SUPPLIER");
         }
-        public string CreateAutoID(string idtype)
+        public string CreateAutoID()
         {
             db.openConnection();
             try
             {
                 comm = new SqlCommand("proc_CreateAutoSupplierID", db.getSqlConn);
-                comm.Parameters.AddWithValue("@idtype", idtype);
                 comm.CommandType = CommandType.StoredProcedure;
 
                 object result = comm.ExecuteScalar();
@@ -52,11 +51,11 @@ namespace DOAN.DS
 
             return "";
         }
+
         public bool addSupplier(string s_id, string s_name, string s_phone, string s_address)
         {
             comm = new SqlCommand("EXEC proc_AddSupplier @s_id, @s_name, @s_phone, @s_address", db.getSqlConn);
             comm.Parameters.AddWithValue("@s_id", s_id);
-            comm.Parameters.AddWithValue("@s_name", s_name);
             comm.Parameters.AddWithValue("@s_name", s_name);
             comm.Parameters.AddWithValue("@s_phone", s_phone);
             comm.Parameters.AddWithValue("@s_address", s_address);

@@ -43,15 +43,15 @@ namespace DOAN
 
         private void btn_themMoi_Click(object sender, EventArgs e)
         {
-            string s_id = dbSupplier.CreateAutoID("s");
+            string s_id = dbSupplier.CreateAutoID();
 
             if (dbSupplier.addSupplier(s_id, txt_tenSupplier.Text.Trim(), txt_SDTSupplier.Text.Trim(), txt_diaChiSupplier.Text.Trim()))
             {
-                MessageBox.Show("Thêm khách hàng thành công");
+                MessageBox.Show("Thêm nhà cung cấp thành công");
             }
             else
             {
-                MessageBox.Show("Thêm khách hàng không thành công");
+                MessageBox.Show("Thêm nhà cung cấp không thành công");
             }
             loadSupplier();
         }
