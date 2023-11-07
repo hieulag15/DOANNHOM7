@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_DiaChi = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_SoDienThoai = new Guna.UI2.WinForms.Guna2TextBox();
@@ -81,14 +81,13 @@
             this.txt_DiaChi.ForeColor = System.Drawing.Color.Black;
             this.txt_DiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_DiaChi.HoverState.Parent = this.txt_DiaChi;
-            this.txt_DiaChi.Location = new System.Drawing.Point(192, 440);
-            this.txt_DiaChi.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_DiaChi.Location = new System.Drawing.Point(144, 358);
             this.txt_DiaChi.Name = "txt_DiaChi";
             this.txt_DiaChi.PasswordChar = '\0';
             this.txt_DiaChi.PlaceholderText = "";
             this.txt_DiaChi.SelectedText = "";
             this.txt_DiaChi.ShadowDecoration.Parent = this.txt_DiaChi;
-            this.txt_DiaChi.Size = new System.Drawing.Size(265, 44);
+            this.txt_DiaChi.Size = new System.Drawing.Size(199, 36);
             this.txt_DiaChi.TabIndex = 58;
             // 
             // label6
@@ -96,9 +95,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(23, 457);
+            this.label6.Location = new System.Drawing.Point(17, 371);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 27);
+            this.label6.Size = new System.Drawing.Size(58, 22);
             this.label6.TabIndex = 57;
             this.label6.Text = "Địa chỉ";
             // 
@@ -118,14 +118,13 @@
             this.txt_SoDienThoai.ForeColor = System.Drawing.Color.Black;
             this.txt_SoDienThoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_SoDienThoai.HoverState.Parent = this.txt_SoDienThoai;
-            this.txt_SoDienThoai.Location = new System.Drawing.Point(192, 345);
-            this.txt_SoDienThoai.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_SoDienThoai.Location = new System.Drawing.Point(144, 280);
             this.txt_SoDienThoai.Name = "txt_SoDienThoai";
             this.txt_SoDienThoai.PasswordChar = '\0';
             this.txt_SoDienThoai.PlaceholderText = "";
             this.txt_SoDienThoai.SelectedText = "";
             this.txt_SoDienThoai.ShadowDecoration.Parent = this.txt_SoDienThoai;
-            this.txt_SoDienThoai.Size = new System.Drawing.Size(265, 44);
+            this.txt_SoDienThoai.Size = new System.Drawing.Size(199, 36);
             this.txt_SoDienThoai.TabIndex = 56;
             // 
             // label4
@@ -133,9 +132,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(23, 362);
+            this.label4.Location = new System.Drawing.Point(17, 294);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 27);
+            this.label4.Size = new System.Drawing.Size(98, 22);
             this.label4.TabIndex = 55;
             this.label4.Text = "Số điện thoại";
             // 
@@ -149,9 +149,10 @@
             this.rb_Nu.CheckedState.InnerOffset = -4;
             this.rb_Nu.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rb_Nu.ForeColor = System.Drawing.Color.Black;
-            this.rb_Nu.Location = new System.Drawing.Point(332, 279);
+            this.rb_Nu.Location = new System.Drawing.Point(249, 227);
+            this.rb_Nu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rb_Nu.Name = "rb_Nu";
-            this.rb_Nu.Size = new System.Drawing.Size(57, 28);
+            this.rb_Nu.Size = new System.Drawing.Size(49, 24);
             this.rb_Nu.TabIndex = 54;
             this.rb_Nu.TabStop = true;
             this.rb_Nu.Text = "Nữ";
@@ -171,9 +172,10 @@
             this.rb_Nam.CheckedState.InnerOffset = -4;
             this.rb_Nam.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rb_Nam.ForeColor = System.Drawing.Color.Black;
-            this.rb_Nam.Location = new System.Drawing.Point(192, 278);
+            this.rb_Nam.Location = new System.Drawing.Point(144, 226);
+            this.rb_Nam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rb_Nam.Name = "rb_Nam";
-            this.rb_Nam.Size = new System.Drawing.Size(72, 28);
+            this.rb_Nam.Size = new System.Drawing.Size(60, 24);
             this.rb_Nam.TabIndex = 53;
             this.rb_Nam.TabStop = true;
             this.rb_Nam.Text = "Nam";
@@ -188,9 +190,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(23, 280);
+            this.label5.Location = new System.Drawing.Point(17, 228);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 27);
+            this.label5.Size = new System.Drawing.Size(70, 22);
             this.label5.TabIndex = 52;
             this.label5.Text = "Giới tính";
             // 
@@ -210,14 +213,13 @@
             this.txt_TenNhanVien.ForeColor = System.Drawing.Color.Black;
             this.txt_TenNhanVien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_TenNhanVien.HoverState.Parent = this.txt_TenNhanVien;
-            this.txt_TenNhanVien.Location = new System.Drawing.Point(192, 179);
-            this.txt_TenNhanVien.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TenNhanVien.Location = new System.Drawing.Point(144, 145);
             this.txt_TenNhanVien.Name = "txt_TenNhanVien";
             this.txt_TenNhanVien.PasswordChar = '\0';
             this.txt_TenNhanVien.PlaceholderText = "";
             this.txt_TenNhanVien.SelectedText = "";
             this.txt_TenNhanVien.ShadowDecoration.Parent = this.txt_TenNhanVien;
-            this.txt_TenNhanVien.Size = new System.Drawing.Size(265, 44);
+            this.txt_TenNhanVien.Size = new System.Drawing.Size(199, 36);
             this.txt_TenNhanVien.TabIndex = 44;
             // 
             // txt_MaNhanVien
@@ -236,14 +238,13 @@
             this.txt_MaNhanVien.ForeColor = System.Drawing.Color.Black;
             this.txt_MaNhanVien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_MaNhanVien.HoverState.Parent = this.txt_MaNhanVien;
-            this.txt_MaNhanVien.Location = new System.Drawing.Point(192, 85);
-            this.txt_MaNhanVien.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_MaNhanVien.Location = new System.Drawing.Point(144, 69);
             this.txt_MaNhanVien.Name = "txt_MaNhanVien";
             this.txt_MaNhanVien.PasswordChar = '\0';
             this.txt_MaNhanVien.PlaceholderText = "";
             this.txt_MaNhanVien.SelectedText = "";
             this.txt_MaNhanVien.ShadowDecoration.Parent = this.txt_MaNhanVien;
-            this.txt_MaNhanVien.Size = new System.Drawing.Size(265, 44);
+            this.txt_MaNhanVien.Size = new System.Drawing.Size(199, 36);
             this.txt_MaNhanVien.TabIndex = 42;
             // 
             // label3
@@ -251,9 +252,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(19, 196);
+            this.label3.Location = new System.Drawing.Point(14, 159);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 27);
+            this.label3.Size = new System.Drawing.Size(105, 22);
             this.label3.TabIndex = 41;
             this.label3.Text = "Tên nhân viên";
             // 
@@ -262,9 +264,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(19, 102);
+            this.label2.Location = new System.Drawing.Point(14, 83);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 27);
+            this.label2.Size = new System.Drawing.Size(104, 22);
             this.label2.TabIndex = 40;
             this.label2.Text = "Mã nhân viên";
             // 
@@ -274,9 +277,10 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.label1.Font = new System.Drawing.Font("Century", 18F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(92, 10);
+            this.label1.Location = new System.Drawing.Point(69, 8);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(294, 35);
+            this.label1.Size = new System.Drawing.Size(242, 28);
             this.label1.TabIndex = 39;
             this.label1.Text = "Thông tin nhân viên";
             // 
@@ -301,10 +305,11 @@
             this.guna2Panel1.Controls.Add(this.label4);
             this.guna2Panel1.Controls.Add(this.txt_MaNhanVien);
             this.guna2Panel1.Controls.Add(this.txt_TenNhanVien);
-            this.guna2Panel1.Location = new System.Drawing.Point(13, 19);
+            this.guna2Panel1.Location = new System.Drawing.Point(10, 15);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(482, 641);
+            this.guna2Panel1.Size = new System.Drawing.Size(362, 521);
             this.guna2Panel1.TabIndex = 80;
             // 
             // btn_Them
@@ -316,11 +321,11 @@
             this.btn_Them.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_Them.ForeColor = System.Drawing.Color.White;
             this.btn_Them.HoverState.Parent = this.btn_Them;
-            this.btn_Them.Location = new System.Drawing.Point(23, 520);
-            this.btn_Them.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Them.Location = new System.Drawing.Point(17, 422);
+            this.btn_Them.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.ShadowDecoration.Parent = this.btn_Them;
-            this.btn_Them.Size = new System.Drawing.Size(85, 50);
+            this.btn_Them.Size = new System.Drawing.Size(64, 41);
             this.btn_Them.TabIndex = 72;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
@@ -329,10 +334,11 @@
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.guna2Panel2.Controls.Add(this.label1);
-            this.guna2Panel2.Location = new System.Drawing.Point(3, 3);
+            this.guna2Panel2.Location = new System.Drawing.Point(2, 2);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(476, 62);
+            this.guna2Panel2.Size = new System.Drawing.Size(357, 50);
             this.guna2Panel2.TabIndex = 79;
             // 
             // btn_Sua
@@ -344,11 +350,11 @@
             this.btn_Sua.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_Sua.ForeColor = System.Drawing.Color.White;
             this.btn_Sua.HoverState.Parent = this.btn_Sua;
-            this.btn_Sua.Location = new System.Drawing.Point(136, 520);
-            this.btn_Sua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Sua.Location = new System.Drawing.Point(102, 422);
+            this.btn_Sua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.ShadowDecoration.Parent = this.btn_Sua;
-            this.btn_Sua.Size = new System.Drawing.Size(85, 50);
+            this.btn_Sua.Size = new System.Drawing.Size(64, 41);
             this.btn_Sua.TabIndex = 73;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
@@ -363,11 +369,11 @@
             this.btn_LamMoi.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_LamMoi.ForeColor = System.Drawing.Color.White;
             this.btn_LamMoi.HoverState.Parent = this.btn_LamMoi;
-            this.btn_LamMoi.Location = new System.Drawing.Point(23, 578);
-            this.btn_LamMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_LamMoi.Location = new System.Drawing.Point(17, 470);
+            this.btn_LamMoi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_LamMoi.Name = "btn_LamMoi";
             this.btn_LamMoi.ShadowDecoration.Parent = this.btn_LamMoi;
-            this.btn_LamMoi.Size = new System.Drawing.Size(434, 50);
+            this.btn_LamMoi.Size = new System.Drawing.Size(326, 41);
             this.btn_LamMoi.TabIndex = 76;
             this.btn_LamMoi.Text = "Làm mới";
             this.btn_LamMoi.Click += new System.EventHandler(this.btn_LamMoi_Click);
@@ -381,11 +387,11 @@
             this.btn_Xoa.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_Xoa.ForeColor = System.Drawing.Color.White;
             this.btn_Xoa.HoverState.Parent = this.btn_Xoa;
-            this.btn_Xoa.Location = new System.Drawing.Point(253, 520);
-            this.btn_Xoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Xoa.Location = new System.Drawing.Point(190, 422);
+            this.btn_Xoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.ShadowDecoration.Parent = this.btn_Xoa;
-            this.btn_Xoa.Size = new System.Drawing.Size(85, 50);
+            this.btn_Xoa.Size = new System.Drawing.Size(64, 41);
             this.btn_Xoa.TabIndex = 74;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
@@ -399,11 +405,11 @@
             this.btn_Huy.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_Huy.ForeColor = System.Drawing.Color.White;
             this.btn_Huy.HoverState.Parent = this.btn_Huy;
-            this.btn_Huy.Location = new System.Drawing.Point(372, 520);
-            this.btn_Huy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Huy.Location = new System.Drawing.Point(279, 422);
+            this.btn_Huy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Huy.Name = "btn_Huy";
             this.btn_Huy.ShadowDecoration.Parent = this.btn_Huy;
-            this.btn_Huy.Size = new System.Drawing.Size(85, 50);
+            this.btn_Huy.Size = new System.Drawing.Size(64, 41);
             this.btn_Huy.TabIndex = 75;
             this.btn_Huy.Text = "Hủy";
             this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
@@ -414,48 +420,49 @@
             this.guna2Panel3.BorderThickness = 2;
             this.guna2Panel3.Controls.Add(this.dgv_Employee);
             this.guna2Panel3.Controls.Add(this.guna2Panel4);
-            this.guna2Panel3.Location = new System.Drawing.Point(501, 19);
+            this.guna2Panel3.Location = new System.Drawing.Point(376, 15);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
-            this.guna2Panel3.Size = new System.Drawing.Size(783, 535);
+            this.guna2Panel3.Size = new System.Drawing.Size(587, 435);
             this.guna2Panel3.TabIndex = 81;
             // 
             // dgv_Employee
             // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            this.dgv_Employee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgv_Employee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Employee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Employee.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Employee.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_Employee.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_Employee.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Employee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Employee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Employee.ColumnHeadersHeight = 28;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Employee.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Employee.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Employee.EnableHeadersVisualStyles = false;
             this.dgv_Employee.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_Employee.Location = new System.Drawing.Point(3, 69);
-            this.dgv_Employee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgv_Employee.Location = new System.Drawing.Point(4, 59);
+            this.dgv_Employee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_Employee.Name = "dgv_Employee";
             this.dgv_Employee.RowHeadersVisible = false;
             this.dgv_Employee.RowHeadersWidth = 51;
             this.dgv_Employee.RowTemplate.Height = 24;
             this.dgv_Employee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Employee.Size = new System.Drawing.Size(777, 464);
+            this.dgv_Employee.Size = new System.Drawing.Size(583, 377);
             this.dgv_Employee.TabIndex = 80;
             this.dgv_Employee.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dgv_Employee.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -485,10 +492,11 @@
             // 
             this.guna2Panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.guna2Panel4.Controls.Add(this.label7);
-            this.guna2Panel4.Location = new System.Drawing.Point(3, 3);
+            this.guna2Panel4.Location = new System.Drawing.Point(2, 2);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.ShadowDecoration.Parent = this.guna2Panel4;
-            this.guna2Panel4.Size = new System.Drawing.Size(777, 62);
+            this.guna2Panel4.Size = new System.Drawing.Size(583, 50);
             this.guna2Panel4.TabIndex = 79;
             // 
             // label7
@@ -497,9 +505,10 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.label7.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(225, 10);
+            this.label7.Location = new System.Drawing.Point(169, 8);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(306, 35);
+            this.label7.Size = new System.Drawing.Size(251, 28);
             this.label7.TabIndex = 59;
             this.label7.Text = "Danh sách nhân viên";
             // 
@@ -509,10 +518,11 @@
             this.guna2Panel5.BorderThickness = 2;
             this.guna2Panel5.Controls.Add(this.txt_TimNhanVien);
             this.guna2Panel5.Controls.Add(this.btn_TimKiem);
-            this.guna2Panel5.Location = new System.Drawing.Point(501, 560);
+            this.guna2Panel5.Location = new System.Drawing.Point(376, 455);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.ShadowDecoration.Parent = this.guna2Panel5;
-            this.guna2Panel5.Size = new System.Drawing.Size(783, 100);
+            this.guna2Panel5.Size = new System.Drawing.Size(587, 81);
             this.guna2Panel5.TabIndex = 82;
             // 
             // txt_TimNhanVien
@@ -531,14 +541,14 @@
             this.txt_TimNhanVien.ForeColor = System.Drawing.Color.Black;
             this.txt_TimNhanVien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_TimNhanVien.HoverState.Parent = this.txt_TimNhanVien;
-            this.txt_TimNhanVien.Location = new System.Drawing.Point(288, 35);
-            this.txt_TimNhanVien.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_TimNhanVien.Location = new System.Drawing.Point(216, 28);
+            this.txt_TimNhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_TimNhanVien.Name = "txt_TimNhanVien";
             this.txt_TimNhanVien.PasswordChar = '\0';
             this.txt_TimNhanVien.PlaceholderText = "";
             this.txt_TimNhanVien.SelectedText = "";
             this.txt_TimNhanVien.ShadowDecoration.Parent = this.txt_TimNhanVien;
-            this.txt_TimNhanVien.Size = new System.Drawing.Size(401, 44);
+            this.txt_TimNhanVien.Size = new System.Drawing.Size(301, 36);
             this.txt_TimNhanVien.TabIndex = 66;
             // 
             // btn_TimKiem
@@ -550,25 +560,26 @@
             this.btn_TimKiem.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_TimKiem.ForeColor = System.Drawing.Color.White;
             this.btn_TimKiem.HoverState.Parent = this.btn_TimKiem;
-            this.btn_TimKiem.Location = new System.Drawing.Point(35, 17);
-            this.btn_TimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_TimKiem.Location = new System.Drawing.Point(26, 14);
+            this.btn_TimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_TimKiem.Name = "btn_TimKiem";
             this.btn_TimKiem.ShadowDecoration.Parent = this.btn_TimKiem;
-            this.btn_TimKiem.Size = new System.Drawing.Size(203, 68);
+            this.btn_TimKiem.Size = new System.Drawing.Size(152, 55);
             this.btn_TimKiem.TabIndex = 65;
             this.btn_TimKiem.Text = "Tìm kiếm";
             this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
             // 
             // us_employeeUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2Panel5);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "us_employeeUI";
-            this.Size = new System.Drawing.Size(1302, 682);
+            this.Size = new System.Drawing.Size(976, 554);
             this.Load += new System.EventHandler(this.us_employeeUI_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
