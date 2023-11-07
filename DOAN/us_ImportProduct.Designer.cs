@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_maNCC = new Guna.UI2.WinForms.Guna2TextBox();
             this.pic_AnhMatHang = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.date_ngaynhap = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.num_soluongmathang = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.txt_gianhap = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_malohang = new Guna.UI2.WinForms.Guna2TextBox();
@@ -59,6 +58,7 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_quaylai = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btn_XacNhanThem = new Guna.UI2.WinForms.Guna2TileButton();
+            this.txt_NgayNhap = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_AnhMatHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_soluongmathang)).BeginInit();
             this.guna2Panel3.SuspendLayout();
@@ -101,23 +101,6 @@
             this.pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_AnhMatHang.TabIndex = 2;
             this.pic_AnhMatHang.TabStop = false;
-            // 
-            // date_ngaynhap
-            // 
-            this.date_ngaynhap.CheckedState.Parent = this.date_ngaynhap;
-            this.date_ngaynhap.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.date_ngaynhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_ngaynhap.ForeColor = System.Drawing.Color.White;
-            this.date_ngaynhap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.date_ngaynhap.HoverState.Parent = this.date_ngaynhap;
-            this.date_ngaynhap.Location = new System.Drawing.Point(231, 422);
-            this.date_ngaynhap.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.date_ngaynhap.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.date_ngaynhap.Name = "date_ngaynhap";
-            this.date_ngaynhap.ShadowDecoration.Parent = this.date_ngaynhap;
-            this.date_ngaynhap.Size = new System.Drawing.Size(173, 39);
-            this.date_ngaynhap.TabIndex = 57;
-            this.date_ngaynhap.Value = new System.DateTime(2023, 10, 27, 1, 30, 22, 142);
             // 
             // num_soluongmathang
             // 
@@ -297,10 +280,10 @@
             // 
             this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.guna2Panel3.BorderThickness = 2;
+            this.guna2Panel3.Controls.Add(this.txt_NgayNhap);
             this.guna2Panel3.Controls.Add(this.pic_AnhMatHang);
             this.guna2Panel3.Controls.Add(this.guna2HtmlLabel7);
             this.guna2Panel3.Controls.Add(this.txt_maNCC);
-            this.guna2Panel3.Controls.Add(this.date_ngaynhap);
             this.guna2Panel3.Controls.Add(this.txt_malohang);
             this.guna2Panel3.Controls.Add(this.guna2HtmlLabel2);
             this.guna2Panel3.Controls.Add(this.num_soluongmathang);
@@ -460,31 +443,31 @@
             // 
             // dgv_Product
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgv_Product.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgv_Product.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_Product.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Product.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Product.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_Product.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_Product.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Product.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Product.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_Product.ColumnHeadersHeight = 21;
             this.dgv_Product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Product.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Product.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_Product.EnableHeadersVisualStyles = false;
             this.dgv_Product.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_Product.Location = new System.Drawing.Point(3, 41);
@@ -588,6 +571,33 @@
             this.btn_XacNhanThem.TextOffset = new System.Drawing.Point(20, -18);
             this.btn_XacNhanThem.Click += new System.EventHandler(this.btn_XacNhanThem_Click);
             // 
+            // txt_NgayNhap
+            // 
+            this.txt_NgayNhap.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.txt_NgayNhap.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_NgayNhap.DefaultText = "";
+            this.txt_NgayNhap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_NgayNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_NgayNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_NgayNhap.DisabledState.Parent = this.txt_NgayNhap;
+            this.txt_NgayNhap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_NgayNhap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_NgayNhap.FocusedState.Parent = this.txt_NgayNhap;
+            this.txt_NgayNhap.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_NgayNhap.ForeColor = System.Drawing.Color.Black;
+            this.txt_NgayNhap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_NgayNhap.HoverState.Parent = this.txt_NgayNhap;
+            this.txt_NgayNhap.Location = new System.Drawing.Point(231, 424);
+            this.txt_NgayNhap.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.txt_NgayNhap.Name = "txt_NgayNhap";
+            this.txt_NgayNhap.PasswordChar = '\0';
+            this.txt_NgayNhap.PlaceholderText = "";
+            this.txt_NgayNhap.ReadOnly = true;
+            this.txt_NgayNhap.SelectedText = "";
+            this.txt_NgayNhap.ShadowDecoration.Parent = this.txt_NgayNhap;
+            this.txt_NgayNhap.Size = new System.Drawing.Size(173, 37);
+            this.txt_NgayNhap.TabIndex = 58;
+            // 
             // us_ImportProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -617,7 +627,6 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2DateTimePicker date_ngaynhap;
         private Guna.UI2.WinForms.Guna2NumericUpDown num_soluongmathang;
         private Guna.UI2.WinForms.Guna2TextBox txt_gianhap;
         private Guna.UI2.WinForms.Guna2TextBox txt_malohang;
@@ -645,5 +654,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2PictureBox btn_quaylai;
         private Guna.UI2.WinForms.Guna2TileButton btn_XacNhanThem;
+        private Guna.UI2.WinForms.Guna2TextBox txt_NgayNhap;
     }
 }

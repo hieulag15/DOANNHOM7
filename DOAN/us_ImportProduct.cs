@@ -81,7 +81,8 @@ namespace DOAN
             DataRow dr = dbShipment.getOneShipment(id_shipment);
             txt_malohang.Text = id_shipment;
             txt_maNCC.Text = dr[1].ToString();
-            date_ngaynhap.Value = (DateTime)dr[2];
+            DateTime ngayNhap = (DateTime)dr[2];
+            txt_NgayNhap.Text = ngayNhap.ToString("dd/MM/yyyy");
         }
 
         private void LoadProduct()
