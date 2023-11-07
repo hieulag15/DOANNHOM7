@@ -122,10 +122,6 @@ namespace DOAN
             frm_detailPayment frm_detail = new frm_detailPayment();
             frm_detail.ShowDialog();
         }
-        public string getMaHoaDon()
-        {
-
-        }
 
         private void pic_refresh_Click(object sender, EventArgs e)
         {
