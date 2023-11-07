@@ -78,6 +78,12 @@
     <Compile Include="DS\Product.cs" />
     <Compile Include="DS\Detail_Bill.cs" />
     <Compile Include="DS\Supplier.cs" />
+    <Compile Include="frm_detailPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_detailPayment.Designer.cs">
+      <DependentUpon>frm_detailPayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BTN_CONTROLS\us_Product_Pay.resx">
       <DependentUpon>us_Product_Pay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_detailPayment.resx">
+      <DependentUpon>frm_detailPayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>

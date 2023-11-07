@@ -63,18 +63,12 @@ namespace DOAN
         {
             if (e.KeyCode == Keys.Enter)
             {
-                try
-                {
-                    dtBill.Clear();
-                    DataSet ds = dbBill.timTheoMaBill(txt_timTheoMaHoaDon.Text);
-                    dtBill = ds.Tables[0];
-                    dgv_historyPayment.DataSource = dtBill;
-
-                }
-                catch (SqlException)
-                {
-                    MessageBox.Show("Hóa đơn không tồn tại!");
-                }
+                dtBill.Clear();
+                DataSet ds = dbBill.timTheoMaBill(txt_timTheoMaHoaDon.Text);
+                dtBill = ds.Tables[0];
+                dgv_historyPayment.DataSource = dtBill;
+                txt_timTheoSDT.Text = "Theo SĐT khách hàng";
+                txt_timTheoMaMatHang.Text = "Theo mã mặt hàng";
                 e.Handled = true; //không xử lý thêm nữa
             }
         }
@@ -84,18 +78,12 @@ namespace DOAN
         {
             if (e.KeyCode == Keys.Enter)
             {
-                try
-                {
-                    dtBill.Clear();
-                    DataSet ds = dbBill.timTheoSDT(txt_timTheoSDT.Text);
-                    dtBill = ds.Tables[0];
-                    dgv_historyPayment.DataSource = dtBill;
-
-                }
-                catch (SqlException)
-                {
-                    MessageBox.Show("Hóa đơn không tồn tại!");
-                }
+                dtBill.Clear();
+                DataSet ds = dbBill.timTheoSDT(txt_timTheoSDT.Text);
+                dtBill = ds.Tables[0];
+                dgv_historyPayment.DataSource = dtBill;
+                txt_timTheoMaHoaDon.Text = "Theo mã hóa đơn";
+                txt_timTheoMaMatHang.Text = "Theo mã mặt hàng";
                 e.Handled = true; //không xử lý thêm nữa
             }
         }
@@ -103,27 +91,27 @@ namespace DOAN
         //tìm kiếm theo mã sp sau khi nhấn phím enter
         private void txt_timTheoMaMatHang_KeyUp(object sender, KeyEventArgs e)
         {
-
             if (e.KeyCode == Keys.Enter)
             {
-                try
-                {
-                    dtBill.Clear();
-                    DataSet ds = dbBill.timTheoMaSP(txt_timTheoMaMatHang.Text);
-                    dtBill = ds.Tables[0];
-                    dgv_historyPayment.DataSource = dtBill;
-                }
-                catch (SqlException)
-                {
-                    MessageBox.Show("Hóa đơn không tồn tại!");
-                }
+                dtBill.Clear();
+                DataSet ds = dbBill.timTheoMaSP(txt_timTheoMaMatHang.Text);
+                dtBill = ds.Tables[0];
+                dgv_historyPayment.DataSource = dtBill;
+                txt_timTheoMaHoaDon.Text = "Theo mã hóa đơn";
+                txt_timTheoSDT.Text = "Theo SĐT khách hàng";
                 e.Handled = true; //không xử lý thêm nữa
             }
         }
 
         private void pic_timHoaDon_Click(object sender, EventArgs e)
         {
-
+            dtBill.Clear();
+            DataSet ds = dbBill.timTheoNgay(dtp_mocDau.Value, dtp_mocSau.Value);
+            dtBill = ds.Tables[0];
+            dgv_historyPayment.DataSource = dtBill;
+            txt_timTheoMaHoaDon.Text = "Theo mã hóa đơn";
+            txt_timTheoSDT.Text = "Theo SĐT khách hàng";
+            txt_timTheoMaMatHang.Text = "Theo mã mặt hàng";
         }
         private void btn_chiTiet_Click(object sender, EventArgs e)
         {
