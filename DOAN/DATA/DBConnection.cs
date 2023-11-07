@@ -14,7 +14,7 @@ namespace DOAN.DATA
 {
     internal class DBConnection
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=HOANG-HIEU\LAPTOPCUAHIEU;Initial Catalog=QLCUAHANG;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=HIEULAG\THANHHIEU;Initial Catalog=QLCuaHang;Integrated Security=True");
         SqlCommand comm = null; //Đối tượng truy vấn và cập nhật vào SQL Serverwd
         SqlDataAdapter da = null; //Đối tượng đưa dữ liệu vào DataTable
 
@@ -105,7 +105,7 @@ namespace DOAN.DATA
 
                     us_Product btn = new us_Product();
 
-                    btn.ItemPrice = "$" + price;
+                    btn.ItemPrice = price;
                     btn.ItemImage = image;
                     btn.ItemID = id;
                     btn.Click += (sender, e) => getInformation(btn, panelProductPay);
@@ -136,6 +136,7 @@ namespace DOAN.DATA
             us_Product_Pay productpay = new us_Product_Pay();
             productpay.ItemID = us_Product.ItemID;
             productpay.ItemPrice = us_Product.ItemPrice;
+            
             bool found = false;  // Biến này để kiểm tra xem sản phẩm đã tồn tại trong FlowLayoutPanel chưa.
 
             foreach (Control control in panel.Controls)

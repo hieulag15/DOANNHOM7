@@ -75,6 +75,7 @@ namespace DOAN
         private void btn_Banhang_Click(object sender, EventArgs e)
         {
             us_Sell us_Banhang = new us_Sell();
+            us_Banhang.eid = account.eid.ToString();
             TienIch.addUserControl(us_Banhang, pnl_trangchinh);
             LayLaiMau();
             btn_Banhang.FillColor = Color.FromArgb(120, 159, 196);

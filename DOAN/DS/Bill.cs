@@ -64,6 +64,59 @@ namespace DOAN.DS
             comm.Parameters.AddWithValue("@ngayKetThuc", ngayKetThuc);
             return timKiem(comm);
         }
+
+        public bool addBill(string bid, DateTime date, decimal totalpay, decimal discount, string cphone, string eid)
+        {
+            comm = new SqlCommand("EXEC proc_AddBill @b_id, @date, @totalpay, @discount, @c_phone, @e_id", db.getSqlConn);
+            comm.Parameters.AddWithValue("@b_id", bid);
+            comm.Parameters.AddWithValue("@date", date);
+            comm.Parameters.AddWithValue("@totalpay", totalpay);
+            comm.Parameters.AddWithValue("@discount", discount);
+            comm.Parameters.AddWithValue("@c_phone", cphone);
+            comm.Parameters.AddWithValue("@e_id", eid);
+
+            db.openConnection();
+            if (comm.ExecuteNonQuery() == 1)
+            {
+                db.closeConnection();
+                return true;
+            }
+            else
+            {
+                db.closeConnection();
+                return false;
+            }
+        }
+        public string CreateAutoID()
+        {
+            db = new DBConnection();
+            db.openConnection();
+            try
+            {
+                comm = new SqlCommand("proc_CreateAutoBillID", db.getSqlConn);
+                comm.CommandType = CommandType.StoredProcedure;
+
+                // Thêm tham số đầu vào nếu cần
+                // comm.Parameters.AddWithValue("@parameterName", parameterValue);
+
+                object result = comm.ExecuteScalar();
+
+                if (result != null)
+                {
+                    return result.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                db.closeConnection();
+            }
+
+            return "";
+        }
     }
 
 }

@@ -34,5 +34,20 @@ namespace DOAN.BTN_CONTROLS
         {
             InitializeComponent();
         }
+
+        private void lbl_soLuong_TextChanged(object sender, EventArgs e)
+        {
+            // Gọi sự kiện tùy chỉnh để thông báo sự thay đổi
+            OnContentChanged(EventArgs.Empty);
+        }
+
+
+        public event EventHandler ContentChanged;
+
+        protected virtual void OnContentChanged(EventArgs e)
+        {
+            ContentChanged?.Invoke(this, e);
+        }
+
     }
 }

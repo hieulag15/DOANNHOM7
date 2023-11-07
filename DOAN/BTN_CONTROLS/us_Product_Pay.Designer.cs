@@ -86,6 +86,7 @@
             this.lbl_soLuong.Size = new System.Drawing.Size(25, 25);
             this.lbl_soLuong.TabIndex = 0;
             this.lbl_soLuong.Text = "1";
+            this.lbl_soLuong.TextChanged += new System.EventHandler(this.lbl_soLuong_TextChanged);
             // 
             // us_Product_Pay
             // 
