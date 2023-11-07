@@ -19,6 +19,8 @@ namespace DOAN
             InitializeComponent();
         }
 
+        bool addFlag;
+
         DataTable dtCustomer = new DataTable();
         DataTable dtCustomerNoActive = new DataTable();
         Customer dbCustomer = new Customer();
@@ -45,6 +47,7 @@ namespace DOAN
         {
             LoadCustomer();
             LoadCustomerNoActive();
+            initial_Status();
         }
         private void setDataGridView()
         {
@@ -100,6 +103,28 @@ namespace DOAN
                 dgv_DanhSachKHD.AutoResizeColumns();
             }
         }
+        void not_fillingStatus()
+        {
+            txt_SoDienThoai.Enabled = false;
+            txt_TenKhachHang.Enabled = false;
+            txt_DiemTichLuy.Enabled = false;
+            rb_HD.Enabled = false;
+            rb_KhongHD.Enabled = false;
+        }
+        void fillingStatus()
+        {
+            txt_SoDienThoai.Enabled = true;
+            txt_TenKhachHang.Enabled = true;
+            txt_DiemTichLuy.Enabled = true;
+            rb_HD.Enabled = true;
+            rb_KhongHD.Enabled = true;
+        }
+        void initial_Status()
+        {
+            not_fillingStatus();
+            btn_Them.Enabled = true;
+            btn_Sua.Enabled = true;
+        }
         private void Refresh()
         {
             txt_SoDienThoai.Text = "";
@@ -112,6 +137,7 @@ namespace DOAN
         private void btn_LamMoi_Click(object sender, EventArgs e)
         {
             Refresh();
+            initial_Status();
             dgv_DanhSachKHD.Visible = true;
             dgv_DanhSachHD.Visible = true;
             dgv_TimKiem.Visible = false;
@@ -123,63 +149,44 @@ namespace DOAN
         private void btn_Huy_Click(object sender, EventArgs e)
         {
             Refresh();
+            initial_Status();
         }
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            if (txt_SoDienThoai.Text == "" || txt_TenKhachHang.Text == "" || txt_DiemTichLuy.Text == "")
-            {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            try
-            {
-                if (dbCustomer.addCustomer(txt_SoDienThoai.Text.Trim(), txt_TenKhachHang.Text.Trim(), 
-                    //Lấy giá trị điểm trong Textbox, nếu textbox không có dữ liệu thì cho nó bằng 0
-                    txt_DiemTichLuy.Text.Trim() != null ? (int)Convert.ToDecimal(txt_DiemTichLuy.Text.Trim()) : 0) == true)
-                {
+            addFlag = true;
+            btn_Them.Enabled = false;
+            btn_Luu.Enabled = true;
+            btn_Huy.Enabled = true;
+            btn_Sua.Enabled = false;
 
-                    MessageBox.Show("Thêm khách hàng thành công");
-                }
-                else
-                {
-                    MessageBox.Show("Thêm khách hàng không thành công");
-                }
-                LoadCustomer();
-                LoadCustomerNoActive();
-                Refresh();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //Mở các ô cho phép điền thông tin\
+            fillingStatus();
+            Refresh();
+            rb_HD.Enabled = false;
+            rb_HD.Enabled = false;
         }
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            if (txt_SoDienThoai.Text == "" || txt_TenKhachHang.Text == "" || txt_DiemTichLuy.Text == "")
+            //Trường hợp khi người dùng chưa chọn Khách hàng cần sửa thông tin
+            if (txt_SoDienThoai.Text == "" || txt_SoDienThoai.Text == null)
             {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng chọn Khách hàng cần chỉnh sửa thông tin\n" +
+                    "Hoặc nhập ID", "Lỗi",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
                 return;
             }
-            bool check = rb_HD.Checked ? true : false;
-            try
-            {
-                dbCustomer.updateCustomer(
-                    txt_SoDienThoai.Text.Trim(),
-                    txt_TenKhachHang.Text.Trim(),
-                    //Lấy giá trị điểm trong Textbox, nếu textbox không có dữ liệu thì cho nó bằng 0
-                    txt_DiemTichLuy.Text.Trim() != null ? (int)Convert.ToDecimal(txt_DiemTichLuy.Text.Trim()) : 0, check);
 
-                MessageBox.Show("Cập nhật thông tin khách hàng thành công");
-                LoadCustomer();
-                LoadCustomerNoActive();
-                Refresh();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            btn_Them.Enabled = false;
+            btn_Luu.Enabled = true;
+            btn_Huy.Enabled = true;
+            btn_Sua.Enabled = true;
+
+            //Mở các ô cho phép điền thông tin\
+            fillingStatus();
+            txt_SoDienThoai.Enabled = false;
         }
 
         private void btn_Xoa_Click(object sender, EventArgs e)
@@ -198,7 +205,6 @@ namespace DOAN
                 try
                 {
                     dbCustomer.deleteCustomer(txt_SoDienThoai.Text);
-                    MessageBox.Show("Xóa thông tin khách hàng thành công");
                     LoadCustomer();
                     LoadCustomerNoActive();
                     Refresh();
@@ -217,6 +223,10 @@ namespace DOAN
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
+            btn_Them.Enabled = false;
+            btn_Luu.Enabled = false;
+            btn_Huy.Enabled = false;
+            btn_Sua.Enabled = false;
             if (txt_TimKhachHang.Text != "" && txt_TimKhachHang.Text != null)
             {
                 try
@@ -228,9 +238,11 @@ namespace DOAN
                     lbl_HD.Visible = false;
                     lbl_TimKiem.Visible = true;
                     dgv_TimKiem.Visible = true;
-                    MessageBox.Show("Tìm thông tin khách hàng thành công");
                     dtCustomer = ds.Tables[0];
-                    
+                    if (dtCustomer.Rows.Count == 0)
+                        MessageBox.Show("Không tìm thấy thông tin khách hàng");
+                    else
+                        MessageBox.Show("Tìm thông tin khách hàng thành công");
                     dgv_TimKiem.DataSource = dtCustomer;
 
                     // Thực hiện các cài đặt DataGridView (nếu cần)
@@ -282,6 +294,52 @@ namespace DOAN
                 rb_HD.Checked = Convert.ToInt32(dgv_TimKiem.Rows[numrow].Cells[3].Value) == 1 ? true : false;
                 rb_KhongHD.Checked = !rb_HD.Checked;
             }
+        }
+
+        private void btn_Luu_Click(object sender, EventArgs e)
+        {
+            if (txt_SoDienThoai.Text == "" || txt_TenKhachHang.Text == "" || txt_DiemTichLuy.Text == "")
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (addFlag == true) //Trường hợp thêm Khách hàng
+            {
+                try
+                {
+                    dbCustomer.addCustomer(txt_SoDienThoai.Text.Trim(), txt_TenKhachHang.Text.Trim(),
+                        //Lấy giá trị điểm trong Textbox, nếu textbox không có dữ liệu thì cho nó bằng 0
+                        (int)Convert.ToDecimal(txt_DiemTichLuy.Text.Trim()));
+                    LoadCustomer();
+                    LoadCustomerNoActive();
+                    Refresh();
+                    addFlag = false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else //Trường hợp người dùng nhấn update
+            {
+                bool check = rb_HD.Checked ? true : false;
+                try
+                {
+                    dbCustomer.updateCustomer(
+                        txt_SoDienThoai.Text.Trim(),
+                        txt_TenKhachHang.Text.Trim(),
+                        //Lấy giá trị điểm trong Textbox, nếu textbox không có dữ liệu thì cho nó bằng 0
+                        (int)Convert.ToDecimal(txt_DiemTichLuy.Text.Trim()), check);
+                    LoadCustomer();
+                    LoadCustomerNoActive();
+                    Refresh();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            initial_Status();
         }
     }
 }
