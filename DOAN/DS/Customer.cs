@@ -74,7 +74,7 @@ namespace DOAN.DS
             }
             else
             {
-                MessageBox.Show("Thêm thất bại", "Update Customer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Sửa thất bại", "Update Customer", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 db.closeConnection();
                 return false;
             }
@@ -99,7 +99,7 @@ namespace DOAN.DS
                 return false;
             }
         }
-        public DataSet findCustomer(string phone)
+        public DataSet findCustomerByPhone(string phone)
         {
             db.openConnection();
 
@@ -108,6 +108,29 @@ namespace DOAN.DS
             {
                 cmd = new SqlCommand("SELECT * FROM dbo.SearchCustomerByPhone(@phone)", db.getSqlConn);
                 cmd.Parameters.AddWithValue("@phone", phone);
+
+                SqlDataAdapter da = new SqlDataAdapter();
+                da.SelectCommand = cmd;
+                da.Fill(ds);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                db.closeConnection();
+            }
+
+            db.closeConnection();
+            return ds;
+        }
+        public DataSet findCustomerByName(string name)
+        {
+            db.openConnection();
+
+            DataSet ds = new DataSet();
+            try
+            {
+                cmd = new SqlCommand("SELECT * FROM dbo.SearchCustomerByName(@name)", db.getSqlConn);
+                cmd.Parameters.AddWithValue("@name", name);
 
                 SqlDataAdapter da = new SqlDataAdapter();
                 da.SelectCommand = cmd;

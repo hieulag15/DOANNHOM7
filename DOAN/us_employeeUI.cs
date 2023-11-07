@@ -17,6 +17,8 @@ namespace DOAN
         {
             InitializeComponent();
         }
+
+        bool addFlag;
         DataTable dtEmployee = new DataTable();
         Employee dbEmployee = new Employee();
 
@@ -28,7 +30,30 @@ namespace DOAN
             dgv_Employee.DataSource = dtEmployee;
             setDataGridView();
         }
-
+        void not_fillingStatus()
+        {
+            txt_SoDienThoai.Enabled = false;
+            txt_MaNhanVien.Enabled = false;
+            txt_TenNhanVien.Enabled = false;
+            txt_DiaChi.Enabled = false;
+            rb_Nam.Enabled = false;
+            rb_Nu.Enabled = false;
+        }
+        void fillingStatus()
+        {
+            txt_SoDienThoai.Enabled = true;
+            txt_MaNhanVien.Enabled = true;
+            txt_TenNhanVien.Enabled = true;
+            txt_DiaChi.Enabled = true;
+            rb_Nam.Enabled = true;
+            rb_Nu.Enabled = true;
+        }
+        void initial_Status()
+        {
+            not_fillingStatus();
+            btn_Them.Enabled = true;
+            btn_Sua.Enabled = true;
+        }
         private void setDataGridView()
         {
             if (dgv_Employee != null)
@@ -55,6 +80,7 @@ namespace DOAN
         private void us_employeeUI_Load(object sender, EventArgs e)
         {
             LoadEmployee();
+            initial_Status();
         }
 
         private void dgv_Employee_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -84,73 +110,61 @@ namespace DOAN
         private void btn_LamMoi_Click(object sender, EventArgs e)
         {
             Refresh();
+            LoadEmployee();
+            txt_TimTheoMaNV.Text = "Theo mã nhân viên";
+            txt_TimTheoTen.Text = "Theo tên nhân viên";
         }
 
         private void btn_Huy_Click(object sender, EventArgs e)
         {
             Refresh();
+            initial_Status();
+            addFlag = false;
         }
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            string gender = "";
-            if (rb_Nam.Checked)
-                gender = rb_Nam.Text;
-            else
-                gender = rb_Nu.Text;
-            DataSet ds = new DataSet();
-            ds = dbEmployee.findEmployee(txt_MaNhanVien.Text);
-            if (ds != null)
-            {
-                dbEmployee.updateEmployee(txt_MaNhanVien.Text.Trim(), txt_TenNhanVien.Text.Trim(), txt_DiaChi.Text.Trim(), txt_SoDienThoai.Text.Trim(), gender);
-            }
-            else
-            {
-                try
-                {
-                    if (dbEmployee.addEmployee(txt_MaNhanVien.Text.Trim(), txt_TenNhanVien.Text.Trim(), txt_DiaChi.Text.Trim(), txt_SoDienThoai.Text.Trim(), gender) == true)
-                    {
-                        MessageBox.Show("Thêm nhân viên thành công");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Thêm nhân viên không thành công");
-                    }
-                    LoadEmployee();
-                    Refresh();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
+            addFlag = true;
+            btn_Them.Enabled = false;
+            btn_Luu.Enabled = true;
+            btn_Huy.Enabled = true;
+            btn_Sua.Enabled = false;
+
+            //Mở các ô cho phép điền thông tin\
+            fillingStatus();
+            Refresh();
         }
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            try
+            //Trường hợp khi người dùng chưa chọn nhan vien cần sửa thông tin
+            if (txt_MaNhanVien.Text == "" || txt_MaNhanVien.Text == null)
             {
-                string gender = "";
-                if (rb_Nam.Checked)
-                    gender = rb_Nam.Text;
-                else
-                    gender = "Nu";
-                dbEmployee.updateEmployee(txt_MaNhanVien.Text.Trim(), txt_TenNhanVien.Text.Trim(), txt_DiaChi.Text.Trim(), txt_SoDienThoai.Text.Trim(), gender);
+                MessageBox.Show("Vui lòng chọn nhân viên cần chỉnh sửa thông tin", "Lỗi",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
+            }
 
-                MessageBox.Show("Cập nhật thông tin nhân viên thành công");
-                LoadEmployee();
-                Refresh();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            btn_Them.Enabled = false;
+            btn_Luu.Enabled = true;
+            btn_Huy.Enabled = true;
+            btn_Sua.Enabled = true;
+
+            //Mở các ô cho phép điền thông tin\
+            fillingStatus();
+            txt_MaNhanVien.Enabled = false;
         }
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
+            if (txt_MaNhanVien.Text == "" || txt_MaNhanVien.Text == null)
+            {
+                MessageBox.Show("Vui lòng chọn nhân viên cần xóa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             //Hỏi người dùng là có chắc chắn muốn xóa khách hàng không
-            DialogResult respone = MessageBox.Show("Bạn có chắc chắn muốn xóa khách hàng", "Thông báo",
+            DialogResult respone = MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên", "Thông báo",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
             //Nếu đồng ý
@@ -159,13 +173,13 @@ namespace DOAN
                 try
                 {
                     dbEmployee.deleteEmployee(txt_MaNhanVien.Text);
-                    MessageBox.Show("Xóa thông tin khách hàng thành công");
                     LoadEmployee();
                     Refresh();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
+                    Refresh();
                 }
             }
             else
@@ -175,9 +189,150 @@ namespace DOAN
             }
         }
 
-        private void btn_TimKiem_Click(object sender, EventArgs e)
+        private void btn_Luu_Click(object sender, EventArgs e)
         {
+            if (txt_SoDienThoai.Text == "" || txt_MaNhanVien.Text == "" || txt_TenNhanVien.Text == "" || txt_DiaChi.Text == "" || (rb_Nam.Checked == false && rb_Nu.Checked == false))
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (addFlag == true) //Trường hợp thêm nhan vien
+            {
+                string gender = "";
+                if (rb_Nam.Checked)
+                    gender = rb_Nam.Text;
+                else
+                    gender = rb_Nu.Text;
+                DataSet ds = new DataSet();
+                try
+                {
+                    dbEmployee.addEmployee(txt_MaNhanVien.Text.Trim(), txt_TenNhanVien.Text.Trim(),
+                        txt_DiaChi.Text.Trim(), txt_SoDienThoai.Text.Trim(), gender);
+                    LoadEmployee();
+                    Refresh();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    Refresh();
+                }
+                addFlag = false;
+            }
+            else //Trường hợp người dùng nhấn update
+            {
+                try
+                {
+                    string gender = "";
+                    if (rb_Nam.Checked)
+                        gender = rb_Nam.Text;
+                    else
+                        gender = "Nu";
+                    dbEmployee.updateEmployee(txt_MaNhanVien.Text.Trim(), txt_TenNhanVien.Text.Trim(), 
+                        txt_DiaChi.Text.Trim(), txt_SoDienThoai.Text.Trim(), gender);
+                    LoadEmployee();
+                    Refresh();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    Refresh();
+                }
+            }
+            initial_Status();
+        }
 
+        private void txt_TimTheoMaNV_Enter(object sender, EventArgs e)
+        {
+            if (txt_TimTheoMaNV.Text == "Theo mã nhân viên")
+            {
+                txt_TimTheoMaNV.Text = "";
+            }
+        }
+
+        private void txt_TimTheoMaNV_Leave(object sender, EventArgs e)
+        {
+            if (txt_TimTheoMaNV.Text == "")
+            {
+                txt_TimTheoMaNV.Text = "Theo mã nhân viên";
+            }
+        }
+
+        private void txt_TimTheoTen_Enter(object sender, EventArgs e)
+        {
+            if (txt_TimTheoTen.Text == "Theo tên nhân viên")
+            {
+                txt_TimTheoTen.Text = "";
+            }
+        }
+
+        private void txt_TimTheoTen_Leave(object sender, EventArgs e)
+        {
+            if (txt_TimTheoTen.Text == "")
+            {
+                txt_TimTheoTen.Text = "Theo tên nhân viên";
+            }
+        }
+
+        private void pb_TimTheoID_Click(object sender, EventArgs e)
+        {
+            if (txt_TimTheoMaNV.Text != "" && txt_TimTheoMaNV.Text != null && txt_TimTheoMaNV.Text != "Theo mã nhân viên")
+            {
+                btn_Them.Enabled = false;
+                btn_Luu.Enabled = false;
+                btn_Huy.Enabled = false;
+                btn_Sua.Enabled = false;
+                try
+                {
+                    DataSet ds = dbEmployee.findEmployeeByID(txt_TimTheoMaNV.Text.Trim());
+
+                    dtEmployee = ds.Tables[0];
+                    if (dtEmployee.Rows.Count == 0)
+                        MessageBox.Show("Không tìm thấy thông tin nhân viên");
+                    else
+                        MessageBox.Show("Tìm thông tin nhân viên thành công");
+                    dgv_Employee.DataSource = dtEmployee;
+
+                    // Thực hiện các cài đặt DataGridView (nếu cần)
+                    setDataGridView();
+                    txt_TimTheoMaNV.Text = "Theo mã nhân viên";
+                    txt_TimTheoTen.Text = "Theo tên nhân viên";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void pb_TimKiemTheoTen_Click(object sender, EventArgs e)
+        {
+            if (txt_TimTheoTen.Text != "" && txt_TimTheoTen.Text != null && txt_TimTheoTen.Text != "Theo tên nhân viên")
+            {
+                btn_Them.Enabled = false;
+                btn_Luu.Enabled = false;
+                btn_Huy.Enabled = false;
+                btn_Sua.Enabled = false;
+                try
+                {
+                    DataSet ds = dbEmployee.findEmployeeByName(txt_TimTheoTen.Text.Trim());
+
+                    dtEmployee = ds.Tables[0];
+                    if (dtEmployee.Rows.Count == 0)
+                        MessageBox.Show("Không tìm thấy thông tin nhân viên");
+                    else
+                        MessageBox.Show("Tìm thông tin nhân viên thành công");
+                    dgv_Employee.DataSource = dtEmployee;
+
+                    // Thực hiện các cài đặt DataGridView (nếu cần)
+                    setDataGridView();
+                    txt_TimTheoMaNV.Text = "Theo mã nhân viên";
+                    txt_TimTheoTen.Text = "Theo tên nhân viên";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }

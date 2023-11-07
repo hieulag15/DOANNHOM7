@@ -34,19 +34,19 @@ namespace DOAN
             setDataGridView();
         }
 
-        public void LoadCustomerNoActive()
+        public void LoadCustomerInactive()
         {
             dtCustomerNoActive.Clear();
             DataSet ds = dbCustomer.getCustomerNoActive();
             dtCustomerNoActive = ds.Tables[0];
             dgv_DanhSachKHD.DataSource = dtCustomerNoActive;
-            setDataGridView2();
+            setDataGridViewInactive();
         }
 
         private void us_customerUI_Load(object sender, EventArgs e)
         {
             LoadCustomer();
-            LoadCustomerNoActive();
+            LoadCustomerInactive();
             initial_Status();
         }
         private void setDataGridView()
@@ -86,7 +86,7 @@ namespace DOAN
                 dgv_TimKiem.AutoResizeColumns();
             }
         }
-        private void setDataGridView2()
+        private void setDataGridViewInactive()
         {
             if (dgv_DanhSachKHD != null)
             {
@@ -143,13 +143,15 @@ namespace DOAN
             dgv_TimKiem.Visible = false;
             lbl_HD.Visible = true;
             lbl_TimKiem.Visible = false;
-            txt_TimKhachHang.Text = "";
+            txt_TimTheoSDT.Text = "Theo số điện thoại";
+            txt_TimTheoTen.Text = "Theo tên khách hàng";
         }
 
         private void btn_Huy_Click(object sender, EventArgs e)
         {
             Refresh();
             initial_Status();
+            addFlag = false;
         }
 
         private void btn_Them_Click(object sender, EventArgs e)
@@ -172,8 +174,7 @@ namespace DOAN
             //Trường hợp khi người dùng chưa chọn Khách hàng cần sửa thông tin
             if (txt_SoDienThoai.Text == "" || txt_SoDienThoai.Text == null)
             {
-                MessageBox.Show("Vui lòng chọn Khách hàng cần chỉnh sửa thông tin\n" +
-                    "Hoặc nhập ID", "Lỗi",
+                MessageBox.Show("Vui lòng chọn Khách hàng cần chỉnh sửa thông tin", "Lỗi",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
                 return;
@@ -194,6 +195,7 @@ namespace DOAN
             if (txt_SoDienThoai.Text == "" || txt_SoDienThoai.Text == null)
             {
                 MessageBox.Show("Vui lòng chọn khách hàng cần xóa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             //Hỏi người dùng là có chắc chắn muốn xóa khách hàng không
             DialogResult respone = MessageBox.Show("Bạn có chắc chắn muốn xóa khách hàng", "Thông báo",
@@ -206,53 +208,19 @@ namespace DOAN
                 {
                     dbCustomer.deleteCustomer(txt_SoDienThoai.Text);
                     LoadCustomer();
-                    LoadCustomerNoActive();
+                    LoadCustomerInactive();
                     Refresh();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
+                    Refresh();
                 }
             }
             else
             {
                 Refresh();
                 return;
-            }
-        }
-
-        private void btn_TimKiem_Click(object sender, EventArgs e)
-        {
-            btn_Them.Enabled = false;
-            btn_Luu.Enabled = false;
-            btn_Huy.Enabled = false;
-            btn_Sua.Enabled = false;
-            if (txt_TimKhachHang.Text != "" && txt_TimKhachHang.Text != null)
-            {
-                try
-                {
-                    DataSet ds = dbCustomer.findCustomer(txt_TimKhachHang.Text.Trim());
-                    
-                    dgv_DanhSachKHD.Visible = false;
-                    dgv_DanhSachHD.Visible = false;
-                    lbl_HD.Visible = false;
-                    lbl_TimKiem.Visible = true;
-                    dgv_TimKiem.Visible = true;
-                    dtCustomer = ds.Tables[0];
-                    if (dtCustomer.Rows.Count == 0)
-                        MessageBox.Show("Không tìm thấy thông tin khách hàng");
-                    else
-                        MessageBox.Show("Tìm thông tin khách hàng thành công");
-                    dgv_TimKiem.DataSource = dtCustomer;
-
-                    // Thực hiện các cài đặt DataGridView (nếu cần)
-                    setDataGridViewTimKiem();
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
             }
         }
 
@@ -298,11 +266,6 @@ namespace DOAN
 
         private void btn_Luu_Click(object sender, EventArgs e)
         {
-            if (txt_SoDienThoai.Text == "" || txt_TenKhachHang.Text == "" || txt_DiemTichLuy.Text == "")
-            {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
             if (addFlag == true) //Trường hợp thêm Khách hàng
             {
                 try
@@ -311,14 +274,16 @@ namespace DOAN
                         //Lấy giá trị điểm trong Textbox, nếu textbox không có dữ liệu thì cho nó bằng 0
                         (int)Convert.ToDecimal(txt_DiemTichLuy.Text.Trim()));
                     LoadCustomer();
-                    LoadCustomerNoActive();
+                    LoadCustomerInactive();
                     Refresh();
-                    addFlag = false;
+                    
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
+                    Refresh();
                 }
+                addFlag = false;
             }
             else //Trường hợp người dùng nhấn update
             {
@@ -331,15 +296,122 @@ namespace DOAN
                         //Lấy giá trị điểm trong Textbox, nếu textbox không có dữ liệu thì cho nó bằng 0
                         (int)Convert.ToDecimal(txt_DiemTichLuy.Text.Trim()), check);
                     LoadCustomer();
-                    LoadCustomerNoActive();
+                    LoadCustomerInactive();
                     Refresh();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    Refresh();
+                }
+            }
+            initial_Status();
+        }
+
+        private void pb_TimTheoSDT_Click(object sender, EventArgs e)
+        {
+            if (txt_TimTheoSDT.Text != "" && txt_TimTheoSDT.Text != null && txt_TimTheoSDT.Text != "Theo số điện thoại")
+            {
+                btn_Them.Enabled = false;
+                btn_Luu.Enabled = false;
+                btn_Huy.Enabled = false;
+                btn_Sua.Enabled = false;
+                try
+                {
+                    DataSet ds = dbCustomer.findCustomerByPhone(txt_TimTheoSDT.Text.Trim());
+
+                    dgv_DanhSachKHD.Visible = false;
+                    dgv_DanhSachHD.Visible = false;
+                    lbl_HD.Visible = false;
+                    lbl_TimKiem.Visible = true;
+                    dgv_TimKiem.Visible = true;
+                    dtCustomer = ds.Tables[0];
+                    if (dtCustomer.Rows.Count == 0)
+                        MessageBox.Show("Không tìm thấy thông tin khách hàng");
+                    else
+                        MessageBox.Show("Tìm thông tin khách hàng thành công");
+                    dgv_TimKiem.DataSource = dtCustomer;
+
+                    // Thực hiện các cài đặt DataGridView (nếu cần)
+                    setDataGridViewTimKiem();
+                    txt_TimTheoSDT.Text = "Theo số điện thoại";
+                    txt_TimTheoTen.Text = "Theo tên khách hàng";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+
+                }
+            }
+        }
+
+        private void pb_TimKiemTheoTen_Click(object sender, EventArgs e)
+        {
+            
+            if (txt_TimTheoTen.Text != "" && txt_TimTheoTen.Text != null && txt_TimTheoTen.Text != "Theo tên khách hàng")
+            {
+                btn_Them.Enabled = false;
+                btn_Luu.Enabled = false;
+                btn_Huy.Enabled = false;
+                btn_Sua.Enabled = false;
+                try
+                {
+                    DataSet ds = dbCustomer.findCustomerByName(txt_TimTheoTen.Text.Trim());
+
+                    dgv_DanhSachKHD.Visible = false;
+                    dgv_DanhSachHD.Visible = false;
+                    lbl_HD.Visible = false;
+                    lbl_TimKiem.Visible = true;
+                    dgv_TimKiem.Visible = true;
+                    dtCustomer = ds.Tables[0];
+                    if (dtCustomer.Rows.Count == 0)
+                        MessageBox.Show("Không tìm thấy thông tin khách hàng");
+                    else
+                        MessageBox.Show("Tìm thông tin khách hàng thành công");
+                    dgv_TimKiem.DataSource = dtCustomer;
+
+                    // Thực hiện các cài đặt DataGridView (nếu cần)
+                    setDataGridViewTimKiem();
+                    txt_TimTheoSDT.Text = "Theo số điện thoại";
+                    txt_TimTheoTen.Text = "Theo tên khách hàng";
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
             }
-            initial_Status();
+        }
+
+        private void txt_TimTheoSDT_Enter(object sender, EventArgs e)
+        {
+            if (txt_TimTheoSDT.Text == "Theo số điện thoại")
+            {
+                txt_TimTheoSDT.Text = "";
+            }
+        }
+
+        private void txt_TimTheoSDT_Leave(object sender, EventArgs e)
+        {
+            if(txt_TimTheoSDT.Text == "")
+            {
+                txt_TimTheoSDT.Text = "Theo số điện thoại";
+            }
+        }
+
+        private void txt_TimTheoTen_Enter(object sender, EventArgs e)
+        {
+            if (txt_TimTheoTen.Text == "Theo tên khách hàng")
+            {
+                txt_TimTheoTen.Text = "";
+            }
+        }
+
+        private void txt_TimTheoTen_Leave(object sender, EventArgs e)
+        {
+            if (txt_TimTheoTen.Text == "")
+            {
+                txt_TimTheoTen.Text = "Theo tên khách hàng";
+            }
         }
     }
 }

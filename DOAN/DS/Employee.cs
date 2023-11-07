@@ -94,25 +94,50 @@ namespace DOAN.DS
                 return false;
             }
         }
-        public DataSet findEmployee(string id)
+        public DataSet findEmployeeByID(string id)
         {
             db.openConnection();
+
             DataSet ds = new DataSet();
             try
             {
-
-                cmd = new SqlCommand("proc_FindEmployeeByID", db.getSqlConn);
+                cmd = new SqlCommand("SELECT * FROM dbo.SearchEmployeeByID(@id)", db.getSqlConn);
                 cmd.Parameters.AddWithValue("@id", id);
 
-                cmd.CommandType = CommandType.StoredProcedure;
-                SqlDataAdapter da = new SqlDataAdapter(); //Tạo một cầu nối giữa SQl command và Database
+                SqlDataAdapter da = new SqlDataAdapter();
                 da.SelectCommand = cmd;
-                da.Fill(ds); //Đưa dữ liệu vừa gọi được vào DataSet
+                da.Fill(ds);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                db.closeConnection();
             }
+
+            db.closeConnection();
+            return ds;
+        }
+        public DataSet findEmployeeByName(string name)
+        {
+            db.openConnection();
+
+            DataSet ds = new DataSet();
+            try
+            {
+                cmd = new SqlCommand("SELECT * FROM dbo.SearchEmployeeByName(@name)", db.getSqlConn);
+                cmd.Parameters.AddWithValue("@name", name);
+
+                SqlDataAdapter da = new SqlDataAdapter();
+                da.SelectCommand = cmd;
+                da.Fill(ds);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                db.closeConnection();
+            }
+
+            db.closeConnection();
             return ds;
         }
     }
