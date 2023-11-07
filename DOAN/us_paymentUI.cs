@@ -123,7 +123,7 @@ namespace DOAN
             frm_detail.ShowDialog();
         }
 
-        private void pic_refresh_Click(object sender, EventArgs e)
+        private void btn_LamMoi_Click(object sender, EventArgs e)
         {
             txt_timTheoMaHoaDon.Text = "Theo mã hóa đơn";
             txt_timTheoSDT.Text = "Theo SĐT khách hàng";
@@ -131,6 +131,17 @@ namespace DOAN
             dtp_mocDau.Value = DateTime.Today;
             dtp_mocSau.Value = DateTime.Today;
             LoadHistoryBill();
+        }
+
+        private void btn_ApDung_Click(object sender, EventArgs e)
+        {
+            dtBill.Clear();
+            DataSet ds = dbBill.timTheoNgay(dtp_mocDau.Value, dtp_mocSau.Value);
+            dtBill = ds.Tables[0];
+            dgv_historyPayment.DataSource = dtBill;
+            txt_timTheoMaHoaDon.Text = "Theo mã hóa đơn";
+            txt_timTheoSDT.Text = "Theo SĐT khách hàng";
+            txt_timTheoMaMatHang.Text = "Theo mã mặt hàng";
         }
     }
 }

@@ -58,8 +58,7 @@ namespace DOAN.DS
         }
         public DataSet timTheoNgay(DateTime ngayBatDau, DateTime ngayKetThuc)
         {
-            comm = new SqlCommand("proc_timBillTheoNgay", db.getSqlConn);
-            comm.CommandType = CommandType.StoredProcedure;
+            comm = new SqlCommand("select * from func_timBillTheoNgay(@ngayBatDau, @ngayKetThuc)", db.getSqlConn);
             comm.Parameters.AddWithValue("@ngayBatDau", ngayBatDau);
             comm.Parameters.AddWithValue("@ngayKetThuc", ngayKetThuc);
             return timKiem(comm);
