@@ -103,8 +103,10 @@ namespace DOAN
 
         private void btn_NhaCungCap_Click(object sender, EventArgs e)
         {
+            us_supplier supplier = new us_supplier();
+            TienIch.addUserControl(supplier, pnl_trangchinh);
             LayLaiMau();
-            btn_NhaCungCap.FillColor = Color.FromArgb(120, 159, 196);
+            btn_NhaCungCap.FillColor = Color.FromArgb(120, 159, 196);           
         }
 
         private void btn_thongke_Click(object sender, EventArgs e)

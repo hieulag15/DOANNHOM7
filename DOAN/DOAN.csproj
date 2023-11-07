@@ -164,6 +164,12 @@
     <Compile Include="us_Shipment.Designer.cs">
       <DependentUpon>us_Shipment.cs</DependentUpon>
     </Compile>
+    <Compile Include="us_supplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="us_supplier.Designer.cs">
+      <DependentUpon>us_supplier.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BTN_CONTROLS\us_Product.resx">
       <DependentUpon>us_Product.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="us_Shipment.resx">
       <DependentUpon>us_Shipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="us_supplier.resx">
+      <DependentUpon>us_supplier.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

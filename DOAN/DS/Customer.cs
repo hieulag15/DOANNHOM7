@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
+using System.Windows.Forms;
 
 namespace DOAN.DS
 {
@@ -35,26 +35,25 @@ namespace DOAN.DS
         {
 
             db = new DBConnection();
+            db.openConnection();
             string queryString = "EXEC proc_AddCustomer @phone, @name, @point";
             cmd = new SqlCommand(queryString, db.getSqlConn);
             cmd.Parameters.AddWithValue("@phone", phone);
             cmd.Parameters.AddWithValue("@name", name);
             cmd.Parameters.AddWithValue("@point", point);
 
-            db.openConnection();
-            try
+            
+            if (cmd.ExecuteNonQuery() > 0)
             {
-                cmd.ExecuteNonQuery();
+                MessageBox.Show("Thêm thành công!", "Add Customer", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                db.closeConnection();
                 return true;
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
-                return false;
-            }
-            finally
-            {
+                MessageBox.Show("Thêm thất bại", "Add Customer", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 db.closeConnection();
+                return false;
             }
         }
         public bool updateCustomer(string phone, string name, decimal point, bool status)
@@ -67,19 +66,17 @@ namespace DOAN.DS
             cmd.Parameters.AddWithValue("@point", point);
             cmd.Parameters.AddWithValue("@status", status);
             db.openConnection();
-            try
+            if (cmd.ExecuteNonQuery() > 0)
             {
-                cmd.ExecuteNonQuery();
+                MessageBox.Show("Sửa thành công!", "Update Customer", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                db.closeConnection();
                 return true;
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
-                return false;
-            }
-            finally
-            {
+                MessageBox.Show("Thêm thất bại", "Update Customer", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 db.closeConnection();
+                return false;
             }
         }
 
@@ -89,13 +86,15 @@ namespace DOAN.DS
             cmd.Parameters.AddWithValue("@phone", phone);
 
             db.openConnection();
-            if (cmd.ExecuteNonQuery() == 1)
+            if (cmd.ExecuteNonQuery() > 0)
             {
+                MessageBox.Show("Xóa thành công!", "Delete Customer", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 db.closeConnection();
                 return true;
             }
             else
             {
+                MessageBox.Show("Xóa thất bại", "Delete Customer", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 db.closeConnection();
                 return false;
             }
