@@ -166,7 +166,7 @@ namespace DOAN
             fillingStatus();
             Refresh();
             rb_HD.Enabled = false;
-            rb_HD.Enabled = false;
+            rb_KhongHD.Enabled = false;
         }
 
         private void btn_Sua_Click(object sender, EventArgs e)
@@ -266,6 +266,11 @@ namespace DOAN
 
         private void btn_Luu_Click(object sender, EventArgs e)
         {
+            if (txt_SoDienThoai.Text == "" || txt_TenKhachHang.Text == "" || txt_DiemTichLuy.Text == "")
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (addFlag == true) //Trường hợp thêm Khách hàng
             {
                 try
@@ -316,6 +321,7 @@ namespace DOAN
                 btn_Luu.Enabled = false;
                 btn_Huy.Enabled = false;
                 btn_Sua.Enabled = false;
+                btn_Xoa.Enabled = false;
                 try
                 {
                     DataSet ds = dbCustomer.findCustomerByPhone(txt_TimTheoSDT.Text.Trim());
@@ -340,7 +346,6 @@ namespace DOAN
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
-
                 }
             }
         }
@@ -354,6 +359,7 @@ namespace DOAN
                 btn_Luu.Enabled = false;
                 btn_Huy.Enabled = false;
                 btn_Sua.Enabled = false;
+                btn_Xoa.Enabled = false;
                 try
                 {
                     DataSet ds = dbCustomer.findCustomerByName(txt_TimTheoTen.Text.Trim());

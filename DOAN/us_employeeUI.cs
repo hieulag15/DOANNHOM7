@@ -187,6 +187,7 @@ namespace DOAN
                 Refresh();
                 return;
             }
+            initial_Status();
         }
 
         private void btn_Luu_Click(object sender, EventArgs e)
@@ -281,6 +282,7 @@ namespace DOAN
                 btn_Luu.Enabled = false;
                 btn_Huy.Enabled = false;
                 btn_Sua.Enabled = false;
+                btn_Xoa.Enabled = false;
                 try
                 {
                     DataSet ds = dbEmployee.findEmployeeByID(txt_TimTheoMaNV.Text.Trim());
@@ -312,6 +314,7 @@ namespace DOAN
                 btn_Luu.Enabled = false;
                 btn_Huy.Enabled = false;
                 btn_Sua.Enabled = false;
+                btn_Xoa.Enabled = false;
                 try
                 {
                     DataSet ds = dbEmployee.findEmployeeByName(txt_TimTheoTen.Text.Trim());
