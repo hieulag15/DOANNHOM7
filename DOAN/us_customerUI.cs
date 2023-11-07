@@ -266,7 +266,7 @@ namespace DOAN
 
         private void btn_Luu_Click(object sender, EventArgs e)
         {
-            if (txt_SoDienThoai.Text == "" || txt_TenKhachHang.Text == "" || txt_DiemTichLuy.Text == "")
+            if (txt_SoDienThoai.Text == "" || txt_TenKhachHang.Text == "" || txt_DiemTichLuy.Text == "" || Decimal.Parse(txt_DiemTichLuy.Text) < 0)
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
