@@ -68,7 +68,7 @@ namespace DOAN.DS
         {
             comm = new SqlCommand("EXEC proc_AddBill @b_id, @date, @totalpay, @discount, @c_phone, @e_id", db.getSqlConn);
             comm.Parameters.AddWithValue("@b_id", bid);
-            comm.Parameters.AddWithValue("@date", date);
+            comm.Parameters.AddWithValue("@date", date.Date);
             comm.Parameters.AddWithValue("@totalpay", totalpay);
             comm.Parameters.AddWithValue("@discount", discount);
             comm.Parameters.AddWithValue("@c_phone", cphone);

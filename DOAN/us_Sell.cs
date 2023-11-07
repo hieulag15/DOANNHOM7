@@ -16,6 +16,7 @@ namespace DOAN
     {
         Product product = new Product();
         Bill bill = new Bill();
+        Detail_Bill detail_Bill = new Detail_Bill();
         public string eid;
         private bool hasChanges = false;
 
@@ -101,6 +102,16 @@ namespace DOAN
             try
             {
                 bill.addBill(b_id.Trim(), Convert.ToDateTime(DateTime.Now), (decimal)Convert.ToDouble(txt_ThanhTien.Text.Trim()), (decimal)Convert.ToDouble(txt_KhuyenMai.Text.Trim()), txt_SoDienThoai.Text.Trim(), eid.Trim());
+                foreach (UserControl userControl in Panel_ProductPay.Controls)
+                {
+                    // Kiểm tra nếu UserControl là kiểu của UserControl bạn đã tạo
+                    if (userControl is us_Product_Pay)
+                    {
+                        us_Product_Pay yourUserControl = (us_Product_Pay)userControl;
+                        detail_Bill.addDetailBill(b_id.Trim(), yourUserControl.ItemID.ToString().Trim(), (int)Convert.ToInt64(yourUserControl.ItemQuantity.ToString().Trim()));
+                    }
+
+                }
                 MessageBox.Show("Them bill thanh cong");
             }
             catch
