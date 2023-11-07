@@ -21,7 +21,7 @@ namespace DOAN.DS
         {
             return db.ExecuteQueryDataSet("select * from V_INFO_BILL");
         }
-        public DataSet timKiem(string value, SqlCommand comm)
+        public DataSet timKiem(SqlCommand comm)
         {
             DataSet ds = new DataSet();
             try
@@ -42,19 +42,27 @@ namespace DOAN.DS
         {
             comm = new SqlCommand("select * from func_timBillTheoMaBill(@b_id)", db.getSqlConn);
             comm.Parameters.AddWithValue("@b_id", b_id);
-            return timKiem(b_id, comm);
+            return timKiem(comm);
         }
         public DataSet timTheoSDT(string c_phone)
         {
             comm = new SqlCommand("select * from func_timBillTheoSDT(@c_phone)", db.getSqlConn);
             comm.Parameters.AddWithValue("@c_phone", c_phone);
-            return timKiem(c_phone, comm);
+            return timKiem(comm);
         }
         public DataSet timTheoMaSP(string p_id) 
         {
             comm = new SqlCommand("select * from func_timBillTheoMaMatHang(@p_id)", db.getSqlConn);
             comm.Parameters.AddWithValue("@p_id", p_id);
-            return timKiem(p_id, comm);
+            return timKiem(comm);
+        }
+        public DataSet timTheoNgay(DateTime ngayBatDau, DateTime ngayKetThuc)
+        {
+            comm = new SqlCommand("proc_timBillTheoNgay", db.getSqlConn);
+            comm.CommandType = CommandType.StoredProcedure;
+            comm.Parameters.AddWithValue("@ngayBatDau", ngayBatDau);
+            comm.Parameters.AddWithValue("@ngayKetThuc", ngayKetThuc);
+            return timKiem(comm);
         }
     }
 
