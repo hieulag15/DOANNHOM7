@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
+using System.Windows.Forms;
 
 namespace DOAN.DS
 {
@@ -34,19 +34,17 @@ namespace DOAN.DS
             cmd.Parameters.AddWithValue("@phone", phone);
             cmd.Parameters.AddWithValue("@gender", gender);
             db.openConnection();
-            try
+            if (cmd.ExecuteNonQuery() > 0)
             {
-                cmd.ExecuteNonQuery();
+                MessageBox.Show("Thêm thành công!", "Add Employee", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                db.closeConnection();
                 return true;
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
-                return false;
-            }
-            finally
-            {
+                MessageBox.Show("Thêm thất bại", "Add Employee", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 db.closeConnection();
+                return false;
             }
         }
         public bool updateEmployee(string id, string name, string address, string phone, string gender)
@@ -61,19 +59,17 @@ namespace DOAN.DS
             cmd.Parameters.AddWithValue("@gender", gender);
 
             db.openConnection();
-            try
+            if (cmd.ExecuteNonQuery() > 0)
             {
-                cmd.ExecuteNonQuery();
+                MessageBox.Show("Sửa thành công!", "Update Employee", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                db.closeConnection();
                 return true;
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
-                return false;
-            }
-            finally
-            {
+                MessageBox.Show("Sửa thất bại", "Update Employee", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 db.closeConnection();
+                return false;
             }
         }
 
@@ -83,36 +79,63 @@ namespace DOAN.DS
             cmd.Parameters.AddWithValue("@id", id);
 
             db.openConnection();
-            if (cmd.ExecuteNonQuery() == 1)
+            if (cmd.ExecuteNonQuery() > 0)
             {
+                MessageBox.Show("Xóa thành công!", "Delete Employee", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 db.closeConnection();
                 return true;
             }
             else
             {
+                MessageBox.Show("Xóa thất bại", "Delete Employee", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 db.closeConnection();
                 return false;
             }
         }
-        public DataSet findEmployee(string id)
+        public DataSet findEmployeeByID(string id)
         {
             db.openConnection();
+
             DataSet ds = new DataSet();
             try
             {
-
-                cmd = new SqlCommand("proc_FindEmployeeByID", db.getSqlConn);
+                cmd = new SqlCommand("SELECT * FROM dbo.SearchEmployeeByID(@id)", db.getSqlConn);
                 cmd.Parameters.AddWithValue("@id", id);
 
-                cmd.CommandType = CommandType.StoredProcedure;
-                SqlDataAdapter da = new SqlDataAdapter(); //Tạo một cầu nối giữa SQl command và Database
+                SqlDataAdapter da = new SqlDataAdapter();
                 da.SelectCommand = cmd;
-                da.Fill(ds); //Đưa dữ liệu vừa gọi được vào DataSet
+                da.Fill(ds);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                db.closeConnection();
             }
+
+            db.closeConnection();
+            return ds;
+        }
+        public DataSet findEmployeeByName(string name)
+        {
+            db.openConnection();
+
+            DataSet ds = new DataSet();
+            try
+            {
+                cmd = new SqlCommand("SELECT * FROM dbo.SearchEmployeeByName(@name)", db.getSqlConn);
+                cmd.Parameters.AddWithValue("@name", name);
+
+                SqlDataAdapter da = new SqlDataAdapter();
+                da.SelectCommand = cmd;
+                da.Fill(ds);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                db.closeConnection();
+            }
+
+            db.closeConnection();
             return ds;
         }
     }
