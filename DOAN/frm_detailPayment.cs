@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN.DS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,5 +18,6 @@ namespace DOAN
             InitializeComponent();
         }
 
+        //public Detail_Bill detail_bill;
     }
 }

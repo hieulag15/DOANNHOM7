@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -115,7 +116,11 @@ namespace DOAN
         }
         private void btn_chiTiet_Click(object sender, EventArgs e)
         {
-
+            DataGridViewRow currentRow = dgv_historyPayment.CurrentRow;
+            string b_id = (string)currentRow.Cells[0].Value;
+            frm_Main frm_home = new frm_Main();
+            frm_detailPayment frm_detail = new frm_detailPayment();
+            frm_detail.ShowDialog();
         }
 
         private void pic_refresh_Click(object sender, EventArgs e)
