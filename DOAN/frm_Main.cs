@@ -33,29 +33,32 @@ namespace DOAN
         {
             us_customerUI customerUI = new us_customerUI();
             TienIch.addUserControl(customerUI, pnl_trangchinh);
+            LayLaiMau();
+            btn_HienThiKhachHang.FillColor = Color.FromArgb(120, 159, 196);
         }
 
         private void btn_HienThiHoaDon_Click(object sender, EventArgs e)
         {
             us_paymentUI paymentUI = new us_paymentUI();
             TienIch.addUserControl(paymentUI, pnl_trangchinh);
+            LayLaiMau();
+            btn_HienThiHoaDon.FillColor = Color.FromArgb(120, 159, 196);
         }
 
         private void btn_QuanlyNhanvien_Click(object sender, EventArgs e)
         {
             us_employeeUI employeeUI = new us_employeeUI();
             TienIch.addUserControl(employeeUI, pnl_trangchinh);
+            LayLaiMau();
+            btn_QuanlyNhanvien.FillColor = Color.FromArgb(120, 159, 196);
         }
 
         private void btn_HienThiMatHang_Click(object sender, EventArgs e)
         {
             frm_ListProduct Fmathang = new frm_ListProduct(this.pnl_trangchinh);
             TienIch.addForm(Fmathang, pnl_trangchinh);
-        }
-
-        private void btn_TaikhoanAdmin_Click(object sender, EventArgs e)
-        {
-
+            LayLaiMau();
+            btn_HienThiMatHang.FillColor = Color.FromArgb(120, 159, 196);
         }
 
         private void pic_dong_Click(object sender, EventArgs e)
@@ -73,12 +76,41 @@ namespace DOAN
         {
             us_Sell us_Banhang = new us_Sell();
             TienIch.addUserControl(us_Banhang, pnl_trangchinh);
+            LayLaiMau();
+            btn_Banhang.FillColor = Color.FromArgb(120, 159, 196);
         }
 
         private void btn_LoHang_Click(object sender, EventArgs e)
         {
             us_Shipment us_Shipment = new us_Shipment(pnl_trangchinh);
             TienIch.addUserControl(us_Shipment, pnl_trangchinh);
+            LayLaiMau();
+            btn_LoHang.FillColor = Color.FromArgb(120, 159, 196);
+        }
+
+        private void LayLaiMau()
+        {
+            btn_Banhang.FillColor = Color.FromArgb(75, 115, 165);
+            btn_HienThiMatHang.FillColor = Color.FromArgb(75, 115, 165);
+            btn_LoHang.FillColor = Color.FromArgb(75, 115, 165);
+            btn_HienThiHoaDon.FillColor = Color.FromArgb(75, 115, 165);
+            btn_NhaCungCap.FillColor = Color.FromArgb(75, 115, 165);
+            btn_HienThiKhachHang.FillColor = Color.FromArgb(75, 115, 165);
+            btn_thongke.FillColor = Color.FromArgb(75, 115, 165);
+            btn_QuanlyNhanvien.FillColor = Color.FromArgb(75, 115, 165);
+            btn_CaiDat.FillColor = Color.FromArgb(75, 115, 165);
+        }
+
+        private void btn_NhaCungCap_Click(object sender, EventArgs e)
+        {
+            LayLaiMau();
+            btn_NhaCungCap.FillColor = Color.FromArgb(120, 159, 196);
+        }
+
+        private void btn_thongke_Click(object sender, EventArgs e)
+        {
+            LayLaiMau();
+            btn_thongke.FillColor = Color.FromArgb(120, 159, 196);
         }
     }
 }

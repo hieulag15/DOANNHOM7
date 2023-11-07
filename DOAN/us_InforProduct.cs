@@ -61,9 +61,7 @@ namespace DOAN
         {
             try
             {
-                dtProduct.Clear();
-                DataSet ds = dbProduct.getOneProduct(id_product);
-                DataRow dr = ds.Tables[0].Rows[0];
+                DataRow dr = dbProduct.getOneProduct(id_product);
                 txt_mamathang.Text = dr[0].ToString();
                 txt_tenmathang.Text = dr[1].ToString();
                 txt_giaban.Text = dr[2].ToString();
