@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_LamMoi = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btn_capNhat = new Guna.UI2.WinForms.Guna2TileButton();
             this.btn_themMoi = new Guna.UI2.WinForms.Guna2TileButton();
             this.txt_diaChiSupplier = new Guna.UI2.WinForms.Guna2TextBox();
@@ -47,6 +48,7 @@
             this.dgv_supplier = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_LamMoi)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_supplier)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +57,7 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.guna2Panel1.Controls.Add(this.btn_LamMoi);
             this.guna2Panel1.Controls.Add(this.btn_capNhat);
             this.guna2Panel1.Controls.Add(this.btn_themMoi);
             this.guna2Panel1.Controls.Add(this.txt_diaChiSupplier);
@@ -70,6 +73,18 @@
             this.guna2Panel1.Size = new System.Drawing.Size(976, 135);
             this.guna2Panel1.TabIndex = 46;
             // 
+            // btn_LamMoi
+            // 
+            this.btn_LamMoi.Image = global::DOAN.Properties.Resources.refresh;
+            this.btn_LamMoi.Location = new System.Drawing.Point(797, 70);
+            this.btn_LamMoi.Name = "btn_LamMoi";
+            this.btn_LamMoi.ShadowDecoration.Parent = this.btn_LamMoi;
+            this.btn_LamMoi.Size = new System.Drawing.Size(40, 34);
+            this.btn_LamMoi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_LamMoi.TabIndex = 65;
+            this.btn_LamMoi.TabStop = false;
+            this.btn_LamMoi.Click += new System.EventHandler(this.btn_LamMoi_Click);
+            // 
             // btn_capNhat
             // 
             this.btn_capNhat.BorderRadius = 5;
@@ -79,12 +94,13 @@
             this.btn_capNhat.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_capNhat.ForeColor = System.Drawing.Color.White;
             this.btn_capNhat.HoverState.Parent = this.btn_capNhat;
-            this.btn_capNhat.Location = new System.Drawing.Point(837, 13);
+            this.btn_capNhat.Location = new System.Drawing.Point(838, 15);
             this.btn_capNhat.Name = "btn_capNhat";
             this.btn_capNhat.ShadowDecoration.Parent = this.btn_capNhat;
             this.btn_capNhat.Size = new System.Drawing.Size(105, 34);
             this.btn_capNhat.TabIndex = 61;
             this.btn_capNhat.Text = "Cập nhật";
+            this.btn_capNhat.Click += new System.EventHandler(this.btn_capNhat_Click);
             // 
             // btn_themMoi
             // 
@@ -253,12 +269,13 @@
             this.btn_chinhSua.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_chinhSua.ForeColor = System.Drawing.Color.White;
             this.btn_chinhSua.HoverState.Parent = this.btn_chinhSua;
-            this.btn_chinhSua.Location = new System.Drawing.Point(731, 28);
+            this.btn_chinhSua.Location = new System.Drawing.Point(721, 28);
             this.btn_chinhSua.Name = "btn_chinhSua";
             this.btn_chinhSua.ShadowDecoration.Parent = this.btn_chinhSua;
             this.btn_chinhSua.Size = new System.Drawing.Size(106, 34);
             this.btn_chinhSua.TabIndex = 63;
             this.btn_chinhSua.Text = "Chỉnh sửa";
+            this.btn_chinhSua.Click += new System.EventHandler(this.btn_chinhSua_Click);
             // 
             // btn_xoa
             // 
@@ -269,12 +286,13 @@
             this.btn_xoa.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xoa.ForeColor = System.Drawing.Color.White;
             this.btn_xoa.HoverState.Parent = this.btn_xoa;
-            this.btn_xoa.Location = new System.Drawing.Point(856, 28);
+            this.btn_xoa.Location = new System.Drawing.Point(838, 28);
             this.btn_xoa.Name = "btn_xoa";
             this.btn_xoa.ShadowDecoration.Parent = this.btn_xoa;
-            this.btn_xoa.Size = new System.Drawing.Size(78, 34);
+            this.btn_xoa.Size = new System.Drawing.Size(105, 34);
             this.btn_xoa.TabIndex = 62;
             this.btn_xoa.Text = "Xóa";
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
             // dgv_supplier
             // 
@@ -361,6 +379,7 @@
             this.Load += new System.EventHandler(this.us_supplier_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_LamMoi)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_supplier)).EndInit();
@@ -384,5 +403,6 @@
         private Guna.UI2.WinForms.Guna2TileButton btn_xoa;
         private Guna.UI2.WinForms.Guna2DataGridView dgv_supplier;
         private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2PictureBox btn_LamMoi;
     }
 }

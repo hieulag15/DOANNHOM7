@@ -25,10 +25,10 @@ namespace DOAN.DS
             db = new DBConnection();
             return db.ExecuteQueryDataSet("select * from V_CUSTOMER_POINT");
         }
-        public DataSet getCustomerNoActive()
+        public DataSet getCustomerInactive()
         {
             db = new DBConnection();
-            return db.ExecuteQueryDataSet("select * from V_CUSTOMERNOACTIVE");
+            return db.ExecuteQueryDataSet("select * from V_CUSTOMERINACTIVE");
         }
 
         public bool addCustomer(string phone, string name, decimal point)
@@ -51,7 +51,6 @@ namespace DOAN.DS
             }
             else
             {
-                MessageBox.Show("Thêm thất bại", "Add Customer", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 db.closeConnection();
                 return false;
             }
@@ -74,7 +73,6 @@ namespace DOAN.DS
             }
             else
             {
-                MessageBox.Show("Sửa thất bại", "Update Customer", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 db.closeConnection();
                 return false;
             }

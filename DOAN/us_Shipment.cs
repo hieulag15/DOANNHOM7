@@ -68,7 +68,7 @@ namespace DOAN
         //Thêm lô hàng mới
         private void ThemLoHang()
         {
-            string prefixIDShipment = dbShipment.CreateAutoID("SH");
+            string prefixIDShipment = dbShipment.CreateAutoShipmentID();
             try
             {
                 //truyền dữ liệu vào hàm thêm lô hàng

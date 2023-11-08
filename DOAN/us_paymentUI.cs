@@ -21,6 +21,13 @@ namespace DOAN
             InitializeComponent();
         }
 
+        Panel pnl_trangchinh;
+        public us_paymentUI(Panel pnl_trangchinh)
+        {
+            InitializeComponent();
+            this.pnl_trangchinh = pnl_trangchinh;
+        }
+
         DataTable dtBill = new DataTable();
         Bill dbBill = new Bill();
 
@@ -46,88 +53,40 @@ namespace DOAN
             }
         }
 
+        private void dgv_historyPayment_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i;
+            i = dgv_historyPayment.CurrentRow.Index;
+            idbill = dgv_historyPayment.Rows[i].Cells[0].Value.ToString();
+        }
+
         private void txt_timTheoMaHoaDon_Enter(object sender, EventArgs e)
         {
+            SetDefaultTextValues();
             txt_timTheoMaHoaDon.Text = string.Empty;
         }
         private void txt_timTheoSDT_Enter(object sender, EventArgs e)
         {
+            SetDefaultTextValues();
             txt_timTheoSDT.Text = string.Empty;
         }
         private void txt_timTheoMaMatHang_Enter(object sender, EventArgs e)
         {
+            SetDefaultTextValues();
             txt_timTheoMaMatHang.Text = string.Empty;
         }
 
-        //tìm kiếm theo mã hóa đơn sau khi nhấn phím enter
-        private void txt_timTheoMaHoaDon_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                dtBill.Clear();
-                DataSet ds = dbBill.timTheoMaBill(txt_timTheoMaHoaDon.Text);
-                dtBill = ds.Tables[0];
-                dgv_historyPayment.DataSource = dtBill;
-                txt_timTheoSDT.Text = "Theo SĐT khách hàng";
-                txt_timTheoMaMatHang.Text = "Theo mã mặt hàng";
-                e.Handled = true; //không xử lý thêm nữa
-            }
-        }
-
-        //tìm kiếm theo sđt khách hàng sau khi nhấn phím enter
-        private void txt_timTheoSDT_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                dtBill.Clear();
-                DataSet ds = dbBill.timTheoSDT(txt_timTheoSDT.Text);
-                dtBill = ds.Tables[0];
-                dgv_historyPayment.DataSource = dtBill;
-                txt_timTheoMaHoaDon.Text = "Theo mã hóa đơn";
-                txt_timTheoMaMatHang.Text = "Theo mã mặt hàng";
-                e.Handled = true; //không xử lý thêm nữa
-            }
-        }
-
-        //tìm kiếm theo mã sp sau khi nhấn phím enter
-        private void txt_timTheoMaMatHang_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                dtBill.Clear();
-                DataSet ds = dbBill.timTheoMaSP(txt_timTheoMaMatHang.Text);
-                dtBill = ds.Tables[0];
-                dgv_historyPayment.DataSource = dtBill;
-                txt_timTheoMaHoaDon.Text = "Theo mã hóa đơn";
-                txt_timTheoSDT.Text = "Theo SĐT khách hàng";
-                e.Handled = true; //không xử lý thêm nữa
-            }
-        }
-
-        private void pic_timHoaDon_Click(object sender, EventArgs e)
-        {
-            dtBill.Clear();
-            DataSet ds = dbBill.timTheoNgay(dtp_mocDau.Value, dtp_mocSau.Value);
-            dtBill = ds.Tables[0];
-            dgv_historyPayment.DataSource = dtBill;
-            txt_timTheoMaHoaDon.Text = "Theo mã hóa đơn";
-            txt_timTheoSDT.Text = "Theo SĐT khách hàng";
-            txt_timTheoMaMatHang.Text = "Theo mã mặt hàng";
-        }
         private void btn_chiTiet_Click(object sender, EventArgs e)
         {
             DataGridViewRow currentRow = dgv_historyPayment.CurrentRow;
             string b_id = (string)currentRow.Cells[0].Value;
-            frm_Main frm_home = new frm_Main();
-            frm_detailPayment frm_detail = new frm_detailPayment();
-            frm_detail.ShowDialog();
+            frm_detailPayment frm_detail = new frm_detailPayment(idbill);
+            TienIch.addForm(frm_detail, pnl_trangchinh);
         }
 
         private void btn_LamMoi_Click(object sender, EventArgs e)
         {
-            txt_timTheoMaHoaDon.Text = "Theo mã hóa đơn";
-            txt_timTheoSDT.Text = "Theo SĐT khách hàng";
-            txt_timTheoMaMatHang.Text = "Theo mã mặt hàng";
+            SetDefaultTextValues();
             dtp_mocDau.Value = DateTime.Today;
             dtp_mocSau.Value = DateTime.Today;
             LoadHistoryBill();
@@ -139,9 +98,73 @@ namespace DOAN
             DataSet ds = dbBill.timTheoNgay(dtp_mocDau.Value, dtp_mocSau.Value);
             dtBill = ds.Tables[0];
             dgv_historyPayment.DataSource = dtBill;
+            SetDefaultTextValues();
+        }
+
+        private void pic_timMaHoaDon_Click(object sender, EventArgs e)
+        {
+            dtBill.Clear();
+            DataSet ds = dbBill.timTheoMaBill(txt_timTheoMaHoaDon.Text);
+            dtBill = ds.Tables[0];
+            dgv_historyPayment.DataSource = dtBill;
+        }
+
+        private void pic_timSĐT_Click(object sender, EventArgs e)
+        {
+            dtBill.Clear();
+            DataSet ds = dbBill.timTheoSDT(txt_timTheoSDT.Text);
+            dtBill = ds.Tables[0];
+            dgv_historyPayment.DataSource = dtBill;
+        }
+
+        private void pic_timmamathang_Click(object sender, EventArgs e)
+        {
+            dtBill.Clear();
+            DataSet ds = dbBill.timTheoMaSP(txt_timTheoMaMatHang.Text);
+            dtBill = ds.Tables[0];
+            dgv_historyPayment.DataSource = dtBill;
+        }
+
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
+            XoaHoaDon();
+        }
+
+        //Xử lý
+        private void SetDefaultTextValues()
+        {
             txt_timTheoMaHoaDon.Text = "Theo mã hóa đơn";
             txt_timTheoSDT.Text = "Theo SĐT khách hàng";
             txt_timTheoMaMatHang.Text = "Theo mã mặt hàng";
+        }
+
+        string idbill;
+        private void XoaHoaDon()
+        {
+            try
+            {
+                DialogResult traloi;
+                traloi = MessageBox.Show("Xác nhận xóa hóa đơn?", "Trả lời",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (traloi == DialogResult.Yes)
+                {
+                    dbBill.deleteBill(idbill);
+                    // Cập nhật lại DataGridView 
+                    LoadHistoryBill();
+                    // Thông báo 
+                    MessageBox.Show("Đã xóa xong!");
+
+                }
+                else
+                {
+                    // Thông báo 
+                    MessageBox.Show("Không thực hiện việc xóa mẫu tin!");
+                }
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("Không xóa được. Lỗi rồi!");
+            }
         }
     }
 }

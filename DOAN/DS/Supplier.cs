@@ -67,7 +67,50 @@ namespace DOAN.DS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "loi sql insert");
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                db.closeConnection();
+            }
+        }
+        public bool updateSupplier(string s_id, string s_name, string s_phone, string s_address)
+        {
+            comm = new SqlCommand("EXEC proc_updateSuppier @s_id, @s_name, @s_phone, @s_address", db.getSqlConn);
+            comm.Parameters.AddWithValue("@s_id", s_id);
+            comm.Parameters.AddWithValue("@s_name", s_name);
+            comm.Parameters.AddWithValue("@s_phone", s_phone);
+            comm.Parameters.AddWithValue("@s_address", s_address);
+            db.openConnection();
+            try
+            {
+                comm.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                db.closeConnection();
+            }
+        }
+        public bool deleteSupplier(string s_id)
+        {
+            comm = new SqlCommand("EXEC proc_DeleteSupplier @s_id", db.getSqlConn);
+            comm.Parameters.AddWithValue("@s_id", s_id);
+            db.openConnection();
+            try
+            {
+                comm.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
                 return false;
             }
             finally

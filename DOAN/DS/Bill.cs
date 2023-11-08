@@ -21,6 +21,12 @@ namespace DOAN.DS
         {
             return db.ExecuteQueryDataSet("select * from V_INFO_BILL");
         }
+
+        public DataSet getDetailBill(string idBill)
+        {
+            return db.ExecuteQueryDataSet(string.Format("select * from V_INFO_DETAIL_BILL where [Mã hóa đơn] = '{0}'", idBill));
+        }
+
         public DataSet timKiem(SqlCommand comm)
         {
             DataSet ds = new DataSet();
@@ -86,6 +92,25 @@ namespace DOAN.DS
                 return false;
             }
         }
+
+        public bool deleteBill(string bid)
+        {
+            comm = new SqlCommand("Exec proc_DeleteBill @bid", db.getSqlConn);
+            comm.Parameters.AddWithValue("@bid", bid);
+
+            db.openConnection();
+            if ((comm.ExecuteNonQuery() == 1))
+            {
+                db.closeConnection();
+                return true;
+            }
+            else
+            {
+                db.closeConnection();
+                return false;
+            }
+        }
+
         public string CreateAutoID()
         {
             db = new DBConnection();
