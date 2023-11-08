@@ -39,7 +39,7 @@ namespace DOAN
 
         private void btn_HienThiHoaDon_Click(object sender, EventArgs e)
         {
-            us_paymentUI paymentUI = new us_paymentUI();
+            us_paymentUI paymentUI = new us_paymentUI(pnl_trangchinh);
             TienIch.addUserControl(paymentUI, pnl_trangchinh);
             LayLaiMau();
             btn_HienThiHoaDon.FillColor = Color.FromArgb(120, 159, 196);
@@ -55,7 +55,7 @@ namespace DOAN
 
         private void btn_HienThiMatHang_Click(object sender, EventArgs e)
         {
-            frm_ListProduct Fmathang = new frm_ListProduct(this.pnl_trangchinh);
+            frm_ListProduct Fmathang = new frm_ListProduct(pnl_trangchinh);
             TienIch.addForm(Fmathang, pnl_trangchinh);
             LayLaiMau();
             btn_HienThiMatHang.FillColor = Color.FromArgb(120, 159, 196);
