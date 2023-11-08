@@ -124,6 +124,9 @@ namespace DOAN
             not_fillingStatus();
             btn_Them.Enabled = true;
             btn_Sua.Enabled = true;
+            btn_Luu.Enabled = true;
+            btn_Huy.Enabled = true;
+            btn_Xoa.Enabled = true;
         }
         private void Refresh()
         {
@@ -266,9 +269,9 @@ namespace DOAN
 
         private void btn_Luu_Click(object sender, EventArgs e)
         {
-            if (txt_SoDienThoai.Text == "" || txt_TenKhachHang.Text == "" || txt_DiemTichLuy.Text == "" || Decimal.Parse(txt_DiemTichLuy.Text) < 0)
+            if (txt_DiemTichLuy.Text == "" || Decimal.Parse(txt_DiemTichLuy.Text) < 0 )
             {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng nhập điểm và không âm", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (addFlag == true) //Trường hợp thêm Khách hàng

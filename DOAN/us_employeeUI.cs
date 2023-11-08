@@ -192,17 +192,12 @@ namespace DOAN
 
         private void btn_Luu_Click(object sender, EventArgs e)
         {
-            if (txt_SoDienThoai.Text == "" || txt_MaNhanVien.Text == "" || txt_TenNhanVien.Text == "" || txt_DiaChi.Text == "" || (rb_Nam.Checked == false && rb_Nu.Checked == false))
-            {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
             if (addFlag == true) //Trường hợp thêm nhan vien
             {
                 string gender = "";
                 if (rb_Nam.Checked)
                     gender = rb_Nam.Text;
-                else
+                if (rb_Nu.Checked)
                     gender = rb_Nu.Text;
                 DataSet ds = new DataSet();
                 try
