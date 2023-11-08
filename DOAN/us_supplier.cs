@@ -119,7 +119,7 @@ namespace DOAN
             DataGridViewRow currentRow = dgv_supplier.CurrentRow;
             string currentRow_id = (string)currentRow.Cells[0].Value; //lay s_id tu datagridview
             //Hỏi người dùng là có chắc chắn muốn xóa khách hàng không
-            DialogResult respone = MessageBox.Show("Bạn có chắc chắn muốn xóa nhà cung cấp có ID" +currentRow_id, "Thông báo",
+            DialogResult respone = MessageBox.Show("Bạn có chắc chắn muốn xóa nhà cung cấp có ID: " + currentRow_id, "Thông báo",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
             //Nếu đồng ý
