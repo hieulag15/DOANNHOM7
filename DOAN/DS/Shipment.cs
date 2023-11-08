@@ -97,14 +97,13 @@ namespace DOAN.DS
             }
         }
 
-        public string CreateAutoID(string prefix)
+        public string CreateAutoShipmentID()
         {
             db = new DBConnection();
             db.openConnection();
             try
             {
                 comm = new SqlCommand("proc_CreateAutoShipmentID", db.getSqlConn);
-                comm.Parameters.AddWithValue("@prefix", prefix);
                 comm.CommandType = CommandType.StoredProcedure;
 
                 // Thêm tham số đầu vào nếu cần
