@@ -77,7 +77,7 @@ namespace DOAN.DS
         }
         public bool updateSupplier(string s_id, string s_name, string s_phone, string s_address)
         {
-            comm = new SqlCommand("EXEC proc_updateSuppier @s_id, @s_name, @s_phone, @s_address", db.getSqlConn);
+            comm = new SqlCommand("EXEC proc_updateSupplier @s_id, @s_name, @s_phone, @s_address", db.getSqlConn);
             comm.Parameters.AddWithValue("@s_id", s_id);
             comm.Parameters.AddWithValue("@s_name", s_name);
             comm.Parameters.AddWithValue("@s_phone", s_phone);
