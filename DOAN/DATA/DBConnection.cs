@@ -58,21 +58,6 @@ namespace DOAN.DATA
             da.Fill(ds); //Đưa dữ liệu truy vào Dataset
             return ds;
         }
-        public String autoGenerateID(string strSQL)
-        {
-            string result = "";
-            if (conn.State == ConnectionState.Open)//Nếu đang mở kết nối trước đó thì đóng lại
-                conn.Close();
-            conn.Open(); //Tạo một kết nối mới
-            comm.CommandText = strSQL;
-            comm.CommandType = CommandType.Text;
-            SqlDataReader dr = comm.ExecuteReader();
-            dr.Read();
-            result = dr[0].ToString();
-            dr.Close();
-            conn.Close();
-            return result;
-        }
 
         public string getButtons(string query, FlowLayoutPanel panelProduct, FlowLayoutPanel panelProductPay)
         {
