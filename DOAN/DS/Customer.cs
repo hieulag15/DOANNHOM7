@@ -25,10 +25,10 @@ namespace DOAN.DS
             db = new DBConnection();
             return db.ExecuteQueryDataSet("select * from V_CUSTOMER_POINT");
         }
-        public DataSet getCustomerNoActive()
+        public DataSet getCustomerInactive()
         {
             db = new DBConnection();
-            return db.ExecuteQueryDataSet("select * from V_CUSTOMERNOACTIVE");
+            return db.ExecuteQueryDataSet("select * from V_CUSTOMERINACTIVE");
         }
 
         public bool addCustomer(string phone, string name, decimal point)

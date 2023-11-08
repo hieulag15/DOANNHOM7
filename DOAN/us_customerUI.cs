@@ -22,7 +22,7 @@ namespace DOAN
         bool addFlag;
 
         DataTable dtCustomer = new DataTable();
-        DataTable dtCustomerNoActive = new DataTable();
+        DataTable dtCustomerInactive = new DataTable();
         Customer dbCustomer = new Customer();
 
         public void LoadCustomer()
@@ -36,10 +36,10 @@ namespace DOAN
 
         public void LoadCustomerInactive()
         {
-            dtCustomerNoActive.Clear();
-            DataSet ds = dbCustomer.getCustomerNoActive();
-            dtCustomerNoActive = ds.Tables[0];
-            dgv_DanhSachKHD.DataSource = dtCustomerNoActive;
+            dtCustomerInactive.Clear();
+            DataSet ds = dbCustomer.getCustomerInactive();
+            dtCustomerInactive = ds.Tables[0];
+            dgv_DanhSachKHD.DataSource = dtCustomerInactive;
             setDataGridViewInactive();
         }
 
