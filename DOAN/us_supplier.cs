@@ -43,31 +43,25 @@ namespace DOAN
         }
         private void btn_LamMoi_Click(object sender, EventArgs e)
         {
-            txt_tenSupplier.Text = "";
-            txt_SDTSupplier.Text = "";
-            txt_diaChiSupplier.Text = "";
-            btn_themMoi.Enabled = true;
-            btn_capNhat.Enabled = false;
+            LamMoi();
         }
         private void btn_themMoi_Click(object sender, EventArgs e)
         {
             string auto_id = dbSupplier.CreateAutoID(); //s_id duoc tao tu dong
-            if (checkTxt())
+            try
             {
                 if (dbSupplier.addSupplier(auto_id, txt_tenSupplier.Text.Trim(), txt_SDTSupplier.Text.Trim(), txt_diaChiSupplier.Text.Trim()))
                 {
-                    MessageBox.Show("Thêm nhà cung cấp thành công");
+                    MessageBox.Show("Thêm thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LamMoi();
+                    loadSupplier();
                 }
-                else
-                {
-                    MessageBox.Show("Thêm nhà cung cấp không thành công");
-                }
-                loadSupplier();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Chưa nhập đầy đủ thông tin");
-            } 
+                MessageBox.Show(ex.Message);
+            }
+
                 
         }
         public bool checkTxt()
@@ -95,22 +89,19 @@ namespace DOAN
 
             DataGridViewRow currentRow = dgv_supplier.CurrentRow;
             string currentRow_id = (string)currentRow.Cells[0].Value; //lay s_id tu datagridview
-            if (checkTxt())
+
+            try
             {
                 if (dbSupplier.updateSupplier(currentRow_id, txt_tenSupplier.Text.Trim(), txt_SDTSupplier.Text.Trim(), txt_diaChiSupplier.Text.Trim()))
                 {
-                    MessageBox.Show("Cập nhật thành công");
+                    MessageBox.Show("Sửa thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LamMoi();
+                    loadSupplier();
                 }
-                else
-                {
-                    MessageBox.Show("Cập nhật không thành công");
-                }
-                loadSupplier();
-                btn_LamMoi_Click(sender, e);
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Chưa nhập đầy đủ thông tin");
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -136,6 +127,15 @@ namespace DOAN
             }
             loadSupplier();
             btn_LamMoi_Click(sender, e);
+        }
+
+        private void LamMoi()
+        {
+            txt_tenSupplier.Text = "";
+            txt_SDTSupplier.Text = "";
+            txt_diaChiSupplier.Text = "";
+            btn_themMoi.Enabled = true;
+            btn_capNhat.Enabled = false;
         }
     }
 }
