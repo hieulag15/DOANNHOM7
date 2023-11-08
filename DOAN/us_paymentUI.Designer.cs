@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgv_historyPayment = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.pic_timHoaDon = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pic_timMaHoaDon = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btn_xoa = new Guna.UI2.WinForms.Guna2TileButton();
             this.btn_chiTiet = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -49,17 +49,17 @@
             this.btn_ApDung = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pic_timmamathang = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pic_timSĐT = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_historyPayment)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_timHoaDon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_timMaHoaDon)).BeginInit();
             this.guna2Panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_LamMoi)).BeginInit();
             this.guna2Panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_timmamathang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_timSĐT)).BeginInit();
             this.guna2Panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,31 +92,31 @@
             // 
             // dgv_historyPayment
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dgv_historyPayment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgv_historyPayment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_historyPayment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_historyPayment.BackgroundColor = System.Drawing.Color.White;
             this.dgv_historyPayment.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_historyPayment.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_historyPayment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_historyPayment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_historyPayment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_historyPayment.ColumnHeadersHeight = 21;
             this.dgv_historyPayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_historyPayment.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_historyPayment.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_historyPayment.EnableHeadersVisualStyles = false;
             this.dgv_historyPayment.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_historyPayment.Location = new System.Drawing.Point(3, 3);
@@ -149,18 +149,19 @@
             this.dgv_historyPayment.ThemeStyle.RowsStyle.Height = 22;
             this.dgv_historyPayment.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_historyPayment.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv_historyPayment.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_historyPayment_CellClick);
             // 
-            // pic_timHoaDon
+            // pic_timMaHoaDon
             // 
-            this.pic_timHoaDon.Image = global::DOAN.Properties.Resources.search__1_;
-            this.pic_timHoaDon.Location = new System.Drawing.Point(205, 54);
-            this.pic_timHoaDon.Name = "pic_timHoaDon";
-            this.pic_timHoaDon.ShadowDecoration.Parent = this.pic_timHoaDon;
-            this.pic_timHoaDon.Size = new System.Drawing.Size(30, 30);
-            this.pic_timHoaDon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_timHoaDon.TabIndex = 58;
-            this.pic_timHoaDon.TabStop = false;
-            this.pic_timHoaDon.Click += new System.EventHandler(this.pic_timHoaDon_Click);
+            this.pic_timMaHoaDon.Image = global::DOAN.Properties.Resources.search__1_;
+            this.pic_timMaHoaDon.Location = new System.Drawing.Point(205, 54);
+            this.pic_timMaHoaDon.Name = "pic_timMaHoaDon";
+            this.pic_timMaHoaDon.ShadowDecoration.Parent = this.pic_timMaHoaDon;
+            this.pic_timMaHoaDon.Size = new System.Drawing.Size(30, 30);
+            this.pic_timMaHoaDon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_timMaHoaDon.TabIndex = 58;
+            this.pic_timMaHoaDon.TabStop = false;
+            this.pic_timMaHoaDon.Click += new System.EventHandler(this.pic_timMaHoaDon_Click);
             // 
             // btn_xoa
             // 
@@ -177,6 +178,7 @@
             this.btn_xoa.Size = new System.Drawing.Size(183, 49);
             this.btn_xoa.TabIndex = 57;
             this.btn_xoa.Text = "Xóa hóa đơn";
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
             // btn_chiTiet
             // 
@@ -281,7 +283,6 @@
             this.txt_timTheoMaMatHang.Size = new System.Drawing.Size(220, 34);
             this.txt_timTheoMaMatHang.TabIndex = 49;
             this.txt_timTheoMaMatHang.Enter += new System.EventHandler(this.txt_timTheoMaMatHang_Enter);
-            this.txt_timTheoMaMatHang.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_timTheoMaMatHang_KeyUp);
             // 
             // txt_timTheoSDT
             // 
@@ -311,7 +312,6 @@
             this.txt_timTheoSDT.Size = new System.Drawing.Size(220, 34);
             this.txt_timTheoSDT.TabIndex = 48;
             this.txt_timTheoSDT.Enter += new System.EventHandler(this.txt_timTheoSDT_Enter);
-            this.txt_timTheoSDT.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_timTheoSDT_KeyUp);
             // 
             // txt_timTheoMaHoaDon
             // 
@@ -341,7 +341,6 @@
             this.txt_timTheoMaHoaDon.Size = new System.Drawing.Size(220, 34);
             this.txt_timTheoMaHoaDon.TabIndex = 47;
             this.txt_timTheoMaHoaDon.Enter += new System.EventHandler(this.txt_timTheoMaHoaDon_Enter);
-            this.txt_timTheoMaHoaDon.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_timTheoMaHoaDon_KeyUp);
             // 
             // guna2Panel5
             // 
@@ -351,9 +350,9 @@
             this.guna2Panel5.Controls.Add(this.btn_LamMoi);
             this.guna2Panel5.Controls.Add(this.btn_ApDung);
             this.guna2Panel5.Controls.Add(this.guna2Panel3);
-            this.guna2Panel5.Controls.Add(this.guna2PictureBox2);
-            this.guna2Panel5.Controls.Add(this.guna2PictureBox1);
-            this.guna2Panel5.Controls.Add(this.pic_timHoaDon);
+            this.guna2Panel5.Controls.Add(this.pic_timmamathang);
+            this.guna2Panel5.Controls.Add(this.pic_timSĐT);
+            this.guna2Panel5.Controls.Add(this.pic_timMaHoaDon);
             this.guna2Panel5.Controls.Add(this.txt_timTheoMaHoaDon);
             this.guna2Panel5.Controls.Add(this.txt_timTheoSDT);
             this.guna2Panel5.Controls.Add(this.txt_timTheoMaMatHang);
@@ -422,27 +421,29 @@
             this.guna2HtmlLabel1.TabIndex = 29;
             this.guna2HtmlLabel1.Text = "Tìm hóa đơn";
             // 
-            // guna2PictureBox2
+            // pic_timmamathang
             // 
-            this.guna2PictureBox2.Image = global::DOAN.Properties.Resources.search__1_;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(205, 155);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(30, 30);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 60;
-            this.guna2PictureBox2.TabStop = false;
+            this.pic_timmamathang.Image = global::DOAN.Properties.Resources.search__1_;
+            this.pic_timmamathang.Location = new System.Drawing.Point(205, 155);
+            this.pic_timmamathang.Name = "pic_timmamathang";
+            this.pic_timmamathang.ShadowDecoration.Parent = this.pic_timmamathang;
+            this.pic_timmamathang.Size = new System.Drawing.Size(30, 30);
+            this.pic_timmamathang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_timmamathang.TabIndex = 60;
+            this.pic_timmamathang.TabStop = false;
+            this.pic_timmamathang.Click += new System.EventHandler(this.pic_timmamathang_Click);
             // 
-            // guna2PictureBox1
+            // pic_timSĐT
             // 
-            this.guna2PictureBox1.Image = global::DOAN.Properties.Resources.search__1_;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(205, 105);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(30, 30);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 59;
-            this.guna2PictureBox1.TabStop = false;
+            this.pic_timSĐT.Image = global::DOAN.Properties.Resources.search__1_;
+            this.pic_timSĐT.Location = new System.Drawing.Point(205, 105);
+            this.pic_timSĐT.Name = "pic_timSĐT";
+            this.pic_timSĐT.ShadowDecoration.Parent = this.pic_timSĐT;
+            this.pic_timSĐT.Size = new System.Drawing.Size(30, 30);
+            this.pic_timSĐT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_timSĐT.TabIndex = 59;
+            this.pic_timSĐT.TabStop = false;
+            this.pic_timSĐT.Click += new System.EventHandler(this.pic_timSĐT_Click);
             // 
             // guna2Panel4
             // 
@@ -472,14 +473,14 @@
             this.Load += new System.EventHandler(this.us_paymentUI_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_historyPayment)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_timHoaDon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_timMaHoaDon)).EndInit();
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_LamMoi)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_timmamathang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_timSĐT)).EndInit();
             this.guna2Panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -498,14 +499,14 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker dtp_mocDau;
         private Guna.UI2.WinForms.Guna2TileButton btn_xoa;
         private Guna.UI2.WinForms.Guna2TileButton btn_chiTiet;
-        private Guna.UI2.WinForms.Guna2PictureBox pic_timHoaDon;
+        private Guna.UI2.WinForms.Guna2PictureBox pic_timMaHoaDon;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private Guna.UI2.WinForms.Guna2PictureBox btn_LamMoi;
         private Guna.UI2.WinForms.Guna2TileButton btn_ApDung;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox pic_timmamathang;
+        private Guna.UI2.WinForms.Guna2PictureBox pic_timSĐT;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
     }
 }

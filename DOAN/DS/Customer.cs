@@ -51,7 +51,6 @@ namespace DOAN.DS
             }
             else
             {
-                MessageBox.Show("Thêm thất bại", "Add Customer", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 db.closeConnection();
                 return false;
             }
@@ -74,7 +73,6 @@ namespace DOAN.DS
             }
             else
             {
-                MessageBox.Show("Sửa thất bại", "Update Customer", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 db.closeConnection();
                 return false;
             }
