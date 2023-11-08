@@ -21,6 +21,13 @@ namespace DOAN
             InitializeComponent();
         }
 
+        Panel pnl_trangchinh;
+        public us_paymentUI(Panel pnl_trangchinh)
+        {
+            InitializeComponent();
+            this.pnl_trangchinh = pnl_trangchinh;
+        }
+
         DataTable dtBill = new DataTable();
         Bill dbBill = new Bill();
 
@@ -73,9 +80,8 @@ namespace DOAN
         {
             DataGridViewRow currentRow = dgv_historyPayment.CurrentRow;
             string b_id = (string)currentRow.Cells[0].Value;
-            frm_Main frm_home = new frm_Main();
-            frm_detailPayment frm_detail = new frm_detailPayment();
-            frm_detail.ShowDialog();
+            frm_detailPayment frm_detail = new frm_detailPayment(idbill);
+            TienIch.addForm(frm_detail, pnl_trangchinh);
         }
 
         private void btn_LamMoi_Click(object sender, EventArgs e)

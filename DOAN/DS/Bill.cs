@@ -21,6 +21,12 @@ namespace DOAN.DS
         {
             return db.ExecuteQueryDataSet("select * from V_INFO_BILL");
         }
+
+        public DataSet getDetailBill(string idBill)
+        {
+            return db.ExecuteQueryDataSet(string.Format("select * from V_INFO_DETAIL_BILL where [Mã hóa đơn] = '{0}'", idBill));
+        }
+
         public DataSet timKiem(SqlCommand comm)
         {
             DataSet ds = new DataSet();
