@@ -86,6 +86,25 @@ namespace DOAN.DS
                 return false;
             }
         }
+
+        public bool deleteBill(string bid)
+        {
+            comm = new SqlCommand("Exec proc_DeleteBill @bid", db.getSqlConn);
+            comm.Parameters.AddWithValue("@bid", bid);
+
+            db.openConnection();
+            if ((comm.ExecuteNonQuery() == 1))
+            {
+                db.closeConnection();
+                return true;
+            }
+            else
+            {
+                db.closeConnection();
+                return false;
+            }
+        }
+
         public string CreateAutoID()
         {
             db = new DBConnection();
