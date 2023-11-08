@@ -75,7 +75,7 @@ namespace DOAN.DS
             comm.Parameters.AddWithValue("@e_id", eid);
 
             db.openConnection();
-            if (comm.ExecuteNonQuery() == 1)
+            if (comm.ExecuteNonQuery() > 0)
             {
                 db.closeConnection();
                 return true;
