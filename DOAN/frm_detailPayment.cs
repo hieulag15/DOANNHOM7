@@ -1,4 +1,5 @@
-﻿using DOAN.DS;
+﻿using DOAN.BTN_CONTROLS;
+using DOAN.DS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,7 +37,12 @@ namespace DOAN
                 DataSet ds = dbBill.getDetailBill(idBill);
                 dtDetailBill = ds.Tables[0];
                 dgv_DetailBill.DataSource = dtDetailBill;
-
+                DataRow dr = dbBill.getBillBasic(idBill);
+                lbl_TenNhanVien.Text = dr[0].ToString();
+                lbl_TenKhachHang.Text = dr[1].ToString();
+                DateTime ngaylap = (DateTime)dr[2];
+                lbl_NgayLap.Text = ngaylap.ToString("dd/MM/yyyy");
+                lbl_MaHoaDon.Text = dr[3].ToString();
             }
             catch (SqlException)
             {
