@@ -164,6 +164,12 @@
     <Compile Include="us_Shipment.Designer.cs">
       <DependentUpon>us_Shipment.cs</DependentUpon>
     </Compile>
+    <Compile Include="us_Statistic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="us_Statistic.Designer.cs">
+      <DependentUpon>us_Statistic.cs</DependentUpon>
+    </Compile>
     <Compile Include="us_supplier.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="us_Shipment.resx">
       <DependentUpon>us_Shipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="us_Statistic.resx">
+      <DependentUpon>us_Statistic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="us_supplier.resx">
       <DependentUpon>us_supplier.cs</DependentUpon>
@@ -337,6 +346,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add-to-cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dollar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
