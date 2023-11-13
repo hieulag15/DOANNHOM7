@@ -61,8 +61,6 @@ namespace DOAN
             {
                 MessageBox.Show(ex.Message);
             }
-
-                
         }
         public bool checkTxt()
         {
@@ -74,7 +72,7 @@ namespace DOAN
             }
             else return false; //if textbox = ""
         }
-        private void btn_chinhSua_Click(object sender, EventArgs e)
+        private void btn_chinhSua_Click(object sender, EventArgs e) 
         {
             DataGridViewRow currentRow = dgv_supplier.CurrentRow;
             //string s_id = (string)currentRow.Cells[0].Value; //s_id
@@ -109,7 +107,6 @@ namespace DOAN
         {
             DataGridViewRow currentRow = dgv_supplier.CurrentRow;
             string currentRow_id = (string)currentRow.Cells[0].Value; //lay s_id tu datagridview
-            //Hỏi người dùng là có chắc chắn muốn xóa khách hàng không
             DialogResult respone = MessageBox.Show("Bạn có chắc chắn muốn xóa nhà cung cấp có ID: " + currentRow_id, "Thông báo",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 

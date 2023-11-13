@@ -66,8 +66,8 @@ namespace DOAN.DS
                 return true;
             }
             catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+            { 
+                MessageBox.Show(ex.Message, "loi o supplier");
                 return false;
             }
             finally
