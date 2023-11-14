@@ -112,6 +112,8 @@ namespace DOAN
 
         private void btn_thongke_Click(object sender, EventArgs e)
         {
+            us_Statistic statistic = new us_Statistic(); 
+            TienIch.addUserControl(statistic, pnl_trangchinh);
             LayLaiMau();
             btn_thongke.FillColor = Color.FromArgb(120, 159, 196);
         }

@@ -110,12 +110,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="TienIch.cs" />
-    <Compile Include="us_accountUI.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="us_accountUI.Designer.cs">
-      <DependentUpon>us_accountUI.cs</DependentUpon>
-    </Compile>
     <Compile Include="us_AddProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -198,9 +192,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="us_accountUI.resx">
-      <DependentUpon>us_accountUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="us_AddProduct.resx">
       <DependentUpon>us_AddProduct.cs</DependentUpon>
