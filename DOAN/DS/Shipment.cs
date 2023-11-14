@@ -97,6 +97,31 @@ namespace DOAN.DS
             }
         }
 
+        public Decimal TotalImportFee(int numberOfDays)
+        {
+            db = new DBConnection();
+            db.openConnection();
+            Decimal totalImportFee = 0;
+
+            try
+            {
+                comm = new SqlCommand("SELECT dbo.CalculateTotalImportAmountInLastNDays(@numberOfDays)", db.getSqlConn);
+                comm.Parameters.AddWithValue("@numberOfDays", numberOfDays);
+
+                totalImportFee = Convert.ToDecimal(comm.ExecuteScalar());
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                db.closeConnection();
+            }
+
+            return totalImportFee;
+        }
+
         public string CreateAutoShipmentID()
         {
             db = new DBConnection();

@@ -118,6 +118,32 @@ namespace DOAN.DS
             }
         }
 
+        public Decimal TotalSalesFee(int numberOfDays)
+        {
+            db = new DBConnection();
+            db.openConnection();
+            Decimal totalSalesAmount = 0;
+
+            try
+            {
+                comm = new SqlCommand("SELECT dbo.CalculateTotalSalesAmountInLastNDays(@numberOfDays)", db.getSqlConn);
+                comm.Parameters.AddWithValue("@numberOfDays", numberOfDays);
+
+                totalSalesAmount = Convert.ToDecimal(comm.ExecuteScalar());
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                db.closeConnection();
+            }
+
+            return totalSalesAmount;
+        }
+
+
         public string CreateAutoID()
         {
             db = new DBConnection();
