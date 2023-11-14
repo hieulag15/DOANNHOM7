@@ -6,7 +6,6 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
 
@@ -212,6 +211,29 @@ namespace DOAN.DS
         public string getProductList(FlowLayoutPanel panelProduct, FlowLayoutPanel panelProductPay)
         {
             return db.getButtons("select p_price, p_image, p_id from PRODUCT Where p_status = 1", panelProduct, panelProductPay);
+        }
+        public DataSet getProductBestSeller(int date)
+        {
+            db.openConnection();
+
+            DataSet ds = new DataSet();
+            try
+            {
+                comm = new SqlCommand("SELECT * FROM dbo.fn_FindProductSell(@date)", db.getSqlConn);
+                comm.Parameters.AddWithValue("@date", date);
+
+                SqlDataAdapter da = new SqlDataAdapter();
+                da.SelectCommand = comm;
+                da.Fill(ds);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                db.closeConnection();
+            }
+
+            db.closeConnection();
+            return ds;
         }
     }
 }
