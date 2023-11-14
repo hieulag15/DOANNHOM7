@@ -21,17 +21,26 @@ namespace DOAN
 
         Shipment dbshipment = new Shipment();
         Bill dbBill = new Bill();
+        Customer dbcustomer = new Customer();
+
         private void us_Statistic_Load(object sender, EventArgs e)
         {
             tongTien = dbBill.TotalSalesFee(0) - dbshipment.TotalImportFee(0);
             HienThiThongTin();
+            loadCustomerNumber();
+            lbl_SPDaBan.Text = dbBill.SPDaBan(0).ToString();
         }
 
         Decimal tongTienNhapHang;
         Decimal tongTienBanHang;
         Decimal tongDoanhThu;
         Decimal tongTien;
-
+        
+        private void loadCustomerNumber()
+        {
+            int result= dbcustomer.customerNumber();
+            lbl_tongKhachHang.Text = result.ToString();
+        }
         private void HienThiThongTin()
         {
             lbl_tongtien.Text = tongTien.ToString();
@@ -45,26 +54,31 @@ namespace DOAN
                 {
                     tongTienNhapHang = dbshipment.TotalImportFee(1000);
                     tongTienBanHang = dbBill.TotalSalesFee(1000);
+                    lbl_SPDaBan.Text = dbBill.SPDaBan(1000).ToString();
                 }
                 if (cb_SoNgay.SelectedIndex == 1)
                 {
                     tongTienNhapHang = dbshipment.TotalImportFee(0);
                     tongTienBanHang = dbBill.TotalSalesFee(0);
+                    lbl_SPDaBan.Text = dbBill.SPDaBan(0).ToString();
                 }
                 if (cb_SoNgay.SelectedIndex == 2)
                 {
                     tongTienNhapHang = dbshipment.TotalImportFee(7);
                     tongTienBanHang = dbBill.TotalSalesFee(7);
+                    lbl_SPDaBan.Text = dbBill.SPDaBan(7).ToString();
                 }
                 if (cb_SoNgay.SelectedIndex == 3)
                 {
                     tongTienNhapHang = dbshipment.TotalImportFee(30);
                     tongTienBanHang = dbBill.TotalSalesFee(30);
+                    lbl_SPDaBan.Text = dbBill.SPDaBan(30).ToString();
                 }
                 if (cb_SoNgay.SelectedIndex == 4)
                 {
                     tongTienNhapHang = dbshipment.TotalImportFee(90);
                     tongTienBanHang = dbBill.TotalSalesFee(90);
+                    lbl_SPDaBan.Text = dbBill.SPDaBan(90).ToString();
                 }
 
                 tongDoanhThu = tongTienBanHang - tongTienNhapHang;

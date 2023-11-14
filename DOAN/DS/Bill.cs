@@ -143,7 +143,26 @@ namespace DOAN.DS
             return totalSalesAmount;
         }
 
-
+        public int SPDaBan(int numberOfDays)
+        {
+            db.openConnection();
+            int SPDaBan = 0;
+            try
+            {
+                comm = new SqlCommand("SELECT dbo.func_sanPhamDaBan(@numberOfDays)", db.getSqlConn);
+                comm.Parameters.AddWithValue("@numberOfDays", numberOfDays);
+                SPDaBan = (int)comm.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show(ex.Message, "loi o sp da ban");
+            }
+            finally
+            {
+                db.closeConnection();
+            }
+            return SPDaBan;
+        }
         public string CreateAutoID()
         {
             db = new DBConnection();
@@ -174,6 +193,7 @@ namespace DOAN.DS
 
             return "";
         }
+       
     }
 
 }
