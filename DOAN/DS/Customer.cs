@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DOAN.DS
 {
@@ -30,7 +31,13 @@ namespace DOAN.DS
             db = new DBConnection();
             return db.ExecuteQueryDataSet("select * from V_CUSTOMERINACTIVE");
         }
-
+        public int customerNumber()
+        {
+            db.openConnection();
+            cmd = new SqlCommand("SELECT dbo.func_Customers()", db.getSqlConn);
+            int result = (int)cmd.ExecuteScalar();
+            return result;
+        }
         public bool addCustomer(string phone, string name, decimal point)
         {
 
