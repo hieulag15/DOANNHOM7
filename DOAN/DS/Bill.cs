@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DOAN.DS
 {
@@ -132,7 +133,7 @@ namespace DOAN.DS
                 totalSalesAmount = Convert.ToDecimal(comm.ExecuteScalar());
             }
             catch (Exception ex)
-            {
+            {   
                 System.Windows.MessageBox.Show(ex.Message);
             }
             finally
@@ -146,12 +147,17 @@ namespace DOAN.DS
         public int SPDaBan(int numberOfDays)
         {
             db.openConnection();
-            int SPDaBan = 0;
+            int SPDaBan= 0;
             try
             {
                 comm = new SqlCommand("SELECT dbo.func_sanPhamDaBan(@numberOfDays)", db.getSqlConn);
                 comm.Parameters.AddWithValue("@numberOfDays", numberOfDays);
-                SPDaBan = (int)comm.ExecuteScalar();
+
+                if (comm.ExecuteScalar() != DBNull.Value)
+                {
+                    // Cast đối tượng sang kiểu dữ liệu mong muốn
+                    SPDaBan = (int)comm.ExecuteScalar();
+                }
             }
             catch (Exception ex)
             {
