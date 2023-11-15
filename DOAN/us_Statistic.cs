@@ -30,6 +30,7 @@ namespace DOAN
             HienThiThongTin();
             loadCustomerNumber();
             lbl_SPDaBan.Text = dbBill.SPDaBan(0).ToString();
+            LoadProductBestSeller(1);
         }
 
         Decimal tongTienNhapHang;
@@ -56,35 +57,35 @@ namespace DOAN
                     tongTienNhapHang = dbshipment.TotalImportFee(1000);
                     tongTienBanHang = dbBill.TotalSalesFee(1000);
                     lbl_SPDaBan.Text = dbBill.SPDaBan(1000).ToString();
-                    LoadProductBestSeller(1000);
+                    LoadProductBestSeller(1001);
                 }
                 if (cb_SoNgay.SelectedIndex == 1)
                 {
                     tongTienNhapHang = dbshipment.TotalImportFee(0);
                     tongTienBanHang = dbBill.TotalSalesFee(0);
                     lbl_SPDaBan.Text = dbBill.SPDaBan(0).ToString();
-                    LoadProductBestSeller(0);
+                    LoadProductBestSeller(1);
                 }
                 if (cb_SoNgay.SelectedIndex == 2)
                 {
                     tongTienNhapHang = dbshipment.TotalImportFee(7);
                     tongTienBanHang = dbBill.TotalSalesFee(7);
                     lbl_SPDaBan.Text = dbBill.SPDaBan(7).ToString();
-                    LoadProductBestSeller(7);
+                    LoadProductBestSeller(8);
                 }
                 if (cb_SoNgay.SelectedIndex == 3)
                 {
                     tongTienNhapHang = dbshipment.TotalImportFee(30);
                     tongTienBanHang = dbBill.TotalSalesFee(30);
                     lbl_SPDaBan.Text = dbBill.SPDaBan(30).ToString();
-                    LoadProductBestSeller(30);
+                    LoadProductBestSeller(31);
                 }
                 if (cb_SoNgay.SelectedIndex == 4)
                 {
                     tongTienNhapHang = dbshipment.TotalImportFee(90);
                     tongTienBanHang = dbBill.TotalSalesFee(90);
                     lbl_SPDaBan.Text = dbBill.SPDaBan(90).ToString();
-                    LoadProductBestSeller(90);
+                    LoadProductBestSeller(91);
                 }
 
                 tongDoanhThu = tongTienBanHang - tongTienNhapHang;
@@ -125,11 +126,6 @@ namespace DOAN
                 HienThiThongTin();
             }            
         }
-
-        private void dgv_ListProductBestSeller_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
         public void LoadProductBestSeller(int date)
         {
             dtProduct.Clear();
@@ -156,6 +152,9 @@ namespace DOAN
                 dgv_ListProductBestSeller.Columns[2].Width -= width / n_column;
                 dgv_ListProductBestSeller.Columns[3].Width -= width / n_column;
                 dgv_ListProductBestSeller.AutoResizeColumns();
+
+                // Set độ cao của Header Text
+                dgv_ListProductBestSeller.ColumnHeadersHeight = 40; // Điều chỉnh độ cao tùy ý
             }
         }
     }
