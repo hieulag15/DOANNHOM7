@@ -46,6 +46,8 @@
             this.txt_ThanhTien = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_TotalMoney = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txt_Point = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lbl_Point = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btn_ThanhToan = new Guna.UI2.WinForms.Guna2TileButton();
             this.Panel_ProductPay = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
@@ -65,8 +67,6 @@
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lbl_Point = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txt_Point = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -356,6 +356,45 @@
             this.guna2Panel4.Size = new System.Drawing.Size(431, 382);
             this.guna2Panel4.TabIndex = 13;
             // 
+            // txt_Point
+            // 
+            this.txt_Point.BorderColor = System.Drawing.Color.Black;
+            this.txt_Point.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Point.DefaultText = "0";
+            this.txt_Point.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Point.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Point.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Point.DisabledState.Parent = this.txt_Point;
+            this.txt_Point.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Point.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Point.FocusedState.Parent = this.txt_Point;
+            this.txt_Point.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Point.ForeColor = System.Drawing.Color.Black;
+            this.txt_Point.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Point.HoverState.Parent = this.txt_Point;
+            this.txt_Point.Location = new System.Drawing.Point(306, 284);
+            this.txt_Point.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.txt_Point.Name = "txt_Point";
+            this.txt_Point.PasswordChar = '\0';
+            this.txt_Point.PlaceholderText = "";
+            this.txt_Point.SelectedText = "";
+            this.txt_Point.SelectionStart = 1;
+            this.txt_Point.ShadowDecoration.Parent = this.txt_Point;
+            this.txt_Point.Size = new System.Drawing.Size(119, 41);
+            this.txt_Point.TabIndex = 16;
+            this.txt_Point.TextChanged += new System.EventHandler(this.txt_Point_TextChanged);
+            // 
+            // lbl_Point
+            // 
+            this.lbl_Point.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Point.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Point.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Point.Location = new System.Drawing.Point(348, 245);
+            this.lbl_Point.Name = "lbl_Point";
+            this.lbl_Point.Size = new System.Drawing.Size(57, 25);
+            this.lbl_Point.TabIndex = 15;
+            this.lbl_Point.Text = "POINT";
+            // 
             // btn_ThanhToan
             // 
             this.btn_ThanhToan.BackColor = System.Drawing.Color.White;
@@ -639,45 +678,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // lbl_Point
-            // 
-            this.lbl_Point.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Point.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Point.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Point.Location = new System.Drawing.Point(348, 245);
-            this.lbl_Point.Name = "lbl_Point";
-            this.lbl_Point.Size = new System.Drawing.Size(57, 25);
-            this.lbl_Point.TabIndex = 15;
-            this.lbl_Point.Text = "POINT";
-            // 
-            // txt_Point
-            // 
-            this.txt_Point.BorderColor = System.Drawing.Color.Black;
-            this.txt_Point.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Point.DefaultText = "0";
-            this.txt_Point.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_Point.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_Point.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Point.DisabledState.Parent = this.txt_Point;
-            this.txt_Point.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Point.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Point.FocusedState.Parent = this.txt_Point;
-            this.txt_Point.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Point.ForeColor = System.Drawing.Color.Black;
-            this.txt_Point.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Point.HoverState.Parent = this.txt_Point;
-            this.txt_Point.Location = new System.Drawing.Point(306, 284);
-            this.txt_Point.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.txt_Point.Name = "txt_Point";
-            this.txt_Point.PasswordChar = '\0';
-            this.txt_Point.PlaceholderText = "";
-            this.txt_Point.SelectedText = "";
-            this.txt_Point.SelectionStart = 1;
-            this.txt_Point.ShadowDecoration.Parent = this.txt_Point;
-            this.txt_Point.Size = new System.Drawing.Size(119, 41);
-            this.txt_Point.TabIndex = 16;
-            this.txt_Point.TextChanged += new System.EventHandler(this.txt_Point_TextChanged);
             // 
             // us_Sell
             // 

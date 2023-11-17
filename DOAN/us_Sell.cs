@@ -114,6 +114,12 @@ namespace DOAN
 
         private void btn_ThanhToan_Click(object sender, EventArgs e)
         {
+            DataSet ds = customer.findCustomerByPhone(txt_SoDienThoai.Text.Trim());
+            DataTable dt = ds.Tables[0];
+            if (dt.Rows.Count == 0)
+            {
+                customer.addCustomer(txt_SoDienThoai.Text.Trim(), txt_TenKhachHang.Text.Trim(), 0);
+            }
             string b_id = bill.CreateAutoID();
             try
             {
@@ -145,35 +151,28 @@ namespace DOAN
         }
         public void LoadPoint()
         {
-            try
-            {
                 DataSet ds = customer.findCustomerByPhone(txt_SoDienThoai.Text.Trim());
                 DataTable dt = ds.Tables[0];
-                txt_TenKhachHang.Text = dt.Rows[0][1].ToString();
-                txt_Point.Text = dt.Rows[0][2].ToString();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void txt_SoDienThoai_TextChanged(object sender, EventArgs e)
-        {
-            if (txt_SoDienThoai.Text.Length == 10)
-            {
-                LoadPoint();
-            }
-            else
-            {
-                txt_TenKhachHang.Text = "";
-                txt_Point.Text = "";
-            }
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    txt_TenKhachHang.Text = dt.Rows[0][1].ToString();
+                    txt_Point.Text = dt.Rows[0][2].ToString();
+                }
+                else
+                {
+                    txt_TenKhachHang.Text = "";
+                    txt_Point.Text = "0";
+                }
         }
 
         private void txt_Point_TextChanged(object sender, EventArgs e)
         {
             LoadTotalPay();
+        }
+
+        private void txt_SoDienThoai_TextChanged(object sender, EventArgs e)
+        {
+            LoadPoint();
         }
     }
 }
