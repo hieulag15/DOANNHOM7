@@ -14,7 +14,7 @@ namespace DOAN.DATA
 {
     internal class DBConnection
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=HIEULAG\THANHHIEU;Initial Catalog=CuaHangDBMS;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-NN1DVIA;Initial Catalog=QLCUAHANG;Integrated Security=True");
         SqlCommand comm = null; //Đối tượng truy vấn và cập nhật vào SQL Serverwd
         SqlDataAdapter da = null; //Đối tượng đưa dữ liệu vào DataTable
 

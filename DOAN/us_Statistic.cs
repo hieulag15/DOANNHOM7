@@ -26,7 +26,10 @@ namespace DOAN
         DataTable dtProduct = new DataTable();
         private void us_Statistic_Load(object sender, EventArgs e)
         {
-            tongTien = dbBill.TotalSalesFee(0) - dbshipment.TotalImportFee(0);
+            tongTienNhapHang = dbshipment.TotalImportFee(0);
+            tongTienBanHang = dbBill.TotalSalesFee(0);
+            tongDoanhThu = tongTienBanHang - tongTienNhapHang;
+            tongTien = tongDoanhThu;
             HienThiThongTin();
             loadCustomerNumber();
             lbl_SPDaBan.Text = dbBill.SPDaBan(0).ToString();
@@ -37,6 +40,29 @@ namespace DOAN
         Decimal tongTienBanHang;
         Decimal tongDoanhThu;
         Decimal tongTien;
+
+        private void chart(decimal _tongTienNhapHang, decimal _tongTienBanHang)
+        {
+            // Set up the chart properties
+            chart1.ChartAreas[0].AxisY.Title = "Tổng tiền";
+            chart1.Series.Clear();
+            chart1.Series.Add("Tổng tiền nhập hàng");
+            chart1.Series.Add("Tổng tiền bán hàng");
+
+            // Add data points to the chart
+            chart1.Series["Tổng tiền nhập hàng"].Points.AddXY("", _tongTienNhapHang);
+            chart1.Series["Tổng tiền bán hàng"].Points.AddXY("", _tongTienBanHang);
+
+            // Hide X-axis labels
+            chart1.ChartAreas[0].AxisX.LabelStyle.Enabled = false;
+
+            // Hide X-axis ticks
+            chart1.ChartAreas[0].AxisX.MajorTickMark.Enabled = false;
+            chart1.ChartAreas[0].AxisX.MinorTickMark.Enabled = false;
+
+            // Optionally, you can hide X-axis lines
+            chart1.ChartAreas[0].AxisX.LineWidth = 0;
+        }
         
         private void loadCustomerNumber()
         {
@@ -56,6 +82,7 @@ namespace DOAN
                 {
                     tongTienNhapHang = dbshipment.TotalImportFee(1000);
                     tongTienBanHang = dbBill.TotalSalesFee(1000);
+                    chart(tongTienNhapHang, tongTienBanHang);
                     lbl_SPDaBan.Text = dbBill.SPDaBan(1000).ToString();
                     LoadProductBestSeller(1001);
                 }
@@ -63,6 +90,7 @@ namespace DOAN
                 {
                     tongTienNhapHang = dbshipment.TotalImportFee(0);
                     tongTienBanHang = dbBill.TotalSalesFee(0);
+                    chart(tongTienNhapHang, tongTienBanHang);
                     lbl_SPDaBan.Text = dbBill.SPDaBan(0).ToString();
                     LoadProductBestSeller(1);
                 }
@@ -70,6 +98,7 @@ namespace DOAN
                 {
                     tongTienNhapHang = dbshipment.TotalImportFee(7);
                     tongTienBanHang = dbBill.TotalSalesFee(7);
+                    chart(tongTienNhapHang, tongTienBanHang);
                     lbl_SPDaBan.Text = dbBill.SPDaBan(7).ToString();
                     LoadProductBestSeller(8);
                 }
@@ -77,6 +106,7 @@ namespace DOAN
                 {
                     tongTienNhapHang = dbshipment.TotalImportFee(30);
                     tongTienBanHang = dbBill.TotalSalesFee(30);
+                    chart(tongTienNhapHang, tongTienBanHang);
                     lbl_SPDaBan.Text = dbBill.SPDaBan(30).ToString();
                     LoadProductBestSeller(31);
                 }
@@ -84,6 +114,7 @@ namespace DOAN
                 {
                     tongTienNhapHang = dbshipment.TotalImportFee(90);
                     tongTienBanHang = dbBill.TotalSalesFee(90);
+                    chart(tongTienNhapHang, tongTienBanHang);
                     lbl_SPDaBan.Text = dbBill.SPDaBan(90).ToString();
                     LoadProductBestSeller(91);
                 }
