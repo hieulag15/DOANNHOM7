@@ -117,5 +117,13 @@ namespace DOAN
             LayLaiMau();
             btn_thongke.FillColor = Color.FromArgb(120, 159, 196);
         }
+
+        private void btn_Account_Click(object sender, EventArgs e)
+        {
+            us_Account account = new us_Account();
+            TienIch.addUserControl(account, pnl_trangchinh);
+            LayLaiMau();
+            btn_Account.FillColor = Color.FromArgb(120, 159, 196);
+        }
     }
 }

@@ -56,6 +56,7 @@
             this.lbl_Name = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.btn_Account = new Guna.UI2.WinForms.Guna2TileButton();
             this.pnl_thanhben.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -77,6 +78,7 @@
             // pnl_thanhben
             // 
             this.pnl_thanhben.BorderColor = System.Drawing.Color.Black;
+            this.pnl_thanhben.Controls.Add(this.btn_Account);
             this.pnl_thanhben.Controls.Add(this.guna2Panel6);
             this.pnl_thanhben.Controls.Add(this.btn_CaiDat);
             this.pnl_thanhben.Controls.Add(this.btn_NhaCungCap);
@@ -220,7 +222,7 @@
             this.btn_QuanlyNhanvien.Margin = new System.Windows.Forms.Padding(2);
             this.btn_QuanlyNhanvien.Name = "btn_QuanlyNhanvien";
             this.btn_QuanlyNhanvien.ShadowDecoration.Parent = this.btn_QuanlyNhanvien;
-            this.btn_QuanlyNhanvien.Size = new System.Drawing.Size(277, 66);
+            this.btn_QuanlyNhanvien.Size = new System.Drawing.Size(277, 58);
             this.btn_QuanlyNhanvien.TabIndex = 6;
             this.btn_QuanlyNhanvien.Text = "Quản lý                   nhân viên";
             this.btn_QuanlyNhanvien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -446,6 +448,30 @@
             // 
             this.guna2DragControl1.TargetControl = this.guna2Panel3;
             // 
+            // btn_Account
+            // 
+            this.btn_Account.BackColor = System.Drawing.Color.White;
+            this.btn_Account.CheckedState.Parent = this.btn_Account;
+            this.btn_Account.CustomImages.Parent = this.btn_Account;
+            this.btn_Account.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btn_Account.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Account.ForeColor = System.Drawing.Color.White;
+            this.btn_Account.HoverState.Parent = this.btn_Account;
+            this.btn_Account.Image = global::DOAN.Properties.Resources.recruitment;
+            this.btn_Account.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_Account.ImageOffset = new System.Drawing.Point(30, 25);
+            this.btn_Account.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_Account.Location = new System.Drawing.Point(2, 617);
+            this.btn_Account.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Account.Name = "btn_Account";
+            this.btn_Account.ShadowDecoration.Parent = this.btn_Account;
+            this.btn_Account.Size = new System.Drawing.Size(277, 42);
+            this.btn_Account.TabIndex = 9;
+            this.btn_Account.Text = "Tài khoản";
+            this.btn_Account.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_Account.TextOffset = new System.Drawing.Point(98, -23);
+            this.btn_Account.Click += new System.EventHandler(this.btn_Account_Click);
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -505,5 +531,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2TileButton btn_Account;
     }
 }
