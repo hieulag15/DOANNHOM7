@@ -174,5 +174,10 @@ namespace DOAN
         {
             LoadPoint();
         }
+
+        private void btn_ApDung_Click(object sender, EventArgs e)
+        {
+            product.findProductList(Panel_Product, Panel_ProductPay, txt_TenMatHang.Text.Trim());
+        }
     }
 }

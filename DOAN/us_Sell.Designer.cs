@@ -53,12 +53,12 @@
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2TileButton2 = new Guna.UI2.WinForms.Guna2TileButton();
-            this.guna2TileButton1 = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btn_ApDung = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox7 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_TenMatHang = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -433,12 +433,12 @@
             this.guna2Panel5.BorderThickness = 2;
             this.guna2Panel5.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel5.Controls.Add(this.guna2TileButton2);
-            this.guna2Panel5.Controls.Add(this.guna2TileButton1);
+            this.guna2Panel5.Controls.Add(this.btn_ApDung);
             this.guna2Panel5.Controls.Add(this.guna2ComboBox2);
             this.guna2Panel5.Controls.Add(this.guna2HtmlLabel12);
             this.guna2Panel5.Controls.Add(this.guna2ComboBox1);
             this.guna2Panel5.Controls.Add(this.guna2HtmlLabel8);
-            this.guna2Panel5.Controls.Add(this.guna2TextBox7);
+            this.guna2Panel5.Controls.Add(this.txt_TenMatHang);
             this.guna2Panel5.Controls.Add(this.guna2HtmlLabel9);
             this.guna2Panel5.Controls.Add(this.guna2Panel6);
             this.guna2Panel5.Location = new System.Drawing.Point(437, 3);
@@ -479,26 +479,27 @@
             this.guna2TileButton2.Text = "Làm mới";
             this.guna2TileButton2.TextOffset = new System.Drawing.Point(12, -12);
             // 
-            // guna2TileButton1
+            // btn_ApDung
             // 
-            this.guna2TileButton1.BackColor = System.Drawing.Color.White;
-            this.guna2TileButton1.CheckedState.Parent = this.guna2TileButton1;
-            this.guna2TileButton1.CustomImages.Parent = this.guna2TileButton1;
-            this.guna2TileButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.guna2TileButton1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TileButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2TileButton1.HoverState.Parent = this.guna2TileButton1;
-            this.guna2TileButton1.Image = global::DOAN.Properties.Resources._checked;
-            this.guna2TileButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2TileButton1.ImageOffset = new System.Drawing.Point(0, 13);
-            this.guna2TileButton1.Location = new System.Drawing.Point(14, 116);
-            this.guna2TileButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2TileButton1.Name = "guna2TileButton1";
-            this.guna2TileButton1.ShadowDecoration.Parent = this.guna2TileButton1;
-            this.guna2TileButton1.Size = new System.Drawing.Size(102, 34);
-            this.guna2TileButton1.TabIndex = 8;
-            this.guna2TileButton1.Text = "Áp dụng";
-            this.guna2TileButton1.TextOffset = new System.Drawing.Point(12, -12);
+            this.btn_ApDung.BackColor = System.Drawing.Color.White;
+            this.btn_ApDung.CheckedState.Parent = this.btn_ApDung;
+            this.btn_ApDung.CustomImages.Parent = this.btn_ApDung;
+            this.btn_ApDung.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btn_ApDung.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ApDung.ForeColor = System.Drawing.Color.White;
+            this.btn_ApDung.HoverState.Parent = this.btn_ApDung;
+            this.btn_ApDung.Image = global::DOAN.Properties.Resources._checked;
+            this.btn_ApDung.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_ApDung.ImageOffset = new System.Drawing.Point(0, 13);
+            this.btn_ApDung.Location = new System.Drawing.Point(14, 116);
+            this.btn_ApDung.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ApDung.Name = "btn_ApDung";
+            this.btn_ApDung.ShadowDecoration.Parent = this.btn_ApDung;
+            this.btn_ApDung.Size = new System.Drawing.Size(102, 34);
+            this.btn_ApDung.TabIndex = 8;
+            this.btn_ApDung.Text = "Áp dụng";
+            this.btn_ApDung.TextOffset = new System.Drawing.Point(12, -12);
+            this.btn_ApDung.Click += new System.EventHandler(this.btn_ApDung_Click);
             // 
             // guna2ComboBox2
             // 
@@ -576,31 +577,31 @@
             this.guna2HtmlLabel8.TabIndex = 3;
             this.guna2HtmlLabel8.Text = "Loại mặt hàng";
             // 
-            // guna2TextBox7
+            // txt_TenMatHang
             // 
-            this.guna2TextBox7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.guna2TextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox7.DefaultText = "";
-            this.guna2TextBox7.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox7.DisabledState.Parent = this.guna2TextBox7;
-            this.guna2TextBox7.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox7.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox7.FocusedState.Parent = this.guna2TextBox7;
-            this.guna2TextBox7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox7.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox7.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox7.HoverState.Parent = this.guna2TextBox7;
-            this.guna2TextBox7.Location = new System.Drawing.Point(14, 75);
-            this.guna2TextBox7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.guna2TextBox7.Name = "guna2TextBox7";
-            this.guna2TextBox7.PasswordChar = '\0';
-            this.guna2TextBox7.PlaceholderText = "";
-            this.guna2TextBox7.SelectedText = "";
-            this.guna2TextBox7.ShadowDecoration.Parent = this.guna2TextBox7;
-            this.guna2TextBox7.Size = new System.Drawing.Size(211, 36);
-            this.guna2TextBox7.TabIndex = 2;
+            this.txt_TenMatHang.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.txt_TenMatHang.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_TenMatHang.DefaultText = "";
+            this.txt_TenMatHang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_TenMatHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_TenMatHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_TenMatHang.DisabledState.Parent = this.txt_TenMatHang;
+            this.txt_TenMatHang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_TenMatHang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_TenMatHang.FocusedState.Parent = this.txt_TenMatHang;
+            this.txt_TenMatHang.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TenMatHang.ForeColor = System.Drawing.Color.Black;
+            this.txt_TenMatHang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_TenMatHang.HoverState.Parent = this.txt_TenMatHang;
+            this.txt_TenMatHang.Location = new System.Drawing.Point(14, 75);
+            this.txt_TenMatHang.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt_TenMatHang.Name = "txt_TenMatHang";
+            this.txt_TenMatHang.PasswordChar = '\0';
+            this.txt_TenMatHang.PlaceholderText = "";
+            this.txt_TenMatHang.SelectedText = "";
+            this.txt_TenMatHang.ShadowDecoration.Parent = this.txt_TenMatHang;
+            this.txt_TenMatHang.Size = new System.Drawing.Size(211, 36);
+            this.txt_TenMatHang.TabIndex = 2;
             // 
             // guna2HtmlLabel9
             // 
@@ -732,7 +733,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox7;
+        private Guna.UI2.WinForms.Guna2TextBox txt_TenMatHang;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
@@ -742,7 +743,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
-        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton1;
+        private Guna.UI2.WinForms.Guna2TileButton btn_ApDung;
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.FlowLayoutPanel Panel_Product;

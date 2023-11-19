@@ -212,6 +212,12 @@ namespace DOAN.DS
         {
             return db.getButtons("select p_price, p_image, p_id from PRODUCT Where p_status = 1", panelProduct, panelProductPay);
         }
+
+        public string findProductList(FlowLayoutPanel panelProduct, FlowLayoutPanel panelProductPay, string name)
+        {
+            String sql = "select p_price, p_image, p_id from PRODUCT Where p_status = 1 And p_name LIKE '%'" + name + "'%'";
+            return db.getButtons(sql, panelProduct, panelProductPay);
+        }
         public DataSet getProductBestSeller(int date)
         {
             db.openConnection();
