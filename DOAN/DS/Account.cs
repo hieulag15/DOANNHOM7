@@ -12,7 +12,7 @@ namespace DOAN.DS
     public class Account
     {
         DBConnection db = null;
-        SqlCommand cmd = null;
+        SqlCommand comm;
 
         public string username { get; set; }
         public string password { get; set; }
@@ -41,10 +41,10 @@ namespace DOAN.DS
         public bool testLogin(string username, string password)
         {
             db.openConnection();
-            cmd = new SqlCommand("SELECT dbo.uf_CheckLogin(@a_username, @a_password)", db.getSqlConn);
-            cmd.Parameters.AddWithValue("@a_username", username);
-            cmd.Parameters.AddWithValue("@a_password", password);
-            int result = (int)cmd.ExecuteScalar();
+            comm = new SqlCommand("SELECT dbo.uf_CheckLogin(@a_username, @a_password)", db.getSqlConn);
+            comm.Parameters.AddWithValue("@a_username", username);
+            comm.Parameters.AddWithValue("@a_password", password);
+            int result = (int)comm.ExecuteScalar();
             if (result > 0)
             {
                 return true;
@@ -52,10 +52,31 @@ namespace DOAN.DS
 
             return false;
         }
-
+        
         public DataSet GetAccount(string username, string password)
         {
             return db.ExecuteQueryDataSet("Select * from dbo.uf_PermissionRole('" + username + "', '" + password + "')");
+        }
+
+        public bool addAccount(String username, String password, String eid, int role)
+        {
+            comm = new SqlCommand("EXEC pro_AddAccount @ausername, @apassword, @eid, @arole", db.getSqlConn);
+            comm.Parameters.AddWithValue("@ausername", username);
+            comm.Parameters.AddWithValue("@apassword", password);
+            comm.Parameters.AddWithValue("@eid", eid);
+            comm.Parameters.AddWithValue("@arole", role);
+
+            db.openConnection();
+            if (comm.ExecuteNonQuery() > 0)
+            {
+                db.closeConnection();
+                return true;
+            }
+            else
+            {
+                db.closeConnection();
+                return false;
+            }
         }
     }
 }

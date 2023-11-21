@@ -31,6 +31,8 @@ namespace DOAN
 
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
+            Global.Username = txt_Username.Text;
+            Global.Password = txt_Password.Text;
             bool check = dbAccount.testLogin(txt_Username.Text, txt_Password.Text);
             if (check)
             {

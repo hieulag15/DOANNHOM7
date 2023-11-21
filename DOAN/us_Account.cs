@@ -21,6 +21,7 @@ namespace DOAN
         DataTable dtAccount = new DataTable();
         DataTable dtAccountActive = new DataTable();
         Account account = new Account();
+        int role = 0;
 
         void LoadAccount()
         {
@@ -53,6 +54,28 @@ namespace DOAN
         private void us_Account_Load(object sender, EventArgs e)
         {
             LoadAccount();
+        }
+
+        private void btn_Them_Click(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                account.addAccount(txt_TaiKhoan.Text.Trim(), txt_MatKhau.Text.Trim(), txt_MaNhanVien.Text.Trim(), role);
+                LoadAccount();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void rbtn_Quanly_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rbtn_Quanly.Checked)
+            {
+                role = 1;
+            }
         }
     }
 }

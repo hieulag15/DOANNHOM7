@@ -9,12 +9,14 @@ using System.Windows.Forms;
 using DOAN.BTN_CONTROLS;
 using System.Drawing;
 using System.IO;
+using Microsoft.VisualBasic;
 
 namespace DOAN.DATA
 {
     internal class DBConnection
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=HIEULAG\THANHHIEU;Initial Catalog=CuaHangDBMS;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=HIEULAG\THANHHIEU;Initial Catalog=CuaHangDBMS;Integrated Security=True;User Id=" + Global.Username + ";Password=" +
+Global.Password + ";");
         SqlCommand comm = null; //Đối tượng truy vấn và cập nhật vào SQL Serverwd
         SqlDataAdapter da = null; //Đối tượng đưa dữ liệu vào DataTable
 
