@@ -78,5 +78,24 @@ namespace DOAN.DS
                 return false;
             }
         }
+
+        public bool updateAccount(String username, String password)
+        {
+            comm = new SqlCommand("EXEC proc_updateAccount @a_username, @a_password", db.getSqlConn);
+            comm.Parameters.AddWithValue("@a_username", username);
+            comm.Parameters.AddWithValue ("@a_password", password);
+
+            db.openConnection();
+            if (comm.ExecuteNonQuery() > 0)
+            {
+                db.closeConnection();
+                return true;
+            }
+            else
+            {
+                db.closeConnection();
+                return false;
+            }
+        }
     }
 }

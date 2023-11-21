@@ -77,5 +77,24 @@ namespace DOAN
                 role = 1;
             }
         }
+
+        private void dgv_DanhSachHD_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int numrow;
+            numrow = e.RowIndex;
+            if (numrow >= 0)
+            {
+                txt_TaiKhoan.Text = dgv_DanhSachHD.Rows[numrow].Cells[0].Value.ToString();
+                txt_MatKhau.Text = dgv_DanhSachHD.Rows[numrow].Cells[1].Value.ToString();
+                txt_MaNhanVien.Text = dgv_DanhSachHD.Rows[numrow].Cells[2].Value.ToString();
+                rb_HD.Checked = true;
+            }
+        }
+
+        private void btn_Sua_Click(object sender, EventArgs e)
+        {
+            account.updateAccount(txt_TaiKhoan.Text.Trim(), txt_MatKhau.Text.Trim());
+            LoadAccount();
+        }
     }
 }
