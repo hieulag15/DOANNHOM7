@@ -128,7 +128,7 @@ namespace DOAN
             //Trường hợp khi người dùng chưa chọn nhan vien cần sửa thông tin
             if (txt_MaNhanVien.Text == "" || txt_MaNhanVien.Text == null)
             {
-                MessageBox.Show("Vui lòng chọn nhân viên cần chỉnh sửa thông tin", "Lỗi",
+                MessageBox.Show("Vui lòng chọn tài khoản cần chỉnh sửa thông tin", "Lỗi",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
                 return;
