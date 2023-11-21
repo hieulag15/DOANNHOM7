@@ -60,10 +60,6 @@
             this.txt_TimTheoTen = new Guna.UI2.WinForms.Guna2TextBox();
             this.pb_TimTheoID = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txt_TimTheoMaNV = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_Username = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txt_Password = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -90,7 +86,7 @@
             this.txt_DiaChi.ForeColor = System.Drawing.Color.Black;
             this.txt_DiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_DiaChi.HoverState.Parent = this.txt_DiaChi;
-            this.txt_DiaChi.Location = new System.Drawing.Point(191, 294);
+            this.txt_DiaChi.Location = new System.Drawing.Point(193, 401);
             this.txt_DiaChi.Margin = new System.Windows.Forms.Padding(7);
             this.txt_DiaChi.Name = "txt_DiaChi";
             this.txt_DiaChi.PasswordChar = '\0';
@@ -105,7 +101,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(22, 310);
+            this.label6.Location = new System.Drawing.Point(24, 417);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 27);
             this.label6.TabIndex = 57;
@@ -127,7 +123,7 @@
             this.txt_SoDienThoai.ForeColor = System.Drawing.Color.Black;
             this.txt_SoDienThoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_SoDienThoai.HoverState.Parent = this.txt_SoDienThoai;
-            this.txt_SoDienThoai.Location = new System.Drawing.Point(192, 239);
+            this.txt_SoDienThoai.Location = new System.Drawing.Point(193, 311);
             this.txt_SoDienThoai.Margin = new System.Windows.Forms.Padding(7);
             this.txt_SoDienThoai.Name = "txt_SoDienThoai";
             this.txt_SoDienThoai.PasswordChar = '\0';
@@ -142,7 +138,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(23, 256);
+            this.label4.Location = new System.Drawing.Point(24, 328);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 27);
             this.label4.TabIndex = 55;
@@ -158,7 +154,7 @@
             this.rb_Nu.CheckedState.InnerOffset = -4;
             this.rb_Nu.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rb_Nu.ForeColor = System.Drawing.Color.Black;
-            this.rb_Nu.Location = new System.Drawing.Point(332, 197);
+            this.rb_Nu.Location = new System.Drawing.Point(332, 250);
             this.rb_Nu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rb_Nu.Name = "rb_Nu";
             this.rb_Nu.Size = new System.Drawing.Size(57, 28);
@@ -181,7 +177,7 @@
             this.rb_Nam.CheckedState.InnerOffset = -4;
             this.rb_Nam.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rb_Nam.ForeColor = System.Drawing.Color.Black;
-            this.rb_Nam.Location = new System.Drawing.Point(192, 196);
+            this.rb_Nam.Location = new System.Drawing.Point(192, 249);
             this.rb_Nam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rb_Nam.Name = "rb_Nam";
             this.rb_Nam.Size = new System.Drawing.Size(72, 28);
@@ -199,7 +195,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(23, 199);
+            this.label5.Location = new System.Drawing.Point(23, 252);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 27);
             this.label5.TabIndex = 52;
@@ -221,7 +217,7 @@
             this.txt_TenNhanVien.ForeColor = System.Drawing.Color.Black;
             this.txt_TenNhanVien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_TenNhanVien.HoverState.Parent = this.txt_TenNhanVien;
-            this.txt_TenNhanVien.Location = new System.Drawing.Point(192, 131);
+            this.txt_TenNhanVien.Location = new System.Drawing.Point(192, 168);
             this.txt_TenNhanVien.Margin = new System.Windows.Forms.Padding(7);
             this.txt_TenNhanVien.Name = "txt_TenNhanVien";
             this.txt_TenNhanVien.PasswordChar = '\0';
@@ -247,7 +243,7 @@
             this.txt_MaNhanVien.ForeColor = System.Drawing.Color.Black;
             this.txt_MaNhanVien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_MaNhanVien.HoverState.Parent = this.txt_MaNhanVien;
-            this.txt_MaNhanVien.Location = new System.Drawing.Point(192, 73);
+            this.txt_MaNhanVien.Location = new System.Drawing.Point(192, 84);
             this.txt_MaNhanVien.Margin = new System.Windows.Forms.Padding(7);
             this.txt_MaNhanVien.Name = "txt_MaNhanVien";
             this.txt_MaNhanVien.PasswordChar = '\0';
@@ -262,7 +258,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(19, 149);
+            this.label3.Location = new System.Drawing.Point(19, 186);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(139, 27);
             this.label3.TabIndex = 41;
@@ -273,7 +269,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(19, 90);
+            this.label2.Location = new System.Drawing.Point(19, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(134, 27);
             this.label2.TabIndex = 40;
@@ -295,10 +291,6 @@
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.guna2Panel1.BorderThickness = 2;
-            this.guna2Panel1.Controls.Add(this.txt_Password);
-            this.guna2Panel1.Controls.Add(this.label9);
-            this.guna2Panel1.Controls.Add(this.txt_Username);
-            this.guna2Panel1.Controls.Add(this.label8);
             this.guna2Panel1.Controls.Add(this.btn_Luu);
             this.guna2Panel1.Controls.Add(this.btn_Them);
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
@@ -644,80 +636,6 @@
             this.txt_TimTheoMaNV.Enter += new System.EventHandler(this.txt_TimTheoMaNV_Enter);
             this.txt_TimTheoMaNV.Leave += new System.EventHandler(this.txt_TimTheoMaNV_Leave);
             // 
-            // txt_Username
-            // 
-            this.txt_Username.BorderColor = System.Drawing.Color.Black;
-            this.txt_Username.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Username.DefaultText = "";
-            this.txt_Username.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_Username.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_Username.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Username.DisabledState.Parent = this.txt_Username;
-            this.txt_Username.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Username.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Username.FocusedState.Parent = this.txt_Username;
-            this.txt_Username.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_Username.ForeColor = System.Drawing.Color.Black;
-            this.txt_Username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Username.HoverState.Parent = this.txt_Username;
-            this.txt_Username.Location = new System.Drawing.Point(192, 352);
-            this.txt_Username.Margin = new System.Windows.Forms.Padding(7);
-            this.txt_Username.Name = "txt_Username";
-            this.txt_Username.PasswordChar = '\0';
-            this.txt_Username.PlaceholderText = "";
-            this.txt_Username.SelectedText = "";
-            this.txt_Username.ShadowDecoration.Parent = this.txt_Username;
-            this.txt_Username.Size = new System.Drawing.Size(265, 44);
-            this.txt_Username.TabIndex = 84;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(23, 369);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(104, 27);
-            this.label8.TabIndex = 83;
-            this.label8.Text = "Username";
-            // 
-            // txt_Password
-            // 
-            this.txt_Password.BorderColor = System.Drawing.Color.Black;
-            this.txt_Password.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Password.DefaultText = "";
-            this.txt_Password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_Password.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_Password.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Password.DisabledState.Parent = this.txt_Password;
-            this.txt_Password.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Password.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Password.FocusedState.Parent = this.txt_Password;
-            this.txt_Password.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_Password.ForeColor = System.Drawing.Color.Black;
-            this.txt_Password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Password.HoverState.Parent = this.txt_Password;
-            this.txt_Password.Location = new System.Drawing.Point(191, 410);
-            this.txt_Password.Margin = new System.Windows.Forms.Padding(7);
-            this.txt_Password.Name = "txt_Password";
-            this.txt_Password.PasswordChar = '\0';
-            this.txt_Password.PlaceholderText = "";
-            this.txt_Password.SelectedText = "";
-            this.txt_Password.ShadowDecoration.Parent = this.txt_Password;
-            this.txt_Password.Size = new System.Drawing.Size(265, 44);
-            this.txt_Password.TabIndex = 86;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(22, 427);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(97, 27);
-            this.label9.TabIndex = 85;
-            this.label9.Text = "Password";
-            // 
             // us_employeeUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -776,9 +694,5 @@
         private Guna.UI2.WinForms.Guna2PictureBox pb_TimTheoID;
         private Guna.UI2.WinForms.Guna2TextBox txt_TimTheoMaNV;
         private Guna.UI2.WinForms.Guna2Button btn_Luu;
-        private Guna.UI2.WinForms.Guna2TextBox txt_Password;
-        private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2TextBox txt_Username;
-        private System.Windows.Forms.Label label8;
     }
 }
