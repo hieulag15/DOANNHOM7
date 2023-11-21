@@ -24,18 +24,16 @@ namespace DOAN.DS
         {
             return db.ExecuteQueryDataSet("select * from V_EMPLOYEE_INFO");
         }
-        public bool addEmployee(string id, string name, string address, string phone, string gender, string username, string password)
+        public bool addEmployee(string id, string name, string address, string phone, string gender)
         {
             db = new DBConnection();
-            string queryString = "EXEC proc_AddEmployee @id, @name, @address, @phone, @gender, @username, @password";
+            string queryString = "EXEC proc_AddEmployee @id, @name, @address, @phone, @gender";
             cmd = new SqlCommand(queryString, db.getSqlConn);
             cmd.Parameters.AddWithValue("@id", id);
             cmd.Parameters.AddWithValue("@name", name);
             cmd.Parameters.AddWithValue("@address", address);
             cmd.Parameters.AddWithValue("@phone", phone);
             cmd.Parameters.AddWithValue("@gender", gender);
-            cmd.Parameters.AddWithValue("@username", username);
-            cmd.Parameters.AddWithValue("@password", password);
             db.openConnection();
             if (cmd.ExecuteNonQuery() > 0)
             {
@@ -49,9 +47,9 @@ namespace DOAN.DS
                 return false;
             }
         }
-        public bool updateEmployee(string id, string name, string address, string phone, string gender, string username, string password)
+        public bool updateEmployee(string id, string name, string address, string phone, string gender)
         {
-            string queryString = "EXEC proc_UpdateEmployee @id, @name, @address, @phone, @gender, @username, @password";
+            string queryString = "EXEC proc_UpdateEmployee @id, @name, @address, @phone, @gender";
 
             cmd = new SqlCommand(queryString, db.getSqlConn);
             cmd.Parameters.AddWithValue("@id", id);
@@ -59,8 +57,6 @@ namespace DOAN.DS
             cmd.Parameters.AddWithValue("@address", address);
             cmd.Parameters.AddWithValue("@phone", phone);
             cmd.Parameters.AddWithValue("@gender", gender);
-            cmd.Parameters.AddWithValue("@username", username);
-            cmd.Parameters.AddWithValue("@password", password);
             db.openConnection();
             if (cmd.ExecuteNonQuery() > 0)
             {

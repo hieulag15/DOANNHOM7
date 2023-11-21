@@ -38,8 +38,6 @@ namespace DOAN
             txt_DiaChi.Enabled = false;
             rb_Nam.Enabled = false;
             rb_Nu.Enabled = false;
-            txt_Password.Enabled = false;
-            txt_Username.Enabled = false;
         }
         void fillingStatus()
         {
@@ -49,8 +47,6 @@ namespace DOAN
             txt_DiaChi.Enabled = true;
             rb_Nam.Enabled = true;
             rb_Nu.Enabled = true;
-            txt_Password.Enabled = true;
-            txt_Username.Enabled = true;
         }
         void initial_Status()
         {
@@ -68,8 +64,6 @@ namespace DOAN
                 dgv_Employee.Columns[2].HeaderText = "Địa chỉ";
                 dgv_Employee.Columns[3].HeaderText = "Số điện thoại";
                 dgv_Employee.Columns[4].HeaderText = "Giới tính";
-                dgv_Employee.Columns[5].HeaderText = "User";
-                dgv_Employee.Columns[6].HeaderText = "Password";
 
                 //Set chiều rộng cột
                 int width = dgv_Employee.Width;
@@ -79,8 +73,6 @@ namespace DOAN
                 dgv_Employee.Columns[2].Width -= width / n_column;
                 dgv_Employee.Columns[3].Width -= width / n_column;
                 dgv_Employee.Columns[4].Width -= width / n_column;
-                dgv_Employee.Columns[5].Width -= width / n_column;
-                dgv_Employee.Columns[6].Width -= width / n_column;
                 dgv_Employee.AutoResizeColumns();
             }
         }
@@ -103,8 +95,6 @@ namespace DOAN
                 txt_SoDienThoai.Text = dgv_Employee.Rows[numrow].Cells[3].Value.ToString();
                 rb_Nam.Checked = dgv_Employee.Rows[numrow].Cells[4].Value.ToString() == "Nam" ? true : false;
                 rb_Nu.Checked = !rb_Nam.Checked;
-                txt_Username.Text = dgv_Employee.Rows[numrow].Cells[5].Value.ToString();
-                txt_Password.Text = dgv_Employee.Rows[numrow].Cells[6].Value.ToString();
             }
         }
         private void Refresh()
@@ -115,8 +105,6 @@ namespace DOAN
             txt_DiaChi.Text = "";
             rb_Nam.Checked = false;
             rb_Nu.Checked = false;
-            txt_Password.Text = "";
-            txt_Username.Text = "";
         }
 
         private void btn_LamMoi_Click(object sender, EventArgs e)
@@ -216,7 +204,7 @@ namespace DOAN
                 try
                 {
                     dbEmployee.addEmployee(txt_MaNhanVien.Text.Trim(), txt_TenNhanVien.Text.Trim(),
-                        txt_DiaChi.Text.Trim(), txt_SoDienThoai.Text.Trim(), gender, txt_Username.Text.Trim(), txt_Password.Text.Trim());
+                        txt_DiaChi.Text.Trim(), txt_SoDienThoai.Text.Trim(), gender);
                     LoadEmployee();
                     Refresh();
                 }
@@ -237,7 +225,7 @@ namespace DOAN
                     else
                         gender = "Nữ";
                     dbEmployee.updateEmployee(txt_MaNhanVien.Text.Trim(), txt_TenNhanVien.Text.Trim(), 
-                        txt_DiaChi.Text.Trim(), txt_SoDienThoai.Text.Trim(), gender, txt_Username.Text.Trim(), txt_Password.Text.Trim());
+                        txt_DiaChi.Text.Trim(), txt_SoDienThoai.Text.Trim(), gender);
                     LoadEmployee();
                     Refresh();
                 }
