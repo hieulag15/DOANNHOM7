@@ -21,14 +21,6 @@ namespace DOAN
             panelShop.BackColor = Color.FromArgb(100, Color.White);
         }
 
-        private void txt_Password_Leave(object sender, EventArgs e)
-        {
-            if (txt_Password.Text == "")
-            {
-                txt_Password.Text = "Password";
-            }
-        }
-
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
             Global.Username = txt_Username.Text;
@@ -55,6 +47,14 @@ namespace DOAN
                 txt_Username.Text = "";
             }
 
+        }
+
+        private void txt_Password_Leave(object sender, EventArgs e)
+        {
+            if (txt_Password.Text == "")
+            {
+                txt_Password.Text = "Password";
+            }
         }
 
         private void txt_Username_Leave(object sender, EventArgs e)

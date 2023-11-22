@@ -99,7 +99,6 @@ namespace DOAN
             btn_HienThiKhachHang.FillColor = Color.FromArgb(75, 115, 165);
             btn_thongke.FillColor = Color.FromArgb(75, 115, 165);
             btn_QuanlyNhanvien.FillColor = Color.FromArgb(75, 115, 165);
-            btn_CaiDat.FillColor = Color.FromArgb(75, 115, 165);
         }
 
         private void btn_NhaCungCap_Click(object sender, EventArgs e)
