@@ -53,6 +53,9 @@ namespace DOAN
             not_fillingStatus();
             btn_Them.Enabled = true;
             btn_Sua.Enabled = true;
+            btn_Luu.Enabled = true;
+            btn_Huy.Enabled = true;
+            btn_Xoa.Enabled = true;
         }
         private void setDataGridView()
         {

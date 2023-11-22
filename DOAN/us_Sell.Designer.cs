@@ -46,8 +46,6 @@
             this.txt_ThanhTien = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_TotalMoney = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.txt_Point = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lbl_Point = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btn_ThanhToan = new Guna.UI2.WinForms.Guna2TileButton();
             this.Panel_ProductPay = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
@@ -67,6 +65,7 @@
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.txt_Point = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -223,7 +222,7 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.LimeGreen;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(7, 245);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(6, 248);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(142, 25);
             this.guna2HtmlLabel5.TabIndex = 7;
@@ -234,7 +233,7 @@
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(3, 284);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(34, 299);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(113, 25);
             this.guna2HtmlLabel6.TabIndex = 8;
@@ -256,7 +255,7 @@
             this.txt_KhuyenMai.ForeColor = System.Drawing.Color.Black;
             this.txt_KhuyenMai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_KhuyenMai.HoverState.Parent = this.txt_KhuyenMai;
-            this.txt_KhuyenMai.Location = new System.Drawing.Point(136, 284);
+            this.txt_KhuyenMai.Location = new System.Drawing.Point(157, 283);
             this.txt_KhuyenMai.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.txt_KhuyenMai.Name = "txt_KhuyenMai";
             this.txt_KhuyenMai.PasswordChar = '\0';
@@ -264,7 +263,7 @@
             this.txt_KhuyenMai.SelectedText = "";
             this.txt_KhuyenMai.SelectionStart = 1;
             this.txt_KhuyenMai.ShadowDecoration.Parent = this.txt_KhuyenMai;
-            this.txt_KhuyenMai.Size = new System.Drawing.Size(127, 41);
+            this.txt_KhuyenMai.Size = new System.Drawing.Size(136, 41);
             this.txt_KhuyenMai.TabIndex = 9;
             this.txt_KhuyenMai.TextChanged += new System.EventHandler(this.txt_KhuyenMai_TextChanged);
             // 
@@ -273,7 +272,7 @@
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.Firebrick;
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(7, 339);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(35, 350);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(112, 25);
             this.guna2HtmlLabel7.TabIndex = 10;
@@ -295,7 +294,7 @@
             this.txt_ThanhTien.ForeColor = System.Drawing.Color.Firebrick;
             this.txt_ThanhTien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_ThanhTien.HoverState.Parent = this.txt_ThanhTien;
-            this.txt_ThanhTien.Location = new System.Drawing.Point(136, 331);
+            this.txt_ThanhTien.Location = new System.Drawing.Point(157, 334);
             this.txt_ThanhTien.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.txt_ThanhTien.Name = "txt_ThanhTien";
             this.txt_ThanhTien.PasswordChar = '\0';
@@ -303,7 +302,7 @@
             this.txt_ThanhTien.SelectedText = "";
             this.txt_ThanhTien.SelectionStart = 1;
             this.txt_ThanhTien.ShadowDecoration.Parent = this.txt_ThanhTien;
-            this.txt_ThanhTien.Size = new System.Drawing.Size(164, 41);
+            this.txt_ThanhTien.Size = new System.Drawing.Size(136, 41);
             this.txt_ThanhTien.TabIndex = 11;
             // 
             // txt_TotalMoney
@@ -322,7 +321,7 @@
             this.txt_TotalMoney.ForeColor = System.Drawing.Color.LimeGreen;
             this.txt_TotalMoney.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_TotalMoney.HoverState.Parent = this.txt_TotalMoney;
-            this.txt_TotalMoney.Location = new System.Drawing.Point(154, 236);
+            this.txt_TotalMoney.Location = new System.Drawing.Point(157, 232);
             this.txt_TotalMoney.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.txt_TotalMoney.Name = "txt_TotalMoney";
             this.txt_TotalMoney.PasswordChar = '\0';
@@ -330,7 +329,7 @@
             this.txt_TotalMoney.SelectedText = "";
             this.txt_TotalMoney.SelectionStart = 1;
             this.txt_TotalMoney.ShadowDecoration.Parent = this.txt_TotalMoney;
-            this.txt_TotalMoney.Size = new System.Drawing.Size(157, 41);
+            this.txt_TotalMoney.Size = new System.Drawing.Size(136, 41);
             this.txt_TotalMoney.TabIndex = 12;
             this.txt_TotalMoney.TextChanged += new System.EventHandler(this.txt_TotalMoney_TextChanged);
             // 
@@ -339,9 +338,8 @@
             this.guna2Panel4.BackColor = System.Drawing.Color.White;
             this.guna2Panel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.guna2Panel4.BorderThickness = 2;
-            this.guna2Panel4.Controls.Add(this.txt_Point);
-            this.guna2Panel4.Controls.Add(this.lbl_Point);
             this.guna2Panel4.Controls.Add(this.btn_ThanhToan);
+            this.guna2Panel4.Controls.Add(this.txt_Point);
             this.guna2Panel4.Controls.Add(this.Panel_ProductPay);
             this.guna2Panel4.Controls.Add(this.guna2Panel3);
             this.guna2Panel4.Controls.Add(this.txt_ThanhTien);
@@ -356,45 +354,6 @@
             this.guna2Panel4.Size = new System.Drawing.Size(431, 382);
             this.guna2Panel4.TabIndex = 13;
             // 
-            // txt_Point
-            // 
-            this.txt_Point.BorderColor = System.Drawing.Color.Black;
-            this.txt_Point.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Point.DefaultText = "0";
-            this.txt_Point.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_Point.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_Point.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Point.DisabledState.Parent = this.txt_Point;
-            this.txt_Point.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Point.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Point.FocusedState.Parent = this.txt_Point;
-            this.txt_Point.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Point.ForeColor = System.Drawing.Color.Black;
-            this.txt_Point.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Point.HoverState.Parent = this.txt_Point;
-            this.txt_Point.Location = new System.Drawing.Point(306, 284);
-            this.txt_Point.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.txt_Point.Name = "txt_Point";
-            this.txt_Point.PasswordChar = '\0';
-            this.txt_Point.PlaceholderText = "";
-            this.txt_Point.SelectedText = "";
-            this.txt_Point.SelectionStart = 1;
-            this.txt_Point.ShadowDecoration.Parent = this.txt_Point;
-            this.txt_Point.Size = new System.Drawing.Size(119, 41);
-            this.txt_Point.TabIndex = 16;
-            this.txt_Point.TextChanged += new System.EventHandler(this.txt_Point_TextChanged);
-            // 
-            // lbl_Point
-            // 
-            this.lbl_Point.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Point.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Point.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Point.Location = new System.Drawing.Point(348, 245);
-            this.lbl_Point.Name = "lbl_Point";
-            this.lbl_Point.Size = new System.Drawing.Size(57, 25);
-            this.lbl_Point.TabIndex = 15;
-            this.lbl_Point.Text = "POINT";
-            // 
             // btn_ThanhToan
             // 
             this.btn_ThanhToan.BackColor = System.Drawing.Color.White;
@@ -404,17 +363,15 @@
             this.btn_ThanhToan.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ThanhToan.ForeColor = System.Drawing.Color.White;
             this.btn_ThanhToan.HoverState.Parent = this.btn_ThanhToan;
-            this.btn_ThanhToan.Image = global::DOAN.Properties.Resources._checked;
             this.btn_ThanhToan.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_ThanhToan.ImageOffset = new System.Drawing.Point(0, 13);
-            this.btn_ThanhToan.Location = new System.Drawing.Point(308, 334);
+            this.btn_ThanhToan.Location = new System.Drawing.Point(305, 333);
             this.btn_ThanhToan.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ThanhToan.Name = "btn_ThanhToan";
             this.btn_ThanhToan.ShadowDecoration.Parent = this.btn_ThanhToan;
-            this.btn_ThanhToan.Size = new System.Drawing.Size(114, 34);
+            this.btn_ThanhToan.Size = new System.Drawing.Size(109, 41);
             this.btn_ThanhToan.TabIndex = 14;
             this.btn_ThanhToan.Text = "Thanh toán";
-            this.btn_ThanhToan.TextOffset = new System.Drawing.Point(12, -12);
             this.btn_ThanhToan.Click += new System.EventHandler(this.btn_ThanhToan_Click);
             // 
             // Panel_ProductPay
@@ -680,6 +637,33 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // txt_Point
+            // 
+            this.txt_Point.BorderColor = System.Drawing.Color.Black;
+            this.txt_Point.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Point.DefaultText = "0";
+            this.txt_Point.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Point.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Point.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Point.DisabledState.Parent = this.txt_Point;
+            this.txt_Point.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Point.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Point.FocusedState.Parent = this.txt_Point;
+            this.txt_Point.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Point.ForeColor = System.Drawing.Color.Black;
+            this.txt_Point.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Point.HoverState.Parent = this.txt_Point;
+            this.txt_Point.Location = new System.Drawing.Point(305, 283);
+            this.txt_Point.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.txt_Point.Name = "txt_Point";
+            this.txt_Point.PasswordChar = '\0';
+            this.txt_Point.PlaceholderText = "";
+            this.txt_Point.SelectedText = "";
+            this.txt_Point.SelectionStart = 1;
+            this.txt_Point.ShadowDecoration.Parent = this.txt_Point;
+            this.txt_Point.Size = new System.Drawing.Size(109, 41);
+            this.txt_Point.TabIndex = 15;
+            // 
             // us_Sell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -751,6 +735,5 @@
         private System.Windows.Forms.Timer timer1;
         private Guna.UI2.WinForms.Guna2TileButton btn_ThanhToan;
         private Guna.UI2.WinForms.Guna2TextBox txt_Point;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_Point;
     }
 }

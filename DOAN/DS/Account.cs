@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace DOAN.DS
 {
@@ -96,6 +97,52 @@ namespace DOAN.DS
                 db.closeConnection();
                 return false;
             }
+        }
+        public DataSet findAccountByID(string id)
+        {
+            db.openConnection();
+
+            DataSet ds = new DataSet();
+            try
+            {
+                comm = new SqlCommand("SELECT * FROM dbo.SearchAccountByID(@id)", db.getSqlConn);
+                comm.Parameters.AddWithValue("@id", id);
+
+                SqlDataAdapter da = new SqlDataAdapter();
+                da.SelectCommand = comm;
+                da.Fill(ds);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                db.closeConnection();
+            }
+
+            db.closeConnection();
+            return ds;
+        }
+        public DataSet findAccountByUserName(string name)
+        {
+            db.openConnection();
+
+            DataSet ds = new DataSet();
+            try
+            {
+                comm = new SqlCommand("SELECT * FROM dbo.SearchAccountByUserName(@name)", db.getSqlConn);
+                comm.Parameters.AddWithValue("@name", name);
+
+                SqlDataAdapter da = new SqlDataAdapter();
+                da.SelectCommand = comm;
+                da.Fill(ds);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                db.closeConnection();
+            }
+
+            db.closeConnection();
+            return ds;
         }
     }
 }

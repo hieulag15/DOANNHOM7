@@ -131,14 +131,16 @@ namespace DOAN
                 {
                     txt_KhuyenMai.Text = "0";
                 }
-                bill.addBill(b_id.Trim(), Convert.ToDateTime(DateTime.Now), (decimal)Convert.ToDouble(txt_TotalMoney.Text.Trim()), (decimal)Convert.ToDouble(txt_KhuyenMai.Text.Trim()), txt_SoDienThoai.Text.Trim(), eid.Trim());
+                bill.addBill(b_id.Trim(), Convert.ToDateTime(DateTime.Now), (decimal)Convert.ToDouble(txt_TotalMoney.Text.Trim()), 
+                    (decimal)Convert.ToDouble(txt_KhuyenMai.Text.Trim()), txt_SoDienThoai.Text.Trim(), eid.Trim());
                 foreach (UserControl userControl in Panel_ProductPay.Controls)
                 {
                     // Kiểm tra nếu UserControl là kiểu của UserControl bạn đã tạo
                     if (userControl is us_Product_Pay)
                     {
                         us_Product_Pay yourUserControl = (us_Product_Pay)userControl;
-                        detail_Bill.addDetailBill(b_id.Trim(), yourUserControl.ItemID.ToString().Trim(), (int)Convert.ToInt64(yourUserControl.ItemQuantity.ToString().Trim()));
+                        detail_Bill.addDetailBill(b_id.Trim(), yourUserControl.ItemID.ToString().Trim(), 
+                            (int)Convert.ToInt64(yourUserControl.ItemQuantity.ToString().Trim()));
                     }
 
                 }
