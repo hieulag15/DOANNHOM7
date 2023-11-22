@@ -24,11 +24,18 @@ namespace DOAN
 
         public void LoadEmployee()
         {
-            dtEmployee.Clear();
-            DataSet ds = dbEmployee.getEmployee(); // Lấy dữ liệu Employee đưa vào Dataset
-            dtEmployee = ds.Tables[0];
-            dgv_Employee.DataSource = dtEmployee;
-            setDataGridView();
+            try
+            {
+                dtEmployee.Clear();
+                DataSet ds = dbEmployee.getEmployee(); // Lấy dữ liệu Employee đưa vào Dataset
+                dtEmployee = ds.Tables[0];
+                dgv_Employee.DataSource = dtEmployee;
+                setDataGridView();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         void not_fillingStatus()
         {

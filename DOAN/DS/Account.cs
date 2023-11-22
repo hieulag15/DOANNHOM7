@@ -12,7 +12,7 @@ namespace DOAN.DS
 {
     public class Account
     {
-        DBConnection db = null;
+        DBConnection db;
         SqlCommand comm;
 
         public string username { get; set; }

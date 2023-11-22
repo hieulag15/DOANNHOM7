@@ -28,11 +28,18 @@ namespace DOAN
 
         void LoadAccount()
         {
-            dtAccount.Clear();
-            DataSet ds = account.getAccount();
-            dtAccount = ds.Tables[0];
-            dgv_DanhSachHD.DataSource = dtAccount;
-            setDataGridView();
+            try
+            {
+                dtAccount.Clear();
+                DataSet ds = account.getAccount();
+                dtAccount = ds.Tables[0];
+                dgv_DanhSachHD.DataSource = dtAccount;
+                setDataGridView();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         void not_fillingStatus()
         {
@@ -59,7 +66,6 @@ namespace DOAN
             btn_Sua.Enabled = true;
             btn_Luu.Enabled = true;
             btn_Huy.Enabled = true;
-            btn_Xoa.Enabled = true;
         }
         private void setDataGridView()
         {
@@ -147,6 +153,7 @@ namespace DOAN
             //Mở các ô cho phép điền thông tin\
             fillingStatus();
             txt_MaNhanVien.Enabled = false;
+            txt_TaiKhoan.Enabled = false;
         }
 
         private void btn_Luu_Click(object sender, EventArgs e)
@@ -239,7 +246,6 @@ namespace DOAN
                 btn_Luu.Enabled = false;
                 btn_Huy.Enabled = false;
                 btn_Sua.Enabled = false;
-                btn_Xoa.Enabled = false;
                 try
                 {
                     DataSet ds = dbAccount.findAccountByUserName(txt_TimTheoTenTK.Text.Trim());
@@ -271,7 +277,6 @@ namespace DOAN
                 btn_Luu.Enabled = false;
                 btn_Huy.Enabled = false;
                 btn_Sua.Enabled = false;
-                btn_Xoa.Enabled = false;
                 try
                 {
                     DataSet ds = dbAccount.findAccountByID(txt_TimTheoID.Text.Trim());

@@ -13,7 +13,7 @@ namespace DOAN
 {
     public partial class Frm_Login : Form
     {
-        Account dbAccount = new Account();
+        Account dbAccount;
         public Frm_Login()
         {
             InitializeComponent();
@@ -23,12 +23,13 @@ namespace DOAN
 
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
-            Global.Username = txt_Username.Text;
-            Global.Password = txt_Password.Text;
-            bool check = dbAccount.testLogin(txt_Username.Text, txt_Password.Text);
+            Global.Username = txt_Username.Text.Trim();
+            Global.Password = txt_Password.Text.Trim();
+            dbAccount = new Account();
+            bool check = dbAccount.testLogin(txt_Username.Text.Trim(), txt_Password.Text.Trim());
             if (check)
             {
-                DataSet ds = dbAccount.GetAccount(txt_Username.Text, txt_Password.Text);
+                DataSet ds = dbAccount.GetAccount(txt_Username.Text.Trim(), txt_Password.Text.Trim());
                 DataTable dt = ds.Tables[0];
                 dbAccount = new Account(dt.Rows[0][0].ToString(), dt.Rows[0][1].ToString(), dt.Rows[0][2].ToString(), dt.Rows[0][3].ToString());
                 frm_Main frm_home = new frm_Main();
