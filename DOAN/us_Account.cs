@@ -1,4 +1,5 @@
-﻿using DOAN.DS;
+﻿using DOAN.DATA;
+using DOAN.DS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,7 @@ namespace DOAN
         bool addFlag;
         DataTable dtAccount = new DataTable();
         DataTable dtAccountActive = new DataTable();
+        Account dbAccount = new Account();
         Account account = new Account();
         int role = 0;
 
@@ -55,6 +57,9 @@ namespace DOAN
             not_fillingStatus();
             btn_Them.Enabled = true;
             btn_Sua.Enabled = true;
+            btn_Luu.Enabled = true;
+            btn_Huy.Enabled = true;
+            btn_Xoa.Enabled = true;
         }
         private void setDataGridView()
         {
@@ -183,8 +188,8 @@ namespace DOAN
             Refresh();
             initial_Status();
             LoadAccount();
-            txt_TimTheoTenTK.Text = "Theo tên tài khoản";
-            txt_TimTheoTen.Text = "Theo mã nhân viên";
+            txt_TimTheoTenTK.Text = "Theo tên đăng nhập";
+            txt_TimTheoID.Text = "Theo mã nhân viên";
         }
 
         private void btn_Huy_Click(object sender, EventArgs e)
@@ -192,6 +197,102 @@ namespace DOAN
             Refresh();
             initial_Status();
             addFlag = false;
+        }
+
+        private void txt_TimTheoTenTK_Enter(object sender, EventArgs e)
+        {
+            if (txt_TimTheoTenTK.Text == "Theo tên đăng nhập")
+            {
+                txt_TimTheoTenTK.Text = "";
+            }
+        }
+
+        private void txt_TimTheoTenTK_Leave(object sender, EventArgs e)
+        {
+            if (txt_TimTheoTenTK.Text == "")
+            {
+                txt_TimTheoTenTK.Text = "Theo tên đăng nhập";
+            }
+        }
+
+        private void txt_TimTheoID_Leave(object sender, EventArgs e)
+        {
+            if (txt_TimTheoID.Text == "")
+            {
+                txt_TimTheoID.Text = "Theo mã nhân viên";
+            }
+        }
+
+        private void txt_TimTheoID_Enter(object sender, EventArgs e)
+        {
+            if (txt_TimTheoID.Text == "Theo mã nhân viên")
+            {
+                txt_TimTheoID.Text = "";
+            }
+        }
+
+        private void pb_TimTheoTenTK_Click(object sender, EventArgs e)
+        {
+            if (txt_TimTheoTenTK.Text != "" && txt_TimTheoTenTK.Text != null && txt_TimTheoTenTK.Text != "Theo mã nhân viên")
+            {
+                btn_Them.Enabled = false;
+                btn_Luu.Enabled = false;
+                btn_Huy.Enabled = false;
+                btn_Sua.Enabled = false;
+                btn_Xoa.Enabled = false;
+                try
+                {
+                    DataSet ds = dbAccount.findAccountByUserName(txt_TimTheoTenTK.Text.Trim());
+
+                    dtAccount = ds.Tables[0];
+                    if (dtAccount.Rows.Count == 0)
+                        MessageBox.Show("Không tìm thấy thông tin tài khoản");
+                    else
+                        MessageBox.Show("Tìm thông tin tài khoản thành công");
+                    dgv_DanhSachHD.DataSource = dtAccount;
+
+                    // Thực hiện các cài đặt DataGridView (nếu cần)
+                    setDataGridView();
+                    txt_TimTheoTenTK.Text = "Theo tên đăng nhập";
+                    txt_TimTheoID.Text = "Theo mã nhân viên";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void pb_TimTheoID_Click(object sender, EventArgs e)
+        {
+            if (txt_TimTheoTenTK.Text != "" && txt_TimTheoTenTK.Text != null && txt_TimTheoTenTK.Text != "Theo mã nhân viên")
+            {
+                btn_Them.Enabled = false;
+                btn_Luu.Enabled = false;
+                btn_Huy.Enabled = false;
+                btn_Sua.Enabled = false;
+                btn_Xoa.Enabled = false;
+                try
+                {
+                    DataSet ds = dbAccount.findAccountByID(txt_TimTheoID.Text.Trim());
+
+                    dtAccount = ds.Tables[0];
+                    if (dtAccount.Rows.Count == 0)
+                        MessageBox.Show("Không tìm thấy thông tin tài khoản");
+                    else
+                        MessageBox.Show("Tìm thông tin tài khoản thành công");
+                    dgv_DanhSachHD.DataSource = dtAccount;
+
+                    // Thực hiện các cài đặt DataGridView (nếu cần)
+                    setDataGridView();
+                    txt_TimTheoTenTK.Text = "Theo tên đăng nhập";
+                    txt_TimTheoID.Text = "Theo mã nhân viên";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }

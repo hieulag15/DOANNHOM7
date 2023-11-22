@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.txt_TimTheoTen = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pb_TimTheoSDT = new Guna.UI2.WinForms.Guna2PictureBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.txt_TimTheoID = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pb_TimTheoTenTK = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txt_TimTheoTenTK = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            this.pb_TimKiemTheoTen = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pb_TimTheoID = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbl_HD = new System.Windows.Forms.Label();
             this.panel_HD = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
@@ -60,9 +60,9 @@
             this.btn_LamMoi = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Xoa = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Huy = new Guna.UI2.WinForms.Guna2Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_TimTheoSDT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_TimTheoTenTK)).BeginInit();
             this.guna2Panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_TimKiemTheoTen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_TimTheoID)).BeginInit();
             this.panel_HD.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachHD)).BeginInit();
@@ -70,52 +70,55 @@
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txt_TimTheoTen
+            // txt_TimTheoID
             // 
-            this.txt_TimTheoTen.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.txt_TimTheoTen.BorderThickness = 2;
-            this.txt_TimTheoTen.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_TimTheoTen.DefaultText = "Theo mã nhân viên";
-            this.txt_TimTheoTen.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_TimTheoTen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_TimTheoTen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_TimTheoTen.DisabledState.Parent = this.txt_TimTheoTen;
-            this.txt_TimTheoTen.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_TimTheoTen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_TimTheoTen.FocusedState.Parent = this.txt_TimTheoTen;
-            this.txt_TimTheoTen.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TimTheoTen.ForeColor = System.Drawing.Color.Black;
-            this.txt_TimTheoTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_TimTheoTen.HoverState.Parent = this.txt_TimTheoTen;
-            this.txt_TimTheoTen.Location = new System.Drawing.Point(395, 17);
-            this.txt_TimTheoTen.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.txt_TimTheoTen.Name = "txt_TimTheoTen";
-            this.txt_TimTheoTen.PasswordChar = '\0';
-            this.txt_TimTheoTen.PlaceholderText = "";
-            this.txt_TimTheoTen.SelectedText = "";
-            this.txt_TimTheoTen.SelectionStart = 17;
-            this.txt_TimTheoTen.ShadowDecoration.Parent = this.txt_TimTheoTen;
-            this.txt_TimTheoTen.Size = new System.Drawing.Size(373, 62);
-            this.txt_TimTheoTen.TabIndex = 69;
+            this.txt_TimTheoID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.txt_TimTheoID.BorderThickness = 2;
+            this.txt_TimTheoID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_TimTheoID.DefaultText = "Theo mã nhân viên";
+            this.txt_TimTheoID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_TimTheoID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_TimTheoID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_TimTheoID.DisabledState.Parent = this.txt_TimTheoID;
+            this.txt_TimTheoID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_TimTheoID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_TimTheoID.FocusedState.Parent = this.txt_TimTheoID;
+            this.txt_TimTheoID.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TimTheoID.ForeColor = System.Drawing.Color.Black;
+            this.txt_TimTheoID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_TimTheoID.HoverState.Parent = this.txt_TimTheoID;
+            this.txt_TimTheoID.Location = new System.Drawing.Point(395, 17);
+            this.txt_TimTheoID.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txt_TimTheoID.Name = "txt_TimTheoID";
+            this.txt_TimTheoID.PasswordChar = '\0';
+            this.txt_TimTheoID.PlaceholderText = "";
+            this.txt_TimTheoID.SelectedText = "";
+            this.txt_TimTheoID.SelectionStart = 17;
+            this.txt_TimTheoID.ShadowDecoration.Parent = this.txt_TimTheoID;
+            this.txt_TimTheoID.Size = new System.Drawing.Size(373, 62);
+            this.txt_TimTheoID.TabIndex = 69;
+            this.txt_TimTheoID.Enter += new System.EventHandler(this.txt_TimTheoID_Enter);
+            this.txt_TimTheoID.Leave += new System.EventHandler(this.txt_TimTheoID_Leave);
             // 
-            // pb_TimTheoSDT
+            // pb_TimTheoTenTK
             // 
-            this.pb_TimTheoSDT.Image = global::DOAN.Properties.Resources.search__1_;
-            this.pb_TimTheoSDT.Location = new System.Drawing.Point(323, 21);
-            this.pb_TimTheoSDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pb_TimTheoSDT.Name = "pb_TimTheoSDT";
-            this.pb_TimTheoSDT.ShadowDecoration.Parent = this.pb_TimTheoSDT;
-            this.pb_TimTheoSDT.Size = new System.Drawing.Size(53, 50);
-            this.pb_TimTheoSDT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_TimTheoSDT.TabIndex = 68;
-            this.pb_TimTheoSDT.TabStop = false;
+            this.pb_TimTheoTenTK.Image = global::DOAN.Properties.Resources.search__1_;
+            this.pb_TimTheoTenTK.Location = new System.Drawing.Point(323, 21);
+            this.pb_TimTheoTenTK.Margin = new System.Windows.Forms.Padding(4);
+            this.pb_TimTheoTenTK.Name = "pb_TimTheoTenTK";
+            this.pb_TimTheoTenTK.ShadowDecoration.Parent = this.pb_TimTheoTenTK;
+            this.pb_TimTheoTenTK.Size = new System.Drawing.Size(53, 50);
+            this.pb_TimTheoTenTK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_TimTheoTenTK.TabIndex = 68;
+            this.pb_TimTheoTenTK.TabStop = false;
+            this.pb_TimTheoTenTK.Click += new System.EventHandler(this.pb_TimTheoTenTK_Click);
             // 
             // txt_TimTheoTenTK
             // 
             this.txt_TimTheoTenTK.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.txt_TimTheoTenTK.BorderThickness = 2;
             this.txt_TimTheoTenTK.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_TimTheoTenTK.DefaultText = "Theo tên tài khoản";
+            this.txt_TimTheoTenTK.DefaultText = "Theo tên đăng nhập";
             this.txt_TimTheoTenTK.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txt_TimTheoTenTK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_TimTheoTenTK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -133,18 +136,19 @@
             this.txt_TimTheoTenTK.PasswordChar = '\0';
             this.txt_TimTheoTenTK.PlaceholderText = "";
             this.txt_TimTheoTenTK.SelectedText = "";
-            this.txt_TimTheoTenTK.SelectionStart = 18;
             this.txt_TimTheoTenTK.ShadowDecoration.Parent = this.txt_TimTheoTenTK;
             this.txt_TimTheoTenTK.Size = new System.Drawing.Size(376, 62);
             this.txt_TimTheoTenTK.TabIndex = 67;
+            this.txt_TimTheoTenTK.Enter += new System.EventHandler(this.txt_TimTheoTenTK_Enter);
+            this.txt_TimTheoTenTK.Leave += new System.EventHandler(this.txt_TimTheoTenTK_Leave);
             // 
             // guna2Panel5
             // 
             this.guna2Panel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.guna2Panel5.BorderThickness = 2;
-            this.guna2Panel5.Controls.Add(this.pb_TimKiemTheoTen);
-            this.guna2Panel5.Controls.Add(this.txt_TimTheoTen);
-            this.guna2Panel5.Controls.Add(this.pb_TimTheoSDT);
+            this.guna2Panel5.Controls.Add(this.pb_TimTheoID);
+            this.guna2Panel5.Controls.Add(this.txt_TimTheoID);
+            this.guna2Panel5.Controls.Add(this.pb_TimTheoTenTK);
             this.guna2Panel5.Controls.Add(this.txt_TimTheoTenTK);
             this.guna2Panel5.Location = new System.Drawing.Point(504, 562);
             this.guna2Panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -153,17 +157,18 @@
             this.guna2Panel5.Size = new System.Drawing.Size(783, 100);
             this.guna2Panel5.TabIndex = 84;
             // 
-            // pb_TimKiemTheoTen
+            // pb_TimTheoID
             // 
-            this.pb_TimKiemTheoTen.Image = global::DOAN.Properties.Resources.search__1_;
-            this.pb_TimKiemTheoTen.Location = new System.Drawing.Point(709, 21);
-            this.pb_TimKiemTheoTen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pb_TimKiemTheoTen.Name = "pb_TimKiemTheoTen";
-            this.pb_TimKiemTheoTen.ShadowDecoration.Parent = this.pb_TimKiemTheoTen;
-            this.pb_TimKiemTheoTen.Size = new System.Drawing.Size(53, 50);
-            this.pb_TimKiemTheoTen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_TimKiemTheoTen.TabIndex = 70;
-            this.pb_TimKiemTheoTen.TabStop = false;
+            this.pb_TimTheoID.Image = global::DOAN.Properties.Resources.search__1_;
+            this.pb_TimTheoID.Location = new System.Drawing.Point(709, 21);
+            this.pb_TimTheoID.Margin = new System.Windows.Forms.Padding(4);
+            this.pb_TimTheoID.Name = "pb_TimTheoID";
+            this.pb_TimTheoID.ShadowDecoration.Parent = this.pb_TimTheoID;
+            this.pb_TimTheoID.Size = new System.Drawing.Size(53, 50);
+            this.pb_TimTheoID.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_TimTheoID.TabIndex = 70;
+            this.pb_TimTheoID.TabStop = false;
+            this.pb_TimTheoID.Click += new System.EventHandler(this.pb_TimTheoID_Click);
             // 
             // lbl_HD
             // 
@@ -203,30 +208,30 @@
             // 
             // dgv_DanhSachHD
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.dgv_DanhSachHD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgv_DanhSachHD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_DanhSachHD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_DanhSachHD.BackgroundColor = System.Drawing.Color.White;
             this.dgv_DanhSachHD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_DanhSachHD.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_DanhSachHD.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_DanhSachHD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_DanhSachHD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_DanhSachHD.ColumnHeadersHeight = 28;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_DanhSachHD.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_DanhSachHD.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_DanhSachHD.EnableHeadersVisualStyles = false;
             this.dgv_DanhSachHD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_DanhSachHD.Location = new System.Drawing.Point(3, 49);
@@ -411,7 +416,7 @@
             this.txt_MaNhanVien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_MaNhanVien.HoverState.Parent = this.txt_MaNhanVien;
             this.txt_MaNhanVien.Location = new System.Drawing.Point(192, 383);
-            this.txt_MaNhanVien.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_MaNhanVien.Margin = new System.Windows.Forms.Padding(5);
             this.txt_MaNhanVien.Name = "txt_MaNhanVien";
             this.txt_MaNhanVien.PasswordChar = '\0';
             this.txt_MaNhanVien.PlaceholderText = "";
@@ -495,7 +500,7 @@
             this.txt_TaiKhoan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_TaiKhoan.HoverState.Parent = this.txt_TaiKhoan;
             this.txt_TaiKhoan.Location = new System.Drawing.Point(192, 86);
-            this.txt_TaiKhoan.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_TaiKhoan.Margin = new System.Windows.Forms.Padding(5);
             this.txt_TaiKhoan.Name = "txt_TaiKhoan";
             this.txt_TaiKhoan.PasswordChar = '\0';
             this.txt_TaiKhoan.PlaceholderText = "";
@@ -533,7 +538,7 @@
             this.txt_MatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_MatKhau.HoverState.Parent = this.txt_MatKhau;
             this.txt_MatKhau.Location = new System.Drawing.Point(192, 174);
-            this.txt_MatKhau.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_MatKhau.Margin = new System.Windows.Forms.Padding(5);
             this.txt_MatKhau.Name = "txt_MatKhau";
             this.txt_MatKhau.PasswordChar = '\0';
             this.txt_MatKhau.PlaceholderText = "";
@@ -639,13 +644,13 @@
             this.Controls.Add(this.guna2Panel5);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "us_Account";
             this.Size = new System.Drawing.Size(1301, 682);
             this.Load += new System.EventHandler(this.us_Account_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_TimTheoSDT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_TimTheoTenTK)).EndInit();
             this.guna2Panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_TimKiemTheoTen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_TimTheoID)).EndInit();
             this.panel_HD.ResumeLayout(false);
             this.panel_HD.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
@@ -660,11 +665,11 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2TextBox txt_TimTheoTen;
-        private Guna.UI2.WinForms.Guna2PictureBox pb_TimTheoSDT;
+        private Guna.UI2.WinForms.Guna2TextBox txt_TimTheoID;
+        private Guna.UI2.WinForms.Guna2PictureBox pb_TimTheoTenTK;
         private Guna.UI2.WinForms.Guna2TextBox txt_TimTheoTenTK;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
-        private Guna.UI2.WinForms.Guna2PictureBox pb_TimKiemTheoTen;
+        private Guna.UI2.WinForms.Guna2PictureBox pb_TimTheoID;
         private System.Windows.Forms.Label lbl_HD;
         private Guna.UI2.WinForms.Guna2Panel panel_HD;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
