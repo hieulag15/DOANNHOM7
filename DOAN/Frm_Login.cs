@@ -45,7 +45,12 @@ namespace DOAN
                 frm_home.ShowDialog();
                 this.Close();
             }
+            else
+            {
+                MessageBox.Show("Tai khoan hoac mat khau khong dung");
+            }
         }
+
 
 
         private void txt_Username_Enter(object sender, EventArgs e)
